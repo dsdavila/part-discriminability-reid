@@ -79,17 +79,28 @@ def build_resnet_base():
 def load_spatial_and_extractor(ckpt_info):
     """Return (spatial_model, full_extractor) for F_k and retrieval respectively."""
     path = CKPT_DIR / ckpt_info['path']
+    raw = torch.load(path, map_location=DEVICE)
     base = build_resnet_base()
 
     if ckpt_info['type'] == 'bot':
         bottleneck = nn.BatchNorm1d(2048)
         bottleneck.bias.requires_grad_(False)
+        if isinstance(raw, dict) and 'model_state_dict' in raw:
+            # Epoch checkpoint: keys are base.*, bottleneck.*, classifier.*
+            sd = raw['model_state_dict']
+            base_sd = {k[len('base.'):]: v for k, v in sd.items() if k.startswith('base.')}
+            bn_sd   = {k[len('bottleneck.'):]: v for k, v in sd.items() if k.startswith('bottleneck.')}
+            base.load_state_dict(base_sd)
+            bottleneck.load_state_dict(bn_sd)
+        else:
+            # Final checkpoint: flat Sequential keys (0.*, 1.*, 2.*, 3.*)
+            extractor = nn.Sequential(base, nn.AdaptiveAvgPool2d(1), nn.Flatten(), bottleneck)
+            extractor.load_state_dict(raw)
+        spatial = base
         extractor = nn.Sequential(base, nn.AdaptiveAvgPool2d(1), nn.Flatten(), bottleneck)
-        extractor.load_state_dict(torch.load(path, map_location=DEVICE))
-        spatial = extractor[0]
     else:
-        # MoCo: checkpoint contains just the base Sequential weights
-        base.load_state_dict(torch.load(path, map_location=DEVICE))
+        # MoCo: flat base Sequential keys (0.weight, 1.weight, 4.*.*, ...)
+        base.load_state_dict(raw)
         spatial = base
         extractor = nn.Sequential(base, nn.AdaptiveAvgPool2d(1), nn.Flatten())
 
