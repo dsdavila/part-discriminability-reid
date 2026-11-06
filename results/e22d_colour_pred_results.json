@@ -1,0 +1,216 @@
+{
+  "protocol": "Vertical thirds of 256\u00d7128 resized gallery images: head rows 0\u201385 (fractions [0.000,0.336)), upper_body rows 86\u2013170 ([0.336,0.668)), lower_body rows 171\u2013255 ([0.668,1.000]). Colour stats: mean R,G,B ([0,1]) and mean H (degrees,[0,360]), S ([0,1]) per region. RidgeCV(alphas=[0.1,1,10,100,1000], cv=5) from 2048-d embedding to each stat. Train/test split by sorted ID, 80/20. r2_proj_mu_hat: same after projecting out train-set gallery mean direction (\u03bc\u0302 from train IDs only).",
+  "colour_stats": [
+    "head_R",
+    "head_G",
+    "head_B",
+    "head_H",
+    "head_S",
+    "upper_body_R",
+    "upper_body_G",
+    "upper_body_B",
+    "upper_body_H",
+    "upper_body_S",
+    "lower_body_R",
+    "lower_body_G",
+    "lower_body_B",
+    "lower_body_H",
+    "lower_body_S"
+  ],
+  "region_boundaries": {
+    "head": {
+      "rows": [
+        0,
+        85
+      ],
+      "fractions": [
+        0.0,
+        0.336
+      ]
+    },
+    "upper_body": {
+      "rows": [
+        86,
+        170
+      ],
+      "fractions": [
+        0.336,
+        0.668
+      ]
+    },
+    "lower_body": {
+      "rows": [
+        171,
+        255
+      ],
+      "fractions": [
+        0.668,
+        1.0
+      ]
+    }
+  },
+  "cache": "e12_feature_cache",
+  "image_order": "dataset.gallery filtered by not is_junk, same order as cache",
+  "cells": {
+    "A": {
+      "n_train": 10779,
+      "n_test": 2336,
+      "n_train_ids": 600,
+      "n_test_ids": 150,
+      "r2": {
+        "head_R": 0.8366619048992552,
+        "head_G": 0.8554483778195214,
+        "head_B": 0.8250259531583883,
+        "head_H": 0.7179622647213986,
+        "head_S": 0.846181080085926,
+        "upper_body_R": 0.853158525250842,
+        "upper_body_G": 0.8592208459477363,
+        "upper_body_B": 0.8502921284175992,
+        "upper_body_H": 0.6809163300703156,
+        "upper_body_S": 0.8667380916109474,
+        "lower_body_R": 0.8430286275860917,
+        "lower_body_G": 0.8270883996455238,
+        "lower_body_B": 0.8213404564996929,
+        "lower_body_H": 0.653725631602696,
+        "lower_body_S": 0.7986434479018072
+      },
+      "r2_proj_mu_hat": {
+        "head_R": 0.8355464700712811,
+        "head_G": 0.8548912970659842,
+        "head_B": 0.8243206886273334,
+        "head_H": 0.7178079590300137,
+        "head_S": 0.8459386708617327,
+        "upper_body_R": 0.8538796298804737,
+        "upper_body_G": 0.8597355865961183,
+        "upper_body_B": 0.849949101662612,
+        "upper_body_H": 0.680513229616823,
+        "upper_body_S": 0.8665967237417534,
+        "lower_body_R": 0.8361106952709803,
+        "lower_body_G": 0.8196018922019609,
+        "lower_body_B": 0.81356958013647,
+        "lower_body_H": 0.6539922339908328,
+        "lower_body_S": 0.7968589825249007
+      }
+    },
+    "C": {
+      "n_train": 10779,
+      "n_test": 2336,
+      "n_train_ids": 600,
+      "n_test_ids": 150,
+      "r2": {
+        "head_R": 0.7707899500693159,
+        "head_G": 0.7893529629055587,
+        "head_B": 0.7699232457014702,
+        "head_H": 0.6656195667690561,
+        "head_S": 0.8683888147891343,
+        "upper_body_R": 0.8131238954513565,
+        "upper_body_G": 0.8286596201596877,
+        "upper_body_B": 0.8263340952572215,
+        "upper_body_H": 0.6188291152725014,
+        "upper_body_S": 0.8844949093473966,
+        "lower_body_R": 0.7938885478628561,
+        "lower_body_G": 0.7942959823776559,
+        "lower_body_B": 0.7971189302790441,
+        "lower_body_H": 0.3888546075506696,
+        "lower_body_S": 0.7777539039091039
+      },
+      "r2_proj_mu_hat": {
+        "head_R": 0.7686458398722908,
+        "head_G": 0.7857246556983666,
+        "head_B": 0.7658588518977983,
+        "head_H": 0.6640711415803893,
+        "head_S": 0.865839790120473,
+        "upper_body_R": 0.8107832309859736,
+        "upper_body_G": 0.8262097801425977,
+        "upper_body_B": 0.8226277569474674,
+        "upper_body_H": 0.6168943516655916,
+        "upper_body_S": 0.8816408504487037,
+        "lower_body_R": 0.7911809969448094,
+        "lower_body_G": 0.7926731900287083,
+        "lower_body_B": 0.7962792703511077,
+        "lower_body_H": 0.3839459799054472,
+        "lower_body_S": 0.7766791545832068
+      }
+    },
+    "D": {
+      "n_train": 65956,
+      "n_test": 16176,
+      "n_train_ids": 2447,
+      "n_test_ids": 612,
+      "r2": {
+        "head_R": 0.6292470629325796,
+        "head_G": 0.6137097427474836,
+        "head_B": 0.6518691655796409,
+        "head_H": 0.6559241682797696,
+        "head_S": 0.6219997059606295,
+        "upper_body_R": 0.7514063551632576,
+        "upper_body_G": 0.7343048226422311,
+        "upper_body_B": 0.7536110944432327,
+        "upper_body_H": 0.7237106887920997,
+        "upper_body_S": 0.7525826358911372,
+        "lower_body_R": 0.6610201577204504,
+        "lower_body_G": 0.658803721798604,
+        "lower_body_B": 0.673737004076906,
+        "lower_body_H": 0.6874112057981439,
+        "lower_body_S": 0.7068516658794579
+      },
+      "r2_proj_mu_hat": {
+        "head_R": 0.6290437950989693,
+        "head_G": 0.6136122980339147,
+        "head_B": 0.6523849429872384,
+        "head_H": 0.6546143506452959,
+        "head_S": 0.6224346085277992,
+        "upper_body_R": 0.7496577885173543,
+        "upper_body_G": 0.7324916628147435,
+        "upper_body_B": 0.7522948147186139,
+        "upper_body_H": 0.7235518347435839,
+        "upper_body_S": 0.7525997693760035,
+        "lower_body_R": 0.6591754154353424,
+        "lower_body_G": 0.656205977975431,
+        "lower_body_B": 0.6715403405835889,
+        "lower_body_H": 0.6870257178379988,
+        "lower_body_S": 0.706299149896455
+      }
+    },
+    "B": {
+      "n_train": 65956,
+      "n_test": 16176,
+      "n_train_ids": 2447,
+      "n_test_ids": 612,
+      "r2": {
+        "head_R": 0.8789286477929459,
+        "head_G": 0.8690243697977688,
+        "head_B": 0.8701023937316218,
+        "head_H": 0.8881595673707354,
+        "head_S": 0.8328764926898031,
+        "upper_body_R": 0.9148786120716091,
+        "upper_body_G": 0.9032793455986545,
+        "upper_body_B": 0.892265889326351,
+        "upper_body_H": 0.8961266210910916,
+        "upper_body_S": 0.8776660796078578,
+        "lower_body_R": 0.9264501305494428,
+        "lower_body_G": 0.9220161321652651,
+        "lower_body_B": 0.9086582585128049,
+        "lower_body_H": 0.9136314360881812,
+        "lower_body_S": 0.9075883441994743
+      },
+      "r2_proj_mu_hat": {
+        "head_R": 0.8786613646091335,
+        "head_G": 0.8685137289876024,
+        "head_B": 0.8698707958131964,
+        "head_H": 0.8881612516802014,
+        "head_S": 0.8312664196798405,
+        "upper_body_R": 0.9138936753069685,
+        "upper_body_G": 0.9018415894167426,
+        "upper_body_B": 0.8911122437440756,
+        "upper_body_H": 0.8961812880918893,
+        "upper_body_S": 0.8767659701576984,
+        "lower_body_R": 0.9261781770291075,
+        "lower_body_G": 0.921711164122519,
+        "lower_body_B": 0.9084127135347554,
+        "lower_body_H": 0.9138574665950608,
+        "lower_body_S": 0.9063354828044794
+      }
+    }
+  }
+}

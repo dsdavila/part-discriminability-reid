@@ -1,0 +1,38 @@
+{
+  "A": {
+    "mean_norm_entropy": 0.9203018676051976,
+    "median_norm_entropy": 0.934518161982959,
+    "p10_norm_entropy": 0.864943076099,
+    "n_tgt": 750,
+    "n_src": 751,
+    "proto_cache": "source-domain",
+    "desc": "BoT-Mkt/Market-train proto/Market test (in-domain)"
+  },
+  "B": {
+    "mean_norm_entropy": 0.9520692591614662,
+    "median_norm_entropy": 0.955631263814482,
+    "p10_norm_entropy": 0.9258090254151422,
+    "n_tgt": 3059,
+    "n_src": 751,
+    "proto_cache": "source-domain",
+    "desc": "BoT-Mkt/Market-train proto/MSMT17 test (cross-dom, CORRECTED)"
+  },
+  "C": {
+    "mean_norm_entropy": 0.9373356271037915,
+    "median_norm_entropy": 0.9443802460885307,
+    "p10_norm_entropy": 0.8921016161265124,
+    "n_tgt": 750,
+    "n_src": 1041,
+    "proto_cache": "source-domain",
+    "desc": "BoT-MSMT/MSMT17-train proto/Market test (cross-dom, CORRECTED)"
+  },
+  "D": {
+    "mean_norm_entropy": 0.9348270165047203,
+    "median_norm_entropy": 0.9443825265139608,
+    "p10_norm_entropy": 0.8921117791535499,
+    "n_tgt": 3059,
+    "n_src": 1041,
+    "proto_cache": "source-domain",
+    "desc": "BoT-MSMT/MSMT17-train proto/MSMT17 test (in-domain)"
+  }
+}

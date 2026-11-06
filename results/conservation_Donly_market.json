@@ -1,0 +1,68 @@
+{
+  "classes": {
+    "A-easy": 727,
+    "A-hard": 23
+  },
+  "items_per_class": {
+    "A-easy": 12931,
+    "A-hard": 184
+  },
+  "rows": [
+    {
+      "q_class": "A-easy",
+      "n_class": "A-easy",
+      "slots_A": 128084,
+      "slots_C": 127448,
+      "slots_noise": 127651,
+      "delta_C_minus_A": -636,
+      "delta_noise_minus_A": -433,
+      "C_minus_noise": -203
+    },
+    {
+      "q_class": "A-easy",
+      "n_class": "A-hard",
+      "slots_A": 1226,
+      "slots_C": 1862,
+      "slots_noise": 1659,
+      "delta_C_minus_A": 636,
+      "delta_noise_minus_A": 433,
+      "C_minus_noise": 203
+    },
+    {
+      "q_class": "A-hard",
+      "n_class": "A-easy",
+      "slots_A": 1444,
+      "slots_C": 1615,
+      "slots_noise": 1623,
+      "delta_C_minus_A": 171,
+      "delta_noise_minus_A": 179,
+      "C_minus_noise": -8
+    },
+    {
+      "q_class": "A-hard",
+      "n_class": "A-hard",
+      "slots_A": 396,
+      "slots_C": 225,
+      "slots_noise": 217,
+      "delta_C_minus_A": -171,
+      "delta_noise_minus_A": -179,
+      "C_minus_noise": 8
+    }
+  ],
+  "col_totals": {
+    "A-easy": {
+      "A": 129528,
+      "C": 129063,
+      "noise": 129274,
+      "C_share": 0.9840869233701868,
+      "null_share": 0.9859702630575676
+    },
+    "A-hard": {
+      "A": 1622,
+      "C": 2087,
+      "noise": 1876,
+      "C_share": 0.01591307662981319,
+      "null_share": 0.01402973694243233
+    }
+  }
+}

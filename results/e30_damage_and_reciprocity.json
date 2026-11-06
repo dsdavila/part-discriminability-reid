@@ -1,0 +1,122 @@
+{
+  "partA": {
+    "MSMT": {
+      "10": {
+        "n_queries": 11659,
+        "total_sigma_dap": 11360.459398086487,
+        "share_dap_D_shared": 0.0538,
+        "share_dap_B_only": 0.9462,
+        "mean_dap_per_shared_intruder_item": 0.001176,
+        "mean_dap_per_bonly_intruder_item": 0.000306,
+        "n_shared_intruder_items": 519318,
+        "n_bonly_intruder_items": 35133904,
+        "sum_shares_sanity": 1.0,
+        "_attribution_formula": "additive 1/r (sums to \u0394AP)"
+      },
+      "50": {
+        "n_queries": 11659,
+        "total_sigma_dap": 11360.459398086487,
+        "share_dap_D_shared": 0.149,
+        "share_dap_B_only": 0.851,
+        "mean_dap_per_shared_intruder_item": 0.000882,
+        "mean_dap_per_bonly_intruder_item": 0.000287,
+        "n_shared_intruder_items": 1918989,
+        "n_bonly_intruder_items": 33734233,
+        "sum_shares_sanity": 1.0,
+        "_attribution_formula": "additive 1/r (sums to \u0394AP)"
+      }
+    },
+    "Market": {
+      "10": {
+        "n_queries": 3368,
+        "total_sigma_dap": 2470.1040701269594,
+        "share_dap_D_shared": 0.1391,
+        "share_dap_B_only": 0.8609,
+        "mean_dap_per_shared_intruder_item": 0.017315,
+        "mean_dap_per_bonly_intruder_item": 0.000851,
+        "n_shared_intruder_items": 19844,
+        "n_bonly_intruder_items": 2499792,
+        "sum_shares_sanity": 1.0,
+        "_attribution_formula": "additive 1/r (sums to \u0394AP)"
+      },
+      "50": {
+        "n_queries": 3368,
+        "total_sigma_dap": 2470.1040701269594,
+        "share_dap_D_shared": 0.4263,
+        "share_dap_B_only": 0.5737,
+        "mean_dap_per_shared_intruder_item": 0.007876,
+        "mean_dap_per_bonly_intruder_item": 0.000594,
+        "n_shared_intruder_items": 133718,
+        "n_bonly_intruder_items": 2385918,
+        "sum_shares_sanity": 1.0,
+        "_attribution_formula": "additive 1/r (sums to \u0394AP)"
+      }
+    }
+  },
+  "partB": {
+    "A": {
+      "10": {
+        "n_edges": 4609,
+        "reciprocity_measured": 0.4465176827945324,
+        "reciprocity_null_mean": 0.011672814059448906,
+        "reciprocity_null_std": 0.0018043500009799773,
+        "ratio_to_null": 38.25278810408921
+      },
+      "50": {
+        "n_edges": 29386,
+        "reciprocity_measured": 0.7193901858027633,
+        "reciprocity_null_mean": 0.06442523650718028,
+        "reciprocity_null_std": 0.0018370298875150163,
+        "ratio_to_null": 11.166279315444752
+      }
+    },
+    "C": {
+      "10": {
+        "n_edges": 24839,
+        "reciprocity_measured": 0.5720037038528121,
+        "reciprocity_null_mean": 0.07080397761584604,
+        "reciprocity_null_std": 0.001686527072153627,
+        "ratio_to_null": 8.078694490248479
+      },
+      "50": {
+        "n_edges": 74117,
+        "reciprocity_measured": 0.6661629585655113,
+        "reciprocity_null_mean": 0.1882348179230136,
+        "reciprocity_null_std": 0.0017141783131212397,
+        "ratio_to_null": 3.538999670283986
+      }
+    },
+    "D": {
+      "10": {
+        "n_edges": 113885,
+        "reciprocity_measured": 0.5470079466128112,
+        "reciprocity_null_mean": 0.025748781665715415,
+        "reciprocity_null_std": 0.0006256851879409657,
+        "ratio_to_null": 21.24403219206111
+      },
+      "50": {
+        "n_edges": 428039,
+        "reciprocity_measured": 0.7130658654935649,
+        "reciprocity_null_mean": 0.0815624277227075,
+        "reciprocity_null_std": 0.00040610598047745197,
+        "ratio_to_null": 8.742577745697028
+      }
+    },
+    "B": {
+      "10": {
+        "n_edges": 332329,
+        "reciprocity_measured": 0.4312954933213773,
+        "reciprocity_null_mean": 0.05652711620111396,
+        "reciprocity_null_std": 0.0004897022233976278,
+        "ratio_to_null": 7.629886721744314
+      },
+      "50": {
+        "n_edges": 1102586,
+        "reciprocity_measured": 0.5168177357593875,
+        "reciprocity_null_mean": 0.1660905362484196,
+        "reciprocity_null_std": 0.00036213646947079036,
+        "ratio_to_null": 3.1116627559464884
+      }
+    }
+  }
+}

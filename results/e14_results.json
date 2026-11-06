@@ -1,0 +1,90 @@
+{
+  "baseline_map": 0.033860270468961194,
+  "control_whitening_map": 0.03193182557804342,
+  "control_permuted_map": 0.03389844616595319,
+  "n_harmful_dirs": 25,
+  "n_query": 3000,
+  "n_gallery": 46455,
+  "reweighting_sweep": [
+    {
+      "alpha": 0.25,
+      "map": 0.033904517304917337
+    },
+    {
+      "alpha": 0.5,
+      "map": 0.03393384310836343
+    },
+    {
+      "alpha": 0.75,
+      "map": 0.03397665433645728
+    },
+    {
+      "alpha": 1.0,
+      "map": 0.034011907766690885
+    },
+    {
+      "alpha": 1.5,
+      "map": 0.03408741938045888
+    },
+    {
+      "alpha": 2.0,
+      "map": 0.03416237429481988
+    },
+    {
+      "alpha": 3.0,
+      "map": 0.03430905884430253
+    }
+  ],
+  "removal_sweep": [
+    {
+      "k_removed": 1,
+      "map": 0.034049442243409826
+    },
+    {
+      "k_removed": 3,
+      "map": 0.0343594630682334
+    },
+    {
+      "k_removed": 5,
+      "map": 0.03459179262943578
+    },
+    {
+      "k_removed": 10,
+      "map": 0.03479081143971578
+    },
+    {
+      "k_removed": 15,
+      "map": 0.03485633001089182
+    },
+    {
+      "k_removed": 20,
+      "map": 0.034717591549937546
+    }
+  ],
+  "random_removal_control": [
+    {
+      "k_removed": 5,
+      "map_mean": 0.033770073232904346,
+      "map_std": 0.0002636684434978279
+    },
+    {
+      "k_removed": 10,
+      "map_mean": 0.033549966633669284,
+      "map_std": 0.00028456406393797287
+    },
+    {
+      "k_removed": 20,
+      "map_mean": 0.033074143044319375,
+      "map_std": 0.0004253484110640812
+    }
+  ],
+  "best_reweight": {
+    "alpha": 3.0,
+    "map": 0.03430905884430253
+  },
+  "best_removal": {
+    "k_removed": 15,
+    "map": 0.03485633001089182
+  },
+  "note": "Oracle ceiling: f_tgt estimated on half-A target IDs, evaluated on half-B. Beats baseline + both controls = real ceiling effect."
+}

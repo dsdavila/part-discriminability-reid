@@ -1,0 +1,106 @@
+{
+  "conditions": [
+    {
+      "label": "Market (source)",
+      "n_samples": 16483,
+      "n_ids": 750,
+      "n_cameras": 6,
+      "m1_effective_rank": 261.201171875,
+      "m4_hubness_matched": 0.5369440595809426,
+      "m4_hubness_full": 0.5325611263190942,
+      "m4_n_ids_matched": 750,
+      "m5_identity_r2": 0.6291658004192258,
+      "m5_camera_r2": 0.006080792600963404,
+      "m5_ratio": 103.467558759356
+    },
+    {
+      "label": "MSMT17 baseline (15 cam)",
+      "n_samples": 93787,
+      "n_ids": 3059,
+      "n_cameras": 15,
+      "m1_effective_rank": 133.30162048339844,
+      "m4_hubness_matched": 1.892340006481395,
+      "m4_hubness_full": 2.1888079780556806,
+      "m4_n_ids_matched": 750,
+      "m5_identity_r2": 0.29498258475937045,
+      "m5_camera_r2": 0.09476377164440968,
+      "m5_ratio": 3.112819894274155
+    },
+    {
+      "label": "MSMT17 baseline (top-6 cam)",
+      "n_samples": 67038,
+      "n_ids": 3059,
+      "n_cameras": 6,
+      "m1_effective_rank": 125.63732147216797,
+      "m4_hubness_matched": 1.99119236634814,
+      "m4_hubness_full": 2.1823719174301233,
+      "m4_n_ids_matched": 750,
+      "m5_identity_r2": 0.3462711809876484,
+      "m5_camera_r2": 0.09200833771682217,
+      "m5_ratio": 3.7634757017198193
+    },
+    {
+      "label": "MSMT17 styled (15 cam)",
+      "n_samples": 93787,
+      "n_ids": 3059,
+      "n_cameras": 15,
+      "m1_effective_rank": 129.01309204101562,
+      "m4_hubness_matched": 1.639262795395877,
+      "m4_hubness_full": 1.7466414880045276,
+      "m4_n_ids_matched": 750,
+      "m5_identity_r2": 0.303999128444651,
+      "m5_camera_r2": 0.1022413333373085,
+      "m5_ratio": 2.9733483395431857
+    },
+    {
+      "label": "MSMT17 styled (top-6 cam)",
+      "n_samples": 67038,
+      "n_ids": 3059,
+      "n_cameras": 6,
+      "m1_effective_rank": 122.06468963623047,
+      "m4_hubness_matched": 1.8272337146903221,
+      "m4_hubness_full": 1.659206317246831,
+      "m4_n_ids_matched": 750,
+      "m5_identity_r2": 0.35449760744739683,
+      "m5_camera_r2": 0.10383726450868205,
+      "m5_ratio": 3.413972575115659
+    }
+  ],
+  "channel_stats": {
+    "market_mean": [
+      0.4167739748954773,
+      0.3918518126010895,
+      0.3834383487701416
+    ],
+    "market_std": [
+      0.21052595973014832,
+      0.20433446764945984,
+      0.20168320834636688
+    ],
+    "msmt17_mean": [
+      0.31008991599082947,
+      0.2895391583442688,
+      0.30281633138656616
+    ],
+    "msmt17_std": [
+      0.2616141140460968,
+      0.24865616858005524,
+      0.24074319005012512
+    ]
+  },
+  "top6_cameras": [
+    1,
+    5,
+    7,
+    11,
+    13,
+    14
+  ],
+  "delta_styled_vs_baseline": {
+    "eff_rank": -4.2885284423828125,
+    "hubness": -0.25307721108551817,
+    "identity_r2": 0.009016543685280543,
+    "camera_r2": 0.007477561692898829
+  },
+  "interpretation": "If eff_rank increases toward Market (~241) and hubness drops toward Market (~0.28), style shift explains the collapse. If metrics are unchanged, collapse is deeper than appearance statistics."
+}

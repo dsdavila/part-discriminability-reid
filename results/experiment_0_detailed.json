@@ -1,0 +1,78 @@
+{
+  "resnet50": {
+    "distance_stats": {
+      "same_id_same_cam": {
+        "mean": 0.2878820598125458,
+        "std": 0.0862044021487236,
+        "median": 0.28281164169311523,
+        "count": 2089596
+      },
+      "same_id_diff_cam": {
+        "mean": 0.30788034200668335,
+        "std": 0.0807623490691185,
+        "median": 0.30240321159362793,
+        "count": 9257636
+      },
+      "diff_id": {
+        "mean": 0.2728265909758772,
+        "std": 0.07526848698972848,
+        "median": 0.2651694416999817,
+        "count": 470393
+      },
+      "cross_view_gap": {
+        "mean": 0.019998282194137573,
+        "median": 0.019591569900512695
+      }
+    },
+    "retrieval_stats": {
+      "same_camera": {
+        "displaced_fraction": 0.5580586199398815,
+        "rank1_accuracy": 0.9233966745843231,
+        "num_queries": 3368
+      },
+      "cross_camera": {
+        "displaced_fraction": 0.9854646309839518,
+        "rank1_accuracy": 0.12203087885985749,
+        "num_queries": 3368
+      }
+    }
+  },
+  "random": {
+    "distance_stats": {
+      "same_id_same_cam": {
+        "mean": 0.001315686502493918,
+        "std": 0.0008125491440296173,
+        "median": 0.0011172294616699219,
+        "count": 2089596
+      },
+      "same_id_diff_cam": {
+        "mean": 0.0014019712107256055,
+        "std": 0.0008279519388452172,
+        "median": 0.0011984705924987793,
+        "count": 9257636
+      },
+      "diff_id": {
+        "mean": 0.0012054666275700772,
+        "std": 0.000653788102077305,
+        "median": 0.0010606050491333008,
+        "count": 470393
+      },
+      "cross_view_gap": {
+        "mean": 8.628470823168755e-05,
+        "median": 8.124113082885742e-05
+      }
+    },
+    "retrieval_stats": {
+      "same_camera": {
+        "displaced_fraction": 0.705275035555895,
+        "rank1_accuracy": 0.6843824228028503,
+        "num_queries": 3368
+      },
+      "cross_camera": {
+        "displaced_fraction": 0.9966845183102115,
+        "rank1_accuracy": 0.037410926365795724,
+        "num_queries": 3368
+      }
+    }
+  }
+}

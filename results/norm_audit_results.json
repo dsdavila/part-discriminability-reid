@@ -1,0 +1,61 @@
+{
+  "cache_normalization": "post_l2_norm (all features are L2-normalized)",
+  "max_norm_deviation": {
+    "market_test": 1.1920928955078125e-07,
+    "msmt17_test": 1.7881393432617188e-07,
+    "bot_msmt_market": 1.1920928955078125e-07,
+    "bot_msmt_msmt": 1.7881393432617188e-07
+  },
+  "effective_rank": {
+    "cell_A": {
+      "eff_rank_pre_l2": 261.1714172363281,
+      "eff_rank_post_l2": 261.201171875,
+      "eff_rank_raw_then_l2": 261.201171875
+    },
+    "cell_B": {
+      "eff_rank_pre_l2": 114.85181427001953,
+      "eff_rank_post_l2": 133.30162048339844,
+      "eff_rank_raw_then_l2": 133.30162048339844
+    },
+    "cell_C": {
+      "eff_rank_pre_l2": 206.10089111328125,
+      "eff_rank_post_l2": 208.8625030517578,
+      "eff_rank_raw_then_l2": 208.86241149902344
+    },
+    "cell_D": {
+      "eff_rank_pre_l2": 360.09307861328125,
+      "eff_rank_post_l2": 359.9081726074219,
+      "eff_rank_raw_then_l2": 359.9078674316406
+    }
+  },
+  "map_separability": {
+    "A": {
+      "cosine_norm": 85.84041244712758,
+      "euclidean_raw": 84.30170706065044,
+      "delta_pp": -1.5387053864771332
+    },
+    "B": {
+      "cosine_norm": 2.5614186845882667,
+      "euclidean_raw": 2.5834377508554396,
+      "delta_pp": 0.02201906626717287
+    },
+    "C": {
+      "cosine_norm": 26.65961584752611,
+      "euclidean_raw": 26.280555948810637,
+      "delta_pp": -0.37905989871547163
+    },
+    "D": {
+      "cosine_norm": 41.624584720826384,
+      "euclidean_raw": 39.51484818245408,
+      "delta_pp": -2.109736538372303
+    }
+  },
+  "ordering_preserved": true,
+  "cell_c_discrepancy_explanation": {
+    "seed42_eff_rank": 208.862,
+    "seed123_eff_rank": 205.592,
+    "two_seed_average": 207.227,
+    "reference_in_2x2_json": 207.2,
+    "explanation": "Reference 207.2 is the average of seed42+seed123 from compute_bot_msmt_2x2.py. The 2x2 mAP uses seed42 only, so 208.86 is the correct value for the consistent single-seed analysis."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "protocol": "canonical junk=(g_pid==q_pid)&(g_cam==q_cam); mean-only removal: u=mu/|mu|, X'=X-(X@u)u, L2-renorm",
+  "cache": "bot_market / msmt17_test.npz",
+  "baseline_full": 2.5614186845882667,
+  "mean_only_removal": {
+    "map": 2.878920777522379,
+    "delta": 0.31750209293411213,
+    "bootstrap_ci_95": [
+      0.27993351735844274,
+      0.35632386733771365
+    ]
+  },
+  "decomposition": {
+    "raw_svd_v2_plateau": 1.8,
+    "mean_centered_pca_v3_plateau": 1.4256,
+    "gap_v2_minus_v3": 0.37440000000000007,
+    "mean_only_delta": 0.31750209293411213,
+    "mean_explains_gap_fraction": 0.8480290943752994
+  }
+}

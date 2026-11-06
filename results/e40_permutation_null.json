@@ -1,0 +1,1396 @@
+{
+  "MSMT": {
+    "dataset": "MSMT",
+    "id_cell": "D",
+    "ood_cell": "B'",
+    "partition_counts": {
+      "EASY": 228,
+      "ID-ONLY": 1,
+      "SHARED": 692,
+      "OOD-ONLY": 2138
+    },
+    "real": {
+      "id": {
+        "cos_global": {
+          "EASY": 0.9465539455413818,
+          "ID-ONLY": 0.4929674565792084,
+          "SHARED": 0.9579247832298279,
+          "OOD-ONLY": 0.9627853631973267
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 5.145822525024414,
+            "median_deg": 16.103458404541016,
+            "last_deg": 87.45823669433594,
+            "mean_deg": 22.498079299926758
+          },
+          "EASY|SHARED": {
+            "first_deg": 6.240170478820801,
+            "median_deg": 20.080495834350586,
+            "last_deg": 89.60865020751953,
+            "mean_deg": 27.047744750976562
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 3.0506279468536377,
+            "median_deg": 9.447651863098145,
+            "last_deg": 83.59186553955078,
+            "mean_deg": 14.507829666137695
+          }
+        }
+      },
+      "ood": {
+        "cos_global": {
+          "EASY": 0.9700108766555786,
+          "ID-ONLY": 0.4073490500450134,
+          "SHARED": 0.957054615020752,
+          "OOD-ONLY": 0.9703437089920044
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 2.5129480361938477,
+            "median_deg": 11.7833833694458,
+            "last_deg": 86.51081848144531,
+            "mean_deg": 17.36599349975586
+          },
+          "EASY|SHARED": {
+            "first_deg": 3.202346086502075,
+            "median_deg": 15.012041091918945,
+            "last_deg": 85.72441864013672,
+            "mean_deg": 21.379091262817383
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 1.1206486225128174,
+            "median_deg": 7.842733383178711,
+            "last_deg": 85.59564208984375,
+            "mean_deg": 11.951574325561523
+          }
+        }
+      },
+      "noise": {
+        "cos_global": {
+          "EASY": 0.8365311622619629,
+          "ID-ONLY": 0.32252034544944763,
+          "SHARED": 0.8811219930648804,
+          "OOD-ONLY": 0.936031699180603
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 18.618419647216797,
+            "median_deg": 53.864105224609375,
+            "last_deg": 89.89783477783203,
+            "mean_deg": 54.51383972167969
+          },
+          "EASY|SHARED": {
+            "first_deg": 24.589113235473633,
+            "median_deg": 61.78887939453125,
+            "last_deg": 89.9039077758789,
+            "mean_deg": 61.08881759643555
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 12.318255424499512,
+            "median_deg": 41.26057052612305,
+            "last_deg": 89.64984130859375,
+            "mean_deg": 46.35715866088867
+          }
+        }
+      },
+      "randproj": {
+        "cos_global": {
+          "EASY": 0.9999999403953552,
+          "ID-ONLY": 1.0,
+          "SHARED": 1.0,
+          "OOD-ONLY": 0.9999999403953552
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.007464008871465921
+          },
+          "EASY|SHARED": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.007464008871465921
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.0063003418035805225
+          }
+        }
+      }
+    },
+    "permutation": {
+      "0": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.957184374332428,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9559687376022339,
+            "OOD-ONLY": 0.9635945558547974
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.223408222198486,
+              "median_deg": 12.142101287841797,
+              "last_deg": 86.34673309326172,
+              "mean_deg": 17.77772331237793
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.6859211921691895,
+              "median_deg": 13.385714530944824,
+              "last_deg": 88.88668060302734,
+              "mean_deg": 19.47690200805664
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 2.828193187713623,
+              "median_deg": 8.174216270446777,
+              "last_deg": 85.5219955444336,
+              "mean_deg": 12.492806434631348
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.963475227355957,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9681476950645447,
+            "OOD-ONLY": 0.9702944755554199
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 1.2330524921417236,
+              "median_deg": 9.826980590820312,
+              "last_deg": 83.2510986328125,
+              "mean_deg": 14.51857852935791
+            },
+            "EASY|SHARED": {
+              "first_deg": 1.421614646911621,
+              "median_deg": 10.91628360748291,
+              "last_deg": 86.70079040527344,
+              "mean_deg": 15.851152420043945
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.75795578956604,
+              "median_deg": 6.5378499031066895,
+              "last_deg": 84.29296875,
+              "mean_deg": 9.75062370300293
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.8157690167427063,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8880980014801025,
+            "OOD-ONLY": 0.936756432056427
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 18.551427841186523,
+              "median_deg": 52.3367805480957,
+              "last_deg": 89.8719711303711,
+              "mean_deg": 53.609779357910156
+            },
+            "EASY|SHARED": {
+              "first_deg": 21.509096145629883,
+              "median_deg": 56.894615173339844,
+              "last_deg": 89.82527160644531,
+              "mean_deg": 57.220550537109375
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 12.342101097106934,
+              "median_deg": 35.77679443359375,
+              "last_deg": 89.97626495361328,
+              "mean_deg": 42.79722595214844
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9999998807907104,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.01978234015405178,
+              "mean_deg": 0.006982001941651106
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009109682403504848
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.008428022265434265
+            }
+          }
+        }
+      },
+      "1": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9556186199188232,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9593177437782288,
+            "OOD-ONLY": 0.9639697670936584
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.087009429931641,
+              "median_deg": 12.009349822998047,
+              "last_deg": 88.8222885131836,
+              "mean_deg": 17.674741744995117
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.458433628082275,
+              "median_deg": 13.243629455566406,
+              "last_deg": 89.58786010742188,
+              "mean_deg": 19.29096794128418
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 2.7460203170776367,
+              "median_deg": 8.180932998657227,
+              "last_deg": 86.8208236694336,
+              "mean_deg": 12.44119644165039
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9638146162033081,
+            "ID-ONLY": NaN,
+            "SHARED": 0.969953715801239,
+            "OOD-ONLY": 0.9703747034072876
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 1.2351138591766357,
+              "median_deg": 9.714600563049316,
+              "last_deg": 88.17853546142578,
+              "mean_deg": 14.373123168945312
+            },
+            "EASY|SHARED": {
+              "first_deg": 1.3839493989944458,
+              "median_deg": 10.728288650512695,
+              "last_deg": 89.68602752685547,
+              "mean_deg": 15.655492782592773
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.7885750532150269,
+              "median_deg": 6.53164529800415,
+              "last_deg": 81.18180084228516,
+              "mean_deg": 9.678327560424805
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.816838800907135,
+            "ID-ONLY": NaN,
+            "SHARED": 0.89206463098526,
+            "OOD-ONLY": 0.9365724921226501
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 18.5021915435791,
+              "median_deg": 52.303489685058594,
+              "last_deg": 89.92412567138672,
+              "mean_deg": 53.76282501220703
+            },
+            "EASY|SHARED": {
+              "first_deg": 20.65767478942871,
+              "median_deg": 56.609466552734375,
+              "last_deg": 89.80860137939453,
+              "mean_deg": 57.052040100097656
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 11.602964401245117,
+              "median_deg": 35.27662658691406,
+              "last_deg": 89.72637939453125,
+              "mean_deg": 42.238983154296875
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009109682403504848
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009591689333319664
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007264355197548866
+            }
+          }
+        }
+      },
+      "2": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.953472375869751,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9601607322692871,
+            "OOD-ONLY": 0.9622395634651184
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.1631598472595215,
+              "median_deg": 12.149710655212402,
+              "last_deg": 88.29479217529297,
+              "mean_deg": 17.805395126342773
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.760944843292236,
+              "median_deg": 13.646870613098145,
+              "last_deg": 89.67510223388672,
+              "mean_deg": 19.58173942565918
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 2.9865543842315674,
+              "median_deg": 8.219612121582031,
+              "last_deg": 82.75907897949219,
+              "mean_deg": 12.39632511138916
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9663892984390259,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9684373736381531,
+            "OOD-ONLY": 0.9708940386772156
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 1.2581883668899536,
+              "median_deg": 9.700570106506348,
+              "last_deg": 86.50226593017578,
+              "mean_deg": 14.458894729614258
+            },
+            "EASY|SHARED": {
+              "first_deg": 1.3945139646530151,
+              "median_deg": 10.794858932495117,
+              "last_deg": 85.83961486816406,
+              "mean_deg": 15.962177276611328
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.76104736328125,
+              "median_deg": 6.50088357925415,
+              "last_deg": 88.09359741210938,
+              "mean_deg": 9.883576393127441
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.8327882289886475,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8966841697692871,
+            "OOD-ONLY": 0.9351364374160767
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 17.364654541015625,
+              "median_deg": 52.296207427978516,
+              "last_deg": 89.97069549560547,
+              "mean_deg": 53.73651885986328
+            },
+            "EASY|SHARED": {
+              "first_deg": 20.37241554260254,
+              "median_deg": 56.75556945800781,
+              "last_deg": 89.97207641601562,
+              "mean_deg": 57.09651184082031
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 11.732149124145508,
+              "median_deg": 35.466064453125,
+              "last_deg": 89.98950958251953,
+              "mean_deg": 42.29107666015625
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 1.0
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.03426402062177658,
+              "mean_deg": 0.007833865471184254
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009591689333319664
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007464008871465921
+            }
+          }
+        }
+      },
+      "3": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9497873187065125,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9607265591621399,
+            "OOD-ONLY": 0.9618569016456604
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.02155876159668,
+              "median_deg": 12.15551471710205,
+              "last_deg": 89.30897521972656,
+              "mean_deg": 17.628196716308594
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.6152849197387695,
+              "median_deg": 13.630267143249512,
+              "last_deg": 89.61750793457031,
+              "mean_deg": 19.401123046875
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 2.8547847270965576,
+              "median_deg": 8.311847686767578,
+              "last_deg": 86.43175506591797,
+              "mean_deg": 12.406909942626953
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.964344322681427,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9687391519546509,
+            "OOD-ONLY": 0.9714788198471069
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 1.165164589881897,
+              "median_deg": 9.766889572143555,
+              "last_deg": 89.9496078491211,
+              "mean_deg": 14.468230247497559
+            },
+            "EASY|SHARED": {
+              "first_deg": 1.326479434967041,
+              "median_deg": 10.979202270507812,
+              "last_deg": 86.09577178955078,
+              "mean_deg": 15.95498275756836
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.7979486584663391,
+              "median_deg": 6.576977252960205,
+              "last_deg": 83.21499633789062,
+              "mean_deg": 10.024563789367676
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.8260599970817566,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8983647227287292,
+            "OOD-ONLY": 0.9343525767326355
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 16.790224075317383,
+              "median_deg": 52.136749267578125,
+              "last_deg": 89.78363037109375,
+              "mean_deg": 53.411460876464844
+            },
+            "EASY|SHARED": {
+              "first_deg": 19.39295768737793,
+              "median_deg": 56.877899169921875,
+              "last_deg": 89.7166976928711,
+              "mean_deg": 56.83858871459961
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 12.07453441619873,
+              "median_deg": 35.20427703857422,
+              "last_deg": 89.77898406982422,
+              "mean_deg": 42.38026809692383
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 1.0,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009109682403504848
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007946016266942024
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007464008871465921
+            }
+          }
+        }
+      },
+      "4": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9517307281494141,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9590717554092407,
+            "OOD-ONLY": 0.9626919031143188
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.110040187835693,
+              "median_deg": 12.28836727142334,
+              "last_deg": 89.722900390625,
+              "mean_deg": 18.228897094726562
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.688303470611572,
+              "median_deg": 13.496084213256836,
+              "last_deg": 87.00383758544922,
+              "mean_deg": 19.65212631225586
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 2.7897257804870605,
+              "median_deg": 8.185515403747559,
+              "last_deg": 77.54680633544922,
+              "mean_deg": 12.220094680786133
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9662488698959351,
+            "ID-ONLY": NaN,
+            "SHARED": 0.970076858997345,
+            "OOD-ONLY": 0.9701300859451294
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 1.2630006074905396,
+              "median_deg": 9.792673110961914,
+              "last_deg": 89.45988464355469,
+              "mean_deg": 14.544419288635254
+            },
+            "EASY|SHARED": {
+              "first_deg": 1.3028119802474976,
+              "median_deg": 11.002952575683594,
+              "last_deg": 89.29373168945312,
+              "mean_deg": 15.844902038574219
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.8052717447280884,
+              "median_deg": 6.567711353302002,
+              "last_deg": 76.40827941894531,
+              "mean_deg": 9.645803451538086
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.8250276446342468,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8976376056671143,
+            "OOD-ONLY": 0.9360414743423462
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 18.751129150390625,
+              "median_deg": 52.4821662902832,
+              "last_deg": 89.88568878173828,
+              "mean_deg": 53.88896179199219
+            },
+            "EASY|SHARED": {
+              "first_deg": 21.234460830688477,
+              "median_deg": 56.998165130615234,
+              "last_deg": 89.97067260742188,
+              "mean_deg": 57.20978927612305
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 11.890101432800293,
+              "median_deg": 35.337947845458984,
+              "last_deg": 89.88069152832031,
+              "mean_deg": 42.394874572753906
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007464008871465921
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.0063003418035805225
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007946016266942024
+            }
+          }
+        }
+      }
+    }
+  },
+  "Market": {
+    "dataset": "Market",
+    "id_cell": "A'",
+    "ood_cell": "C",
+    "partition_counts": {
+      "EASY": 396,
+      "ID-ONLY": 1,
+      "SHARED": 22,
+      "OOD-ONLY": 331
+    },
+    "real": {
+      "id": {
+        "cos_global": {
+          "EASY": 0.9555075764656067,
+          "ID-ONLY": 0.46120044589042664,
+          "SHARED": 0.75222247838974,
+          "OOD-ONLY": 0.9506656527519226
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 5.1310272216796875,
+            "median_deg": 13.790948867797852,
+            "last_deg": 89.59815979003906,
+            "mean_deg": 20.436246871948242
+          },
+          "EASY|SHARED": {
+            "first_deg": 9.318166732788086,
+            "median_deg": 44.021358489990234,
+            "last_deg": 89.93890380859375,
+            "mean_deg": 47.77552032470703
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 7.629385948181152,
+            "median_deg": 43.52803039550781,
+            "last_deg": 89.83058166503906,
+            "mean_deg": 47.46405029296875
+          }
+        }
+      },
+      "ood": {
+        "cos_global": {
+          "EASY": 0.9587956666946411,
+          "ID-ONLY": 0.5787060856819153,
+          "SHARED": 0.8497125506401062,
+          "OOD-ONLY": 0.9573981761932373
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 2.605642080307007,
+            "median_deg": 13.866961479187012,
+            "last_deg": 89.0204086303711,
+            "mean_deg": 19.494293212890625
+          },
+          "EASY|SHARED": {
+            "first_deg": 7.522926330566406,
+            "median_deg": 45.82527542114258,
+            "last_deg": 89.9395980834961,
+            "mean_deg": 47.95658493041992
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 6.324371814727783,
+            "median_deg": 45.17731475830078,
+            "last_deg": 89.93415832519531,
+            "mean_deg": 47.70136642456055
+          }
+        }
+      },
+      "noise": {
+        "cos_global": {
+          "EASY": 0.7787989377975464,
+          "ID-ONLY": 0.3412337899208069,
+          "SHARED": 0.3767039179801941,
+          "OOD-ONLY": 0.7409730553627014
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 23.605146408081055,
+            "median_deg": 61.892234802246094,
+            "last_deg": 89.916748046875,
+            "mean_deg": 60.59800338745117
+          },
+          "EASY|SHARED": {
+            "first_deg": 41.38862991333008,
+            "median_deg": 73.16618347167969,
+            "last_deg": 89.94270324707031,
+            "mean_deg": 71.92550659179688
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 41.12653732299805,
+            "median_deg": 73.16014099121094,
+            "last_deg": 89.99392700195312,
+            "mean_deg": 72.19568634033203
+          }
+        }
+      },
+      "randproj": {
+        "cos_global": {
+          "EASY": 1.0,
+          "ID-ONLY": 1.0,
+          "SHARED": 0.9999999403953552,
+          "OOD-ONLY": 1.0
+        },
+        "principal_angles": {
+          "EASY|OOD-ONLY": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.0063003418035805225
+          },
+          "EASY|SHARED": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.008428022265434265
+          },
+          "OOD-ONLY|SHARED": {
+            "first_deg": 0.0,
+            "median_deg": 0.0,
+            "last_deg": 0.02797645330429077,
+            "mean_deg": 0.007464008871465921
+          }
+        }
+      }
+    },
+    "permutation": {
+      "0": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9523319602012634,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8936396241188049,
+            "OOD-ONLY": 0.954685628414154
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.8389787673950195,
+              "median_deg": 12.952401161193848,
+              "last_deg": 87.70973205566406,
+              "mean_deg": 19.046382904052734
+            },
+            "EASY|SHARED": {
+              "first_deg": 9.248602867126465,
+              "median_deg": 29.481990814208984,
+              "last_deg": 89.62614440917969,
+              "mean_deg": 36.01036071777344
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 9.40880298614502,
+              "median_deg": 30.055891036987305,
+              "last_deg": 89.8896255493164,
+              "mean_deg": 36.33371353149414
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9616332054138184,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9037500023841858,
+            "OOD-ONLY": 0.9587264657020569
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 2.274688243865967,
+              "median_deg": 12.888051986694336,
+              "last_deg": 87.6131820678711,
+              "mean_deg": 17.968191146850586
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.997868537902832,
+              "median_deg": 30.36989402770996,
+              "last_deg": 89.54116821289062,
+              "mean_deg": 35.96631622314453
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 4.996927738189697,
+              "median_deg": 30.787588119506836,
+              "last_deg": 89.88314819335938,
+              "mean_deg": 36.2382698059082
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.7761325836181641,
+            "ID-ONLY": NaN,
+            "SHARED": 0.44637545943260193,
+            "OOD-ONLY": 0.7529624104499817
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 22.213197708129883,
+              "median_deg": 61.642250061035156,
+              "last_deg": 89.96050262451172,
+              "mean_deg": 60.006526947021484
+            },
+            "EASY|SHARED": {
+              "first_deg": 36.15570068359375,
+              "median_deg": 72.24504852294922,
+              "last_deg": 89.99223327636719,
+              "mean_deg": 70.65505981445312
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 36.049827575683594,
+              "median_deg": 72.56212615966797,
+              "last_deg": 89.9499740600586,
+              "mean_deg": 70.93408966064453
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 1.0,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9999999403953552,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.006782348267734051
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.008627675473690033
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.008428022265434265
+            }
+          }
+        }
+      },
+      "1": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.950677216053009,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8834574818611145,
+            "OOD-ONLY": 0.9530336260795593
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.596700668334961,
+              "median_deg": 12.725048065185547,
+              "last_deg": 88.744140625,
+              "mean_deg": 19.126445770263672
+            },
+            "EASY|SHARED": {
+              "first_deg": 8.786707878112793,
+              "median_deg": 32.325984954833984,
+              "last_deg": 89.60063934326172,
+              "mean_deg": 38.28611755371094
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 9.150468826293945,
+              "median_deg": 32.791080474853516,
+              "last_deg": 89.15475463867188,
+              "mean_deg": 38.57268524169922
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9595718383789062,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8933374881744385,
+            "OOD-ONLY": 0.960801899433136
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 2.274430274963379,
+              "median_deg": 12.984082221984863,
+              "last_deg": 88.02261352539062,
+              "mean_deg": 18.019075393676758
+            },
+            "EASY|SHARED": {
+              "first_deg": 4.772861957550049,
+              "median_deg": 33.207054138183594,
+              "last_deg": 89.52113342285156,
+              "mean_deg": 38.249576568603516
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 4.826817989349365,
+              "median_deg": 33.46172332763672,
+              "last_deg": 89.49451446533203,
+              "mean_deg": 38.633323669433594
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.7593746781349182,
+            "ID-ONLY": NaN,
+            "SHARED": 0.44363340735435486,
+            "OOD-ONLY": 0.762711763381958
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 21.055204391479492,
+              "median_deg": 61.24604415893555,
+              "last_deg": 89.53685760498047,
+              "mean_deg": 59.97014236450195
+            },
+            "EASY|SHARED": {
+              "first_deg": 38.13066101074219,
+              "median_deg": 72.8281478881836,
+              "last_deg": 89.96769714355469,
+              "mean_deg": 71.22682189941406
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 40.142696380615234,
+              "median_deg": 72.89346313476562,
+              "last_deg": 89.9304428100586,
+              "mean_deg": 71.52240753173828
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 1.0,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.01978234015405178,
+              "mean_deg": 0.005818335339426994
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.010273349471390247
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.010273349471390247
+            }
+          }
+        }
+      },
+      "2": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9528419971466064,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8848006725311279,
+            "OOD-ONLY": 0.9554710984230042
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 5.021841526031494,
+              "median_deg": 12.998064041137695,
+              "last_deg": 88.67306518554688,
+              "mean_deg": 18.894792556762695
+            },
+            "EASY|SHARED": {
+              "first_deg": 8.704591751098633,
+              "median_deg": 29.969932556152344,
+              "last_deg": 89.34503173828125,
+              "mean_deg": 36.29620361328125
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 9.070731163024902,
+              "median_deg": 30.153303146362305,
+              "last_deg": 89.00684356689453,
+              "mean_deg": 36.55173873901367
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.960970938205719,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9053101539611816,
+            "OOD-ONLY": 0.9582858681678772
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 2.0814948081970215,
+              "median_deg": 12.774002075195312,
+              "last_deg": 87.92960357666016,
+              "mean_deg": 18.16754722595215
+            },
+            "EASY|SHARED": {
+              "first_deg": 5.248258590698242,
+              "median_deg": 30.357805252075195,
+              "last_deg": 89.85770416259766,
+              "mean_deg": 35.999961853027344
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 5.497612476348877,
+              "median_deg": 31.06120491027832,
+              "last_deg": 89.36396026611328,
+              "mean_deg": 36.424983978271484
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.7857232689857483,
+            "ID-ONLY": NaN,
+            "SHARED": 0.4662608206272125,
+            "OOD-ONLY": 0.7341484427452087
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 21.89902114868164,
+              "median_deg": 61.454185485839844,
+              "last_deg": 89.93647766113281,
+              "mean_deg": 60.047515869140625
+            },
+            "EASY|SHARED": {
+              "first_deg": 34.258480072021484,
+              "median_deg": 72.54782104492188,
+              "last_deg": 89.88226318359375,
+              "mean_deg": 70.81669616699219
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 34.73456573486328,
+              "median_deg": 72.56083679199219,
+              "last_deg": 89.97583770751953,
+              "mean_deg": 71.03942108154297
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 0.9999999403953552
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007264355197548866
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.006782348267734051
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009109682403504848
+            }
+          }
+        }
+      },
+      "3": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.9511783123016357,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8776335120201111,
+            "OOD-ONLY": 0.9526520371437073
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.695150852203369,
+              "median_deg": 12.961935997009277,
+              "last_deg": 89.53494262695312,
+              "mean_deg": 19.08997917175293
+            },
+            "EASY|SHARED": {
+              "first_deg": 10.051854133605957,
+              "median_deg": 33.1167106628418,
+              "last_deg": 89.47156524658203,
+              "mean_deg": 38.70417785644531
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 10.08045768737793,
+              "median_deg": 33.118675231933594,
+              "last_deg": 89.7627944946289,
+              "mean_deg": 39.07325744628906
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9611974954605103,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8811302185058594,
+            "OOD-ONLY": 0.9599912166595459
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 2.2831051349639893,
+              "median_deg": 12.605851173400879,
+              "last_deg": 86.07662963867188,
+              "mean_deg": 18.05409049987793
+            },
+            "EASY|SHARED": {
+              "first_deg": 5.470025062561035,
+              "median_deg": 33.51334762573242,
+              "last_deg": 89.7343521118164,
+              "mean_deg": 38.452762603759766
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 6.047663688659668,
+              "median_deg": 33.78179168701172,
+              "last_deg": 89.65645599365234,
+              "mean_deg": 38.948204040527344
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.7768864035606384,
+            "ID-ONLY": NaN,
+            "SHARED": 0.45258113741874695,
+            "OOD-ONLY": 0.7365912199020386
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 21.749597549438477,
+              "median_deg": 61.15571975708008,
+              "last_deg": 89.91818237304688,
+              "mean_deg": 59.85411834716797
+            },
+            "EASY|SHARED": {
+              "first_deg": 39.22772979736328,
+              "median_deg": 72.63668060302734,
+              "last_deg": 89.9342041015625,
+              "mean_deg": 71.1413803100586
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 40.45183563232422,
+              "median_deg": 72.9811019897461,
+              "last_deg": 89.99317169189453,
+              "mean_deg": 71.44713592529297
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 1.0,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 1.0
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.009109682403504848
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007464008871465921
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.006782348267734051
+            }
+          }
+        }
+      },
+      "4": {
+        "id": {
+          "cos_global": {
+            "EASY": 0.954220712184906,
+            "ID-ONLY": NaN,
+            "SHARED": 0.8888721466064453,
+            "OOD-ONLY": 0.954395592212677
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 4.789169788360596,
+              "median_deg": 12.88072395324707,
+              "last_deg": 89.04290771484375,
+              "mean_deg": 19.252756118774414
+            },
+            "EASY|SHARED": {
+              "first_deg": 10.158071517944336,
+              "median_deg": 30.88209342956543,
+              "last_deg": 89.7549057006836,
+              "mean_deg": 36.87538146972656
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 9.444832801818848,
+              "median_deg": 30.99150276184082,
+              "last_deg": 89.60990905761719,
+              "mean_deg": 37.29352569580078
+            }
+          }
+        },
+        "ood": {
+          "cos_global": {
+            "EASY": 0.9619259834289551,
+            "ID-ONLY": NaN,
+            "SHARED": 0.9073120355606079,
+            "OOD-ONLY": 0.9567883610725403
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 2.2975471019744873,
+              "median_deg": 13.02841854095459,
+              "last_deg": 87.97740936279297,
+              "mean_deg": 18.447830200195312
+            },
+            "EASY|SHARED": {
+              "first_deg": 5.907437324523926,
+              "median_deg": 31.479032516479492,
+              "last_deg": 89.82115173339844,
+              "mean_deg": 36.935089111328125
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 6.19957160949707,
+              "median_deg": 31.939834594726562,
+              "last_deg": 89.58808135986328,
+              "mean_deg": 37.30122756958008
+            }
+          }
+        },
+        "noise": {
+          "cos_global": {
+            "EASY": 0.7665271759033203,
+            "ID-ONLY": NaN,
+            "SHARED": 0.4944422245025635,
+            "OOD-ONLY": 0.7416422963142395
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 22.07118797302246,
+              "median_deg": 61.20604705810547,
+              "last_deg": 89.91839599609375,
+              "mean_deg": 60.102996826171875
+            },
+            "EASY|SHARED": {
+              "first_deg": 37.80609893798828,
+              "median_deg": 72.70645904541016,
+              "last_deg": 89.88442993164062,
+              "mean_deg": 70.97264099121094
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 38.42185592651367,
+              "median_deg": 72.94331359863281,
+              "last_deg": 89.92439270019531,
+              "mean_deg": 71.25531768798828
+            }
+          }
+        },
+        "randproj": {
+          "cos_global": {
+            "EASY": 0.9999999403953552,
+            "ID-ONLY": NaN,
+            "SHARED": 1.0,
+            "OOD-ONLY": 1.0
+          },
+          "principal_angles": {
+            "EASY|OOD-ONLY": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.0063003418035805225
+            },
+            "EASY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.0063003418035805225
+            },
+            "OOD-ONLY|SHARED": {
+              "first_deg": 0.0,
+              "median_deg": 0.0,
+              "last_deg": 0.02797645330429077,
+              "mean_deg": 0.007464008871465921
+            }
+          }
+        }
+      }
+    }
+  }
+}

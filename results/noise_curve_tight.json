@@ -1,0 +1,198 @@
+{
+  "MSMT": {
+    "noise_tgt30.0": {
+      "mAP_pct": 29.85240698973624,
+      "density": 0.07921355269197819,
+      "reciprocity_measured": 0.7373902998257753,
+      "reciprocity_null_mean": 0.12801414850532458,
+      "reciprocity_null_std": 0.0005071519463336272,
+      "reciprocity_chance_corrected": 0.6988372004842922,
+      "cc_ci95": [
+        0.6957441091403246,
+        0.7014936785570082
+      ]
+    },
+    "noise_tgt20.0": {
+      "mAP_pct": 20.171215312573327,
+      "density": 0.11893123915085294,
+      "reciprocity_measured": 0.7578076335713188,
+      "reciprocity_null_mean": 0.18116801928572004,
+      "reciprocity_null_std": 0.0003780597062501128,
+      "reciprocity_chance_corrected": 0.7042221455280568,
+      "cc_ci95": [
+        0.7011192868343081,
+        0.7071087700638354
+      ]
+    },
+    "noise_tgt10.0": {
+      "mAP_pct": 9.837126890879995,
+      "density": 0.18482093281658662,
+      "reciprocity_measured": 0.7992316470712763,
+      "reciprocity_null_mean": 0.26340132096086916,
+      "reciprocity_null_std": 0.00035172096425403017,
+      "reciprocity_chance_corrected": 0.7274386193705649,
+      "cc_ci95": [
+        0.7247364256885663,
+        0.7302781362895331
+      ]
+    },
+    "noise_tgt5.4": {
+      "mAP_pct": 5.451775972079881,
+      "density": 0.2236185196690934,
+      "reciprocity_measured": 0.828694793342837,
+      "reciprocity_null_mean": 0.3115152723319671,
+      "reciprocity_null_std": 0.0003700516267086949,
+      "reciprocity_chance_corrected": 0.7511851755413792,
+      "cc_ci95": [
+        0.7486108373739657,
+        0.7540903307365401
+      ]
+    },
+    "randproj_tgt30.0": {
+      "mAP_pct": 29.69720906041279,
+      "density": 0.07246262783526336,
+      "reciprocity_measured": 0.6889086901744644,
+      "reciprocity_null_mean": 0.12057355210475536,
+      "reciprocity_null_std": 0.0005614219606324563,
+      "reciprocity_chance_corrected": 0.6462565907926935,
+      "cc_ci95": [
+        0.6422267811690825,
+        0.6497250641623123
+      ]
+    },
+    "randproj_tgt20.0": {
+      "mAP_pct": 19.875513546437247,
+      "density": 0.10005225336209976,
+      "reciprocity_measured": 0.7134265239638392,
+      "reciprocity_null_mean": 0.15833592433630256,
+      "reciprocity_null_std": 0.00042001766717506873,
+      "reciprocity_chance_corrected": 0.6595156139815255,
+      "cc_ci95": [
+        0.6558371324792499,
+        0.6629325799853983
+      ]
+    },
+    "randproj_tgt10.0": {
+      "mAP_pct": 10.253546262834737,
+      "density": 0.1323349534583751,
+      "reciprocity_measured": 0.8056162085180186,
+      "reciprocity_null_mean": 0.19858286137115816,
+      "reciprocity_null_std": 0.0003368391292449118,
+      "reciprocity_chance_corrected": 0.7574499195081406,
+      "cc_ci95": [
+        0.7549771111124097,
+        0.7597550951566892
+      ]
+    },
+    "randproj_tgt5.4": {
+      "mAP_pct": 5.179469844213118,
+      "density": 0.1483005577469137,
+      "reciprocity_measured": 0.8236690007540011,
+      "reciprocity_null_mean": 0.21760131077961975,
+      "reciprocity_null_std": 0.00028814059075785826,
+      "reciprocity_chance_corrected": 0.7746276908749634,
+      "cc_ci95": [
+        0.7721087261948323,
+        0.7770610620489775
+      ]
+    }
+  },
+  "Market": {
+    "noise_tgt60.0": {
+      "mAP_pct": 59.84202601519044,
+      "density": 0.1654045393858478,
+      "reciprocity_measured": 0.7262688880278961,
+      "reciprocity_null_mean": 0.20236342502905852,
+      "reciprocity_null_std": 0.0015645359615323081,
+      "reciprocity_chance_corrected": 0.6568222664788457,
+      "cc_ci95": [
+        0.6450854147222862,
+        0.6674419505451583
+      ]
+    },
+    "noise_tgt45.0": {
+      "mAP_pct": 45.26416917916911,
+      "density": 0.2580080106809079,
+      "reciprocity_measured": 0.7869956394546559,
+      "reciprocity_null_mean": 0.31002649445272396,
+      "reciprocity_null_std": 0.001090284798270549,
+      "reciprocity_chance_corrected": 0.6912861742765146,
+      "cc_ci95": [
+        0.6796579284349724,
+        0.702296155132801
+      ]
+    },
+    "noise_tgt35.0": {
+      "mAP_pct": 34.70381196535927,
+      "density": 0.323820204717401,
+      "reciprocity_measured": 0.8320011434477148,
+      "reciprocity_null_mean": 0.38611040867261115,
+      "reciprocity_null_std": 0.0011950924111943275,
+      "reciprocity_chance_corrected": 0.7263370173958675,
+      "cc_ci95": [
+        0.7150694328870821,
+        0.7363413508215926
+      ]
+    },
+    "noise_tgt26.66": {
+      "mAP_pct": 26.64056387012801,
+      "density": 0.3732799287939475,
+      "reciprocity_measured": 0.8629786828174925,
+      "reciprocity_null_mean": 0.4441103533787973,
+      "reciprocity_null_std": 0.0009531729376217392,
+      "reciprocity_chance_corrected": 0.7535098593482579,
+      "cc_ci95": [
+        0.7435942492063695,
+        0.7628755616856535
+      ]
+    },
+    "randproj_tgt60.0": {
+      "mAP_pct": 59.856746288480466,
+      "density": 0.13005429461504228,
+      "reciprocity_measured": 0.7436283500780202,
+      "reciprocity_null_mean": 0.1687727558925785,
+      "reciprocity_null_std": 0.0018815540628740073,
+      "reciprocity_chance_corrected": 0.6915745342330859,
+      "cc_ci95": [
+        0.679104609893955,
+        0.7011083037798149
+      ]
+    },
+    "randproj_tgt45.0": {
+      "mAP_pct": 45.27804863040471,
+      "density": 0.1665776591010236,
+      "reciprocity_measured": 0.8053005610472883,
+      "reciprocity_null_mean": 0.21067165375367353,
+      "reciprocity_null_std": 0.001626790658355858,
+      "reciprocity_chance_corrected": 0.7533353009826513,
+      "cc_ci95": [
+        0.7455468443282791,
+        0.7589970332368117
+      ]
+    },
+    "randproj_tgt35.0": {
+      "mAP_pct": 34.787749414733874,
+      "density": 0.1860436137071651,
+      "reciprocity_measured": 0.8234044589034543,
+      "reciprocity_null_mean": 0.2380796096067362,
+      "reciprocity_null_std": 0.0014582320922200457,
+      "reciprocity_chance_corrected": 0.7682231066090824,
+      "cc_ci95": [
+        0.7621352182613508,
+        0.7735303393153333
+      ]
+    },
+    "randproj_tgt26.66": {
+      "mAP_pct": 26.13810889985919,
+      "density": 0.2031295060080107,
+      "reciprocity_measured": 0.8471623374347109,
+      "reciprocity_null_mean": 0.2621165912994706,
+      "reciprocity_null_std": 0.0014519995172698474,
+      "reciprocity_chance_corrected": 0.7928701733049559,
+      "cc_ci95": [
+        0.7864096862805835,
+        0.7978726185316959
+      ]
+    }
+  }
+}

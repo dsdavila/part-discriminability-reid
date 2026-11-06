@@ -1,0 +1,111 @@
+{
+  "bot_market_on_market": {
+    "label": "BoT-Market / Market",
+    "n": 16483,
+    "n_ids": 750,
+    "n_cams": 6,
+    "eff_rank": 261.201171875,
+    "hubness_matched": 0.5369440595809426,
+    "identity_r2": 0.6291658004192258,
+    "camera_r2": 0.006080792600963404,
+    "ratio": 103.467558759356
+  },
+  "bot_market_on_msmt17": {
+    "label": "BoT-Market / MSMT17",
+    "n": 93787,
+    "n_ids": 3059,
+    "n_cams": 15,
+    "eff_rank": 133.30162048339844,
+    "hubness_matched": 1.9330762598417035,
+    "identity_r2": 0.29498258475937045,
+    "camera_r2": 0.09476377164440968,
+    "ratio": 3.112819894274155
+  },
+  "bot_msmt_on_market": {
+    "label": "BoT-MSMT17 / Market (avg 2 seeds)",
+    "n": 16483,
+    "n_ids": 750,
+    "n_cams": 6,
+    "n_seeds": 2,
+    "eff_rank": 207.22713470458984,
+    "eff_rank_std": 1.6353683471679688,
+    "hubness_matched": 1.7503433080587376,
+    "hubness_matched_std": 0.06614318629330107,
+    "identity_r2": 0.4595035735605453,
+    "identity_r2_std": 0.0015522921105019238,
+    "camera_r2": 0.024762090437084536,
+    "camera_r2_std": 9.330471907311767e-05,
+    "ratio": 18.556755705704376,
+    "ratio_std": 0.007234473827551824
+  },
+  "bot_msmt_on_msmt17": {
+    "label": "BoT-MSMT17 / MSMT17 (avg 2 seeds)",
+    "n": 93787,
+    "n_ids": 3059,
+    "n_cams": 15,
+    "n_seeds": 2,
+    "eff_rank": 359.9066467285156,
+    "eff_rank_std": 0.00152587890625,
+    "hubness_matched": 0.6529209801893727,
+    "hubness_matched_std": 0.021359695810184487,
+    "identity_r2": 0.4660317910487103,
+    "identity_r2_std": 3.136112019311299e-05,
+    "camera_r2": 0.013657344047071137,
+    "camera_r2_std": 2.5096735205607824e-05,
+    "ratio": 34.123258484677336,
+    "ratio_std": 0.06500113416375441
+  },
+  "per_seed": {
+    "market": [
+      {
+        "label": "BoT-MSMT s42 / Market",
+        "n": 16483,
+        "n_ids": 750,
+        "n_cams": 6,
+        "eff_rank": 208.8625030517578,
+        "hubness_matched": 1.6842001217654365,
+        "identity_r2": 0.4579512814500433,
+        "camera_r2": 0.02466878571801142,
+        "ratio": 18.563990179531928
+      },
+      {
+        "label": "BoT-MSMT s123 / Market",
+        "n": 16483,
+        "n_ids": 750,
+        "n_cams": 6,
+        "eff_rank": 205.59176635742188,
+        "hubness_matched": 1.8164864943520387,
+        "identity_r2": 0.46105586567104717,
+        "camera_r2": 0.024855395156157655,
+        "ratio": 18.549521231876824
+      }
+    ],
+    "msmt17": [
+      {
+        "label": "BoT-MSMT s42 / MSMT17",
+        "n": 93787,
+        "n_ids": 3059,
+        "n_cams": 15,
+        "eff_rank": 359.9081726074219,
+        "hubness_matched": 0.6315612843791882,
+        "identity_r2": 0.4660631521689034,
+        "camera_r2": 0.01363224731186553,
+        "ratio": 34.18825961884109
+      },
+      {
+        "label": "BoT-MSMT s123 / MSMT17",
+        "n": 93787,
+        "n_ids": 3059,
+        "n_cams": 15,
+        "eff_rank": 359.9051208496094,
+        "hubness_matched": 0.6742806759995572,
+        "identity_r2": 0.4660004299285172,
+        "camera_r2": 0.013682440782276746,
+        "ratio": 34.05825735051358
+      }
+    ]
+  },
+  "flip_rank_bot_msmt": true,
+  "flip_hub_bot_msmt": true,
+  "note": "flip_rank_bot_msmt=True: BoT-MSMT17 shows lower eff. rank on Market (OOD) than MSMT17 (in-domain) \u2014 collapse tracks out-of-domain, architecture-independent."
+}

@@ -1,0 +1,297 @@
+{
+  "protocol": "angular cap: centroid direction u_i + angular radius r_i at percentile p of arccos(x.u_i) in degrees; intersection: arccos(u_i.u_j) < r_i+r_j; containment of test in train: arccos(u_i.u_j)+r_i < r_j",
+  "prototype_source": {
+    "A_and_B": "Market-train under BoT-Market: bot_market_market_train.npz (751 training IDs)",
+    "C_and_D": "MSMT17-train under BoT-MSMT17: bot_msmt_msmt_train.npz (1041 training IDs)"
+  },
+  "percentiles_reported": [
+    75,
+    90,
+    95
+  ],
+  "cache": "e12_feature_cache + e18_train_cache",
+  "Q1_test_vs_test": {
+    "A": {
+      "p75": {
+        "intersection_rate": 0.9906666666666667,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 87.672,
+        "median_intersection_count": 52.0,
+        "intersects_none_frac": 0.009333333333333334,
+        "intersects_exactly_one_frac": 0.004,
+        "intersects_several_frac": 0.9866666666666667,
+        "max_intersection_count": 622,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 287.168,
+        "median_intersection_count": 252.5,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0013333333333333333,
+        "intersects_several_frac": 0.9986666666666667,
+        "max_intersection_count": 749,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 417.14933333333335,
+        "median_intersection_count": 418.5,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 749,
+        "mean_max_depth_deg": 0.0
+      }
+    },
+    "B": {
+      "p75": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.012095456031382805,
+        "mean_intersection_count": 3041.0683229813662,
+        "median_intersection_count": 3057.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.03950733348148374
+      },
+      "p90": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.02615233736515201,
+        "mean_intersection_count": 3056.9676364825104,
+        "median_intersection_count": 3058.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.14453167890094193
+      },
+      "p95": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.03040209218698921,
+        "mean_intersection_count": 3057.7332461588753,
+        "median_intersection_count": 3058.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.1583220439018226
+      }
+    },
+    "C": {
+      "p75": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 646.7893333333334,
+        "median_intersection_count": 694.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 749,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 717.0426666666667,
+        "median_intersection_count": 740.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 749,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 730.4506666666666,
+        "median_intersection_count": 745.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 749,
+        "mean_max_depth_deg": 0.0
+      }
+    },
+    "D": {
+      "p75": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 2465.0389016018307,
+        "median_intersection_count": 2691.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 2958.4243216737495,
+        "median_intersection_count": 3040.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 1.0,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 3025.510951291272,
+        "median_intersection_count": 3056.0,
+        "intersects_none_frac": 0.0,
+        "intersects_exactly_one_frac": 0.0,
+        "intersects_several_frac": 1.0,
+        "max_intersection_count": 3058,
+        "mean_max_depth_deg": 0.0
+      }
+    }
+  },
+  "Q2Q3_test_vs_train": {
+    "A": {
+      "p75": {
+        "intersection_rate": 0.832,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 6.272,
+        "median_intersection_count": 2.0,
+        "intersects_none_frac": 0.168,
+        "intersects_exactly_one_frac": 0.20133333333333334,
+        "intersects_several_frac": 0.6306666666666667,
+        "max_intersection_count": 166,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 0.9666666666666667,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 39.83733333333333,
+        "median_intersection_count": 10.0,
+        "intersects_none_frac": 0.03333333333333333,
+        "intersects_exactly_one_frac": 0.068,
+        "intersects_several_frac": 0.8986666666666666,
+        "max_intersection_count": 751,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 0.988,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 91.86666666666666,
+        "median_intersection_count": 28.5,
+        "intersects_none_frac": 0.012,
+        "intersects_exactly_one_frac": 0.02666666666666667,
+        "intersects_several_frac": 0.9613333333333334,
+        "max_intersection_count": 751,
+        "mean_max_depth_deg": 0.0
+      }
+    },
+    "B": {
+      "p75": {
+        "intersection_rate": 0.9555410264792416,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 105.10330173259236,
+        "median_intersection_count": 48.0,
+        "intersects_none_frac": 0.044458973520758414,
+        "intersects_exactly_one_frac": 0.04086302713305002,
+        "intersects_several_frac": 0.9146779993461915,
+        "max_intersection_count": 682,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 0.9960771493952272,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 361.43118666230794,
+        "median_intersection_count": 364.0,
+        "intersects_none_frac": 0.003922850604772802,
+        "intersects_exactly_one_frac": 0.006211180124223602,
+        "intersects_several_frac": 0.9898659692710036,
+        "max_intersection_count": 751,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 0.998365478914678,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 494.14939522719845,
+        "median_intersection_count": 571.0,
+        "intersects_none_frac": 0.0016345210853220007,
+        "intersects_exactly_one_frac": 0.0013076168682576005,
+        "intersects_several_frac": 0.9970578620464204,
+        "max_intersection_count": 751,
+        "mean_max_depth_deg": 0.0
+      }
+    },
+    "C": {
+      "p75": {
+        "intersection_rate": 0.8853333333333333,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 14.129333333333333,
+        "median_intersection_count": 4.0,
+        "intersects_none_frac": 0.11466666666666667,
+        "intersects_exactly_one_frac": 0.15333333333333332,
+        "intersects_several_frac": 0.732,
+        "max_intersection_count": 392,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 0.9746666666666667,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 108.57066666666667,
+        "median_intersection_count": 35.0,
+        "intersects_none_frac": 0.025333333333333333,
+        "intersects_exactly_one_frac": 0.04933333333333333,
+        "intersects_several_frac": 0.9253333333333333,
+        "max_intersection_count": 974,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 0.9946666666666667,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 243.81066666666666,
+        "median_intersection_count": 121.5,
+        "intersects_none_frac": 0.005333333333333333,
+        "intersects_exactly_one_frac": 0.02266666666666667,
+        "intersects_several_frac": 0.972,
+        "max_intersection_count": 1028,
+        "mean_max_depth_deg": 0.0
+      }
+    },
+    "D": {
+      "p75": {
+        "intersection_rate": 0.9519450800915332,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 50.556390977443606,
+        "median_intersection_count": 12.0,
+        "intersects_none_frac": 0.04805491990846682,
+        "intersects_exactly_one_frac": 0.08924485125858124,
+        "intersects_several_frac": 0.8627002288329519,
+        "max_intersection_count": 1011,
+        "mean_max_depth_deg": 0.0
+      },
+      "p90": {
+        "intersection_rate": 0.9954233409610984,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 275.82804838182415,
+        "median_intersection_count": 129.0,
+        "intersects_none_frac": 0.004576659038901602,
+        "intersects_exactly_one_frac": 0.011114743380189604,
+        "intersects_several_frac": 0.9843085975809088,
+        "max_intersection_count": 1041,
+        "mean_max_depth_deg": 0.0
+      },
+      "p95": {
+        "intersection_rate": 0.998365478914678,
+        "containment_rate_A_in_B": 0.0,
+        "mean_intersection_count": 476.9895390650539,
+        "median_intersection_count": 421.0,
+        "intersects_none_frac": 0.0016345210853220007,
+        "intersects_exactly_one_frac": 0.0032690421706440013,
+        "intersects_several_frac": 0.995096436744034,
+        "max_intersection_count": 1041,
+        "mean_max_depth_deg": 0.0
+      }
+    }
+  }
+}

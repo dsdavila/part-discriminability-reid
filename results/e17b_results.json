@@ -1,0 +1,595 @@
+{
+  "description": "E17b rank sweep with top-k retention and spectral sharpening",
+  "reference": {
+    "map": {
+      "A": 85.84,
+      "B": 2.56,
+      "C": 26.66,
+      "D": 41.62
+    },
+    "eff_rank": {
+      "A": 261.2,
+      "B": 133.3,
+      "C": 208.86,
+      "D": 359.91
+    },
+    "cell_c_note": "208.86 = seed42 value; reference 207.2 = 2-seed average from compute_bot_msmt_2x2.py"
+  },
+  "decisive_targets": {
+    "D_to_B_eff_rank": 133.3,
+    "A_to_C_eff_rank": 208.86
+  },
+  "harness_gate_passed": true,
+  "results": [
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 2048,
+      "effective_rank": 261.2009952817248,
+      "map_pct": 85.84041244712758,
+      "r1_pct": 94.53681710213777
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 1024,
+      "effective_rank": 232.6402024276377,
+      "map_pct": 85.91369107023777,
+      "r1_pct": 94.56650831353919
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 512,
+      "effective_rank": 195.39062557403074,
+      "map_pct": 86.01993203983311,
+      "r1_pct": 94.53681710213777
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 256,
+      "effective_rank": 156.31545376724756,
+      "map_pct": 86.02976480050725,
+      "r1_pct": 94.53681710213777
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 128,
+      "effective_rank": 109.95015589523165,
+      "map_pct": 85.90456297829843,
+      "r1_pct": 94.18052256532067
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 64,
+      "effective_rank": 60.929510740841664,
+      "map_pct": 84.15961124074039,
+      "r1_pct": 93.55700712589073
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 32,
+      "effective_rank": 31.445778949905414,
+      "map_pct": 78.12694042027165,
+      "r1_pct": 90.38004750593825
+    },
+    {
+      "cell": "A",
+      "instrument": "top_k_retention",
+      "k": 16,
+      "effective_rank": 15.894898502975314,
+      "map_pct": 62.98629360786324,
+      "r1_pct": 80.25534441805226
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.0,
+      "effective_rank": 261.2009952817248,
+      "effective_rank_analytic": 259.67113180884587,
+      "map_pct": 85.84041244712758,
+      "r1_pct": 94.53681710213777
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.2,
+      "effective_rank": 178.68621736340893,
+      "effective_rank_analytic": 176.50804060879986,
+      "map_pct": 86.02986012867973,
+      "r1_pct": 94.38836104513064
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.5,
+      "effective_rank": 123.4284722130912,
+      "effective_rank_analytic": 120.36901224073259,
+      "map_pct": 85.94340222789928,
+      "r1_pct": 94.23990498812351
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 2.0,
+      "effective_rank": 85.58716371867627,
+      "effective_rank_analytic": 80.96907343931977,
+      "map_pct": 85.30818389596296,
+      "r1_pct": 94.18052256532067
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 3.0,
+      "effective_rank": 53.249094949933905,
+      "effective_rank_analytic": 45.805882961019066,
+      "map_pct": 82.77695312632564,
+      "r1_pct": 93.08194774346794
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 5.0,
+      "effective_rank": 26.332343894871,
+      "effective_rank_analytic": 16.868913895247935,
+      "map_pct": 73.38534736980196,
+      "r1_pct": 88.89548693586698
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 10.0,
+      "effective_rank": 7.869897217846542,
+      "effective_rank_analytic": 2.8752250407644495,
+      "map_pct": 38.77183308312777,
+      "r1_pct": 69.35866983372921
+    },
+    {
+      "cell": "A",
+      "instrument": "spectral_sharpening",
+      "gamma": 20.0,
+      "effective_rank": 1.0,
+      "effective_rank_analytic": 1.1622608678170823,
+      "map_pct": 0.7511459016948115,
+      "r1_pct": 0.29691211401425177
+    },
+    {
+      "cell": "A",
+      "instrument": "decisive_test",
+      "target_eff_rank": 208.86,
+      "gamma": 1.1042177609665487,
+      "effective_rank": 210.74612452853154,
+      "effective_rank_analytic": 208.85991272543185,
+      "map_pct": 85.97002454942995,
+      "r1_pct": 94.47743467933492,
+      "decisive_gap_pp": 59.31040870190384,
+      "decisive_ratio": 3.2247285572724254,
+      "decisive_verdict": "IN_DOMAIN_DOMINATES"
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 2048,
+      "effective_rank": 133.30161773457877,
+      "map_pct": 2.5614186845882667,
+      "r1_pct": 7.953667953667953
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 1024,
+      "effective_rank": 118.74190656551345,
+      "map_pct": 2.551438872872168,
+      "r1_pct": 7.902187902187902
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 512,
+      "effective_rank": 100.8753984556932,
+      "map_pct": 2.5087827059473935,
+      "r1_pct": 7.773487773487774
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 256,
+      "effective_rank": 82.13437404173499,
+      "map_pct": 2.4263649292766907,
+      "r1_pct": 7.4388674388674385
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 128,
+      "effective_rank": 61.511176114918015,
+      "map_pct": 2.237764120096391,
+      "r1_pct": 6.924066924066924
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 64,
+      "effective_rank": 40.17072376036814,
+      "map_pct": 1.7681988612204638,
+      "r1_pct": 5.293865293865293
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 32,
+      "effective_rank": 23.64215777307219,
+      "map_pct": 1.1110806900686367,
+      "r1_pct": 3.6465036465036467
+    },
+    {
+      "cell": "B",
+      "instrument": "top_k_retention",
+      "k": 16,
+      "effective_rank": 13.213620185988539,
+      "map_pct": 0.5141030033573541,
+      "r1_pct": 1.4328614328614329
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.0,
+      "effective_rank": 133.30161773457877,
+      "effective_rank_analytic": 133.296040266454,
+      "map_pct": 2.5614186845882667,
+      "r1_pct": 7.953667953667953
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.2,
+      "effective_rank": 69.19785826703824,
+      "effective_rank_analytic": 63.382712536533035,
+      "map_pct": 1.950440306511266,
+      "r1_pct": 6.229086229086229
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.5,
+      "effective_rank": 33.094770444783805,
+      "effective_rank_analytic": 25.873694957310345,
+      "map_pct": 1.3007999537967552,
+      "r1_pct": 4.444444444444445
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 2.0,
+      "effective_rank": 13.77982255869478,
+      "effective_rank_analytic": 8.5104333036271,
+      "map_pct": 0.7002991268624048,
+      "r1_pct": 2.8228228228228227
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 3.0,
+      "effective_rank": 4.688216059176554,
+      "effective_rank_analytic": 2.4903987334867965,
+      "map_pct": 0.29835904417293435,
+      "r1_pct": 1.2526812526812527
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 5.0,
+      "effective_rank": 1.9912841755067303,
+      "effective_rank_analytic": 1.243217593424728,
+      "map_pct": 0.1352636513531687,
+      "r1_pct": 0.4375804375804376
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 10.0,
+      "effective_rank": 1.2163215009522386,
+      "effective_rank_analytic": 1.0121448575271128,
+      "map_pct": 0.08438281048178453,
+      "r1_pct": 0.15444015444015444
+    },
+    {
+      "cell": "B",
+      "instrument": "spectral_sharpening",
+      "gamma": 20.0,
+      "effective_rank": 1.0000371924334477,
+      "effective_rank_analytic": 1.0000352587952615,
+      "map_pct": 0.07749907389506841,
+      "r1_pct": 0.05148005148005148
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 2048,
+      "effective_rank": 208.86250699543487,
+      "map_pct": 26.65961584752611,
+      "r1_pct": 53.85985748218527
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 1024,
+      "effective_rank": 186.59671735024108,
+      "map_pct": 26.69126116764574,
+      "r1_pct": 53.770783847980994
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 512,
+      "effective_rank": 153.06390078811842,
+      "map_pct": 26.621179488157498,
+      "r1_pct": 53.295724465558195
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 256,
+      "effective_rank": 118.21424494105467,
+      "map_pct": 26.25550779060602,
+      "r1_pct": 52.22684085510689
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 128,
+      "effective_rank": 81.07481644134454,
+      "map_pct": 25.362947037887935,
+      "r1_pct": 50.53444180522565
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 64,
+      "effective_rank": 48.70390791281569,
+      "map_pct": 22.855626170941875,
+      "r1_pct": 46.080760095011875
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 32,
+      "effective_rank": 27.318183597653174,
+      "map_pct": 18.468770860257973,
+      "r1_pct": 38.034441805225654
+    },
+    {
+      "cell": "C",
+      "instrument": "top_k_retention",
+      "k": 16,
+      "effective_rank": 14.736057126058688,
+      "map_pct": 12.262082232429975,
+      "r1_pct": 25.504750593824227
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.0,
+      "effective_rank": 208.86250699543487,
+      "effective_rank_analytic": 207.95147083196932,
+      "map_pct": 26.65961584752611,
+      "r1_pct": 53.85985748218527
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.2,
+      "effective_rank": 120.18134369701373,
+      "effective_rank_analytic": 115.34728389979851,
+      "map_pct": 25.080684087282457,
+      "r1_pct": 51.306413301662715
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.5,
+      "effective_rank": 63.909212012147925,
+      "effective_rank_analytic": 57.25629214603871,
+      "map_pct": 22.619989301090783,
+      "r1_pct": 47.47624703087886
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 2.0,
+      "effective_rank": 30.798064300998462,
+      "effective_rank_analytic": 24.768709939574386,
+      "map_pct": 18.6030448792292,
+      "r1_pct": 40.736342042755346
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 3.0,
+      "effective_rank": 12.745446228916398,
+      "effective_rank_analytic": 9.119395516572387,
+      "map_pct": 12.231595443486167,
+      "r1_pct": 29.483372921615203
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 5.0,
+      "effective_rank": 5.772397159666897,
+      "effective_rank_analytic": 3.8555404888532614,
+      "map_pct": 6.0835339916134785,
+      "r1_pct": 15.380047505938244
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 10.0,
+      "effective_rank": 2.7523524962974015,
+      "effective_rank_analytic": 1.8413062631930293,
+      "map_pct": 2.704535258614502,
+      "r1_pct": 6.324228028503563
+    },
+    {
+      "cell": "C",
+      "instrument": "spectral_sharpening",
+      "gamma": 20.0,
+      "effective_rank": 1.2119848555188606,
+      "effective_rank_analytic": 1.2117510977923567,
+      "map_pct": 0.5978617099888742,
+      "r1_pct": 0.2672209026128266
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 2048,
+      "effective_rank": 359.9082546562746,
+      "map_pct": 41.624584720826384,
+      "r1_pct": 70.999570999571
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 1024,
+      "effective_rank": 311.06616706121366,
+      "map_pct": 41.67277384889089,
+      "r1_pct": 70.86229086229086
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 512,
+      "effective_rank": 247.4928265596141,
+      "map_pct": 41.631782573600724,
+      "r1_pct": 70.75075075075074
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 256,
+      "effective_rank": 185.20605727351767,
+      "map_pct": 41.446848883851686,
+      "r1_pct": 70.6048906048906
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 128,
+      "effective_rank": 117.1910478268648,
+      "map_pct": 40.856700007190064,
+      "r1_pct": 69.89274989274989
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 64,
+      "effective_rank": 62.15771580800643,
+      "map_pct": 36.965859480119214,
+      "r1_pct": 65.61132561132561
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 32,
+      "effective_rank": 31.610347020681587,
+      "map_pct": 28.59712208510956,
+      "r1_pct": 55.80437580437581
+    },
+    {
+      "cell": "D",
+      "instrument": "top_k_retention",
+      "k": 16,
+      "effective_rank": 15.904210984313696,
+      "map_pct": 14.199133017213336,
+      "r1_pct": 33.33333333333333
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.0,
+      "effective_rank": 359.9082546562746,
+      "effective_rank_analytic": 359.4843156456054,
+      "map_pct": 41.624584720826384,
+      "r1_pct": 70.999570999571
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.2,
+      "effective_rank": 249.40733294348246,
+      "effective_rank_analytic": 247.8886907725392,
+      "map_pct": 41.55109501373853,
+      "r1_pct": 70.61347061347061
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 1.5,
+      "effective_rank": 170.10052736612116,
+      "effective_rank_analytic": 167.68110658800992,
+      "map_pct": 41.09698104138894,
+      "r1_pct": 70.24453024453024
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 2.0,
+      "effective_rank": 115.58250010926601,
+      "effective_rank_analytic": 112.03364245893154,
+      "map_pct": 39.70721750295644,
+      "r1_pct": 69.21492921492921
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 3.0,
+      "effective_rank": 71.77809511800781,
+      "effective_rank_analytic": 65.93282075208191,
+      "map_pct": 35.40229259077674,
+      "r1_pct": 65.41398541398542
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 5.0,
+      "effective_rank": 35.124311050624705,
+      "effective_rank_analytic": 26.365123379776364,
+      "map_pct": 24.654101732564406,
+      "r1_pct": 55.7957957957958
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 10.0,
+      "effective_rank": 9.447719820981266,
+      "effective_rank_analytic": 4.013198021713795,
+      "map_pct": 7.913025017046378,
+      "r1_pct": 30.82797082797083
+    },
+    {
+      "cell": "D",
+      "instrument": "spectral_sharpening",
+      "gamma": 20.0,
+      "effective_rank": 1.0,
+      "effective_rank_analytic": 1.214478263840897,
+      "map_pct": 0.09622067975884481,
+      "r1_pct": 0.05148005148005148
+    },
+    {
+      "cell": "D",
+      "instrument": "decisive_test",
+      "target_eff_rank": 133.3,
+      "gamma": 1.7539259062420414,
+      "effective_rank": 136.29986518365823,
+      "effective_rank_analytic": 133.30040192712434,
+      "map_pct": 40.46966536413274,
+      "r1_pct": 69.83268983268984,
+      "decisive_gap_pp": 37.90824667954447,
+      "decisive_ratio": 15.799707251154842,
+      "decisive_verdict": "IN_DOMAIN_DOMINATES"
+    }
+  ]
+}

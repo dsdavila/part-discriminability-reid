@@ -1,0 +1,58 @@
+{
+  "MSMT": {
+    "eval": "MSMT",
+    "id_cell": "D",
+    "ood_cell": "B'",
+    "class_counts": {
+      "SHARED": 692,
+      "OOD-ONLY": 2138,
+      "EASY": 228,
+      "ID-ONLY": 1
+    },
+    "null_share_SHARED": 0.2262177182085649,
+    "OOD-ONLY_confusers_share_in_SHARED": {
+      "n": 2138,
+      "mean": 0.22304381960659533,
+      "median": 0.21606265356265358
+    },
+    "EASY_confusers_share_in_SHARED": {
+      "n": 228,
+      "mean": 0.14123584159296934,
+      "median": 0.1307911617961511
+    },
+    "SHARED_confusers_share_in_SHARED": {
+      "n": 692,
+      "mean": 0.3111083224132756,
+      "median": 0.30741758241758244
+    },
+    "OOD-ONLY_ratio_to_null": 0.9859697170181722
+  },
+  "Market": {
+    "eval": "Market",
+    "id_cell": "A'",
+    "ood_cell": "C",
+    "class_counts": {
+      "EASY": 396,
+      "OOD-ONLY": 331,
+      "SHARED": 22,
+      "ID-ONLY": 1
+    },
+    "null_share_SHARED": 0.029333333333333333,
+    "OOD-ONLY_confusers_share_in_SHARED": {
+      "n": 331,
+      "mean": 0.016878533883962134,
+      "median": 0.0
+    },
+    "EASY_confusers_share_in_SHARED": {
+      "n": 395,
+      "mean": 0.017665954239182137,
+      "median": 0.0
+    },
+    "SHARED_confusers_share_in_SHARED": {
+      "n": 22,
+      "mean": 0.03471134941723177,
+      "median": 0.0
+    },
+    "OOD-ONLY_ratio_to_null": 0.5754045642259819
+  }
+}

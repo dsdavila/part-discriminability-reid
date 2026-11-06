@@ -1,0 +1,71 @@
+{
+  "direction": "Market->MSMT17",
+  "protocol": "standard (official MSMT17 query + gallery, no halving)",
+  "n_queries": 11655,
+  "n_gallery": 82132,
+  "tuning": {
+    "k": 15,
+    "alpha": 3.0,
+    "source": "half-A of MSMT17 test, same split as compute_e14_fullquery.py (RNG seed=42)"
+  },
+  "baseline_map": 0.025614,
+  "removal": {
+    "k": 15,
+    "map": 0.026397,
+    "delta": 0.000783,
+    "ci": [
+      0.000575,
+      0.00098
+    ],
+    "significant": true,
+    "ci_id_level": [
+      0.000521,
+      0.001048
+    ],
+    "significant_id_level": true,
+    "n_ids": 3059,
+    "ci_note": "image-level ci: [0.000575, 0.000980]; ci_id_level resamples IDs \u2014 the independent unit"
+  },
+  "reweight": {
+    "alpha": 3.0,
+    "map": 0.025865,
+    "delta": 0.000251,
+    "ci": [
+      0.000188,
+      0.000313
+    ],
+    "significant": true,
+    "ci_id_level": [
+      0.000169,
+      0.000337
+    ],
+    "significant_id_level": true,
+    "ci_note": "image-level ci: [0.000575, 0.000980]; ci_id_level resamples IDs \u2014 the independent unit"
+  },
+  "comparison": {
+    "e14_fullquery_baseline": 0.034121,
+    "e14_fullquery_n_queries": 46455,
+    "e14_fullquery_n_gallery": 46455,
+    "note": "full-query uses half-B (46455) as both query and gallery; standard uses 11655 query vs 82132 gallery"
+  },
+  "junk_exclusion": {
+    "self_excluded": true,
+    "same_id_same_cam": "excluded (standard mAP protocol)",
+    "invalid_pids": "excluded (g_pids <= 0)",
+    "cache_vs_canonical": {
+      "query": {
+        "canonical": 11659,
+        "cache": 11655,
+        "diff": 4,
+        "reason": "4 junk query images (person_id=0, is_junk=True) excluded at cache time"
+      },
+      "gallery": {
+        "canonical": 82161,
+        "cache": 82132,
+        "diff": 29,
+        "reason": "29 junk gallery images (person_id<=0, is_junk=True) excluded at cache time"
+      }
+    },
+    "map_equivalence": "mAP is identical to canonical protocol. Junk queries (person_id=0): dropped from the valid-query denominator by the standard evaluator (num_valid_q is decremented, not averaged as zeros \u2014 averaging as zeros would give 2.56 x 11655/11659 = 2.55912%, a 0.00088pp difference). Junk gallery images: removed before true-positive positions are computed under both protocols, so AP over valid items is identical whether exclusion happens at cache time or at eval time."
+  }
+}

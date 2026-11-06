@@ -1,0 +1,47 @@
+{
+  "Market": {
+    "C_real": {
+      "label": "Market C (real transfer MSMT\u2192Market)",
+      "mAP_baseline": 26.6596158475261,
+      "R1_baseline": 53.85985970497131,
+      "mAP_rerank": 37.16216073719873,
+      "R1_rerank": 56.5914511680603,
+      "delta_mAP": 10.502544889672631,
+      "delta_R1": 2.7315914630889893
+    },
+    "noise_A": {
+      "label": "Market noise-A' at \u03c3=0.062",
+      "mAP_baseline": 26.640563822488282,
+      "R1_baseline": 57.92755484580994,
+      "mAP_rerank": 59.35104828439462,
+      "R1_rerank": 72.17933535575867,
+      "delta_mAP": 32.71048446190634,
+      "delta_R1": 14.25178050994873
+    }
+  },
+  "MSMT": {
+    "B_real": {
+      "label": "MSMT B' (real transfer Market\u2192MSMT)",
+      "mAP_baseline": 5.396395099357931,
+      "R1_baseline": 15.498755872249603,
+      "mAP_rerank": 9.035066216839507,
+      "R1_rerank": 19.058237969875336,
+      "delta_mAP": 3.638671117481576,
+      "delta_R1": 3.5594820976257324
+    },
+    "noise_D": {
+      "label": "MSMT noise-D at \u03c3=0.0625",
+      "mAP_baseline": 5.45177597177599,
+      "R1_baseline": 23.00368845462799,
+      "mAP_rerank": 14.590920963149129,
+      "R1_rerank": 30.105498433113098,
+      "delta_mAP": 9.13914499137314,
+      "delta_R1": 7.101809978485107
+    }
+  },
+  "params": {
+    "k1": 20,
+    "k2": 6,
+    "lambda": 0.3
+  }
+}

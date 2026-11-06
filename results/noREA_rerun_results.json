@@ -1,0 +1,210 @@
+{
+  "cells_used": {
+    "A'": "market_test_noREA.npz",
+    "C": "bot_msmt_seed42_market.npz",
+    "D": "bot_msmt_seed42_msmt.npz",
+    "B'": "msmt17_test_noREA.npz"
+  },
+  "e29": {
+    "MSMT": {
+      "eval": "MSMT",
+      "m1": "D",
+      "m2": "B'",
+      "per_k": {
+        "10": {
+          "n_matched_ids": 3053,
+          "jaccard_mean": 0.1107756946875291,
+          "null_jaccard_mean": 0.008685436887875816,
+          "ratio_to_null": 12.754187972071183,
+          "shared_frac_of_m2_mean": 0.13859909934310768,
+          "per_identity_frac_of_ceiling_mean": 0.3872258152580654,
+          "per_identity_frac_of_ceiling_median": 0.37142857142857144
+        },
+        "50": {
+          "n_matched_ids": 3059,
+          "jaccard_mean": 0.1785378734057639,
+          "null_jaccard_mean": 0.03258340955356965,
+          "ratio_to_null": 5.479410407073385,
+          "shared_frac_of_m2_mean": 0.21768264273024418,
+          "per_identity_frac_of_ceiling_mean": 0.517441704933278,
+          "per_identity_frac_of_ceiling_median": 0.5100671140939598
+        }
+      }
+    },
+    "Market": {
+      "eval": "Market",
+      "m1": "A'",
+      "m2": "C",
+      "per_k": {
+        "10": {
+          "n_matched_ids": 695,
+          "jaccard_mean": 0.14486272000556832,
+          "null_jaccard_mean": 0.00812130863046798,
+          "ratio_to_null": 17.837361759913904,
+          "shared_frac_of_m2_mean": 0.16075952830113513,
+          "per_identity_frac_of_ceiling_mean": 0.6869288470939281,
+          "per_identity_frac_of_ceiling_median": 0.7
+        },
+        "50": {
+          "n_matched_ids": 750,
+          "jaccard_mean": 0.2513443129232071,
+          "null_jaccard_mean": 0.038188806402915,
+          "ratio_to_null": 6.58162264280723,
+          "shared_frac_of_m2_mean": 0.286964830041159,
+          "per_identity_frac_of_ceiling_mean": 0.7063277775862263,
+          "per_identity_frac_of_ceiling_median": 0.7
+        }
+      }
+    }
+  },
+  "e30_partA_OODside": {
+    "MSMT": {
+      "10": {
+        "total_sigma_dap": 11029.87092543931,
+        "share_dap_shared": 0.07807289952629796,
+        "share_dap_OODonly": 0.9219271004735877,
+        "mean_dap_per_shared_item": 0.0016582017271687594,
+        "mean_dap_per_OODonly_item": 0.0002894280385376329,
+        "n_shared_items": 519318,
+        "n_OODonly_items": 35133904,
+        "sum_sanity": 0.9999999999998856
+      },
+      "50": {
+        "total_sigma_dap": 11029.87092543931,
+        "share_dap_shared": 0.19961997630280284,
+        "share_dap_OODonly": 0.8003800236974339,
+        "mean_dap_per_shared_item": 0.001147365916510841,
+        "mean_dap_per_OODonly_item": 0.0002616952444918518,
+        "n_shared_items": 1918989,
+        "n_OODonly_items": 33734233,
+        "sum_sanity": 1.0000000000002367
+      }
+    },
+    "Market": {
+      "10": {
+        "total_sigma_dap": 2470.1040701269594,
+        "share_dap_shared": 0.1584289616494062,
+        "share_dap_OODonly": 0.8415710383506779,
+        "mean_dap_per_shared_item": 0.016775378214856983,
+        "mean_dap_per_OODonly_item": 0.0008317387749272489,
+        "n_shared_items": 23328,
+        "n_OODonly_items": 2499304,
+        "sum_sanity": 1.0000000000000842
+      },
+      "50": {
+        "total_sigma_dap": 2470.1040701269594,
+        "share_dap_shared": 0.4288679843685419,
+        "share_dap_OODonly": 0.5711320156315336,
+        "mean_dap_per_shared_item": 0.007969580765970683,
+        "mean_dap_per_OODonly_item": 0.0005903464006443755,
+        "n_shared_items": 132924,
+        "n_OODonly_items": 2389708,
+        "sum_sanity": 1.0000000000000755
+      }
+    }
+  },
+  "e30_partA_IDside": {
+    "MSMT": {
+      "10": {
+        "total_sigma_dap": 6806.696996541418,
+        "share_dap_shared": 0.3800651948253901,
+        "share_dap_IDonly": 0.6199348051748421,
+        "sum_sanity": 1.0000000000002323
+      },
+      "50": {
+        "total_sigma_dap": 6806.696996541418,
+        "share_dap_shared": 0.6177866200819453,
+        "share_dap_IDonly": 0.38221337991812454,
+        "sum_sanity": 1.0000000000000697
+      }
+    },
+    "Market": {
+      "10": {
+        "total_sigma_dap": 660.252087044757,
+        "share_dap_shared": 0.691600418432239,
+        "share_dap_IDonly": 0.30839958156774494,
+        "sum_sanity": 0.9999999999999839
+      },
+      "50": {
+        "total_sigma_dap": 660.252087044757,
+        "share_dap_shared": 0.8551070824898801,
+        "share_dap_IDonly": 0.14489291751011313,
+        "sum_sanity": 0.9999999999999932
+      }
+    }
+  },
+  "e30_partB": {
+    "A'": {
+      "10": {
+        "n_edges": 5345,
+        "measured": 0.4800748362956034,
+        "null_mean": 0.014443405051449957,
+        "null_std": 0.002582665508211397,
+        "ratio_to_null": 33.23834196891191,
+        "chance_corrected": 0.4724552944303124
+      },
+      "50": {
+        "n_edges": 29267,
+        "measured": 0.7163699730071411,
+        "null_mean": 0.06902996549014248,
+        "null_std": 0.0016900334094866983,
+        "ratio_to_null": 10.377666683165867,
+        "chance_corrected": 0.6953392520929139
+      }
+    },
+    "C": {
+      "10": {
+        "n_edges": 24839,
+        "measured": 0.5720037038528121,
+        "null_mean": 0.07080397761584604,
+        "null_std": 0.001686527072153627,
+        "ratio_to_null": 8.078694490248479,
+        "chance_corrected": 0.5393907358223247
+      },
+      "50": {
+        "n_edges": 74117,
+        "measured": 0.6661629585655113,
+        "null_mean": 0.1882348179230136,
+        "null_std": 0.0017141783131212397,
+        "ratio_to_null": 3.538999670283986,
+        "chance_corrected": 0.5887517119417076
+      }
+    },
+    "D": {
+      "10": {
+        "n_edges": 113885,
+        "measured": 0.5470079466128112,
+        "null_mean": 0.025748781665715415,
+        "null_std": 0.0006256851879409657,
+        "ratio_to_null": 21.24403219206111,
+        "chance_corrected": 0.535035681903804
+      },
+      "50": {
+        "n_edges": 428039,
+        "measured": 0.7130658654935649,
+        "null_mean": 0.0815624277227075,
+        "null_std": 0.00040610598047745197,
+        "ratio_to_null": 8.742577745697028,
+        "chance_corrected": 0.687584498753711
+      }
+    },
+    "B'": {
+      "10": {
+        "n_edges": 301780,
+        "measured": 0.4383656968652661,
+        "null_mean": 0.05428954867784479,
+        "null_std": 0.0006492053876968969,
+        "ratio_to_null": 8.074587237159337,
+        "chance_corrected": 0.40612446193278473
+      },
+      "50": {
+        "n_edges": 986777,
+        "measured": 0.5338815152765012,
+        "null_mean": 0.1562051000377998,
+        "null_std": 0.000385658413416664,
+        "ratio_to_null": 3.4178238428022394,
+        "chance_corrected": 0.44759267359357147
+      }
+    }
+  }
+}

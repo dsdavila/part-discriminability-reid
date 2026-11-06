@@ -1,0 +1,58 @@
+{
+  "dataset": "market1501",
+  "sample": false,
+  "dataset_stats": {
+    "train_images": 12267,
+    "train_ids": 629,
+    "train_cameras": 6,
+    "gallery_images": 19732,
+    "query_images": 3368,
+    "test_ids": 750
+  },
+  "backbones": {
+    "resnet50": {
+      "displaced_fraction": 0.9854646309839518,
+      "single_linkage_ratio": 2.8408107628505532,
+      "pct_ids_fragmented": 99.86282578875172,
+      "factor_alignment": {
+        "camera": 0.17212152726202384
+      },
+      "map": 0.03740829986314328,
+      "rank1": 0.12203087885985749,
+      "time_seconds": 147.50966954231262
+    },
+    "bag_of_tricks": {
+      "displaced_fraction": 0.40529339749840665,
+      "single_linkage_ratio": 1.819489584436207,
+      "pct_ids_fragmented": 77.77777777777777,
+      "factor_alignment": {
+        "camera": 0.021194422984968497
+      },
+      "map": 0.8396074054026104,
+      "rank1": 0.9415083135391924,
+      "time_seconds": 159.69073581695557
+    },
+    "moco": {
+      "displaced_fraction": 0.9904794421612538,
+      "single_linkage_ratio": 6.9344747876659065,
+      "pct_ids_fragmented": 100.0,
+      "factor_alignment": {
+        "camera": 0.17858499206158418
+      },
+      "map": 0.026993294518050024,
+      "rank1": 0.08818289786223278,
+      "time_seconds": 217.05578184127808
+    },
+    "random": {
+      "displaced_fraction": 0.9966845183102115,
+      "single_linkage_ratio": 3.181143874748817,
+      "pct_ids_fragmented": 100.0,
+      "factor_alignment": {
+        "camera": 0.07969901636749611
+      },
+      "map": 0.011798900880445929,
+      "rank1": 0.037410926365795724,
+      "time_seconds": 145.30063104629517
+    }
+  }
+}

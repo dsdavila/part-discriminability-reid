@@ -1,0 +1,38 @@
+{
+  "MSMT": {
+    "id_cell": "D",
+    "ood_cell": "B",
+    "splits": {
+      "10": {
+        "total_sigma_dap": 6806.696996541418,
+        "share_dap_shared_with_OOD": 0.35135467229882794,
+        "share_dap_IDonly": 0.6486453277013262,
+        "sum_sanity": 1.000000000000154
+      },
+      "50": {
+        "total_sigma_dap": 6806.696996541418,
+        "share_dap_shared_with_OOD": 0.5908215254670544,
+        "share_dap_IDonly": 0.40917847453307044,
+        "sum_sanity": 1.0000000000001248
+      }
+    }
+  },
+  "Market": {
+    "id_cell": "A",
+    "ood_cell": "C",
+    "splits": {
+      "10": {
+        "total_sigma_dap": 476.8949087807428,
+        "share_dap_shared_with_OOD": 0.6945548545524377,
+        "share_dap_IDonly": 0.305445145447557,
+        "sum_sanity": 0.9999999999999947
+      },
+      "50": {
+        "total_sigma_dap": 476.8949087807428,
+        "share_dap_shared_with_OOD": 0.8514195443234724,
+        "share_dap_IDonly": 0.14858045567651837,
+        "sum_sanity": 0.9999999999999908
+      }
+    }
+  }
+}

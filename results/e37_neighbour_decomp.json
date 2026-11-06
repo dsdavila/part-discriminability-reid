@@ -1,0 +1,726 @@
+{
+  "MSMT": {
+    "dataset": "MSMT",
+    "id_cell": "D",
+    "ood_cell": "B'",
+    "sigma": 0.0625,
+    "items_per_class": {
+      "EASY": 7160,
+      "ID-ONLY": 9,
+      "SHARED": 14797,
+      "OOD-ONLY": 60162
+    },
+    "k_tables": {
+      "1": {
+        "id": {
+          "EASY": {
+            "same_id": 6471,
+            "same_cls_diff_id": 110,
+            "other_cls": 579,
+            "total": 7160,
+            "share_same_id": 90.37709497206704,
+            "share_same_cls_diff_id": 1.5363128491620113,
+            "share_other_cls": 8.08659217877095
+          },
+          "ID-ONLY": {
+            "same_id": 1,
+            "same_cls_diff_id": 0,
+            "other_cls": 8,
+            "total": 9,
+            "share_same_id": 11.11111111111111,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 88.88888888888889
+          },
+          "SHARED": {
+            "same_id": 4279,
+            "same_cls_diff_id": 3902,
+            "other_cls": 6616,
+            "total": 14797,
+            "share_same_id": 28.91802392376833,
+            "share_same_cls_diff_id": 26.37021017773873,
+            "share_other_cls": 44.711765898492935
+          },
+          "OOD-ONLY": {
+            "same_id": 47064,
+            "same_cls_diff_id": 9093,
+            "other_cls": 4005,
+            "total": 60162,
+            "share_same_id": 78.22878228782288,
+            "share_same_cls_diff_id": 15.114191682457365,
+            "share_other_cls": 6.6570260297197565
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 4692,
+            "same_cls_diff_id": 341,
+            "other_cls": 2127,
+            "total": 7160,
+            "share_same_id": 65.53072625698324,
+            "share_same_cls_diff_id": 4.762569832402234,
+            "share_other_cls": 29.706703910614525
+          },
+          "ID-ONLY": {
+            "same_id": 5,
+            "same_cls_diff_id": 0,
+            "other_cls": 4,
+            "total": 9,
+            "share_same_id": 55.55555555555556,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 44.44444444444444
+          },
+          "SHARED": {
+            "same_id": 321,
+            "same_cls_diff_id": 5187,
+            "other_cls": 9289,
+            "total": 14797,
+            "share_same_id": 2.1693586537811718,
+            "share_same_cls_diff_id": 35.054402919510714,
+            "share_other_cls": 62.77623842670812
+          },
+          "OOD-ONLY": {
+            "same_id": 7758,
+            "same_cls_diff_id": 38819,
+            "other_cls": 13585,
+            "total": 60162,
+            "share_same_id": 12.895183005884112,
+            "share_same_cls_diff_id": 64.52411821415511,
+            "share_other_cls": 22.580698779960773
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 3267,
+            "same_cls_diff_id": 505,
+            "other_cls": 3388,
+            "total": 7160,
+            "share_same_id": 45.62849162011173,
+            "share_same_cls_diff_id": 7.053072625698324,
+            "share_other_cls": 47.31843575418994
+          },
+          "ID-ONLY": {
+            "same_id": 0,
+            "same_cls_diff_id": 0,
+            "other_cls": 9,
+            "total": 9,
+            "share_same_id": 0.0,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 100.0
+          },
+          "SHARED": {
+            "same_id": 786,
+            "same_cls_diff_id": 3814,
+            "other_cls": 10197,
+            "total": 14797,
+            "share_same_id": 5.311887544772589,
+            "share_same_cls_diff_id": 25.775495032776913,
+            "share_other_cls": 68.9126174224505
+          },
+          "OOD-ONLY": {
+            "same_id": 14234,
+            "same_cls_diff_id": 33459,
+            "other_cls": 12469,
+            "total": 60162,
+            "share_same_id": 23.659452810744323,
+            "share_same_cls_diff_id": 55.6148399321831,
+            "share_other_cls": 20.72570725707257
+          }
+        }
+      },
+      "5": {
+        "id": {
+          "EASY": {
+            "same_id": 30931,
+            "same_cls_diff_id": 805,
+            "other_cls": 4064,
+            "total": 35800,
+            "share_same_id": 86.39944134078212,
+            "share_same_cls_diff_id": 2.2486033519553073,
+            "share_other_cls": 11.35195530726257
+          },
+          "ID-ONLY": {
+            "same_id": 2,
+            "same_cls_diff_id": 0,
+            "other_cls": 43,
+            "total": 45,
+            "share_same_id": 4.444444444444445,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 95.55555555555556
+          },
+          "SHARED": {
+            "same_id": 17765,
+            "same_cls_diff_id": 19933,
+            "other_cls": 36287,
+            "total": 73985,
+            "share_same_id": 24.011623977833345,
+            "share_same_cls_diff_id": 26.94194769209975,
+            "share_other_cls": 49.0464283300669
+          },
+          "OOD-ONLY": {
+            "same_id": 209607,
+            "same_cls_diff_id": 64369,
+            "other_cls": 26834,
+            "total": 300810,
+            "share_same_id": 69.6808616734816,
+            "share_same_cls_diff_id": 21.39855722881553,
+            "share_other_cls": 8.920581097702868
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 19810,
+            "same_cls_diff_id": 2320,
+            "other_cls": 13670,
+            "total": 35800,
+            "share_same_id": 55.33519553072626,
+            "share_same_cls_diff_id": 6.4804469273743015,
+            "share_other_cls": 38.184357541899445
+          },
+          "ID-ONLY": {
+            "same_id": 13,
+            "same_cls_diff_id": 0,
+            "other_cls": 32,
+            "total": 45,
+            "share_same_id": 28.88888888888889,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 71.11111111111111
+          },
+          "SHARED": {
+            "same_id": 1243,
+            "same_cls_diff_id": 24950,
+            "other_cls": 47792,
+            "total": 73985,
+            "share_same_id": 1.6800702845171318,
+            "share_same_cls_diff_id": 33.72305196999392,
+            "share_other_cls": 64.59687774548895
+          },
+          "OOD-ONLY": {
+            "same_id": 29566,
+            "same_cls_diff_id": 201232,
+            "other_cls": 70012,
+            "total": 300810,
+            "share_same_id": 9.82879558525315,
+            "share_same_cls_diff_id": 66.89671221036535,
+            "share_other_cls": 23.274492204381502
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 11948,
+            "same_cls_diff_id": 3138,
+            "other_cls": 20714,
+            "total": 35800,
+            "share_same_id": 33.374301675977655,
+            "share_same_cls_diff_id": 8.76536312849162,
+            "share_other_cls": 57.86033519553072
+          },
+          "ID-ONLY": {
+            "same_id": 0,
+            "same_cls_diff_id": 0,
+            "other_cls": 45,
+            "total": 45,
+            "share_same_id": 0.0,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 100.0
+          },
+          "SHARED": {
+            "same_id": 2652,
+            "same_cls_diff_id": 18551,
+            "other_cls": 52782,
+            "total": 73985,
+            "share_same_id": 3.5845103737244037,
+            "share_same_cls_diff_id": 25.07400148678786,
+            "share_other_cls": 71.34148813948774
+          },
+          "OOD-ONLY": {
+            "same_id": 48743,
+            "same_cls_diff_id": 184317,
+            "other_cls": 67750,
+            "total": 300810,
+            "share_same_id": 16.203916093214985,
+            "share_same_cls_diff_id": 61.27356138426249,
+            "share_other_cls": 22.52252252252252
+          }
+        }
+      },
+      "10": {
+        "id": {
+          "EASY": {
+            "same_id": 56635,
+            "same_cls_diff_id": 2714,
+            "other_cls": 12251,
+            "total": 71600,
+            "share_same_id": 79.09916201117318,
+            "share_same_cls_diff_id": 3.7905027932960893,
+            "share_other_cls": 17.110335195530727
+          },
+          "ID-ONLY": {
+            "same_id": 3,
+            "same_cls_diff_id": 0,
+            "other_cls": 87,
+            "total": 90,
+            "share_same_id": 3.3333333333333335,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 96.66666666666667
+          },
+          "SHARED": {
+            "same_id": 28928,
+            "same_cls_diff_id": 40892,
+            "other_cls": 78150,
+            "total": 147970,
+            "share_same_id": 19.54990876529026,
+            "share_same_cls_diff_id": 27.63533148611205,
+            "share_other_cls": 52.81475974859769
+          },
+          "OOD-ONLY": {
+            "same_id": 360753,
+            "same_cls_diff_id": 172470,
+            "other_cls": 68397,
+            "total": 601620,
+            "share_same_id": 59.963598284631495,
+            "share_same_cls_diff_id": 28.667597486785677,
+            "share_other_cls": 11.368804228582826
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 32649,
+            "same_cls_diff_id": 5846,
+            "other_cls": 33105,
+            "total": 71600,
+            "share_same_id": 45.599162011173185,
+            "share_same_cls_diff_id": 8.164804469273744,
+            "share_other_cls": 46.236033519553075
+          },
+          "ID-ONLY": {
+            "same_id": 17,
+            "same_cls_diff_id": 0,
+            "other_cls": 73,
+            "total": 90,
+            "share_same_id": 18.88888888888889,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 81.11111111111111
+          },
+          "SHARED": {
+            "same_id": 2085,
+            "same_cls_diff_id": 48892,
+            "other_cls": 96993,
+            "total": 147970,
+            "share_same_id": 1.4090694059606677,
+            "share_same_cls_diff_id": 33.04183280394675,
+            "share_other_cls": 65.54909779009259
+          },
+          "OOD-ONLY": {
+            "same_id": 47639,
+            "same_cls_diff_id": 410773,
+            "other_cls": 143208,
+            "total": 601620,
+            "share_same_id": 7.918453508859413,
+            "share_same_cls_diff_id": 68.27781656194941,
+            "share_other_cls": 23.803729929191185
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 19105,
+            "same_cls_diff_id": 6863,
+            "other_cls": 45632,
+            "total": 71600,
+            "share_same_id": 26.682960893854748,
+            "share_same_cls_diff_id": 9.585195530726256,
+            "share_other_cls": 63.73184357541899
+          },
+          "ID-ONLY": {
+            "same_id": 0,
+            "same_cls_diff_id": 0,
+            "other_cls": 90,
+            "total": 90,
+            "share_same_id": 0.0,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 100.0
+          },
+          "SHARED": {
+            "same_id": 4321,
+            "same_cls_diff_id": 36541,
+            "other_cls": 107108,
+            "total": 147970,
+            "share_same_id": 2.9201865242954654,
+            "share_same_cls_diff_id": 24.694870581874703,
+            "share_other_cls": 72.38494289382983
+          },
+          "OOD-ONLY": {
+            "same_id": 76602,
+            "same_cls_diff_id": 384221,
+            "other_cls": 140797,
+            "total": 601620,
+            "share_same_id": 12.732621920813802,
+            "share_same_cls_diff_id": 63.86439945480536,
+            "share_other_cls": 23.40297862438084
+          }
+        }
+      }
+    }
+  },
+  "Market": {
+    "dataset": "Market",
+    "id_cell": "A'",
+    "ood_cell": "C",
+    "sigma": 0.062,
+    "items_per_class": {
+      "EASY": 7659,
+      "ID-ONLY": 21,
+      "SHARED": 163,
+      "OOD-ONLY": 5272
+    },
+    "k_tables": {
+      "1": {
+        "id": {
+          "EASY": {
+            "same_id": 7440,
+            "same_cls_diff_id": 97,
+            "other_cls": 122,
+            "total": 7659,
+            "share_same_id": 97.14061887974931,
+            "share_same_cls_diff_id": 1.2664838751795273,
+            "share_other_cls": 1.592897245071158
+          },
+          "ID-ONLY": {
+            "same_id": 6,
+            "same_cls_diff_id": 0,
+            "other_cls": 15,
+            "total": 21,
+            "share_same_id": 28.571428571428573,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 71.42857142857143
+          },
+          "SHARED": {
+            "same_id": 46,
+            "same_cls_diff_id": 6,
+            "other_cls": 111,
+            "total": 163,
+            "share_same_id": 28.220858895705522,
+            "share_same_cls_diff_id": 3.6809815950920246,
+            "share_other_cls": 68.09815950920246
+          },
+          "OOD-ONLY": {
+            "same_id": 4863,
+            "same_cls_diff_id": 224,
+            "other_cls": 185,
+            "total": 5272,
+            "share_same_id": 92.24203338391503,
+            "share_same_cls_diff_id": 4.24886191198786,
+            "share_other_cls": 3.509104704097117
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 5591,
+            "same_cls_diff_id": 961,
+            "other_cls": 1107,
+            "total": 7659,
+            "share_same_id": 72.9990860425643,
+            "share_same_cls_diff_id": 12.547329938634286,
+            "share_other_cls": 14.45358401880141
+          },
+          "ID-ONLY": {
+            "same_id": 11,
+            "same_cls_diff_id": 0,
+            "other_cls": 10,
+            "total": 21,
+            "share_same_id": 52.38095238095238,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 47.61904761904762
+          },
+          "SHARED": {
+            "same_id": 26,
+            "same_cls_diff_id": 1,
+            "other_cls": 136,
+            "total": 163,
+            "share_same_id": 15.950920245398773,
+            "share_same_cls_diff_id": 0.6134969325153374,
+            "share_other_cls": 83.43558282208589
+          },
+          "OOD-ONLY": {
+            "same_id": 1510,
+            "same_cls_diff_id": 2258,
+            "other_cls": 1504,
+            "total": 5272,
+            "share_same_id": 28.641881638846737,
+            "share_same_cls_diff_id": 42.83004552352048,
+            "share_other_cls": 28.528072837632777
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 5246,
+            "same_cls_diff_id": 1356,
+            "other_cls": 1057,
+            "total": 7659,
+            "share_same_id": 68.4945815380598,
+            "share_same_cls_diff_id": 17.704661182922052,
+            "share_other_cls": 13.800757279018148
+          },
+          "ID-ONLY": {
+            "same_id": 8,
+            "same_cls_diff_id": 0,
+            "other_cls": 13,
+            "total": 21,
+            "share_same_id": 38.095238095238095,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 61.904761904761905
+          },
+          "SHARED": {
+            "same_id": 21,
+            "same_cls_diff_id": 3,
+            "other_cls": 139,
+            "total": 163,
+            "share_same_id": 12.883435582822086,
+            "share_same_cls_diff_id": 1.8404907975460123,
+            "share_other_cls": 85.2760736196319
+          },
+          "OOD-ONLY": {
+            "same_id": 2693,
+            "same_cls_diff_id": 1276,
+            "other_cls": 1303,
+            "total": 5272,
+            "share_same_id": 51.08118361153262,
+            "share_same_cls_diff_id": 24.203338391502275,
+            "share_other_cls": 24.7154779969651
+          }
+        }
+      },
+      "5": {
+        "id": {
+          "EASY": {
+            "same_id": 36033,
+            "same_cls_diff_id": 1078,
+            "other_cls": 1184,
+            "total": 38295,
+            "share_same_id": 94.09322365844105,
+            "share_same_cls_diff_id": 2.8149889019454237,
+            "share_other_cls": 3.0917874396135265
+          },
+          "ID-ONLY": {
+            "same_id": 42,
+            "same_cls_diff_id": 0,
+            "other_cls": 63,
+            "total": 105,
+            "share_same_id": 40.0,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 60.0
+          },
+          "SHARED": {
+            "same_id": 177,
+            "same_cls_diff_id": 16,
+            "other_cls": 622,
+            "total": 815,
+            "share_same_id": 21.717791411042946,
+            "share_same_cls_diff_id": 1.9631901840490797,
+            "share_other_cls": 76.31901840490798
+          },
+          "OOD-ONLY": {
+            "same_id": 22176,
+            "same_cls_diff_id": 2388,
+            "other_cls": 1796,
+            "total": 26360,
+            "share_same_id": 84.12746585735964,
+            "share_same_cls_diff_id": 9.05918057663126,
+            "share_other_cls": 6.813353566009105
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 21913,
+            "same_cls_diff_id": 8360,
+            "other_cls": 8022,
+            "total": 38295,
+            "share_same_id": 57.22156939548244,
+            "share_same_cls_diff_id": 21.830526178352265,
+            "share_other_cls": 20.947904426165294
+          },
+          "ID-ONLY": {
+            "same_id": 37,
+            "same_cls_diff_id": 0,
+            "other_cls": 68,
+            "total": 105,
+            "share_same_id": 35.23809523809524,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 64.76190476190476
+          },
+          "SHARED": {
+            "same_id": 90,
+            "same_cls_diff_id": 12,
+            "other_cls": 713,
+            "total": 815,
+            "share_same_id": 11.042944785276074,
+            "share_same_cls_diff_id": 1.4723926380368098,
+            "share_other_cls": 87.48466257668711
+          },
+          "OOD-ONLY": {
+            "same_id": 5216,
+            "same_cls_diff_id": 12301,
+            "other_cls": 8843,
+            "total": 26360,
+            "share_same_id": 19.787556904400606,
+            "share_same_cls_diff_id": 46.665402124430955,
+            "share_other_cls": 33.547040971168435
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 20275,
+            "same_cls_diff_id": 10523,
+            "other_cls": 7497,
+            "total": 38295,
+            "share_same_id": 52.94424859642251,
+            "share_same_cls_diff_id": 27.478783130957044,
+            "share_other_cls": 19.576968272620448
+          },
+          "ID-ONLY": {
+            "same_id": 36,
+            "same_cls_diff_id": 0,
+            "other_cls": 69,
+            "total": 105,
+            "share_same_id": 34.285714285714285,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 65.71428571428571
+          },
+          "SHARED": {
+            "same_id": 80,
+            "same_cls_diff_id": 12,
+            "other_cls": 723,
+            "total": 815,
+            "share_same_id": 9.815950920245399,
+            "share_same_cls_diff_id": 1.4723926380368098,
+            "share_other_cls": 88.71165644171779
+          },
+          "OOD-ONLY": {
+            "same_id": 9706,
+            "same_cls_diff_id": 8107,
+            "other_cls": 8547,
+            "total": 26360,
+            "share_same_id": 36.82094081942337,
+            "share_same_cls_diff_id": 30.754931714719273,
+            "share_other_cls": 32.42412746585736
+          }
+        }
+      },
+      "10": {
+        "id": {
+          "EASY": {
+            "same_id": 66712,
+            "same_cls_diff_id": 5405,
+            "other_cls": 4473,
+            "total": 76590,
+            "share_same_id": 87.10275492884189,
+            "share_same_cls_diff_id": 7.057057057057057,
+            "share_other_cls": 5.840188014101058
+          },
+          "ID-ONLY": {
+            "same_id": 85,
+            "same_cls_diff_id": 0,
+            "other_cls": 125,
+            "total": 210,
+            "share_same_id": 40.476190476190474,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 59.523809523809526
+          },
+          "SHARED": {
+            "same_id": 286,
+            "same_cls_diff_id": 25,
+            "other_cls": 1319,
+            "total": 1630,
+            "share_same_id": 17.54601226993865,
+            "share_same_cls_diff_id": 1.5337423312883436,
+            "share_other_cls": 80.920245398773
+          },
+          "OOD-ONLY": {
+            "same_id": 38494,
+            "same_cls_diff_id": 7958,
+            "other_cls": 6268,
+            "total": 52720,
+            "share_same_id": 73.01593323216996,
+            "share_same_cls_diff_id": 15.0948406676783,
+            "share_other_cls": 11.889226100151745
+          }
+        },
+        "ood": {
+          "EASY": {
+            "same_id": 34447,
+            "same_cls_diff_id": 22620,
+            "other_cls": 19523,
+            "total": 76590,
+            "share_same_id": 44.97584541062802,
+            "share_same_cls_diff_id": 29.53388170779475,
+            "share_other_cls": 25.49027288157723
+          },
+          "ID-ONLY": {
+            "same_id": 55,
+            "same_cls_diff_id": 0,
+            "other_cls": 155,
+            "total": 210,
+            "share_same_id": 26.19047619047619,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 73.80952380952381
+          },
+          "SHARED": {
+            "same_id": 142,
+            "same_cls_diff_id": 27,
+            "other_cls": 1461,
+            "total": 1630,
+            "share_same_id": 8.71165644171779,
+            "share_same_cls_diff_id": 1.656441717791411,
+            "share_other_cls": 89.6319018404908
+          },
+          "OOD-ONLY": {
+            "same_id": 7902,
+            "same_cls_diff_id": 25646,
+            "other_cls": 19172,
+            "total": 52720,
+            "share_same_id": 14.988619119878605,
+            "share_same_cls_diff_id": 48.64567526555387,
+            "share_other_cls": 36.365705614567524
+          }
+        },
+        "noise": {
+          "EASY": {
+            "same_id": 32502,
+            "same_cls_diff_id": 26013,
+            "other_cls": 18075,
+            "total": 76590,
+            "share_same_id": 42.43634939287113,
+            "share_same_cls_diff_id": 33.96396396396396,
+            "share_other_cls": 23.599686643164905
+          },
+          "ID-ONLY": {
+            "same_id": 68,
+            "same_cls_diff_id": 0,
+            "other_cls": 142,
+            "total": 210,
+            "share_same_id": 32.38095238095238,
+            "share_same_cls_diff_id": 0.0,
+            "share_other_cls": 67.61904761904762
+          },
+          "SHARED": {
+            "same_id": 122,
+            "same_cls_diff_id": 25,
+            "other_cls": 1483,
+            "total": 1630,
+            "share_same_id": 7.484662576687117,
+            "share_same_cls_diff_id": 1.5337423312883436,
+            "share_other_cls": 90.98159509202453
+          },
+          "OOD-ONLY": {
+            "same_id": 15240,
+            "same_cls_diff_id": 18032,
+            "other_cls": 19448,
+            "total": 52720,
+            "share_same_id": 28.90743550834598,
+            "share_same_cls_diff_id": 34.20333839150228,
+            "share_other_cls": 36.889226100151745
+          }
+        }
+      }
+    }
+  }
+}

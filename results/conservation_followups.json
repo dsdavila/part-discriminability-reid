@@ -1,0 +1,471 @@
+{
+  "market_bootstrap": {
+    "n_easy": 727,
+    "total_excess_slots": 203.0,
+    "pct_excess_point": 12.236286919831224,
+    "pct_excess_ci95": [
+      1.5201957987551868,
+      25.918828919002152
+    ],
+    "per_identity_mean": 0.2792297111416781,
+    "per_identity_sd": 3.8629044472282423
+  },
+  "msmt_size_matched": [
+    {
+      "n_hard": 23,
+      "mean_pct_excess": 16.001786448757983,
+      "sd_pct_excess": 6.307411407323007,
+      "avg_n_items": 465.8,
+      "trials": [
+        {
+          "n_hard": 23,
+          "n_items_hard": 495,
+          "hits_D": 3967,
+          "hits_B": 4939,
+          "hits_N": 4673,
+          "pct_excess": 5.692274769955061
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 489,
+          "hits_D": 4156,
+          "hits_B": 5563,
+          "hits_N": 4905,
+          "pct_excess": 13.414882772680938
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 459,
+          "hits_D": 3947,
+          "hits_B": 4879,
+          "hits_N": 4517,
+          "pct_excess": 8.014168696037192
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 376,
+          "hits_D": 3385,
+          "hits_B": 4644,
+          "hits_N": 4039,
+          "pct_excess": 14.978955186927458
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 323,
+          "hits_D": 2265,
+          "hits_B": 3808,
+          "hits_N": 2982,
+          "pct_excess": 27.699530516431924
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 469,
+          "hits_D": 3882,
+          "hits_B": 5485,
+          "hits_N": 4848,
+          "pct_excess": 13.139438943894389
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 498,
+          "hits_D": 3571,
+          "hits_B": 5404,
+          "hits_N": 4621,
+          "pct_excess": 16.944384332395586
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 585,
+          "hits_D": 4533,
+          "hits_B": 6914,
+          "hits_N": 5651,
+          "pct_excess": 22.35002654397452
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 456,
+          "hits_D": 4067,
+          "hits_B": 5478,
+          "hits_N": 4497,
+          "pct_excess": 21.81454302868579
+        },
+        {
+          "n_hard": 23,
+          "n_items_hard": 508,
+          "hits_D": 4032,
+          "hits_B": 5657,
+          "hits_N": 4878,
+          "pct_excess": 15.969659696596967
+        }
+      ]
+    },
+    {
+      "n_hard": 50,
+      "mean_pct_excess": 16.726365925676888,
+      "sd_pct_excess": 7.899500502269132,
+      "avg_n_items": 1060.4,
+      "trials": [
+        {
+          "n_hard": 50,
+          "n_items_hard": 1125,
+          "hits_D": 10126,
+          "hits_B": 12909,
+          "hits_N": 11396,
+          "pct_excess": 13.276588276588276
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1016,
+          "hits_D": 8077,
+          "hits_B": 12188,
+          "hits_N": 9983,
+          "pct_excess": 22.08754883301613
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1279,
+          "hits_D": 11666,
+          "hits_B": 16644,
+          "hits_N": 13537,
+          "pct_excess": 22.951909581147966
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1053,
+          "hits_D": 8548,
+          "hits_B": 10672,
+          "hits_N": 10088,
+          "pct_excess": 5.789056304520222
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1008,
+          "hits_D": 7439,
+          "hits_B": 10291,
+          "hits_N": 10027,
+          "pct_excess": 2.6328911937768025
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1085,
+          "hits_D": 8541,
+          "hits_B": 12297,
+          "hits_N": 10756,
+          "pct_excess": 14.326887318705838
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1109,
+          "hits_D": 10206,
+          "hits_B": 13134,
+          "hits_N": 11424,
+          "pct_excess": 14.968487394957982
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 917,
+          "hits_D": 8400,
+          "hits_B": 10973,
+          "hits_N": 9272,
+          "pct_excess": 18.34555651423641
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 1083,
+          "hits_D": 9374,
+          "hits_B": 13429,
+          "hits_N": 10933,
+          "pct_excess": 22.829964328180736
+        },
+        {
+          "n_hard": 50,
+          "n_items_hard": 929,
+          "hits_D": 7525,
+          "hits_B": 11398,
+          "hits_N": 8764,
+          "pct_excess": 30.054769511638522
+        }
+      ]
+    },
+    {
+      "n_hard": 100,
+      "mean_pct_excess": 20.836866046112622,
+      "sd_pct_excess": 5.041027440423935,
+      "avg_n_items": 2211.0,
+      "trials": [
+        {
+          "n_hard": 100,
+          "n_items_hard": 2071,
+          "hits_D": 18452,
+          "hits_B": 26576,
+          "hits_N": 20978,
+          "pct_excess": 26.685098674802173
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2069,
+          "hits_D": 18054,
+          "hits_B": 26322,
+          "hits_N": 20612,
+          "pct_excess": 27.70230933436833
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2291,
+          "hits_D": 19361,
+          "hits_B": 27401,
+          "hits_N": 22177,
+          "pct_excess": 23.55593633043243
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2168,
+          "hits_D": 17735,
+          "hits_B": 26635,
+          "hits_N": 21671,
+          "pct_excess": 22.906187993170597
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2287,
+          "hits_D": 20002,
+          "hits_B": 27466,
+          "hits_N": 23558,
+          "pct_excess": 16.58884455386705
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2217,
+          "hits_D": 19718,
+          "hits_B": 25989,
+          "hits_N": 22235,
+          "pct_excess": 16.883292107038454
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2347,
+          "hits_D": 19957,
+          "hits_B": 26883,
+          "hits_N": 23070,
+          "pct_excess": 16.527958387516254
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2198,
+          "hits_D": 18932,
+          "hits_B": 24893,
+          "hits_N": 21949,
+          "pct_excess": 13.41291174996583
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2240,
+          "hits_D": 19125,
+          "hits_B": 26080,
+          "hits_N": 22288,
+          "pct_excess": 17.013639626704954
+        },
+        {
+          "n_hard": 100,
+          "n_items_hard": 2222,
+          "hits_D": 19739,
+          "hits_B": 28653,
+          "hits_N": 22545,
+          "pct_excess": 27.092481703260145
+        }
+      ]
+    },
+    {
+      "n_hard": 200,
+      "mean_pct_excess": 18.113450278104647,
+      "sd_pct_excess": 4.044732186230213,
+      "avg_n_items": 4286.0,
+      "trials": [
+        {
+          "n_hard": 200,
+          "n_items_hard": 4241,
+          "hits_D": 35861,
+          "hits_B": 46714,
+          "hits_N": 42144,
+          "pct_excess": 10.843773728170083
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4223,
+          "hits_D": 37363,
+          "hits_B": 49935,
+          "hits_N": 42173,
+          "pct_excess": 18.405140729850853
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4179,
+          "hits_D": 35634,
+          "hits_B": 50407,
+          "hits_N": 41075,
+          "pct_excess": 22.71941570298235
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4060,
+          "hits_D": 33551,
+          "hits_B": 47926,
+          "hits_N": 39688,
+          "pct_excess": 20.756903850030234
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4412,
+          "hits_D": 37244,
+          "hits_B": 50858,
+          "hits_N": 43717,
+          "pct_excess": 16.334606674748954
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4251,
+          "hits_D": 35883,
+          "hits_B": 50908,
+          "hits_N": 42262,
+          "pct_excess": 20.45809474232171
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4598,
+          "hits_D": 40026,
+          "hits_B": 55391,
+          "hits_N": 46095,
+          "pct_excess": 20.167046317388003
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4280,
+          "hits_D": 36226,
+          "hits_B": 48917,
+          "hits_N": 42496,
+          "pct_excess": 15.109657379518072
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4261,
+          "hits_D": 36290,
+          "hits_B": 51841,
+          "hits_N": 41918,
+          "pct_excess": 23.67240803473448
+        },
+        {
+          "n_hard": 200,
+          "n_items_hard": 4355,
+          "hits_D": 35810,
+          "hits_B": 47602,
+          "hits_N": 42250,
+          "pct_excess": 12.667455621301775
+        }
+      ]
+    },
+    {
+      "n_hard": 400,
+      "mean_pct_excess": 18.116958542851396,
+      "sd_pct_excess": 1.7804954819351304,
+      "avg_n_items": 8638.0,
+      "trials": [
+        {
+          "n_hard": 400,
+          "n_items_hard": 8691,
+          "hits_D": 75420,
+          "hits_B": 104802,
+          "hits_N": 86415,
+          "pct_excess": 21.27755597986461
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8429,
+          "hits_D": 72718,
+          "hits_B": 99065,
+          "hits_N": 83547,
+          "pct_excess": 18.57397632470346
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 9112,
+          "hits_D": 77648,
+          "hits_B": 105038,
+          "hits_N": 89816,
+          "pct_excess": 16.94798254208604
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8448,
+          "hits_D": 72166,
+          "hits_B": 99040,
+          "hits_N": 83629,
+          "pct_excess": 18.427818101376317
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8159,
+          "hits_D": 67411,
+          "hits_B": 95232,
+          "hits_N": 79944,
+          "pct_excess": 19.123386370459322
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8653,
+          "hits_D": 73247,
+          "hits_B": 100913,
+          "hits_N": 86017,
+          "pct_excess": 17.317507004429356
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8831,
+          "hits_D": 74691,
+          "hits_B": 101012,
+          "hits_N": 87626,
+          "pct_excess": 15.276287859767649
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8957,
+          "hits_D": 74578,
+          "hits_B": 103131,
+          "hits_N": 88280,
+          "pct_excess": 16.822609877661986
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8333,
+          "hits_D": 69645,
+          "hits_B": 98697,
+          "hits_N": 81773,
+          "pct_excess": 20.696317855526885
+        },
+        {
+          "n_hard": 400,
+          "n_items_hard": 8767,
+          "hits_D": 74466,
+          "hits_B": 101993,
+          "hits_N": 87393,
+          "pct_excess": 16.706143512638313
+        }
+      ]
+    },
+    {
+      "n_hard": 693,
+      "mean_pct_excess": 18.215025624250355,
+      "sd_pct_excess": 0.0,
+      "avg_n_items": 14806.0,
+      "trials": [
+        {
+          "n_hard": 693,
+          "n_items_hard": 14806,
+          "hits_D": 125368,
+          "hits_B": 173464,
+          "hits_N": 146736,
+          "pct_excess": 18.215025624250355
+        }
+      ]
+    }
+  ]
+}

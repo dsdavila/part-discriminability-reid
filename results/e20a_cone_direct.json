@@ -1,0 +1,111 @@
+{
+  "protocol": "gallery-only; mu computed over gallery; L2-normalised features assumed (verified below); weighted scatter decomposition as in compute_e18.py (tr(S_B)=sum_i(n_i/N)||mu_i-mu||^2, tr(S_W)=(1/N)sum_ij||x_ij-mu_i||^2)",
+  "cache": "e12_feature_cache: market_test.npz (A), msmt17_test.npz (B), bot_msmt_seed42_market.npz (C), bot_msmt_seed42_msmt.npz (D)",
+  "seed": "RNG=42",
+  "cells": {
+    "A": {
+      "N": 13115,
+      "D": 2048,
+      "mu_norm": 0.07718152765065385,
+      "mu_sq": 0.005956988210488645,
+      "tr_ST_direct": 0.9940430120056587,
+      "tr_ST_formula_1_minus_musq": 0.9940430117895114,
+      "tr_ST_direct_minus_formula": 2.161473222628274e-10,
+      "tr_SB": 0.6272245580947088,
+      "tr_SW": 0.36681845391095014,
+      "tr_SB_plus_SW": 0.9940430120056589,
+      "tr_SB_plus_SW_minus_tr_ST": 2.220446049250313e-16,
+      "angular_spread_deg": {
+        "p10": 79.85840517003992,
+        "p25": 82.76744968931274,
+        "p50": 85.73346742108112,
+        "p75": 88.55708675065534,
+        "p90": 91.08852976101157
+      },
+      "std_x_dot_mu_hat": 0.07609952430920963,
+      "mean_inter_sample_cosine": 0.006130005150494054,
+      "mu_sq_vs_mean_cosine_diff": 0.00017301694000540924,
+      "cos_mu_hat_v1": 0.2703584996823375
+    },
+    "B": {
+      "N": 82132,
+      "D": 2048,
+      "mu_norm": 0.44100191966285274,
+      "mu_sq": 0.19448269314632122,
+      "tr_ST_direct": 0.805517307104335,
+      "tr_ST_formula_1_minus_musq": 0.8055173068536787,
+      "tr_ST_direct_minus_formula": 2.506562735149487e-10,
+      "tr_SB": 0.24137798379934308,
+      "tr_SW": 0.5641393233049907,
+      "tr_SB_plus_SW": 0.8055173071043338,
+      "tr_SB_plus_SW_minus_tr_ST": -1.2212453270876722e-15,
+      "angular_spread_deg": {
+        "p10": 49.01843615424019,
+        "p25": 54.69511993902195,
+        "p50": 62.95220422189786,
+        "p75": 71.88422906675741,
+        "p90": 77.97536283902811
+      },
+      "std_x_dot_mu_hat": 0.16729333603431198,
+      "mean_inter_sample_cosine": 0.19503810423509932,
+      "mu_sq_vs_mean_cosine_diff": 0.0005554110887781016,
+      "cos_mu_hat_v1": 0.9816648805658091
+    },
+    "C": {
+      "N": 13115,
+      "D": 2048,
+      "mu_norm": 0.38785789703171764,
+      "mu_sq": 0.15043374828986647,
+      "tr_ST_direct": 0.8495662516088802,
+      "tr_ST_formula_1_minus_musq": 0.8495662517101336,
+      "tr_ST_direct_minus_formula": -1.0125333904653644e-10,
+      "tr_SB": 0.3908277335979741,
+      "tr_SW": 0.45873851801090637,
+      "tr_SB_plus_SW": 0.8495662516088804,
+      "tr_SB_plus_SW_minus_tr_ST": 2.220446049250313e-16,
+      "angular_spread_deg": {
+        "p10": 57.26179442780834,
+        "p25": 61.70101293334748,
+        "p50": 67.08636103105076,
+        "p75": 72.28997743765055,
+        "p90": 76.55863683629188
+      },
+      "std_x_dot_mu_hat": 0.11754143044143468,
+      "mean_inter_sample_cosine": 0.15000384981925324,
+      "mu_sq_vs_mean_cosine_diff": 0.00042989847061322695,
+      "cos_mu_hat_v1": 0.9955079776825413
+    },
+    "D": {
+      "N": 82132,
+      "D": 2048,
+      "mu_norm": 0.21094142269995608,
+      "mu_sq": 0.04449628381068155,
+      "tr_ST_direct": 0.9555037160594412,
+      "tr_ST_formula_1_minus_musq": 0.9555037161893185,
+      "tr_ST_direct_minus_formula": -1.2987733111202715e-10,
+      "tr_SB": 0.4479000733404693,
+      "tr_SW": 0.5076036427189715,
+      "tr_SB_plus_SW": 0.9555037160594408,
+      "tr_SB_plus_SW_minus_tr_ST": -3.3306690738754696e-16,
+      "angular_spread_deg": {
+        "p10": 70.58478652060842,
+        "p25": 73.97550229795166,
+        "p50": 77.74548980305349,
+        "p75": 81.54915420882163,
+        "p90": 84.94143270575135
+      },
+      "std_x_dot_mu_hat": 0.0950354616993273,
+      "mean_inter_sample_cosine": 0.04463764852720582,
+      "mu_sq_vs_mean_cosine_diff": 0.0001413647165242754,
+      "cos_mu_hat_v1": 0.9940454649116938
+    }
+  },
+  "cross_model_mean_directions": {
+    "cos_mu_hat_A_B": 0.03218144847655131,
+    "cos_mu_hat_D_C": 0.5670980816980992,
+    "cos_mu_hat_A_C": 0.33350876515270667,
+    "cos_mu_hat_D_B": 0.01861537966895928,
+    "cos_mu_hat_B_C": -0.12371061230428121,
+    "note": "A/B = BoT-Market on Market vs MSMT17; D/C = BoT-MSMT17 on MSMT17 vs Market"
+  }
+}

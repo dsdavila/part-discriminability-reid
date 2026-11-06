@@ -1,0 +1,715 @@
+{
+  "experiment": "E17",
+  "description": "Rank sweep: for each 2x2 cell, project out top-k and bottom-k gallery eigendirections from both query and gallery, then measure effective rank and mAP at each k.",
+  "protocol": "standard query/gallery, same-cam exclusion, L2-normalised",
+  "k_values": [
+    0,
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256
+  ],
+  "reference_2x2": {
+    "A": {
+      "mAP_pct": 85.84,
+      "effective_rank": 261.2
+    },
+    "B": {
+      "mAP_pct": 2.56,
+      "effective_rank": 133.2
+    },
+    "C": {
+      "mAP_pct": 26.66,
+      "effective_rank": 207.2
+    },
+    "D": {
+      "mAP_pct": 41.62,
+      "effective_rank": 359.9
+    }
+  },
+  "decisive_checks": {
+    "MSMT17_eval": {
+      "strategy": "Cell B top-k ablated to match Cell D baseline eff_rank",
+      "cell_D_baseline": {
+        "k": 0,
+        "eff_rank": 359.908,
+        "mAP_pct": 41.6246
+      },
+      "cell_B_matched": {
+        "cell": "B",
+        "end": "top",
+        "k": 32,
+        "effective_rank": 373.004,
+        "mAP_pct": 4.0279,
+        "rank1_pct": 12.0892
+      },
+      "mAP_ratio": 0.0968,
+      "verdict": "DOMAIN_TERM_NEEDED"
+    },
+    "Market_eval": {
+      "strategy": "Cell C top-k ablated to match Cell A baseline eff_rank",
+      "cell_A_baseline": {
+        "k": 0,
+        "eff_rank": 261.201,
+        "mAP_pct": 85.8404
+      },
+      "cell_C_matched": {
+        "cell": "C",
+        "end": "top",
+        "k": 4,
+        "effective_rank": 261.405,
+        "mAP_pct": 26.8895,
+        "rank1_pct": 54.5131
+      },
+      "mAP_ratio": 0.3132,
+      "verdict": "DOMAIN_TERM_NEEDED"
+    }
+  },
+  "rows": [
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 0,
+      "effective_rank": 261.201,
+      "mAP_pct": 85.8404,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 1,
+      "effective_rank": 264.891,
+      "mAP_pct": 85.7399,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 2,
+      "effective_rank": 267.5,
+      "mAP_pct": 85.6245,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 4,
+      "effective_rank": 271.231,
+      "mAP_pct": 85.3989,
+      "rank1_pct": 94.6259
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 8,
+      "effective_rank": 277.929,
+      "mAP_pct": 84.7695,
+      "rank1_pct": 94.2993
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 16,
+      "effective_rank": 290.498,
+      "mAP_pct": 83.1171,
+      "rank1_pct": 93.7945
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 32,
+      "effective_rank": 316.416,
+      "mAP_pct": 79.7272,
+      "rank1_pct": 92.8147
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 64,
+      "effective_rank": 385.443,
+      "mAP_pct": 73.7426,
+      "rank1_pct": 91.152
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 128,
+      "effective_rank": 692.33,
+      "mAP_pct": 68.9452,
+      "rank1_pct": 90.9442
+    },
+    {
+      "cell": "A",
+      "end": "top",
+      "k": 256,
+      "effective_rank": 1078.214,
+      "mAP_pct": 60.5418,
+      "rank1_pct": 90.3207
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 0,
+      "effective_rank": 261.201,
+      "mAP_pct": 85.8404,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 1,
+      "effective_rank": 261.198,
+      "mAP_pct": 85.8406,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 2,
+      "effective_rank": 261.193,
+      "mAP_pct": 85.8402,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 4,
+      "effective_rank": 261.183,
+      "mAP_pct": 85.8395,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 8,
+      "effective_rank": 261.157,
+      "mAP_pct": 85.8439,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 16,
+      "effective_rank": 261.095,
+      "mAP_pct": 85.8401,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 32,
+      "effective_rank": 260.946,
+      "mAP_pct": 85.8424,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 64,
+      "effective_rank": 260.579,
+      "mAP_pct": 85.8376,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 128,
+      "effective_rank": 259.682,
+      "mAP_pct": 85.8368,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "A",
+      "end": "bottom",
+      "k": 256,
+      "effective_rank": 257.476,
+      "mAP_pct": 85.8432,
+      "rank1_pct": 94.5368
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 0,
+      "effective_rank": 133.302,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9537
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 1,
+      "effective_rank": 168.408,
+      "mAP_pct": 2.9479,
+      "rank1_pct": 8.8031
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 2,
+      "effective_rank": 187.736,
+      "mAP_pct": 3.2719,
+      "rank1_pct": 9.5152
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 4,
+      "effective_rank": 208.811,
+      "mAP_pct": 3.5641,
+      "rank1_pct": 10.3818
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 8,
+      "effective_rank": 238.846,
+      "mAP_pct": 3.9608,
+      "rank1_pct": 11.4886
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 16,
+      "effective_rank": 291.788,
+      "mAP_pct": 3.9817,
+      "rank1_pct": 12.0034
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 32,
+      "effective_rank": 373.004,
+      "mAP_pct": 4.0279,
+      "rank1_pct": 12.0892
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 64,
+      "effective_rank": 533.638,
+      "mAP_pct": 3.9449,
+      "rank1_pct": 12.4668
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 128,
+      "effective_rank": 839.933,
+      "mAP_pct": 3.944,
+      "rank1_pct": 12.9987
+    },
+    {
+      "cell": "B",
+      "end": "top",
+      "k": 256,
+      "effective_rank": 1142.1,
+      "mAP_pct": 3.9728,
+      "rank1_pct": 13.5736
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 0,
+      "effective_rank": 133.302,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9537
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 1,
+      "effective_rank": 133.3,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9537
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 2,
+      "effective_rank": 133.297,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 4,
+      "effective_rank": 133.292,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 8,
+      "effective_rank": 133.278,
+      "mAP_pct": 2.5613,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 16,
+      "effective_rank": 133.247,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 32,
+      "effective_rank": 133.171,
+      "mAP_pct": 2.5615,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 64,
+      "effective_rank": 132.979,
+      "mAP_pct": 2.5614,
+      "rank1_pct": 7.9537
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 128,
+      "effective_rank": 132.487,
+      "mAP_pct": 2.5616,
+      "rank1_pct": 7.9537
+    },
+    {
+      "cell": "B",
+      "end": "bottom",
+      "k": 256,
+      "effective_rank": 131.269,
+      "mAP_pct": 2.5609,
+      "rank1_pct": 7.9451
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 0,
+      "effective_rank": 208.863,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 1,
+      "effective_rank": 224.399,
+      "mAP_pct": 26.6017,
+      "rank1_pct": 53.8895
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 2,
+      "effective_rank": 239.115,
+      "mAP_pct": 26.4217,
+      "rank1_pct": 53.5629
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 4,
+      "effective_rank": 261.405,
+      "mAP_pct": 26.8895,
+      "rank1_pct": 54.5131
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 8,
+      "effective_rank": 296.853,
+      "mAP_pct": 27.4133,
+      "rank1_pct": 55.5226
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 16,
+      "effective_rank": 342.808,
+      "mAP_pct": 27.4509,
+      "rank1_pct": 56.6508
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 32,
+      "effective_rank": 410.102,
+      "mAP_pct": 26.7448,
+      "rank1_pct": 56.6805
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 64,
+      "effective_rank": 522.176,
+      "mAP_pct": 25.0567,
+      "rank1_pct": 56.3539
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 128,
+      "effective_rank": 739.508,
+      "mAP_pct": 23.5168,
+      "rank1_pct": 56.1461
+    },
+    {
+      "cell": "C",
+      "end": "top",
+      "k": 256,
+      "effective_rank": 1012.547,
+      "mAP_pct": 21.1468,
+      "rank1_pct": 56.7102
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 0,
+      "effective_rank": 208.863,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 1,
+      "effective_rank": 208.863,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 2,
+      "effective_rank": 208.862,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 4,
+      "effective_rank": 208.86,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 8,
+      "effective_rank": 208.853,
+      "mAP_pct": 26.6596,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 16,
+      "effective_rank": 208.833,
+      "mAP_pct": 26.6593,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 32,
+      "effective_rank": 208.779,
+      "mAP_pct": 26.6597,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 64,
+      "effective_rank": 208.635,
+      "mAP_pct": 26.6601,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 128,
+      "effective_rank": 208.235,
+      "mAP_pct": 26.6621,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "C",
+      "end": "bottom",
+      "k": 256,
+      "effective_rank": 207.026,
+      "mAP_pct": 26.664,
+      "rank1_pct": 53.8599
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 0,
+      "effective_rank": 359.908,
+      "mAP_pct": 41.6246,
+      "rank1_pct": 70.9996
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 1,
+      "effective_rank": 363.716,
+      "mAP_pct": 41.6965,
+      "rank1_pct": 70.9824
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 2,
+      "effective_rank": 366.124,
+      "mAP_pct": 41.618,
+      "rank1_pct": 71.0082
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 4,
+      "effective_rank": 370.554,
+      "mAP_pct": 41.3785,
+      "rank1_pct": 70.9052
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 8,
+      "effective_rank": 377.307,
+      "mAP_pct": 40.6672,
+      "rank1_pct": 70.4934
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 16,
+      "effective_rank": 390.188,
+      "mAP_pct": 39.3538,
+      "rank1_pct": 69.6353
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 32,
+      "effective_rank": 414.84,
+      "mAP_pct": 37.3885,
+      "rank1_pct": 68.6143
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 64,
+      "effective_rank": 476.754,
+      "mAP_pct": 34.8544,
+      "rank1_pct": 67.0613
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 128,
+      "effective_rank": 695.66,
+      "mAP_pct": 32.1605,
+      "rank1_pct": 64.4616
+    },
+    {
+      "cell": "D",
+      "end": "top",
+      "k": 256,
+      "effective_rank": 1059.386,
+      "mAP_pct": 31.0472,
+      "rank1_pct": 64.1527
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 0,
+      "effective_rank": 359.908,
+      "mAP_pct": 41.6246,
+      "rank1_pct": 70.9996
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 1,
+      "effective_rank": 359.908,
+      "mAP_pct": 41.6246,
+      "rank1_pct": 70.9996
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 2,
+      "effective_rank": 359.906,
+      "mAP_pct": 41.6237,
+      "rank1_pct": 70.9824
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 4,
+      "effective_rank": 359.901,
+      "mAP_pct": 41.6252,
+      "rank1_pct": 70.991
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 8,
+      "effective_rank": 359.885,
+      "mAP_pct": 41.6223,
+      "rank1_pct": 70.9567
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 16,
+      "effective_rank": 359.834,
+      "mAP_pct": 41.6229,
+      "rank1_pct": 70.9567
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 32,
+      "effective_rank": 359.696,
+      "mAP_pct": 41.6223,
+      "rank1_pct": 70.9567
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 64,
+      "effective_rank": 359.33,
+      "mAP_pct": 41.6243,
+      "rank1_pct": 70.9738
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 128,
+      "effective_rank": 358.332,
+      "mAP_pct": 41.6248,
+      "rank1_pct": 70.9738
+    },
+    {
+      "cell": "D",
+      "end": "bottom",
+      "k": 256,
+      "effective_rank": 355.399,
+      "mAP_pct": 41.6291,
+      "rank1_pct": 70.9395
+    }
+  ]
+}

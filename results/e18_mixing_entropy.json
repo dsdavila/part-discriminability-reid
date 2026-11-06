@@ -1,0 +1,22 @@
+{
+  "A": {
+    "mean_norm_entropy": 0.9203018676051976,
+    "median_norm_entropy": 0.934518161982959,
+    "p10_norm_entropy": 0.864943076099
+  },
+  "B": {
+    "mean_norm_entropy": 0.6686450195180372,
+    "median_norm_entropy": 0.6748243682485378,
+    "p10_norm_entropy": 0.5735073740365131
+  },
+  "C": {
+    "mean_norm_entropy": 0.6763204504991592,
+    "median_norm_entropy": 0.6897071606842504,
+    "p10_norm_entropy": 0.5541963428125417
+  },
+  "D": {
+    "mean_norm_entropy": 0.9348270165047203,
+    "median_norm_entropy": 0.9443825265139608,
+    "p10_norm_entropy": 0.8921117791535499
+  }
+}

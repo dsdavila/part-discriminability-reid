@@ -1,0 +1,165 @@
+{
+  "params": {
+    "k": 10,
+    "noise_sigma_D": 0.0625
+  },
+  "B_prime": {
+    "cell": "B'",
+    "n_edges": 64311,
+    "n_reciprocal": 3782,
+    "n_one_directional": 56747,
+    "recip_summary": {
+      "label": "B':reciprocal",
+      "n": 3782,
+      "imbalance_mean": 1.1184174862778349,
+      "imbalance_median": 1.085754171064686,
+      "imbalance_p25": 1.038016652471652,
+      "imbalance_p75": 1.1618059396244056,
+      "margin_mean": 0.46820792014596846,
+      "margin_median": 0.4587393856707596,
+      "ang_mean": 0.7600027905029719,
+      "ang_median": 0.7493587501828072
+    },
+    "one_dir_summary": {
+      "label": "B':one_directional",
+      "n": 56747,
+      "imbalance_mean": 1.1369090787913656,
+      "imbalance_median": 1.102171614438295,
+      "imbalance_p25": 1.0455677696386858,
+      "imbalance_p75": 1.1892304824663276,
+      "margin_mean": 0.5457958439369481,
+      "margin_median": 0.538089631218699,
+      "ang_mean": 0.8905959173594835,
+      "ang_median": 0.8888474819455191
+    },
+    "one_minus_recip_diffs": {
+      "imbalance": {
+        "mean": 0.01849159251353072,
+        "CI95": [
+          0.014773947472505055,
+          0.022486335434883604
+        ]
+      },
+      "margin": {
+        "mean": 0.07758792379097967,
+        "CI95": [
+          0.07402361503990924,
+          0.08110242600585175
+        ]
+      },
+      "ang": {
+        "mean": 0.1305931268565116,
+        "CI95": [
+          0.1249253500140668,
+          0.13581349348384056
+        ]
+      }
+    }
+  },
+  "D": {
+    "cell": "D",
+    "n_edges": 25348,
+    "n_reciprocal": 1874,
+    "n_one_directional": 21600,
+    "recip_summary": {
+      "label": "D:reciprocal",
+      "n": 1874,
+      "imbalance_mean": 1.1254899313669844,
+      "imbalance_median": 1.0948529091593806,
+      "imbalance_p25": 1.0441414120442463,
+      "imbalance_p75": 1.1763093759574317,
+      "margin_mean": 0.6423460180290527,
+      "margin_median": 0.6382291901124149,
+      "ang_mean": 1.0223891154087006,
+      "ang_median": 1.0267381067224992
+    },
+    "one_dir_summary": {
+      "label": "D:one_directional",
+      "n": 21600,
+      "imbalance_mean": 1.1387782792773133,
+      "imbalance_median": 1.1073370098996178,
+      "imbalance_p25": 1.0484833500174415,
+      "imbalance_p75": 1.1954951240194542,
+      "margin_mean": 0.7615791396485023,
+      "margin_median": 0.7537974391581104,
+      "ang_mean": 1.2175452509076023,
+      "ang_median": 1.222069350304764
+    },
+    "one_minus_recip_diffs": {
+      "imbalance": {
+        "mean": 0.013288347910328957,
+        "CI95": [
+          0.007764574175099353,
+          0.01882182573475771
+        ]
+      },
+      "margin": {
+        "mean": 0.11923312161944966,
+        "CI95": [
+          0.11387193241344601,
+          0.12445596486321538
+        ]
+      },
+      "ang": {
+        "mean": 0.19515613549890176,
+        "CI95": [
+          0.18728529133578645,
+          0.20245860915270855
+        ]
+      }
+    }
+  },
+  "noise_D": {
+    "cell": "noise-D",
+    "n_edges": 91170,
+    "n_reciprocal": 3885,
+    "n_one_directional": 83400,
+    "recip_summary": {
+      "label": "noise-D:reciprocal",
+      "n": 3885,
+      "imbalance_mean": 1.0379581179181963,
+      "imbalance_median": 1.0301839915504218,
+      "imbalance_p25": 1.014058559014373,
+      "imbalance_p75": 1.0552180204829522,
+      "margin_mean": 0.500361718743277,
+      "margin_median": 0.5018098082226363,
+      "ang_mean": 1.2770655498795978,
+      "ang_median": 1.281200879235827
+    },
+    "one_dir_summary": {
+      "label": "noise-D:one_directional",
+      "n": 83400,
+      "imbalance_mean": 1.043362598836282,
+      "imbalance_median": 1.0352783471790046,
+      "imbalance_p25": 1.016275072279208,
+      "imbalance_p75": 1.0618351072874852,
+      "margin_mean": 0.5672133856359669,
+      "margin_median": 0.5710536186476063,
+      "ang_mean": 1.4377590977894574,
+      "ang_median": 1.452431669895291
+    },
+    "one_minus_recip_diffs": {
+      "imbalance": {
+        "mean": 0.005404480918085763,
+        "CI95": [
+          0.004386115368223681,
+          0.006412973837375024
+        ]
+      },
+      "margin": {
+        "mean": 0.06685166689268995,
+        "CI95": [
+          0.06535953318602189,
+          0.06831749219036164
+        ]
+      },
+      "ang": {
+        "mean": 0.16069354790985968,
+        "CI95": [
+          0.15691906536736422,
+          0.16429096473114801
+        ]
+      }
+    }
+  }
+}

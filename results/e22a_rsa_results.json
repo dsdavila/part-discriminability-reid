@@ -1,0 +1,49 @@
+{
+  "protocol": "RSA: Spearman rho between off-diagonal entries of per-ID centroid cosine similarity matrices, within eval set (never across). Null: permutation of rows/cols of one model's centroid matrix (200 reps, RNG=42). Per-image: pairwise cosine matrix on 2000-image subsample (RNG=42).",
+  "cache": "e12_feature_cache",
+  "seed": "RNG=42",
+  "n_null_reps": 200,
+  "n_img_subsample": 2000,
+  "market_centroid": {
+    "label_A": "A (BoT-Market)",
+    "label_C": "C (BoT-MSMT17)",
+    "n_ids": 750,
+    "n_pairs": 280875,
+    "spearman_rho": 0.23875142239370797,
+    "null_mean": 9.35051481264443e-05,
+    "null_std": 0.0034610937383406696,
+    "null_p95": 0.005972338837158681,
+    "z_score_vs_null": 68.95447751280844,
+    "null_n_reps": 200,
+    "null_note": "permutation of rows/cols of S_A; preserves marginal distribution, destroys inter-model correspondence"
+  },
+  "msmt17_centroid": {
+    "label_A": "D (BoT-MSMT17)",
+    "label_C": "B (BoT-Market)",
+    "n_ids": 3059,
+    "n_pairs": 4677211,
+    "spearman_rho": 0.28332617593277976,
+    "null_mean": -0.0002885194447154851,
+    "null_std": 0.006707091632276321,
+    "null_p95": 0.01002171759034162,
+    "z_score_vs_null": 42.28579341067685,
+    "null_n_reps": 200,
+    "null_note": "permutation of rows/cols of S_A; preserves marginal distribution, destroys inter-model correspondence"
+  },
+  "market_per_image": {
+    "label_A": "A (BoT-Market)",
+    "label_C": "C (BoT-MSMT17)",
+    "n_subsample": 2000,
+    "n_pairs": 1999000,
+    "spearman_rho": 0.18489789249824298,
+    "subsample_seed": 42
+  },
+  "msmt17_per_image": {
+    "label_A": "D (BoT-MSMT17)",
+    "label_C": "B (BoT-Market)",
+    "n_subsample": 2000,
+    "n_pairs": 1999000,
+    "spearman_rho": 0.10532710673597766,
+    "subsample_seed": 42
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "model": "CLIP-ReID ViT-B/16 (MSMT17-trained, cross-domain on Market-1501)",
+  "sigma_patches": 2.0,
+  "top5_frac": {
+    "median": 0.5488,
+    "q25": 0.5132,
+    "q75": 0.5825,
+    "iqr": 0.0692,
+    "n": 13115
+  },
+  "off_skeleton_frac": {
+    "median": 0.6267,
+    "q25": 0.5179,
+    "q75": 0.7071,
+    "iqr": 0.1892,
+    "n": 13115
+  },
+  "n_no_keypoints": 0
+}

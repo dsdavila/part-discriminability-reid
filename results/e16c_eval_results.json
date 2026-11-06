@@ -1,0 +1,298 @@
+{
+  "model": "BoT-Market ResNet-50",
+  "checkpoint": "/data/papers/low_dimensional_reid/pretrained/bot_market1501_final.pth",
+  "split_file": "/data/papers/low_dimensional_reid/results/e16c_split_v3.json",
+  "matching": "R1/R2/R4 subsampled to R3 bottleneck ID count",
+  "protocol": "one query per (ID,cam) pair; same-cam gallery excluded; MSMT17 train images for R1-R3; Market-1501 test for R4",
+  "draw_results": [
+    {
+      "draw": 1,
+      "held_cameras": [
+        1,
+        7,
+        10,
+        11,
+        12
+      ],
+      "r3_target_ids": 307,
+      "r1_unmatched": {
+        "n_ids": 711,
+        "n_imgs": 12093,
+        "n_queries": 1756,
+        "map": 0.031321
+      },
+      "r1_matched": {
+        "n_ids": 307,
+        "n_imgs": 5265,
+        "n_queries": 777,
+        "map": 0.049418
+      },
+      "r2_unmatched": {
+        "n_ids": 310,
+        "n_imgs": 5617,
+        "n_queries": 769,
+        "map": 0.048245
+      },
+      "r2_matched": {
+        "n_ids": 307,
+        "n_imgs": 5582,
+        "n_queries": 763,
+        "map": 0.051073
+      },
+      "r3": {
+        "n_ids": 307,
+        "n_imgs": 3791,
+        "n_queries": 577,
+        "map": 0.095341
+      },
+      "r4_market": {
+        "n_ids": 307,
+        "n_imgs": 7011,
+        "n_queries": 1388,
+        "map": 0.901414
+      }
+    },
+    {
+      "draw": 2,
+      "held_cameras": [
+        4,
+        8,
+        12,
+        13,
+        14
+      ],
+      "r3_target_ids": 296,
+      "r1_unmatched": {
+        "n_ids": 722,
+        "n_imgs": 13653,
+        "n_queries": 2105,
+        "map": 0.051181
+      },
+      "r1_matched": {
+        "n_ids": 296,
+        "n_imgs": 5318,
+        "n_queries": 836,
+        "map": 0.078006
+      },
+      "r2_unmatched": {
+        "n_ids": 314,
+        "n_imgs": 6117,
+        "n_queries": 919,
+        "map": 0.071897
+      },
+      "r2_matched": {
+        "n_ids": 296,
+        "n_imgs": 5781,
+        "n_queries": 870,
+        "map": 0.072285
+      },
+      "r3": {
+        "n_ids": 296,
+        "n_imgs": 3291,
+        "n_queries": 316,
+        "map": 0.061624
+      },
+      "r4_market": {
+        "n_ids": 296,
+        "n_imgs": 6506,
+        "n_queries": 1321,
+        "map": 0.906068
+      }
+    },
+    {
+      "draw": 3,
+      "held_cameras": [
+        2,
+        6,
+        11,
+        14,
+        15
+      ],
+      "r3_target_ids": 291,
+      "r1_unmatched": {
+        "n_ids": 722,
+        "n_imgs": 14433,
+        "n_queries": 2235,
+        "map": 0.056999
+      },
+      "r1_matched": {
+        "n_ids": 291,
+        "n_imgs": 5680,
+        "n_queries": 883,
+        "map": 0.084699
+      },
+      "r2_unmatched": {
+        "n_ids": 315,
+        "n_imgs": 6477,
+        "n_queries": 978,
+        "map": 0.077585
+      },
+      "r2_matched": {
+        "n_ids": 291,
+        "n_imgs": 5775,
+        "n_queries": 897,
+        "map": 0.080358
+      },
+      "r3": {
+        "n_ids": 291,
+        "n_imgs": 2931,
+        "n_queries": 296,
+        "map": 0.038159
+      },
+      "r4_market": {
+        "n_ids": 291,
+        "n_imgs": 6375,
+        "n_queries": 1298,
+        "map": 0.910905
+      }
+    },
+    {
+      "draw": 4,
+      "held_cameras": [
+        1,
+        3,
+        5,
+        13,
+        15
+      ],
+      "r3_target_ids": 313,
+      "r1_unmatched": {
+        "n_ids": 706,
+        "n_imgs": 11493,
+        "n_queries": 1752,
+        "map": 0.068007
+      },
+      "r1_matched": {
+        "n_ids": 313,
+        "n_imgs": 5066,
+        "n_queries": 774,
+        "map": 0.106889
+      },
+      "r2_unmatched": {
+        "n_ids": 310,
+        "n_imgs": 5360,
+        "n_queries": 781,
+        "map": 0.091728
+      },
+      "r2_matched": {
+        "n_ids": 310,
+        "n_imgs": 5360,
+        "n_queries": 781,
+        "map": 0.090496
+      },
+      "r3": {
+        "n_ids": 313,
+        "n_imgs": 4048,
+        "n_queries": 533,
+        "map": 0.055597
+      },
+      "r4_market": {
+        "n_ids": 313,
+        "n_imgs": 6634,
+        "n_queries": 1399,
+        "map": 0.92115
+      }
+    },
+    {
+      "draw": 5,
+      "held_cameras": [
+        2,
+        3,
+        4,
+        7,
+        9
+      ],
+      "r3_target_ids": 229,
+      "r1_unmatched": {
+        "n_ids": 724,
+        "n_imgs": 16288,
+        "n_queries": 2542,
+        "map": 0.04358
+      },
+      "r1_matched": {
+        "n_ids": 229,
+        "n_imgs": 5037,
+        "n_queries": 809,
+        "map": 0.063982
+      },
+      "r2_unmatched": {
+        "n_ids": 313,
+        "n_imgs": 7272,
+        "n_queries": 1124,
+        "map": 0.059237
+      },
+      "r2_matched": {
+        "n_ids": 229,
+        "n_imgs": 5402,
+        "n_queries": 828,
+        "map": 0.065127
+      },
+      "r3": {
+        "n_ids": 229,
+        "n_imgs": 2136,
+        "n_queries": 162,
+        "map": 0.095207
+      },
+      "r4_market": {
+        "n_ids": 229,
+        "n_imgs": 4914,
+        "n_queries": 1026,
+        "map": 0.905802
+      }
+    },
+    {
+      "draw": 6,
+      "held_cameras": [
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "r3_target_ids": 276,
+      "r1_unmatched": {
+        "n_ids": 723,
+        "n_imgs": 15208,
+        "n_queries": 2431,
+        "map": 0.062753
+      },
+      "r1_matched": {
+        "n_ids": 276,
+        "n_imgs": 6092,
+        "n_queries": 958,
+        "map": 0.097916
+      },
+      "r2_unmatched": {
+        "n_ids": 315,
+        "n_imgs": 6789,
+        "n_queries": 1068,
+        "map": 0.080754
+      },
+      "r2_matched": {
+        "n_ids": 276,
+        "n_imgs": 5969,
+        "n_queries": 947,
+        "map": 0.086439
+      },
+      "r3": {
+        "n_ids": 276,
+        "n_imgs": 2619,
+        "n_queries": 155,
+        "map": 0.074752
+      },
+      "r4_market": {
+        "n_ids": 276,
+        "n_imgs": 5991,
+        "n_queries": 1231,
+        "map": 0.923009
+      }
+    }
+  ],
+  "means": {
+    "r1_unmatched": 0.052307,
+    "r1_matched": 0.080152,
+    "r2_matched": 0.074296,
+    "r3": 0.070113,
+    "r4_market": 0.911391
+  }
+}

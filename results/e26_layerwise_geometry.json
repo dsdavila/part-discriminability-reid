@@ -1,0 +1,202 @@
+{
+  "BoT_Market_x_Market": {
+    "model": "BoT_Market",
+    "gallery": "Market",
+    "layers": {
+      "layer1": {
+        "mu_norm": 0.9736729860305786,
+        "eff_rank_SB": 7.931761264801025,
+        "eff_rank_SW": 13.052092552185059,
+        "eff_rank_SB_frac": 0.030983442440629005,
+        "eff_rank_SW_frac": 0.050984736531972885,
+        "fisher_F": 0.03677679371842206,
+        "dim": 256,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer2": {
+        "mu_norm": 0.9539551138877869,
+        "eff_rank_SB": 17.35427474975586,
+        "eff_rank_SW": 31.58174705505371,
+        "eff_rank_SB_frac": 0.03389506787061691,
+        "eff_rank_SW_frac": 0.06168309971690178,
+        "fisher_F": 0.027167823672800392,
+        "dim": 512,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer3": {
+        "mu_norm": 0.9087647795677185,
+        "eff_rank_SB": 48.63078689575195,
+        "eff_rank_SW": 142.3448944091797,
+        "eff_rank_SB_frac": 0.04749100282788277,
+        "eff_rank_SW_frac": 0.13900868594646454,
+        "fisher_F": 0.03172759683890955,
+        "dim": 1024,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer4": {
+        "mu_norm": 0.913877546787262,
+        "eff_rank_SB": 100.31362915039062,
+        "eff_rank_SW": 244.17396545410156,
+        "eff_rank_SB_frac": 0.04898126423358917,
+        "eff_rank_SW_frac": 0.11922556906938553,
+        "fisher_F": 0.07813567166241396,
+        "dim": 2048,
+        "n_ids": 751,
+        "n_samples": 15913
+      }
+    }
+  },
+  "BoT_Market_x_MSMT17": {
+    "model": "BoT_Market",
+    "gallery": "MSMT17",
+    "layers": {
+      "layer1": {
+        "mu_norm": 0.9537702798843384,
+        "eff_rank_SB": 6.673649787902832,
+        "eff_rank_SW": 10.800049781799316,
+        "eff_rank_SB_frac": 0.026068944483995438,
+        "eff_rank_SW_frac": 0.04218769446015358,
+        "fisher_F": 0.02200957719304114,
+        "dim": 256,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer2": {
+        "mu_norm": 0.9198520183563232,
+        "eff_rank_SB": 11.673450469970703,
+        "eff_rank_SW": 20.642499923706055,
+        "eff_rank_SB_frac": 0.02279970794916153,
+        "eff_rank_SW_frac": 0.04031738266348839,
+        "fisher_F": 0.01942056730408512,
+        "dim": 512,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer3": {
+        "mu_norm": 0.8808004260063171,
+        "eff_rank_SB": 24.877552032470703,
+        "eff_rank_SW": 60.43435287475586,
+        "eff_rank_SB_frac": 0.02429448440670967,
+        "eff_rank_SW_frac": 0.05901792272925377,
+        "fisher_F": 0.01830051217792678,
+        "dim": 1024,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer4": {
+        "mu_norm": 0.9154191017150879,
+        "eff_rank_SB": 44.28459930419922,
+        "eff_rank_SW": 101.27729797363281,
+        "eff_rank_SB_frac": 0.021623339504003525,
+        "eff_rank_SW_frac": 0.0494518056511879,
+        "fisher_F": 0.020534927141011433,
+        "dim": 2048,
+        "n_ids": 3060,
+        "n_samples": 82161
+      }
+    }
+  },
+  "BoT_MSMT17_x_Market": {
+    "model": "BoT_MSMT17",
+    "gallery": "Market",
+    "layers": {
+      "layer1": {
+        "mu_norm": 0.9795407652854919,
+        "eff_rank_SB": 7.841545104980469,
+        "eff_rank_SW": 13.313857078552246,
+        "eff_rank_SB_frac": 0.030631035566329956,
+        "eff_rank_SW_frac": 0.05200725421309471,
+        "fisher_F": 0.03473393252857748,
+        "dim": 256,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer2": {
+        "mu_norm": 0.9631630182266235,
+        "eff_rank_SB": 16.750322341918945,
+        "eff_rank_SW": 32.02512741088867,
+        "eff_rank_SB_frac": 0.03271547332406044,
+        "eff_rank_SW_frac": 0.06254907697439194,
+        "fisher_F": 0.026270985353505194,
+        "dim": 512,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer3": {
+        "mu_norm": 0.9012488722801208,
+        "eff_rank_SB": 46.554283142089844,
+        "eff_rank_SW": 152.92247009277344,
+        "eff_rank_SB_frac": 0.04546316713094711,
+        "eff_rank_SW_frac": 0.14933834969997406,
+        "fisher_F": 0.02789952675254213,
+        "dim": 1024,
+        "n_ids": 751,
+        "n_samples": 15913
+      },
+      "layer4": {
+        "mu_norm": 0.9185870289802551,
+        "eff_rank_SB": 46.788814544677734,
+        "eff_rank_SW": 151.97781372070312,
+        "eff_rank_SB_frac": 0.022846100851893425,
+        "eff_rank_SW_frac": 0.07420791685581207,
+        "fisher_F": 0.046640789352154065,
+        "dim": 2048,
+        "n_ids": 751,
+        "n_samples": 15913
+      }
+    }
+  },
+  "BoT_MSMT17_x_MSMT17": {
+    "model": "BoT_MSMT17",
+    "gallery": "MSMT17",
+    "layers": {
+      "layer1": {
+        "mu_norm": 0.9641799926757812,
+        "eff_rank_SB": 7.538923740386963,
+        "eff_rank_SW": 13.007039070129395,
+        "eff_rank_SB_frac": 0.029448920860886574,
+        "eff_rank_SW_frac": 0.05080874636769295,
+        "fisher_F": 0.02172439074938393,
+        "dim": 256,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer2": {
+        "mu_norm": 0.9431650638580322,
+        "eff_rank_SB": 20.39893913269043,
+        "eff_rank_SW": 36.71478271484375,
+        "eff_rank_SB_frac": 0.039841677993535995,
+        "eff_rank_SW_frac": 0.0717085599899292,
+        "fisher_F": 0.019148841688476463,
+        "dim": 512,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer3": {
+        "mu_norm": 0.8877846002578735,
+        "eff_rank_SB": 85.34550476074219,
+        "eff_rank_SW": 239.78118896484375,
+        "eff_rank_SB_frac": 0.08334521949291229,
+        "eff_rank_SW_frac": 0.23416131734848022,
+        "fisher_F": 0.022971027550364405,
+        "dim": 1024,
+        "n_ids": 3060,
+        "n_samples": 82161
+      },
+      "layer4": {
+        "mu_norm": 0.9015370607376099,
+        "eff_rank_SB": 81.6836929321289,
+        "eff_rank_SW": 219.1260223388672,
+        "eff_rank_SB_frac": 0.03988461568951607,
+        "eff_rank_SW_frac": 0.10699512809515,
+        "fisher_F": 0.05664434883212317,
+        "dim": 2048,
+        "n_ids": 3060,
+        "n_samples": 82161
+      }
+    }
+  }
+}

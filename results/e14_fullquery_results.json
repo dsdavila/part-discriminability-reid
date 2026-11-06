@@ -1,0 +1,53 @@
+{
+  "direction": "Market->MSMT17",
+  "n_queries": 46455,
+  "n_gallery": 46455,
+  "n_half_B_ids": 1530,
+  "note": "Full-query (all half-B images, no MAX_Q cap). Compare to e14_paired_results.json baseline_map=3.26% with n_q=2000.",
+  "baseline_map": 0.034079,
+  "removal": {
+    "k": 15,
+    "map": 0.035204,
+    "delta": 0.001125,
+    "ci": [
+      0.001012,
+      0.001241
+    ],
+    "significant": true,
+    "ci_id_level": [
+      0.000849,
+      0.001424
+    ],
+    "significant_id_level": true,
+    "n_ids": 1530,
+    "ci_note": "ci is image-level (pseudo-replicated, 46455 images / 1530 IDs); ci_id_level resamples IDs \u2014 the independent unit"
+  },
+  "reweight": {
+    "alpha": 3.0,
+    "map": 0.034473,
+    "delta": 0.000394,
+    "ci": [
+      0.000357,
+      0.00043
+    ],
+    "significant": true,
+    "ci_id_level": [
+      0.000314,
+      0.000483
+    ],
+    "significant_id_level": true,
+    "ci_note": "ci is image-level (pseudo-replicated, 46455 images / 1530 IDs); ci_id_level resamples IDs \u2014 the independent unit"
+  },
+  "e14_paired_comparison": {
+    "paired_baseline_map": 0.032613,
+    "paired_n_queries": 2000,
+    "paired_rm_delta": 0.002,
+    "paired_rm_significant": true
+  },
+  "junk_exclusion": {
+    "self_excluded": true,
+    "same_id_same_cam": "excluded (standard mAP protocol)",
+    "invalid_pids": "excluded (g_pids <= 0)",
+    "note": "same-ID-same-cam rule excludes the query image itself since it appears in the gallery with the same pid and cam"
+  }
+}

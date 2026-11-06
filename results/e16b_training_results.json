@@ -1,0 +1,138 @@
+{
+  "D1_seed1337": {
+    "arm": "D1",
+    "seed": 1337,
+    "n_train_images": 7914,
+    "n_ids": 992,
+    "market_map": 21.144697846017678,
+    "market_r1": 47.80285060405731,
+    "geometry_market": {
+      "mu_norm": 0.38525351881980896,
+      "eff_rank_SB": 78.67455291748047,
+      "eff_rank_SW": 223.24725341796875,
+      "tr_SB": 517.1058959960938,
+      "tr_SW": 10973.6142578125,
+      "fisher_F": 0.04712266021451846
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D1_seed1337_final.pth"
+  },
+  "D3_seed1337": {
+    "arm": "D3",
+    "seed": 1337,
+    "n_train_images": 7914,
+    "n_ids": 1005,
+    "market_map": 22.214003882556206,
+    "market_r1": 49.79216158390045,
+    "geometry_market": {
+      "mu_norm": 0.379983514547348,
+      "eff_rank_SB": 81.74873352050781,
+      "eff_rank_SW": 231.92864990234375,
+      "tr_SB": 517.9452514648438,
+      "tr_SW": 11075.072265625,
+      "fisher_F": 0.04676676043662948
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D3_seed1337_final.pth"
+  },
+  "D6_seed1337": {
+    "arm": "D6",
+    "seed": 1337,
+    "n_train_images": 7914,
+    "n_ids": 1034,
+    "market_map": 22.893388379182415,
+    "market_r1": 48.72327744960785,
+    "geometry_market": {
+      "mu_norm": 0.37974950671195984,
+      "eff_rank_SB": 74.01546478271484,
+      "eff_rank_SW": 226.9777374267578,
+      "tr_SB": 519.9854736328125,
+      "tr_SW": 10917.6572265625,
+      "fisher_F": 0.047627935448247574
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D6_seed1337_final.pth"
+  },
+  "C1_seed1337": {
+    "arm": "C1",
+    "seed": 1337,
+    "n_train_images": 7914,
+    "n_ids": 1005,
+    "market_map": 20.350499266806466,
+    "market_r1": 46.22921645641327,
+    "geometry_market": {
+      "mu_norm": 0.41397538781166077,
+      "eff_rank_SB": 74.51446533203125,
+      "eff_rank_SW": 219.68865966796875,
+      "tr_SB": 481.7170715332031,
+      "tr_SW": 10746.4580078125,
+      "fisher_F": 0.04482565987630553
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_C1_seed1337_final.pth"
+  },
+  "D1_seed2024": {
+    "arm": "D1",
+    "seed": 2024,
+    "n_train_images": 7914,
+    "n_ids": 992,
+    "market_map": 20.196461011895465,
+    "market_r1": 47.29810059070587,
+    "geometry_market": {
+      "mu_norm": 0.3814542889595032,
+      "eff_rank_SB": 79.73102569580078,
+      "eff_rank_SW": 219.55892944335938,
+      "tr_SB": 520.8003540039062,
+      "tr_SW": 11091.326171875,
+      "fisher_F": 0.04695564316957278
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D1_seed2024_final.pth"
+  },
+  "D3_seed2024": {
+    "arm": "D3",
+    "seed": 2024,
+    "n_train_images": 7914,
+    "n_ids": 1003,
+    "market_map": 21.743430514918956,
+    "market_r1": 47.862231731414795,
+    "geometry_market": {
+      "mu_norm": 0.38064926862716675,
+      "eff_rank_SB": 80.31069946289062,
+      "eff_rank_SW": 230.61500549316406,
+      "tr_SB": 516.2005615234375,
+      "tr_SW": 11085.486328125,
+      "fisher_F": 0.04656544117634103
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D3_seed2024_final.pth"
+  },
+  "D6_seed2024": {
+    "arm": "D6",
+    "seed": 2024,
+    "n_train_images": 7914,
+    "n_ids": 1032,
+    "market_map": 21.732232666275756,
+    "market_r1": 49.43586587905884,
+    "geometry_market": {
+      "mu_norm": 0.3994324207305908,
+      "eff_rank_SB": 77.97327423095703,
+      "eff_rank_SW": 232.0171356201172,
+      "tr_SB": 495.16943359375,
+      "tr_SW": 10840.7724609375,
+      "fisher_F": 0.04567658212345951
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_D6_seed2024_final.pth"
+  },
+  "C1_seed2024": {
+    "arm": "C1",
+    "seed": 2024,
+    "n_train_images": 7914,
+    "n_ids": 1001,
+    "market_map": 19.601443369138636,
+    "market_r1": 44.98218595981598,
+    "geometry_market": {
+      "mu_norm": 0.3997745215892792,
+      "eff_rank_SB": 78.2240982055664,
+      "eff_rank_SW": 223.88134765625,
+      "tr_SB": 491.6414794921875,
+      "tr_SW": 11100.318359375,
+      "fisher_F": 0.044290754875238474
+    },
+    "ckpt": "/data/papers/low_dimensional_reid/pretrained/e16b/e16b_C1_seed2024_final.pth"
+  }
+}

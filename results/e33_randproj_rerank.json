@@ -1,0 +1,27 @@
+{
+  "Market_randproj": {
+    "label": "Market randproj-A' k=17",
+    "mAP_baseline": 26.138106211991797,
+    "R1_baseline": 46.40736281871796,
+    "mAP_rerank": 37.22940777988225,
+    "R1_rerank": 51.00950002670288,
+    "delta_mAP": 11.091301567890454,
+    "delta_R1": 4.602137207984924
+  },
+  "MSMT_randproj": {
+    "label": "MSMT randproj-D k=17",
+    "mAP_baseline": 5.180100096260435,
+    "R1_baseline": 15.267175436019897,
+    "mAP_rerank": 7.822286866979892,
+    "R1_rerank": 17.27420836687088,
+    "delta_mAP": 2.6421867707194577,
+    "delta_R1": 2.0070329308509827
+  },
+  "params": {
+    "k1": 20,
+    "k2": 6,
+    "lambda": 0.3,
+    "MSMT_k_rand": 17,
+    "MKT_k_rand": 17
+  }
+}

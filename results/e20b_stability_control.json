@@ -1,0 +1,29 @@
+{
+  "protocol": "random item-split gallery halves (RNG=42); cos(mu_hat_half1, mu_hat_half2)",
+  "cells": {
+    "A": {
+      "N": 13115,
+      "cos_half1_half2": 0.9748044671276789,
+      "cos_full_half1": 0.9937054340451048,
+      "cos_full_half2": 0.99365682509608
+    },
+    "B": {
+      "N": 82132,
+      "cos_half1_half2": 0.999906621712604,
+      "cos_full_half1": 0.9999766659929615,
+      "cos_full_half2": 0.9999766443158429
+    },
+    "C": {
+      "N": 13115,
+      "cos_half1_half2": 0.99916940362239,
+      "cos_full_half1": 0.9997922622084972,
+      "cos_full_half2": 0.9997923964647475
+    },
+    "D": {
+      "N": 82132,
+      "cos_half1_half2": 0.9994635442022026,
+      "cos_full_half1": 0.9998653195866444,
+      "cos_full_half2": 0.9998664333694369
+    }
+  }
+}

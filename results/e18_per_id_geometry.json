@@ -1,0 +1,154 @@
+{
+  "description": "E18 per-ID subspace geometry (Fisher + camera decomp + overlap/hub)",
+  "confound_notes": {
+    "cameras": "Market=6 cams, MSMT17=15 cams; cam_decomp_fraction_between accounts for this",
+    "sample_size": "~26 imgs/ID in D=2048; no per-ID eff_rank; use scalar tr(S_W)/tr(S_B)",
+    "unseen_id_vs_domain": "Compare in-domain cells (A,D) vs cross-domain (B,C) with same measures"
+  },
+  "cells": {
+    "A": {
+      "fisher": {
+        "n_samples": 13115,
+        "n_ids": 750,
+        "D": 2048,
+        "tr_S_B": 0.6272245573579394,
+        "tr_S_W": 0.36681845324256673,
+        "fisher_ratio": 1.7099045912588628,
+        "tr_between_cam": 0.13567054019243177,
+        "tr_within_cam": 0.2311479138299177,
+        "cam_decomp_fraction_between": 0.369857455928773,
+        "cam_decomp_fraction_within": 0.6301425440712269,
+        "mean_cameras_per_id": 4.472,
+        "median_cameras_per_id": 5.0,
+        "mean_images_per_id": 17.486666666666668,
+        "n_ids_with_multicam": 750,
+        "n_ids_with_multiimg_per_cam": 746,
+        "per_id_between_cam_scatter_mean": 0.15273032529438246,
+        "per_id_within_cam_scatter_mean": 0.20002165118949233
+      },
+      "overlap_hub": {
+        "mean_overlap_ratio": 0.5619691406702358,
+        "median_overlap_ratio": 0.5274571088948941,
+        "std_overlap_ratio": 0.20874134904816952,
+        "mean_hub_score_normalized": 3.5796756129266893,
+        "median_hub_score_normalized": 3.5714285714285716,
+        "pearson_corr_overlap_hub": 0.06423336193825116,
+        "n_ids": 750,
+        "n_sampled_queries_for_hub": 5000,
+        "knn_k": 10,
+        "overlap_ratio_p25": 0.4235016671467274,
+        "overlap_ratio_p75": 0.6660347232913829,
+        "hub_score_p25": 2.7342105263157896,
+        "hub_score_p75": 4.428571428571429
+      }
+    },
+    "B": {
+      "fisher": {
+        "n_samples": 82132,
+        "n_ids": 3059,
+        "D": 2048,
+        "tr_S_B": 0.24137798398087218,
+        "tr_S_W": 0.5641393220493082,
+        "fisher_ratio": 0.4278694544887171,
+        "tr_between_cam": 0.2758419156939864,
+        "tr_within_cam": 0.28829740735148945,
+        "cam_decomp_fraction_between": 0.48896062448699484,
+        "cam_decomp_fraction_within": 0.5110393755130052,
+        "mean_cameras_per_id": 4.573389996730958,
+        "median_cameras_per_id": 4.0,
+        "mean_images_per_id": 26.84929715593331,
+        "n_ids_with_multicam": 3059,
+        "n_ids_with_multiimg_per_cam": 3059,
+        "per_id_between_cam_scatter_mean": 0.27399608269667974,
+        "per_id_within_cam_scatter_mean": 0.2642588872503119
+      },
+      "overlap_hub": {
+        "mean_overlap_ratio": 1.0809099097548522,
+        "median_overlap_ratio": 1.0425472994650535,
+        "std_overlap_ratio": 0.27564845540495175,
+        "mean_hub_score_normalized": 0.6042707544321502,
+        "median_hub_score_normalized": 0.5714285714285714,
+        "pearson_corr_overlap_hub": 0.12837908721163724,
+        "n_ids": 3059,
+        "n_sampled_queries_for_hub": 5000,
+        "knn_k": 10,
+        "overlap_ratio_p25": 0.8894781588127705,
+        "overlap_ratio_p75": 1.2146547495522353,
+        "hub_score_p25": 0.36363636363636365,
+        "hub_score_p75": 0.7916666666666666
+      }
+    },
+    "C": {
+      "fisher": {
+        "n_samples": 13115,
+        "n_ids": 750,
+        "D": 2048,
+        "tr_S_B": 0.39082773330440673,
+        "tr_S_W": 0.4587385171556395,
+        "fisher_ratio": 0.8519618882837514,
+        "tr_between_cam": 0.1905391864999816,
+        "tr_within_cam": 0.26819933192237044,
+        "cam_decomp_fraction_between": 0.41535467123027964,
+        "cam_decomp_fraction_within": 0.5846453287697204,
+        "mean_cameras_per_id": 4.472,
+        "median_cameras_per_id": 5.0,
+        "mean_images_per_id": 17.486666666666668,
+        "n_ids_with_multicam": 750,
+        "n_ids_with_multiimg_per_cam": 746,
+        "per_id_between_cam_scatter_mean": 0.20938023800454725,
+        "per_id_within_cam_scatter_mean": 0.23183883233964503
+      },
+      "overlap_hub": {
+        "mean_overlap_ratio": 0.7814534914530604,
+        "median_overlap_ratio": 0.7680309507481524,
+        "std_overlap_ratio": 0.20771849509825457,
+        "mean_hub_score_normalized": 3.5726073150826925,
+        "median_hub_score_normalized": 3.466666666666667,
+        "pearson_corr_overlap_hub": 0.18187415486635847,
+        "n_ids": 750,
+        "n_sampled_queries_for_hub": 5000,
+        "knn_k": 10,
+        "overlap_ratio_p25": 0.647102613226264,
+        "overlap_ratio_p75": 0.8939114197145794,
+        "hub_score_p25": 2.625,
+        "hub_score_p75": 4.426691729323308
+      }
+    },
+    "D": {
+      "fisher": {
+        "n_samples": 82132,
+        "n_ids": 3059,
+        "D": 2048,
+        "tr_S_B": 0.44790007255966785,
+        "tr_S_W": 0.507603642867609,
+        "fisher_ratio": 0.8823815172589045,
+        "tr_between_cam": 0.2096719582351174,
+        "tr_within_cam": 0.29793168476375476,
+        "cam_decomp_fraction_between": 0.41306235904138944,
+        "cam_decomp_fraction_within": 0.5869376409586106,
+        "mean_cameras_per_id": 4.573389996730958,
+        "median_cameras_per_id": 4.0,
+        "mean_images_per_id": 26.84929715593331,
+        "n_ids_with_multicam": 3059,
+        "n_ids_with_multiimg_per_cam": 3059,
+        "per_id_between_cam_scatter_mean": 0.2104947765163093,
+        "per_id_within_cam_scatter_mean": 0.27090346513781266
+      },
+      "overlap_hub": {
+        "mean_overlap_ratio": 0.8310915207424706,
+        "median_overlap_ratio": 0.8131854563028856,
+        "std_overlap_ratio": 0.23487756667269125,
+        "mean_hub_score_normalized": 0.5848791016906819,
+        "median_hub_score_normalized": 0.5217391304347826,
+        "pearson_corr_overlap_hub": 0.014106877001688261,
+        "n_ids": 3059,
+        "n_sampled_queries_for_hub": 5000,
+        "knn_k": 10,
+        "overlap_ratio_p25": 0.6569752054686395,
+        "overlap_ratio_p75": 0.9720280381555739,
+        "hub_score_p25": 0.2687617260787992,
+        "hub_score_p75": 0.8214285714285714
+      }
+    }
+  }
+}

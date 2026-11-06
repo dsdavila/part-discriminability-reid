@@ -1,0 +1,28 @@
+{
+  "model": "CLIP-ReID ViT-B/16 (MSMT17-trained, cross-domain Market-1501)",
+  "sigma_patches": 2.0,
+  "n_images_with_keypoints": 13115,
+  "n_no_keypoints": 0,
+  "on_skel_area_frac": {
+    "median": 0.4421,
+    "q25": 0.4244,
+    "q75": 0.458,
+    "mean": 0.4398,
+    "n": 13115
+  },
+  "on_skel_attn_frac": {
+    "median": 0.3733,
+    "q25": 0.2929,
+    "q75": 0.4821,
+    "mean": 0.3991,
+    "n": 13115
+  },
+  "enrichment": {
+    "median": 0.8521,
+    "q25": 0.6724,
+    "q75": 1.0937,
+    "mean": 0.9072,
+    "n": 13115
+  },
+  "note": "enrichment = on_skel_attn_frac / on_skel_area_frac. >1 = skeleton-biased, <1 = background-biased, ~1 = chance. Soft Gaussian masks (sigma=2 patch units), no binary threshold."
+}

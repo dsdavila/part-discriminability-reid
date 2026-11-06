@@ -1,0 +1,58 @@
+{
+  "protocol": "standard query/gallery split, same-cam exclusion, no transforms",
+  "cache_split": {
+    "market_query_count": 3368,
+    "msmt17_query_count": 11655,
+    "source": "compute_bot_msmt_2x2.py cache order: [query_non_junk, gallery_non_junk]"
+  },
+  "cells": {
+    "A": {
+      "map": 0.858404,
+      "r1": 0.945368,
+      "map_pct": 85.8404,
+      "train": "BoT-Market",
+      "eval": "Market",
+      "n_query": 3368,
+      "n_gallery": 13115
+    },
+    "B": {
+      "map": 0.025614,
+      "r1": 0.079537,
+      "map_pct": 2.5614,
+      "train": "BoT-Market",
+      "eval": "MSMT17",
+      "n_query": 11655,
+      "n_gallery": 82132
+    },
+    "C": {
+      "map": 0.266596,
+      "r1": 0.538599,
+      "map_pct": 26.6596,
+      "train": "BoT-MSMT17 (seed42)",
+      "eval": "Market",
+      "n_query": 3368,
+      "n_gallery": 13115
+    },
+    "D": {
+      "map": 0.416246,
+      "r1": 0.709996,
+      "map_pct": 41.6246,
+      "train": "BoT-MSMT17 (seed42)",
+      "eval": "MSMT17",
+      "n_query": 11655,
+      "n_gallery": 82132
+    }
+  },
+  "anova": {
+    "main_eval_dataset_pp": 34.157,
+    "main_training_domain_pp": 10.0588,
+    "interaction_domain_alignment_pp": 49.122,
+    "note": "Interaction = (A-B-C+D)/2 = (A+D)/2-(B+C)/2. All cells on same protocol; commensurable."
+  },
+  "finding2": {
+    "BoT_Market_drop_pp": 83.279,
+    "BoT_Market_retention": 0.0298,
+    "BoT_MSMT17_drop_pp": 14.965,
+    "BoT_MSMT17_retention": 0.6405
+  }
+}

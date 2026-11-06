@@ -1,0 +1,68 @@
+{
+  "classes": {
+    "D-hard": 693,
+    "D-easy": 2366
+  },
+  "items_per_class": {
+    "D-easy": 67322,
+    "D-hard": 14806
+  },
+  "rows": [
+    {
+      "q_class": "D-easy",
+      "n_class": "D-easy",
+      "slots_D": 617714,
+      "slots_B": 550797,
+      "slots_noise": 567377,
+      "delta_B_minus_D": -66917,
+      "delta_noise_minus_D": -50337,
+      "B_minus_noise": -16580
+    },
+    {
+      "q_class": "D-easy",
+      "n_class": "D-hard",
+      "slots_D": 55506,
+      "slots_B": 122423,
+      "slots_noise": 105843,
+      "delta_B_minus_D": 66917,
+      "delta_noise_minus_D": 50337,
+      "B_minus_noise": 16580
+    },
+    {
+      "q_class": "D-hard",
+      "n_class": "D-easy",
+      "slots_D": 78198,
+      "slots_B": 97019,
+      "slots_noise": 107167,
+      "delta_B_minus_D": 18821,
+      "delta_noise_minus_D": 28969,
+      "B_minus_noise": -10148
+    },
+    {
+      "q_class": "D-hard",
+      "n_class": "D-hard",
+      "slots_D": 69862,
+      "slots_B": 51041,
+      "slots_noise": 40893,
+      "delta_B_minus_D": -18821,
+      "delta_noise_minus_D": -28969,
+      "B_minus_noise": 10148
+    }
+  ],
+  "col_totals": {
+    "D-easy": {
+      "D": 695912,
+      "B": 647816,
+      "noise": 674544,
+      "B_share": 0.788788233002143,
+      "null_share": 0.8197204363919735
+    },
+    "D-hard": {
+      "D": 125368,
+      "B": 173464,
+      "noise": 146736,
+      "B_share": 0.21121176699785701,
+      "null_share": 0.1802795636080265
+    }
+  }
+}

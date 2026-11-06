@@ -1,0 +1,19 @@
+{
+  "model": "IBN-ResNet50 (BoT, Market-trained)",
+  "checkpoint": "/data/papers/low_dimensional_reid/pretrained/bot_ibn_resnet50_market1501_final.pth",
+  "protocol": "E8 protocol \u2014 Market test query/gallery; MSMT17 test query/gallery",
+  "market_map": 0.859451,
+  "market_r1": 0.943884,
+  "msmt17_map": 0.049195,
+  "msmt17_r1": 0.143458,
+  "transfer_gap": 0.810256,
+  "ratio_r1_over_map_msmt17": 2.916,
+  "note": "Re-evaluation from bot_ibn_resnet50_market1501_final.pth using identical protocol to E8 compute_e8.py (MSMT17 test query vs test gallery, junk exclusion). Result: 4.92% MSMT17 mAP (not 6.63% as recorded in Channel). The channel value 6.63% is unverified; this JSON is the authoritative result. 2.56% (plain BoT bot_final) uses the same protocol via e8_results.json. IBN improvement: 2.56% -> 4.92% (1.92x, +2.36pp).",
+  "channel_discrepancy": {
+    "channel_value": 0.0663,
+    "verified_value": 0.049195,
+    "difference": 0.0171,
+    "note": "Channel rev 21-22 claimed 6.63%. This run from identical checkpoint and protocol gives 4.92%. The original channel value may have used a different protocol, epoch checkpoint, or contained an error. Do not use 6.63% in write-up."
+  },
+  "protocol_verified": "Plain-BoT same-protocol sanity check: 2.56% MSMT17 mAP (exact match to e8_results.json). Protocol is correct. IBN 4.92% is the verified value."
+}

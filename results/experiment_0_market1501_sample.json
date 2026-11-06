@@ -1,0 +1,36 @@
+{
+  "dataset": "market1501",
+  "sample": true,
+  "dataset_stats": {
+    "train_images": 0,
+    "train_ids": 0,
+    "train_cameras": 0,
+    "gallery_images": 8,
+    "query_images": 2,
+    "test_ids": 2
+  },
+  "backbones": {
+    "resnet50": {
+      "displaced_fraction": 0.25,
+      "single_linkage_ratio": null,
+      "pct_ids_fragmented": null,
+      "factor_alignment": {
+        "camera": -0.08334785773425776
+      },
+      "map": 0.9166666666666666,
+      "rank1": 1.0,
+      "time_seconds": 0.0831902027130127
+    },
+    "random": {
+      "displaced_fraction": 0.5,
+      "single_linkage_ratio": null,
+      "pct_ids_fragmented": null,
+      "factor_alignment": {
+        "camera": 0.23033585548402966
+      },
+      "map": 0.7916666666666666,
+      "rank1": 1.0,
+      "time_seconds": 0.5698981285095215
+    }
+  }
+}

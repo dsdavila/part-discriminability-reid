@@ -1,0 +1,268 @@
+{
+  "protocol": "Per-ID join: nearest_train_angle=arccos(max_cos_to_train_centroid) (same model/train pair as E20c-v2); overlap_ratio=angular_radius/nearest_centroid_dist (E20b definition); per_id_ap=mean AP over queries of that identity (canonical predicate: junk=same-pid&same-cam). Bootstrap CI (95%) over identities, n_boot=1000, RNG=42. Partial Spearman: rank all variables, OLS-residualise ranks on control(s), Pearson of residuals. Confounds: per-ID gallery image count and per-ID camera count. Paired within eval set only (Market: A,C; MSMT17: D,B).",
+  "prototype_pairs": {
+    "A_and_B": "BoT-Market model vs Market-train prototypes (bot_market_market_train.npz)",
+    "C_and_D": "BoT-MSMT17 model vs MSMT17-train prototypes (bot_msmt_msmt_train.npz)"
+  },
+  "cache": "e12_feature_cache + e18_train_cache",
+  "seed": "RNG=42",
+  "n_boot": 1000,
+  "cells": {
+    "A": {
+      "mAP": 85.84041244712758,
+      "n_common_ids": 750,
+      "nearest_train_angle_mean": 59.65078468015726,
+      "nearest_train_angle_std": 8.630047857417766,
+      "overlap_ratio_mean": 0.9141684164993574,
+      "nearest_train_angle_vs_AP": {
+        "spearman": -0.058109107455139586,
+        "pearson": -0.09218290117235174,
+        "boot_ci_95": [
+          -0.13107729979062277,
+          0.015213094378705556
+        ],
+        "n": 750
+      },
+      "overlap_ratio_vs_AP": {
+        "spearman": -0.6620453650103612,
+        "pearson": -0.44640229937353965,
+        "boot_ci_95": [
+          -0.706797523514241,
+          -0.6182964823867315
+        ],
+        "n": 750
+      },
+      "partial_angle_vs_AP_ctrl_overlap": -0.09120569310331494,
+      "partial_overlap_vs_AP_ctrl_angle": -0.6641455146735179,
+      "confound_n_gallery_imgs_vs_angle": {
+        "spearman": -0.018916258616206532,
+        "pearson": -0.0019035413594872576,
+        "boot_ci_95": [
+          -0.09538957779211864,
+          0.050426728452864625
+        ],
+        "n": 750
+      },
+      "confound_n_gallery_imgs_vs_AP": {
+        "spearman": 0.03688966012680318,
+        "pearson": 0.1097573066169431,
+        "boot_ci_95": [
+          -0.03684662332147636,
+          0.11069684101401576
+        ],
+        "n": 750
+      },
+      "confound_n_cameras_vs_angle": {
+        "spearman": -0.04925440383670624,
+        "pearson": -0.03278869851130289,
+        "boot_ci_95": [
+          -0.12278135549598379,
+          0.022316075181967123
+        ],
+        "n": 750
+      },
+      "confound_n_cameras_vs_AP": {
+        "spearman": 0.003058424781244662,
+        "pearson": 0.15110801880839853,
+        "boot_ci_95": [
+          -0.06779301616959454,
+          0.08199054061890522
+        ],
+        "n": 750
+      },
+      "partial_angle_vs_AP_ctrl_count_and_cams": -0.058630373420391214
+    },
+    "C": {
+      "mAP": 26.65961584752611,
+      "n_common_ids": 750,
+      "nearest_train_angle_mean": 63.80417837807151,
+      "nearest_train_angle_std": 5.734358261624556,
+      "overlap_ratio_mean": 2.1313702614643795,
+      "nearest_train_angle_vs_AP": {
+        "spearman": -0.0935061431220322,
+        "pearson": -0.09550710251505637,
+        "boot_ci_95": [
+          -0.16475507885315419,
+          -0.017516116803668706
+        ],
+        "n": 750
+      },
+      "overlap_ratio_vs_AP": {
+        "spearman": -0.3389846666394073,
+        "pearson": -0.3279861709289444,
+        "boot_ci_95": [
+          -0.41212988628228403,
+          -0.26229021093100274
+        ],
+        "n": 750
+      },
+      "partial_angle_vs_AP_ctrl_overlap": -0.21781046373994506,
+      "partial_overlap_vs_AP_ctrl_angle": -0.38660562120471276,
+      "confound_n_gallery_imgs_vs_angle": {
+        "spearman": -0.09009304900779043,
+        "pearson": -0.058207898647968354,
+        "boot_ci_95": [
+          -0.15898101675413331,
+          -0.014519590300182324
+        ],
+        "n": 750
+      },
+      "confound_n_gallery_imgs_vs_AP": {
+        "spearman": 0.19017081397496483,
+        "pearson": 0.09569678610003651,
+        "boot_ci_95": [
+          0.11376255341572651,
+          0.25998352826816873
+        ],
+        "n": 750
+      },
+      "confound_n_cameras_vs_angle": {
+        "spearman": -0.10196578391787071,
+        "pearson": -0.0871592483746419,
+        "boot_ci_95": [
+          -0.1779573242264324,
+          -0.027498137501414357
+        ],
+        "n": 750
+      },
+      "confound_n_cameras_vs_AP": {
+        "spearman": 0.16030900439874937,
+        "pearson": 0.10890524870729104,
+        "boot_ci_95": [
+          0.0867693951160504,
+          0.22907460160533896
+        ],
+        "n": 750
+      },
+      "partial_angle_vs_AP_ctrl_count_and_cams": -0.07468168811542752
+    },
+    "D": {
+      "mAP": 41.624584720826384,
+      "n_common_ids": 3059,
+      "nearest_train_angle_mean": 62.00348884182703,
+      "nearest_train_angle_std": 6.814808822347724,
+      "overlap_ratio_mean": 1.5217007755582594,
+      "nearest_train_angle_vs_AP": {
+        "spearman": -0.11657603232845513,
+        "pearson": -0.13176292721864513,
+        "boot_ci_95": [
+          -0.15137342509204302,
+          -0.08158120379068887
+        ],
+        "n": 3059
+      },
+      "overlap_ratio_vs_AP": {
+        "spearman": -0.34606695043239216,
+        "pearson": -0.2691425751523089,
+        "boot_ci_95": [
+          -0.37817543190433706,
+          -0.31390868749824
+        ],
+        "n": 3059
+      },
+      "partial_angle_vs_AP_ctrl_overlap": -0.17040202260878112,
+      "partial_overlap_vs_AP_ctrl_angle": -0.36544026268869306,
+      "confound_n_gallery_imgs_vs_angle": {
+        "spearman": -0.0026792721465065832,
+        "pearson": -0.019244844310085114,
+        "boot_ci_95": [
+          -0.03980412447642058,
+          0.030647459863838822
+        ],
+        "n": 3059
+      },
+      "confound_n_gallery_imgs_vs_AP": {
+        "spearman": 0.028801586503787203,
+        "pearson": -0.02657168046427471,
+        "boot_ci_95": [
+          -0.0064268278694076565,
+          0.06472062165155773
+        ],
+        "n": 3059
+      },
+      "confound_n_cameras_vs_angle": {
+        "spearman": -0.0031305843823773204,
+        "pearson": -0.020901913279431958,
+        "boot_ci_95": [
+          -0.038374766855197605,
+          0.031273479254993436
+        ],
+        "n": 3059
+      },
+      "confound_n_cameras_vs_AP": {
+        "spearman": 0.021757753054971445,
+        "pearson": -0.03271859803737997,
+        "boot_ci_95": [
+          -0.012528584090440319,
+          0.05791542130510913
+        ],
+        "n": 3059
+      },
+      "partial_angle_vs_AP_ctrl_count_and_cams": -0.11654227303039118
+    },
+    "B": {
+      "mAP": 2.5614186845882667,
+      "n_common_ids": 3059,
+      "nearest_train_angle_mean": 69.71685982319369,
+      "nearest_train_angle_std": 3.5491438320529967,
+      "overlap_ratio_mean": 4.3331416782740995,
+      "nearest_train_angle_vs_AP": {
+        "spearman": -0.19457673286369115,
+        "pearson": -0.21461162107540147,
+        "boot_ci_95": [
+          -0.2272701597961617,
+          -0.16166769196070527
+        ],
+        "n": 3059
+      },
+      "overlap_ratio_vs_AP": {
+        "spearman": -0.22871778233887258,
+        "pearson": -0.22726808240394814,
+        "boot_ci_95": [
+          -0.26170588698245717,
+          -0.19450534923040622
+        ],
+        "n": 3059
+      },
+      "partial_angle_vs_AP_ctrl_overlap": -0.18438789167465938,
+      "partial_overlap_vs_AP_ctrl_angle": -0.22024670367156568,
+      "confound_n_gallery_imgs_vs_angle": {
+        "spearman": -0.05008980128118874,
+        "pearson": -0.04930075478760071,
+        "boot_ci_95": [
+          -0.08538426116962045,
+          -0.014029333205647296
+        ],
+        "n": 3059
+      },
+      "confound_n_gallery_imgs_vs_AP": {
+        "spearman": 0.3323251927760283,
+        "pearson": 0.026236049501263285,
+        "boot_ci_95": [
+          0.3013617074408371,
+          0.36215324624071754
+        ],
+        "n": 3059
+      },
+      "confound_n_cameras_vs_angle": {
+        "spearman": 0.024217841883912572,
+        "pearson": -0.002925268536289362,
+        "boot_ci_95": [
+          -0.012384473781781875,
+          0.06062325222407371
+        ],
+        "n": 3059
+      },
+      "confound_n_cameras_vs_AP": {
+        "spearman": 0.23380199090770876,
+        "pearson": -0.005049646172907327,
+        "boot_ci_95": [
+          0.2013269002195763,
+          0.26792989627922037
+        ],
+        "n": 3059
+      },
+      "partial_angle_vs_AP_ctrl_count_and_cams": -0.1908672247312609
+    }
+  }
+}

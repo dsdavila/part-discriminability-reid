@@ -1,0 +1,130 @@
+{
+  "MSMT": {
+    "dataset": "MSMT",
+    "id_cell": "D",
+    "ood_cell": "B'",
+    "sigma": 0.0625,
+    "Q_total": 11659,
+    "mAP_id_pct": 41.61851704120636,
+    "mAP_ood_pct": 5.396080389618874,
+    "mAP_noise_pct": 5.451776087284088,
+    "gap_real_pts": 36.222436651587486,
+    "gap_noise_pts": 36.16674095392227,
+    "sum_contrib_real_pts": 36.2224379737636,
+    "sum_contrib_noise_pts": 36.16674284268823,
+    "rows": [
+      {
+        "class": "EASY",
+        "Q_c": 985,
+        "share": 0.08448408954455786,
+        "mAP_id": 65.24031162261963,
+        "mAP_ood": 26.988551020622253,
+        "mAP_noise": 12.701182067394257,
+        "delta_real": 38.251760601997375,
+        "delta_noise": 52.53912955522537,
+        "contrib_real_pts": 3.2316651679361366,
+        "contrib_noise_pts": 4.438720525936787
+      },
+      {
+        "class": "ID-ONLY",
+        "Q_c": 2,
+        "share": 0.00017154129856763016,
+        "mAP_id": 21.93199396133423,
+        "mAP_ood": 1.7455283552408218,
+        "mAP_noise": 1.030802633613348,
+        "delta_real": 20.186465606093407,
+        "delta_noise": 20.90119132772088,
+        "contrib_real_pts": 0.0034628125235600664,
+        "contrib_noise_pts": 0.00358541750196773
+      },
+      {
+        "class": "SHARED",
+        "Q_c": 2196,
+        "share": 0.1883523458272579,
+        "mAP_id": 17.52324402332306,
+        "mAP_ood": 1.3189216144382954,
+        "mAP_noise": 1.9065111875534058,
+        "delta_real": 16.204322408884764,
+        "delta_noise": 15.616732835769653,
+        "contrib_real_pts": 3.052122138254648,
+        "contrib_noise_pts": 2.9414482637747796
+      },
+      {
+        "class": "OOD-ONLY",
+        "Q_c": 8476,
+        "share": 0.7269920233296167,
+        "mAP_id": 45.12077569961548,
+        "mAP_ood": 3.943999484181404,
+        "mAP_noise": 5.528885126113892,
+        "delta_real": 41.176776215434074,
+        "delta_noise": 39.59189057350159,
+        "contrib_real_pts": 29.935187855049254,
+        "contrib_noise_pts": 28.782988635474695
+      }
+    ]
+  },
+  "Market": {
+    "dataset": "Market",
+    "id_cell": "A'",
+    "ood_cell": "C",
+    "sigma": 0.062,
+    "Q_total": 3368,
+    "mAP_id_pct": 80.39631247520447,
+    "mAP_ood_pct": 26.659616827964783,
+    "mAP_noise_pct": 26.64056420326233,
+    "gap_real_pts": 53.736695647239685,
+    "gap_noise_pts": 53.75574827194214,
+    "sum_contrib_real_pts": 53.73669614011063,
+    "sum_contrib_noise_pts": 53.755750934285885,
+    "rows": [
+      {
+        "class": "EASY",
+        "Q_c": 1861,
+        "share": 0.5525534441805225,
+        "mAP_id": 86.03733777999878,
+        "mAP_ood": 38.28428089618683,
+        "mAP_noise": 31.330522894859314,
+        "delta_real": 47.75305688381195,
+        "delta_noise": 54.706814885139465,
+        "contrib_real_pts": 26.386116051298703,
+        "contrib_noise_pts": 30.22843898493009
+      },
+      {
+        "class": "ID-ONLY",
+        "Q_c": 6,
+        "share": 0.0017814726840855108,
+        "mAP_id": 46.718356013298035,
+        "mAP_ood": 16.164530813694,
+        "mAP_noise": 32.02946484088898,
+        "delta_real": 30.553825199604034,
+        "delta_noise": 14.688891172409058,
+        "contrib_real_pts": 0.05443080498741812,
+        "contrib_noise_pts": 0.02616785838315153
+      },
+      {
+        "class": "SHARED",
+        "Q_c": 65,
+        "share": 0.019299287410926364,
+        "mAP_id": 28.512096405029297,
+        "mAP_ood": 11.219942569732666,
+        "mAP_noise": 7.202691584825516,
+        "delta_real": 17.29215383529663,
+        "delta_noise": 21.30940482020378,
+        "contrib_real_pts": 0.33372624682134233,
+        "contrib_noise_pts": 0.4112563281808924
+      },
+      {
+        "class": "OOD-ONLY",
+        "Q_c": 1436,
+        "share": 0.42636579572446553,
+        "mAP_id": 75.5750060081482,
+        "mAP_ood": 12.337233871221542,
+        "mAP_noise": 21.419893205165863,
+        "delta_real": 63.23777213692665,
+        "delta_noise": 54.15511280298233,
+        "contrib_real_pts": 26.962423037003166,
+        "contrib_noise_pts": 23.08988776279175
+      }
+    ]
+  }
+}

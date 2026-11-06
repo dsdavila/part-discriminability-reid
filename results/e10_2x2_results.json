@@ -1,0 +1,51 @@
+{
+  "grid": [
+    {
+      "label": "BoT / Market",
+      "n": 16483,
+      "n_ids": 750,
+      "n_cams": 6,
+      "eff_rank": 261.201171875,
+      "hubness_matched": 0.5369440595809426,
+      "identity_r2": 0.6291658004192258,
+      "camera_r2": 0.006080792600963404,
+      "ratio": 103.467558759356
+    },
+    {
+      "label": "BoT / MSMT17",
+      "n": 93787,
+      "n_ids": 3059,
+      "n_cams": 15,
+      "eff_rank": 133.30162048339844,
+      "hubness_matched": 1.9330762598417035,
+      "identity_r2": 0.29498258475937045,
+      "camera_r2": 0.09476377164440968,
+      "ratio": 3.112819894274155
+    },
+    {
+      "label": "CLIP-ReID / Market",
+      "n": 16483,
+      "n_ids": 750,
+      "n_cams": 6,
+      "eff_rank": 78.00151062011719,
+      "hubness_matched": 1.2006024421189154,
+      "identity_r2": 0.6543072708386705,
+      "camera_r2": 0.03167779312020322,
+      "ratio": 20.655070945288234
+    },
+    {
+      "label": "CLIP-ReID / MSMT17",
+      "n": 93787,
+      "n_ids": 3059,
+      "n_cams": 15,
+      "eff_rank": 103.5982666015625,
+      "hubness_matched": 0.9843105633786022,
+      "identity_r2": 0.639017734918525,
+      "camera_r2": 0.031617046258991144,
+      "ratio": 20.211171137629343
+    }
+  ],
+  "flip_rank": true,
+  "flip_hub": true,
+  "note": "flip_rank=True means CLIP-ReID (MSMT17-trained) shows lower eff. rank on Market than MSMT17 \u2014 collapse tracks out-of-domain direction. Architecture confound: ResNet-50 vs ViT-B/16."
+}

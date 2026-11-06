@@ -1,0 +1,778 @@
+{
+  "MSMT": {
+    "partition_counts": {
+      "SHARED": 692,
+      "OOD-ONLY": 2138,
+      "EASY": 228,
+      "ID-ONLY": 1
+    },
+    "id": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 228,
+            "within_dispersion_rad_mean": 1.2592087984085083,
+            "within_dispersion_rad_std": 0.0910649523139,
+            "cos_to_global_mean_mean": 0.25850316882133484,
+            "cos_to_global_mean_std": 0.08519621938467026
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.05607283115386963,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 692,
+            "within_dispersion_rad_mean": 1.2125365734100342,
+            "within_dispersion_rad_std": 0.11675810813903809,
+            "cos_to_global_mean_mean": 0.3331606090068817,
+            "cos_to_global_mean_std": 0.09516020864248276
+          },
+          "OOD-ONLY": {
+            "n_ids": 2138,
+            "within_dispersion_rad_mean": 1.2715131044387817,
+            "within_dispersion_rad_std": 0.09583026170730591,
+            "cos_to_global_mean_mean": 0.2907300293445587,
+            "cos_to_global_mean_std": 0.09447886049747467
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.3948419033437032,
+            "cos": 0.17504790425300598
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.7626389102091184,
+            "cos": 0.7230154871940613
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.5898055527801326,
+            "cos": 0.831048846244812
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.5361044086252476,
+            "cos": 0.034684959799051285
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.53009241210076,
+            "cos": 0.04069267585873604
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.3593497398092279,
+            "cos": 0.9361256957054138
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.46839376720173603,
+          "ID-ONLY": null,
+          "SHARED": 0.29636198007506154,
+          "OOD-ONLY": 0.2826158366396366
+        }
+      },
+      "mAP_raw_pct": 41.61851704120636,
+      "mAP_sub_pct": 41.497254371643066,
+      "pooled_gain_from_submean": -0.12126266956329346,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 985,
+          "mAP_raw": 65.24031162261963,
+          "mAP_sub": 65.04468321800232,
+          "delta_mAP": -0.19562840461730957
+        },
+        "ID-ONLY": {
+          "n": 2,
+          "mAP_raw": 21.93199396133423,
+          "mAP_sub": 32.93460011482239,
+          "delta_mAP": 11.00260615348816
+        },
+        "SHARED": {
+          "n": 2196,
+          "mAP_raw": 17.52324402332306,
+          "mAP_sub": 17.421256005764008,
+          "delta_mAP": -0.10198801755905151
+        },
+        "OOD-ONLY": {
+          "n": 8476,
+          "mAP_raw": 45.12077569961548,
+          "mAP_sub": 45.00053822994232,
+          "delta_mAP": -0.12023746967315674
+        }
+      }
+    },
+    "ood": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 228,
+            "within_dispersion_rad_mean": 1.049627423286438,
+            "within_dispersion_rad_std": 0.09720386564731598,
+            "cos_to_global_mean_mean": 0.4505663216114044,
+            "cos_to_global_mean_std": 0.11102776974439621
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.32081663608551025,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 692,
+            "within_dispersion_rad_mean": 0.7872154116630554,
+            "within_dispersion_rad_std": 0.19551049172878265,
+            "cos_to_global_mean_mean": 0.6817235350608826,
+            "cos_to_global_mean_std": 0.1263587325811386
+          },
+          "OOD-ONLY": {
+            "n_ids": 2138,
+            "within_dispersion_rad_mean": 0.8630797266960144,
+            "within_dispersion_rad_std": 0.15919753909111023,
+            "cos_to_global_mean_mean": 0.6403973698616028,
+            "cos_to_global_mean_std": 0.12257085740566254
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.149802326203762,
+            "cos": 0.4086678624153137
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.5908256213665996,
+            "cos": 0.8304810523986816
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.4059601845158317,
+            "cos": 0.9187236428260803
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.2975322582733404,
+            "cos": 0.26987582445144653
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.2466755615952252,
+            "cos": 0.3184754550457001
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.2238696119336176,
+            "cos": 0.9750456809997559
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.3867659852528903,
+          "ID-ONLY": null,
+          "SHARED": 0.2843816427077757,
+          "OOD-ONLY": 0.25938462578726146
+        }
+      },
+      "mAP_raw_pct": 5.396080389618874,
+      "mAP_sub_pct": 5.753165856003761,
+      "pooled_gain_from_submean": 0.3570854663848877,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 985,
+          "mAP_raw": 26.988551020622253,
+          "mAP_sub": 28.946468234062195,
+          "delta_mAP": 1.9579172134399414
+        },
+        "ID-ONLY": {
+          "n": 2,
+          "mAP_raw": 1.7455283552408218,
+          "mAP_sub": 2.208543010056019,
+          "delta_mAP": 0.463014654815197
+        },
+        "SHARED": {
+          "n": 2196,
+          "mAP_raw": 1.3189216144382954,
+          "mAP_sub": 1.3741138391196728,
+          "delta_mAP": 0.05519222468137741
+        },
+        "OOD-ONLY": {
+          "n": 8476,
+          "mAP_raw": 3.943999484181404,
+          "mAP_sub": 4.193241149187088,
+          "delta_mAP": 0.2492416650056839
+        }
+      }
+    },
+    "noise": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 228,
+            "within_dispersion_rad_mean": 1.3195902109146118,
+            "within_dispersion_rad_std": 0.07303723692893982,
+            "cos_to_global_mean_mean": 0.20780228078365326,
+            "cos_to_global_mean_std": 0.07249313592910767
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.038175664842128754,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 692,
+            "within_dispersion_rad_mean": 1.3182700872421265,
+            "within_dispersion_rad_std": 0.0881667286157608,
+            "cos_to_global_mean_mean": 0.23706354200839996,
+            "cos_to_global_mean_std": 0.07565329223871231
+          },
+          "OOD-ONLY": {
+            "n_ids": 2138,
+            "within_dispersion_rad_mean": 1.3411322832107544,
+            "within_dispersion_rad_std": 0.07805296033620834,
+            "cos_to_global_mean_mean": 0.22499315440654755,
+            "cos_to_global_mean_std": 0.07892999798059464
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.4627638000161594,
+            "cos": 0.10782250761985779
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.781794107411474,
+            "cos": 0.7096506357192993
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.605999184825846,
+            "cos": 0.821933388710022
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.5377519058392708,
+            "cos": 0.03303840756416321
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.54155272409309,
+            "cos": 0.029239434748888016
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.37558806244746523,
+            "cos": 0.9302920699119568
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.45923285866589314,
+          "ID-ONLY": null,
+          "SHARED": 0.2849097966208203,
+          "OOD-ONLY": 0.2800529576010831
+        }
+      },
+      "mAP_raw_pct": 5.451776087284088,
+      "mAP_sub_pct": 5.649970471858978,
+      "pooled_gain_from_submean": 0.19819438457489014,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 985,
+          "mAP_raw": 12.701182067394257,
+          "mAP_sub": 13.190463185310364,
+          "delta_mAP": 0.4892811179161072
+        },
+        "ID-ONLY": {
+          "n": 2,
+          "mAP_raw": 1.030802633613348,
+          "mAP_sub": 1.2358488515019417,
+          "delta_mAP": 0.20504621788859367
+        },
+        "SHARED": {
+          "n": 2196,
+          "mAP_raw": 1.9065111875534058,
+          "mAP_sub": 1.9509820267558098,
+          "delta_mAP": 0.04447083920240402
+        },
+        "OOD-ONLY": {
+          "n": 8476,
+          "mAP_raw": 5.528885126113892,
+          "mAP_sub": 5.733077600598335,
+          "delta_mAP": 0.20419247448444366
+        }
+      }
+    },
+    "randproj": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 228,
+            "within_dispersion_rad_mean": 1.3255164623260498,
+            "within_dispersion_rad_std": 0.28834471106529236,
+            "cos_to_global_mean_mean": 0.1896824985742569,
+            "cos_to_global_mean_std": 0.23531529307365417
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": -0.05225330591201782,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 692,
+            "within_dispersion_rad_mean": 1.256953239440918,
+            "within_dispersion_rad_std": 0.23676417768001556,
+            "cos_to_global_mean_mean": 0.2863088846206665,
+            "cos_to_global_mean_std": 0.22056613862514496
+          },
+          "OOD-ONLY": {
+            "n_ids": 2138,
+            "within_dispersion_rad_mean": 1.302369236946106,
+            "within_dispersion_rad_std": 0.25033822655677795,
+            "cos_to_global_mean_mean": 0.25280246138572693,
+            "cos_to_global_mean_std": 0.24034681916236877
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.6040710302289556,
+            "cos": -0.03326856344938278
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.8305775655180612,
+            "cos": 0.6744494438171387
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.7073493189219247,
+            "cos": 0.7600870132446289
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.6692524346299282,
+            "cos": -0.098297119140625
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.6291601964747453,
+            "cos": -0.05833074077963829
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.41586237683432026,
+            "cos": 0.9147682785987854
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.5336405386325042,
+          "ID-ONLY": null,
+          "SHARED": 0.3308495207182825,
+          "OOD-ONLY": 0.3193121927614521
+        }
+      },
+      "mAP_raw_pct": 5.179470032453537,
+      "mAP_sub_pct": 5.235053598880768,
+      "pooled_gain_from_submean": 0.055583566427230835,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 985,
+          "mAP_raw": 14.09783661365509,
+          "mAP_sub": 14.219145476818085,
+          "delta_mAP": 0.12130886316299438
+        },
+        "ID-ONLY": {
+          "n": 2,
+          "mAP_raw": 0.2531689591705799,
+          "mAP_sub": 0.29235295951366425,
+          "delta_mAP": 0.039184000343084335
+        },
+        "SHARED": {
+          "n": 2196,
+          "mAP_raw": 1.6388116404414177,
+          "mAP_sub": 1.653195358812809,
+          "delta_mAP": 0.014383718371391296
+        },
+        "OOD-ONLY": {
+          "n": 8476,
+          "mAP_raw": 5.061554163694382,
+          "mAP_sub": 5.120178312063217,
+          "delta_mAP": 0.05862414836883545
+        }
+      }
+    }
+  },
+  "Market": {
+    "partition_counts": {
+      "EASY": 396,
+      "OOD-ONLY": 331,
+      "SHARED": 22,
+      "ID-ONLY": 1
+    },
+    "id": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 396,
+            "within_dispersion_rad_mean": 1.3931783437728882,
+            "within_dispersion_rad_std": 0.07748891413211823,
+            "cos_to_global_mean_mean": 0.1692274510860443,
+            "cos_to_global_mean_std": 0.07387656718492508
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.17129969596862793,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 22,
+            "within_dispersion_rad_mean": 1.268723964691162,
+            "within_dispersion_rad_std": 0.08822052925825119,
+            "cos_to_global_mean_mean": 0.17332786321640015,
+            "cos_to_global_mean_std": 0.06375875324010849
+          },
+          "OOD-ONLY": {
+            "n_ids": 331,
+            "within_dispersion_rad_mean": 1.3811733722686768,
+            "within_dispersion_rad_std": 0.08074059337377548,
+            "cos_to_global_mean_mean": 0.17343869805335999,
+            "cos_to_global_mean_std": 0.0745437815785408
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.4069753259877025,
+            "cos": 0.16308923065662384
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.9789330887156112,
+            "cos": 0.557908296585083
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.5990674529398786,
+            "cos": 0.8258618116378784
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.5301384538034213,
+            "cos": 0.04064667224884033
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.4376848249356675,
+            "cos": 0.1327187567949295
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.9604195971371563,
+            "cos": 0.5731762051582336
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.4300005491885085,
+          "ID-ONLY": null,
+          "SHARED": 0.7569964971623638,
+          "OOD-ONLY": 0.4337380556040312
+        }
+      },
+      "mAP_raw_pct": 80.39631247520447,
+      "mAP_sub_pct": 80.34858107566833,
+      "pooled_gain_from_submean": -0.04773139953613281,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 1861,
+          "mAP_raw": 86.03733777999878,
+          "mAP_sub": 85.98820567131042,
+          "delta_mAP": -0.04913210868835449
+        },
+        "ID-ONLY": {
+          "n": 6,
+          "mAP_raw": 46.718356013298035,
+          "mAP_sub": 46.64355218410492,
+          "delta_mAP": -0.07480382919311523
+        },
+        "SHARED": {
+          "n": 65,
+          "mAP_raw": 28.512096405029297,
+          "mAP_sub": 28.065988421440125,
+          "delta_mAP": -0.44610798358917236
+        },
+        "OOD-ONLY": {
+          "n": 1436,
+          "mAP_raw": 75.5750060081482,
+          "mAP_sub": 75.54723620414734,
+          "delta_mAP": -0.027769804000854492
+        }
+      }
+    },
+    "ood": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 396,
+            "within_dispersion_rad_mean": 1.0298136472702026,
+            "within_dispersion_rad_std": 0.14932388067245483,
+            "cos_to_global_mean_mean": 0.5041294693946838,
+            "cos_to_global_mean_std": 0.13162344694137573
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0003452669770922512,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.5689619779586792,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 22,
+            "within_dispersion_rad_mean": 1.0272536277770996,
+            "within_dispersion_rad_std": 0.12410880625247955,
+            "cos_to_global_mean_mean": 0.4586058557033539,
+            "cos_to_global_mean_std": 0.13019979000091553
+          },
+          "OOD-ONLY": {
+            "n_ids": 331,
+            "within_dispersion_rad_mean": 0.9645397067070007,
+            "within_dispersion_rad_std": 0.16756023466587067,
+            "cos_to_global_mean_mean": 0.5532821416854858,
+            "cos_to_global_mean_std": 0.12643462419509888
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 0.9832185359598221,
+            "cos": 0.5543466806411743
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.4786805137158582,
+            "cos": 0.8876034617424011
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.3043388072794701,
+            "cos": 0.954045295715332
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.0451314831899143,
+            "cos": 0.5017881989479065
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 0.9520443155163192,
+            "cos": 0.5800189971923828
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.4674093148678482,
+            "cos": 0.8927385807037354
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.29552803857882615,
+          "ID-ONLY": 2757.414924341126,
+          "SHARED": 0.4550086777296539,
+          "OOD-ONLY": 0.3155275051542481
+        }
+      },
+      "mAP_raw_pct": 26.659616827964783,
+      "mAP_sub_pct": 27.38076150417328,
+      "pooled_gain_from_submean": 0.7211446762084961,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 1861,
+          "mAP_raw": 38.28428089618683,
+          "mAP_sub": 39.18877840042114,
+          "delta_mAP": 0.904497504234314
+        },
+        "ID-ONLY": {
+          "n": 6,
+          "mAP_raw": 16.164530813694,
+          "mAP_sub": 17.33587235212326,
+          "delta_mAP": 1.1713415384292603
+        },
+        "SHARED": {
+          "n": 65,
+          "mAP_raw": 11.219942569732666,
+          "mAP_sub": 11.845456063747406,
+          "delta_mAP": 0.62551349401474
+        },
+        "OOD-ONLY": {
+          "n": 1436,
+          "mAP_raw": 12.337233871221542,
+          "mAP_sub": 12.823198735713959,
+          "delta_mAP": 0.4859648644924164
+        }
+      }
+    },
+    "noise": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 396,
+            "within_dispersion_rad_mean": 1.4334328174591064,
+            "within_dispersion_rad_std": 0.05888146162033081,
+            "cos_to_global_mean_mean": 0.12965738773345947,
+            "cos_to_global_mean_std": 0.0585579015314579
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.1578444093465805,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 22,
+            "within_dispersion_rad_mean": 1.3177132606506348,
+            "within_dispersion_rad_std": 0.03265099599957466,
+            "cos_to_global_mean_mean": 0.10593369603157043,
+            "cos_to_global_mean_std": 0.045103903859853745
+          },
+          "OOD-ONLY": {
+            "n_ids": 331,
+            "within_dispersion_rad_mean": 1.4326927661895752,
+            "within_dispersion_rad_std": 0.057875022292137146,
+            "cos_to_global_mean_mean": 0.1247517317533493,
+            "cos_to_global_mean_std": 0.05701204016804695
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.4300006720115541,
+            "cos": 0.1403309404850006
+          },
+          "EASY|SHARED": {
+            "angle_rad": 1.184120885647277,
+            "cos": 0.37711140513420105
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.6986587969011605,
+            "cos": 0.7657055258750916
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.532869106488682,
+            "cos": 0.037918128073215485
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.4455953897954605,
+            "cos": 0.12487410008907318
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 1.1830087837784775,
+            "cos": 0.3781411647796631
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.48740254052477916,
+          "ID-ONLY": null,
+          "SHARED": 0.8977740598848907,
+          "OOD-ONLY": 0.4876543062050425
+        }
+      },
+      "mAP_raw_pct": 26.64056420326233,
+      "mAP_sub_pct": 26.792895793914795,
+      "pooled_gain_from_submean": 0.15233159065246582,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 1861,
+          "mAP_raw": 31.330522894859314,
+          "mAP_sub": 31.4669132232666,
+          "delta_mAP": 0.1363903284072876
+        },
+        "ID-ONLY": {
+          "n": 6,
+          "mAP_raw": 32.02946484088898,
+          "mAP_sub": 31.55190646648407,
+          "delta_mAP": -0.4775583744049072
+        },
+        "SHARED": {
+          "n": 65,
+          "mAP_raw": 7.202691584825516,
+          "mAP_sub": 7.385494560003281,
+          "delta_mAP": 0.1828029751777649
+        },
+        "OOD-ONLY": {
+          "n": 1436,
+          "mAP_raw": 21.419893205165863,
+          "mAP_sub": 21.594132483005524,
+          "delta_mAP": 0.17423927783966064
+        }
+      }
+    },
+    "randproj": {
+      "geom": {
+        "per_class": {
+          "EASY": {
+            "n_ids": 396,
+            "within_dispersion_rad_mean": 1.4298465251922607,
+            "within_dispersion_rad_std": 0.2518279552459717,
+            "cos_to_global_mean_mean": 0.12353955209255219,
+            "cos_to_global_mean_std": 0.2461310625076294
+          },
+          "ID-ONLY": {
+            "n_ids": 1,
+            "within_dispersion_rad_mean": 0.0,
+            "within_dispersion_rad_std": 0.0,
+            "cos_to_global_mean_mean": 0.33966946601867676,
+            "cos_to_global_mean_std": 0.0
+          },
+          "SHARED": {
+            "n_ids": 22,
+            "within_dispersion_rad_mean": 1.282490611076355,
+            "within_dispersion_rad_std": 0.2513200640678406,
+            "cos_to_global_mean_mean": 0.17790141701698303,
+            "cos_to_global_mean_std": 0.22978678345680237
+          },
+          "OOD-ONLY": {
+            "n_ids": 331,
+            "within_dispersion_rad_mean": 1.3763920068740845,
+            "within_dispersion_rad_std": 0.25204652547836304,
+            "cos_to_global_mean_mean": 0.16405440866947174,
+            "cos_to_global_mean_std": 0.24199125170707703
+          }
+        },
+        "between_class_angle_rad": {
+          "EASY|ID-ONLY": {
+            "angle_rad": 1.2776073422287009,
+            "cos": 0.2890065908432007
+          },
+          "EASY|SHARED": {
+            "angle_rad": 0.9609860487339924,
+            "cos": 0.5727119445800781
+          },
+          "EASY|OOD-ONLY": {
+            "angle_rad": 0.8928721890942368,
+            "cos": 0.6271775364875793
+          },
+          "ID-ONLY|SHARED": {
+            "angle_rad": 1.710032106510841,
+            "cos": -0.13878633081912994
+          },
+          "ID-ONLY|OOD-ONLY": {
+            "angle_rad": 1.3312235203032912,
+            "cos": 0.23728765547275543
+          },
+          "OOD-ONLY|SHARED": {
+            "angle_rad": 0.9253973655838349,
+            "cos": 0.6015172004699707
+          }
+        },
+        "min_between_over_within_ratio": {
+          "EASY": 0.6244531656809663,
+          "ID-ONLY": null,
+          "SHARED": 0.7215626824801292,
+          "OOD-ONLY": 0.6487048636107917
+        }
+      },
+      "mAP_raw_pct": 26.13810896873474,
+      "mAP_sub_pct": 26.152217388153076,
+      "pooled_gain_from_submean": 0.014108419418334961,
+      "per_class_gain_from_submean_pp": {
+        "EASY": {
+          "n": 1861,
+          "mAP_raw": 31.856128573417664,
+          "mAP_sub": 31.904718279838562,
+          "delta_mAP": 0.04858970642089844
+        },
+        "ID-ONLY": {
+          "n": 6,
+          "mAP_raw": 30.23374080657959,
+          "mAP_sub": 30.675384402275085,
+          "delta_mAP": 0.4416435956954956
+        },
+        "SHARED": {
+          "n": 65,
+          "mAP_raw": 8.272098749876022,
+          "mAP_sub": 8.292563259601593,
+          "delta_mAP": 0.02046450972557068
+        },
+        "OOD-ONLY": {
+          "n": 1436,
+          "mAP_raw": 19.519366323947906,
+          "mAP_sub": 19.48670595884323,
+          "delta_mAP": -0.03266036510467529
+        }
+      }
+    }
+  }
+}

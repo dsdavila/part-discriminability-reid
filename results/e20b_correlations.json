@@ -1,0 +1,109 @@
+{
+  "protocol": "canonical junk=(g_pid==q_pid)&(g_cam==q_cam); hub=k-occurrence in gallery k-NN (k=10, N_sample=5000); per eval set (never pooled)",
+  "cache": "e12_feature_cache",
+  "seed": "RNG=42",
+  "cells": {
+    "A": {
+      "mAP": 85.84041244712758,
+      "n_query_ids": 750,
+      "n_gallery_ids": 750,
+      "n_common_c1": 750,
+      "C1_overlap_vs_AP": {
+        "spearman_rho": -0.6620453650103612,
+        "n_ids": 750,
+        "overlap_mean": 0.9141684266678597,
+        "ap_mean": 0.8528752877073149
+      },
+      "C2_hub_vs_cos_x_mu": {
+        "spearman_rho_raw_projection": 0.0037238460933038398,
+        "spearman_rho_zscore_projection": 0.0037238460933038398,
+        "hub_mean": 0.0007624857244081795,
+        "cos_x_mu_mean": 0.0771815276901704,
+        "n_items": 13115
+      },
+      "C3_AP_vs_cos_cent_ID_mu_global": {
+        "spearman_rho": -0.13093110347652165,
+        "n_ids": 750
+      }
+    },
+    "C": {
+      "mAP": 26.65961584752611,
+      "n_query_ids": 750,
+      "n_gallery_ids": 750,
+      "n_common_c1": 750,
+      "C1_overlap_vs_AP": {
+        "spearman_rho": -0.3389846666394073,
+        "n_ids": 750,
+        "overlap_mean": 2.1313703194546094,
+        "ap_mean": 0.26129744196693716
+      },
+      "C2_hub_vs_cos_x_mu": {
+        "spearman_rho_raw_projection": 0.14409326923807786,
+        "spearman_rho_zscore_projection": 0.14409326923807786,
+        "hub_mean": 0.0007624857244081795,
+        "cos_x_mu_mean": 0.3878578965588359,
+        "n_items": 13115
+      },
+      "C3_AP_vs_cos_cent_ID_mu_global": {
+        "spearman_rho": -0.3244558443659455,
+        "n_ids": 750
+      }
+    },
+    "B": {
+      "mAP": 2.5614186897458384,
+      "n_query_ids": 3059,
+      "n_gallery_ids": 3059,
+      "n_common_c1": 3059,
+      "C1_overlap_vs_AP": {
+        "spearman_rho": -0.22871778233887258,
+        "n_ids": 3059,
+        "overlap_mean": 4.3331416350224,
+        "ap_mean": 0.024367640261555554
+      },
+      "C2_hub_vs_cos_x_mu": {
+        "spearman_rho_raw_projection": 0.08798741218902441,
+        "spearman_rho_zscore_projection": 0.08798741218902441,
+        "hub_mean": 0.00012175521260360256,
+        "cos_x_mu_mean": 0.4410019202912907,
+        "n_items": 82132
+      },
+      "C3_AP_vs_cos_cent_ID_mu_global": {
+        "spearman_rho": -0.33604097088846246,
+        "n_ids": 3059
+      }
+    },
+    "D": {
+      "mAP": 41.624584718020465,
+      "n_query_ids": 3059,
+      "n_gallery_ids": 3059,
+      "n_common_c1": 3059,
+      "C1_overlap_vs_AP": {
+        "spearman_rho": -0.3460664456904738,
+        "n_ids": 3059,
+        "overlap_mean": 1.5217007750773306,
+        "ap_mean": 0.41555255884377224
+      },
+      "C2_hub_vs_cos_x_mu": {
+        "spearman_rho_raw_projection": -0.01807745467356164,
+        "spearman_rho_zscore_projection": -0.01807745467356164,
+        "hub_mean": 0.00012175519805168733,
+        "cos_x_mu_mean": 0.21094142287448917,
+        "n_items": 82132
+      },
+      "C3_AP_vs_cos_cent_ID_mu_global": {
+        "spearman_rho": -0.3666339058209176,
+        "n_ids": 3059
+      }
+    }
+  },
+  "eval_set_structure": {
+    "Market": [
+      "A",
+      "C"
+    ],
+    "MSMT17": [
+      "B",
+      "D"
+    ]
+  }
+}

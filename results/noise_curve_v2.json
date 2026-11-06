@@ -1,0 +1,306 @@
+{
+  "MSMT": {
+    "id_cell": "D",
+    "ood_cell": "B'",
+    "target_mAPs": [
+      30.0,
+      20.0,
+      10.0,
+      5.4
+    ],
+    "baseline": {
+      "mAP_pct": 41.618517912844624,
+      "n_edges": 428039,
+      "density": 0.045757931382612416,
+      "reciprocity_measured": 0.7130658654935649,
+      "reciprocity_null_mean": 0.0815626613462792,
+      "reciprocity_chance_corrected": 0.6875844192843534,
+      "overlap_vs_baseline": 1.0,
+      "sigma": 0.0,
+      "route": "baseline"
+    },
+    "ood_anchor": {
+      "mAP_pct": 5.396080920839605,
+      "n_edges": 986777,
+      "density": 0.10548775755466239,
+      "reciprocity_measured": 0.5338815152765012,
+      "reciprocity_null_mean": 0.15628576669298128,
+      "reciprocity_chance_corrected": 0.4475398584939088,
+      "overlap_vs_baseline": 0.517441704933278
+    },
+    "noise_route": [
+      {
+        "mAP_pct": 41.618517912844624,
+        "n_edges": 428039,
+        "density": 0.045757931382612416,
+        "reciprocity_measured": 0.7130658654935649,
+        "reciprocity_null_mean": 0.0815626613462792,
+        "reciprocity_chance_corrected": 0.6875844192843534,
+        "overlap_vs_baseline": 1.0,
+        "sigma": 0.0,
+        "route": "baseline"
+      },
+      {
+        "mAP_pct": 29.891222995246235,
+        "n_edges": 739734,
+        "density": 0.07907853633287017,
+        "reciprocity_measured": 0.7372163507422939,
+        "reciprocity_null_mean": 0.12802656089891773,
+        "reciprocity_chance_corrected": 0.6986334245127811,
+        "overlap_vs_baseline": 0.8278094845377131,
+        "sigma": 0.03515625,
+        "target_mAP": 30.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 20.147800435148415,
+        "n_edges": 1113624,
+        "density": 0.11904786848401751,
+        "reciprocity_measured": 0.7578500463352082,
+        "reciprocity_null_mean": 0.18129745766973412,
+        "reciprocity_chance_corrected": 0.7042271873548084,
+        "overlap_vs_baseline": 0.8139815523070487,
+        "sigma": 0.044921875,
+        "target_mAP": 20.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 9.86593250184239,
+        "n_edges": 1726877,
+        "density": 0.1846054197683192,
+        "reciprocity_measured": 0.7990748617301637,
+        "reciprocity_null_mean": 0.2629748383932382,
+        "reciprocity_chance_corrected": 0.727383610850128,
+        "overlap_vs_baseline": 0.782819164674889,
+        "sigma": 0.0556640625,
+        "target_mAP": 10.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 5.451775972079881,
+        "n_edges": 2091822,
+        "density": 0.2236185196690934,
+        "reciprocity_measured": 0.828694793342837,
+        "reciprocity_null_mean": 0.3116152330360805,
+        "reciprocity_chance_corrected": 0.751149045013453,
+        "overlap_vs_baseline": 0.7520672288144937,
+        "sigma": 0.0625,
+        "target_mAP": 5.4,
+        "route": "gaussian_noise"
+      }
+    ],
+    "random_proj_route": [
+      {
+        "mAP_pct": 41.618517912844624,
+        "n_edges": 428039,
+        "density": 0.045757931382612416,
+        "reciprocity_measured": 0.7130658654935649,
+        "reciprocity_null_mean": 0.0815626613462792,
+        "reciprocity_chance_corrected": 0.6875844192843534,
+        "overlap_vs_baseline": 1.0,
+        "sigma": 0.0,
+        "route": "baseline"
+      },
+      {
+        "mAP_pct": 29.69720906041279,
+        "n_edges": 677846,
+        "density": 0.07246262783526336,
+        "reciprocity_measured": 0.6889086901744644,
+        "reciprocity_null_mean": 0.12051527928172476,
+        "reciprocity_chance_corrected": 0.6462800290930952,
+        "overlap_vs_baseline": 0.6640243603347632,
+        "k_target": 89,
+        "target_mAP": 30.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 19.875513546437247,
+        "n_edges": 935931,
+        "density": 0.10005225336209976,
+        "reciprocity_measured": 0.7134265239638392,
+        "reciprocity_null_mean": 0.15851980541300587,
+        "reciprocity_chance_corrected": 0.659441210999846,
+        "overlap_vs_baseline": 0.5761557448370599,
+        "k_target": 45,
+        "target_mAP": 20.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 10.253546262834737,
+        "n_edges": 1237917,
+        "density": 0.1323349534583751,
+        "reciprocity_measured": 0.8056162085180186,
+        "reciprocity_null_mean": 0.19903111436388707,
+        "reciprocity_chance_corrected": 0.7573141791549046,
+        "overlap_vs_baseline": 0.4770923891294444,
+        "k_target": 24,
+        "target_mAP": 10.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 5.179469844213118,
+        "n_edges": 1387266,
+        "density": 0.1483005577469137,
+        "reciprocity_measured": 0.8236690007540011,
+        "reciprocity_null_mean": 0.2177638607159694,
+        "reciprocity_chance_corrected": 0.7745808581442016,
+        "overlap_vs_baseline": 0.4307160031301941,
+        "k_target": 17,
+        "target_mAP": 5.4,
+        "route": "random_projection"
+      }
+    ]
+  },
+  "Market": {
+    "id_cell": "A'",
+    "ood_cell": "C",
+    "target_mAPs": [
+      60.0,
+      45.0,
+      35.0,
+      26.66
+    ],
+    "baseline": {
+      "mAP_pct": 80.39631570532194,
+      "n_edges": 29267,
+      "density": 0.05209968847352025,
+      "reciprocity_measured": 0.7163699730071411,
+      "reciprocity_null_mean": 0.06839102060340999,
+      "reciprocity_chance_corrected": 0.6955482039507948,
+      "overlap_vs_baseline": 1.0,
+      "sigma": 0.0,
+      "route": "baseline"
+    },
+    "ood_anchor": {
+      "mAP_pct": 26.65961787033974,
+      "n_edges": 74117,
+      "density": 0.1319394748553627,
+      "reciprocity_measured": 0.6661629585655113,
+      "reciprocity_null_mean": 0.188496566239864,
+      "reciprocity_chance_corrected": 0.5886190648785793,
+      "overlap_vs_baseline": 0.7063277775862263
+    },
+    "noise_route": [
+      {
+        "mAP_pct": 80.39631570532194,
+        "n_edges": 29267,
+        "density": 0.05209968847352025,
+        "reciprocity_measured": 0.7163699730071411,
+        "reciprocity_null_mean": 0.06839102060340999,
+        "reciprocity_chance_corrected": 0.6955482039507948,
+        "overlap_vs_baseline": 1.0,
+        "sigma": 0.0,
+        "route": "baseline"
+      },
+      {
+        "mAP_pct": 59.77586526578171,
+        "n_edges": 93157,
+        "density": 0.16583355585224743,
+        "reciprocity_measured": 0.7262148845497386,
+        "reciprocity_null_mean": 0.20279742799789605,
+        "reciprocity_chance_corrected": 0.656567696761597,
+        "overlap_vs_baseline": 0.9254727666157263,
+        "sigma": 0.0439453125,
+        "target_mAP": 60.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 45.16214599849833,
+        "n_edges": 145250,
+        "density": 0.2585669781931464,
+        "reciprocity_measured": 0.7873734939759036,
+        "reciprocity_null_mean": 0.31123993115318416,
+        "reciprocity_chance_corrected": 0.6912908926615116,
+        "overlap_vs_baseline": 0.923071372535267,
+        "sigma": 0.05224609375,
+        "target_mAP": 45.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 34.672974515783125,
+        "n_edges": 182022,
+        "density": 0.32402670226969293,
+        "reciprocity_measured": 0.8321301820659042,
+        "reciprocity_null_mean": 0.3860280625418905,
+        "reciprocity_chance_corrected": 0.7265838913923499,
+        "overlap_vs_baseline": 0.9170631373671944,
+        "sigma": 0.0576171875,
+        "target_mAP": 35.0,
+        "route": "gaussian_noise"
+      },
+      {
+        "mAP_pct": 26.623718991619654,
+        "n_edges": 209753,
+        "density": 0.3733920783266578,
+        "reciprocity_measured": 0.8630818152779698,
+        "reciprocity_null_mean": 0.4453562046788365,
+        "reciprocity_chance_corrected": 0.7531421321629524,
+        "overlap_vs_baseline": 0.9109480343377109,
+        "sigma": 0.06201171875,
+        "target_mAP": 26.66,
+        "route": "gaussian_noise"
+      }
+    ],
+    "random_proj_route": [
+      {
+        "mAP_pct": 80.39631570532194,
+        "n_edges": 29267,
+        "density": 0.05209968847352025,
+        "reciprocity_measured": 0.7163699730071411,
+        "reciprocity_null_mean": 0.06839102060340999,
+        "reciprocity_chance_corrected": 0.6955482039507948,
+        "overlap_vs_baseline": 1.0,
+        "sigma": 0.0,
+        "route": "baseline"
+      },
+      {
+        "mAP_pct": 59.856746288480466,
+        "n_edges": 73058,
+        "density": 0.13005429461504228,
+        "reciprocity_measured": 0.7436283500780202,
+        "reciprocity_null_mean": 0.168906895890936,
+        "reciprocity_chance_corrected": 0.6915247537797687,
+        "overlap_vs_baseline": 0.6911078373592168,
+        "k_target": 47,
+        "target_mAP": 60.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 45.27804863040471,
+        "n_edges": 93575,
+        "density": 0.1665776591010236,
+        "reciprocity_measured": 0.8053005610472883,
+        "reciprocity_null_mean": 0.21195404755543681,
+        "reciprocity_chance_corrected": 0.7529339014447787,
+        "overlap_vs_baseline": 0.6387763602403321,
+        "k_target": 28,
+        "target_mAP": 45.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 34.787749414733874,
+        "n_edges": 104510,
+        "density": 0.1860436137071651,
+        "reciprocity_measured": 0.8234044589034543,
+        "reciprocity_null_mean": 0.23801741460147358,
+        "reciprocity_chance_corrected": 0.7682420248434101,
+        "overlap_vs_baseline": 0.6027747872457361,
+        "k_target": 21,
+        "target_mAP": 35.0,
+        "route": "random_projection"
+      },
+      {
+        "mAP_pct": 26.13810889985919,
+        "n_edges": 114108,
+        "density": 0.2031295060080107,
+        "reciprocity_measured": 0.8471623374347109,
+        "reciprocity_null_mean": 0.2625617835734567,
+        "reciprocity_chance_corrected": 0.7927451287974938,
+        "overlap_vs_baseline": 0.5757785746099625,
+        "k_target": 17,
+        "target_mAP": 26.66,
+        "route": "random_projection"
+      }
+    ]
+  }
+}

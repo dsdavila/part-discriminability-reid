@@ -1,0 +1,35 @@
+{
+  "OOD-ONLY": {
+    "n": 6,
+    "mean_ap_base_pct": 19.804871383817833,
+    "mean_ap_proj_pct": 22.86712586837986,
+    "mean_dap_pct": 3.062254484562022,
+    "total_dap_contrib_pct": 18.373526907372128
+  },
+  "SHARED": {
+    "n": 3039,
+    "mean_ap_base_pct": 4.906378457995919,
+    "mean_ap_proj_pct": 6.7480205298196765,
+    "mean_dap_pct": 1.8416420718237565,
+    "total_dap_contrib_pct": 5596.750256272397
+  },
+  "SHARED_atchance": {
+    "n": 14,
+    "mean_ap_base_pct": 30.07811453910002,
+    "mean_ap_proj_pct": 39.651915922766804,
+    "mean_dap_pct": 9.573801383666773,
+    "total_dap_contrib_pct": 134.03321937133484
+  },
+  "class_counts": {
+    "SHARED": 3039,
+    "SHARED_atchance": 14,
+    "OOD-ONLY": 6
+  },
+  "total_mean_dap_pct": 1.994304773433474,
+  "total_sum_dap": 23251.59935346088,
+  "share_of_dap_by_class": {
+    "SHARED": 0.24070388325521141,
+    "SHARED_atchance": 0.00576447311575514,
+    "OOD-ONLY": 0.0007902048641070072
+  }
+}

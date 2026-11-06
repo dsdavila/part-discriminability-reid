@@ -1,0 +1,103 @@
+{
+  "description": "Cell B (BoT-Market\u2192MSMT17) top-k projection-out sweep with ID-level bootstrap CIs",
+  "n_bootstrap": 10000,
+  "k_stability_curve": [
+    {
+      "k": 0,
+      "map_pct": 2.4367640240141495,
+      "delta_pp": 0.0,
+      "ci_lo_pp": 0.0,
+      "ci_hi_pp": 0.0,
+      "significant": false,
+      "n_ids": 3059
+    },
+    {
+      "k": 1,
+      "map_pct": 2.812217582715059,
+      "delta_pp": 0.3754535587009094,
+      "ci_lo_pp": 0.2837632743445275,
+      "ci_hi_pp": 0.46918902534587964,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 2,
+      "map_pct": 3.135479772442287,
+      "delta_pp": 0.6987157484281377,
+      "ci_lo_pp": 0.5843717789392313,
+      "ci_hi_pp": 0.8165811471197486,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 4,
+      "map_pct": 3.31199817774247,
+      "delta_pp": 0.8752341537283205,
+      "ci_lo_pp": 0.7504560274459479,
+      "ci_hi_pp": 1.0090808410006085,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 8,
+      "map_pct": 3.538491596746676,
+      "delta_pp": 1.1017275727325266,
+      "ci_lo_pp": 0.9476981465590111,
+      "ci_hi_pp": 1.257611341435916,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 16,
+      "map_pct": 3.462294178940659,
+      "delta_pp": 1.0255301549265097,
+      "ci_lo_pp": 0.8568934030549988,
+      "ci_hi_pp": 1.1946033086168946,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 32,
+      "map_pct": 3.4848060225767377,
+      "delta_pp": 1.0480419985625882,
+      "ci_lo_pp": 0.8633372104834605,
+      "ci_hi_pp": 1.2367893759937052,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 64,
+      "map_pct": 3.3740384312712224,
+      "delta_pp": 0.9372744072570726,
+      "ci_lo_pp": 0.7473740692781466,
+      "ci_hi_pp": 1.1310121656212435,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 128,
+      "map_pct": 3.6696675912101533,
+      "delta_pp": 1.2329035671960036,
+      "ci_lo_pp": 1.0355709808011004,
+      "ci_hi_pp": 1.4382661214119894,
+      "significant": true,
+      "n_ids": 3059
+    },
+    {
+      "k": 256,
+      "map_pct": 4.021324341834961,
+      "delta_pp": 1.5845603178208119,
+      "ci_lo_pp": 1.3715690683965178,
+      "ci_hi_pp": 1.8062656175693086,
+      "significant": true,
+      "n_ids": 3059
+    }
+  ],
+  "peak_k": 256,
+  "peak_map_pct": 4.021324341834961,
+  "baseline_map_pct": 2.4367640240141495,
+  "peak_delta_pp": 1.5845603178208116,
+  "near_peak_ks": [
+    256
+  ]
+}

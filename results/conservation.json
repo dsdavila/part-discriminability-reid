@@ -1,0 +1,178 @@
+{
+  "threshold": 0.5,
+  "n_ids": 3059,
+  "items_per_class": {
+    "EASY": 7160,
+    "ID-ONLY": 9,
+    "SHARED": 14797,
+    "OOD-ONLY": 60162
+  },
+  "flux_rows": [
+    {
+      "q_class": "EASY",
+      "n_class": "EASY",
+      "slots_D": 59349,
+      "slots_B": 38495,
+      "delta_slots": -20854,
+      "share_D_of_q_slots_pct": 82.88966480446928,
+      "share_B_of_q_slots_pct": 53.763966480446925
+    },
+    {
+      "q_class": "EASY",
+      "n_class": "ID-ONLY",
+      "slots_D": 0,
+      "slots_B": 45,
+      "delta_slots": 45,
+      "share_D_of_q_slots_pct": 0.0,
+      "share_B_of_q_slots_pct": 0.06284916201117319
+    },
+    {
+      "q_class": "EASY",
+      "n_class": "SHARED",
+      "slots_D": 1582,
+      "slots_B": 4526,
+      "delta_slots": 2944,
+      "share_D_of_q_slots_pct": 2.2094972067039107,
+      "share_B_of_q_slots_pct": 6.32122905027933
+    },
+    {
+      "q_class": "EASY",
+      "n_class": "OOD-ONLY",
+      "slots_D": 10669,
+      "slots_B": 28534,
+      "delta_slots": 17865,
+      "share_D_of_q_slots_pct": 14.900837988826815,
+      "share_B_of_q_slots_pct": 39.85195530726257
+    },
+    {
+      "q_class": "ID-ONLY",
+      "n_class": "EASY",
+      "slots_D": 1,
+      "slots_B": 11,
+      "delta_slots": 10,
+      "share_D_of_q_slots_pct": 1.1111111111111112,
+      "share_B_of_q_slots_pct": 12.222222222222221
+    },
+    {
+      "q_class": "ID-ONLY",
+      "n_class": "ID-ONLY",
+      "slots_D": 3,
+      "slots_B": 17,
+      "delta_slots": 14,
+      "share_D_of_q_slots_pct": 3.3333333333333335,
+      "share_B_of_q_slots_pct": 18.88888888888889
+    },
+    {
+      "q_class": "ID-ONLY",
+      "n_class": "SHARED",
+      "slots_D": 19,
+      "slots_B": 22,
+      "delta_slots": 3,
+      "share_D_of_q_slots_pct": 21.11111111111111,
+      "share_B_of_q_slots_pct": 24.444444444444443
+    },
+    {
+      "q_class": "ID-ONLY",
+      "n_class": "OOD-ONLY",
+      "slots_D": 67,
+      "slots_B": 40,
+      "delta_slots": -27,
+      "share_D_of_q_slots_pct": 74.44444444444444,
+      "share_B_of_q_slots_pct": 44.44444444444444
+    },
+    {
+      "q_class": "SHARED",
+      "n_class": "EASY",
+      "slots_D": 3192,
+      "slots_B": 3268,
+      "delta_slots": 76,
+      "share_D_of_q_slots_pct": 2.1571940258160436,
+      "share_B_of_q_slots_pct": 2.2085557883354734
+    },
+    {
+      "q_class": "SHARED",
+      "n_class": "ID-ONLY",
+      "slots_D": 20,
+      "slots_B": 25,
+      "delta_slots": 5,
+      "share_D_of_q_slots_pct": 0.013516253294586741,
+      "share_B_of_q_slots_pct": 0.016895316618233427
+    },
+    {
+      "q_class": "SHARED",
+      "n_class": "SHARED",
+      "slots_D": 69820,
+      "slots_B": 50977,
+      "delta_slots": -18843,
+      "share_D_of_q_slots_pct": 47.18524025140231,
+      "share_B_of_q_slots_pct": 34.45090220990741
+    },
+    {
+      "q_class": "SHARED",
+      "n_class": "OOD-ONLY",
+      "slots_D": 74938,
+      "slots_B": 93700,
+      "delta_slots": 18762,
+      "share_D_of_q_slots_pct": 50.64404946948706,
+      "share_B_of_q_slots_pct": 63.32364668513888
+    },
+    {
+      "q_class": "OOD-ONLY",
+      "n_class": "EASY",
+      "slots_D": 14473,
+      "slots_B": 25356,
+      "delta_slots": 10883,
+      "share_D_of_q_slots_pct": 2.4056713540108374,
+      "share_B_of_q_slots_pct": 4.214620524583625
+    },
+    {
+      "q_class": "OOD-ONLY",
+      "n_class": "ID-ONLY",
+      "slots_D": 45,
+      "slots_B": 90,
+      "delta_slots": 45,
+      "share_D_of_q_slots_pct": 0.007479804527775007,
+      "share_B_of_q_slots_pct": 0.014959609055550015
+    },
+    {
+      "q_class": "OOD-ONLY",
+      "n_class": "SHARED",
+      "slots_D": 53879,
+      "slots_B": 117762,
+      "delta_slots": 63883,
+      "share_D_of_q_slots_pct": 8.955653070044214,
+      "share_B_of_q_slots_pct": 19.57414979555201
+    },
+    {
+      "q_class": "OOD-ONLY",
+      "n_class": "OOD-ONLY",
+      "slots_D": 533223,
+      "slots_B": 458412,
+      "delta_slots": -74811,
+      "share_D_of_q_slots_pct": 88.63119577141717,
+      "share_B_of_q_slots_pct": 76.19627007080882
+    }
+  ],
+  "col_totals": {
+    "EASY": {
+      "D": 77015,
+      "B": 67130,
+      "delta": -9885
+    },
+    "ID-ONLY": {
+      "D": 68,
+      "B": 177,
+      "delta": 109
+    },
+    "SHARED": {
+      "D": 125300,
+      "B": 173287,
+      "delta": 47987
+    },
+    "OOD-ONLY": {
+      "D": 618897,
+      "B": 580686,
+      "delta": -38211
+    }
+  }
+}
