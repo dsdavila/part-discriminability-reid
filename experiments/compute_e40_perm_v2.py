@@ -157,7 +157,11 @@ def build_item_matched_pseudo_classes(g_pids, class_item_targets, seed):
 
 def compute_class_pair_medians(G, g_pids, class_map, classes=CLASSES, k=FIXED_K, use_gpu=True):
     """For each class in classes, build PCA basis capped at min(k, n_items-1, d).
-    Returns median principal angle per pair and per-class k_eff.
+    For each class pair, force common k = min(k_eff_A, k_eff_B) and truncate
+    both bases to that k before computing principal angles (claude-chat Ch2
+    rev 78: prevents basis-dimension mismatch confounds between real and null).
+    Returns median principal angle per pair, per-class k_eff, and per-pair
+    common-k used.
     """
     bases = {}
     k_effs = {}
@@ -173,12 +177,17 @@ def compute_class_pair_medians(G, g_pids, class_map, classes=CLASSES, k=FIXED_K,
         bases[c] = basis
         k_effs[c] = int(k_eff)
     out = {}
+    pair_ks = {}
     pair_keys = [('EASY', 'OOD-ONLY'), ('EASY', 'SHARED'), ('OOD-ONLY', 'SHARED')]
     for c1, c2 in pair_keys:
         if bases[c1] is None or bases[c2] is None:
-            out[f'{c1}|{c2}'] = None; continue
-        out[f'{c1}|{c2}'] = principal_angle_median(bases[c1], bases[c2])
-    return out, k_effs
+            out[f'{c1}|{c2}'] = None; pair_ks[f'{c1}|{c2}'] = 0; continue
+        common_k = min(k_effs[c1], k_effs[c2])
+        A = bases[c1][:, :common_k]
+        B = bases[c2][:, :common_k]
+        out[f'{c1}|{c2}'] = principal_angle_median(A, B)
+        pair_ks[f'{c1}|{c2}'] = int(common_k)
+    return out, k_effs, pair_ks
 
 
 def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
@@ -204,16 +213,19 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
     arms = {'id': G_id, 'ood': G_ood}
     real_stats = {}
     real_k_effs = {}
+    real_pair_ks = {}
     for arm_name, G_ in arms.items():
         t0 = time.time()
-        real_stats[arm_name], real_k_effs[arm_name] = compute_class_pair_medians(G_, g_pids, real_classes, use_gpu=True)
+        real_stats[arm_name], real_k_effs[arm_name], real_pair_ks[arm_name] = compute_class_pair_medians(G_, g_pids, real_classes, use_gpu=True)
         print(f"  real [{arm_name}] class-pair medians: t={(time.time() - t0) / 60:.1f}m "
               f"=> {real_stats[arm_name]}", flush=True)
         print(f"    k_eff per class: {real_k_effs[arm_name]}", flush=True)
+        print(f"    common_k per pair: {real_pair_ks[arm_name]}", flush=True)
 
     # Permutation null
     perm_stats = {arm: {k: [] for k in real_stats['id']} for arm in arms}
     perm_k_effs = {arm: [] for arm in arms}
+    perm_pair_ks = {arm: [] for arm in arms}
     perm_items = []
     t_total = time.time()
     for seed in range(n_perm):
@@ -222,8 +234,9 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
             g_pids, class_item_counts, seed=seed)
         perm_items.append(class_actual_items)
         for arm_name, G_ in arms.items():
-            stats, k_effs = compute_class_pair_medians(G_, g_pids, perm_classes, use_gpu=True)
+            stats, k_effs, pair_ks = compute_class_pair_medians(G_, g_pids, perm_classes, use_gpu=True)
             perm_k_effs[arm_name].append(k_effs)
+            perm_pair_ks[arm_name].append(pair_ks)
             for pair_key, val in stats.items():
                 if val is not None:
                     perm_stats[arm_name][pair_key].append(val)
@@ -237,8 +250,11 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
                {c: float(np.mean([p.get(c, 0) for p in perm_items])) for c in CLASSES},
                'real_items': class_item_counts,
                'real_k_effs': real_k_effs,
+               'real_pair_ks': real_pair_ks,
                'perm_k_eff_mean': {arm: {c: float(np.mean([pk.get(c, 0) for pk in perm_k_effs[arm]]))
                                          for c in CLASSES} for arm in arms},
+               'perm_pair_k_mean': {arm: {p: float(np.mean([pk.get(p, 0) for pk in perm_pair_ks[arm]]))
+                                          for p in real_pair_ks[arm]} for arm in arms},
                'partition_counts': real_counts, 'per_arm': {}}
     for arm in arms:
         summary['per_arm'][arm] = {}
@@ -287,8 +303,8 @@ def main():
         print_report('MSMT', out['MSMT'])
     out['Market'] = run_dataset('Market', "A'", 'C')
     print_report('Market', out['Market'])
-    out_path = RESULTS / ('e40_permutation_null_v2_market_kfix.json' if market_only
-                          else 'e40_permutation_null_v2.json')
+    out_path = RESULTS / ('e40_permutation_null_v2_market_commonk.json' if market_only
+                          else 'e40_permutation_null_v2_commonk.json')
     with open(out_path, 'w') as f:
         json.dump(out, f, indent=2)
     print(f"\nSaved → {out_path}")
