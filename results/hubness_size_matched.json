@@ -1,0 +1,108 @@
+{
+  "n_subsample": 13115,
+  "n_draws": 3,
+  "draws": [
+    {
+      "n_items": 13115,
+      "n_ids": 2912,
+      "per_arm": {
+        "id": {
+          "skewness_items": 0.9599586065157626,
+          "max_occ": 52,
+          "frac_zero": 0.008997331300038124,
+          "mean_occ": 10.0
+        },
+        "ood": {
+          "skewness_items": 2.203174207792656,
+          "max_occ": 109,
+          "frac_zero": 0.038048036599313766,
+          "mean_occ": 10.0
+        },
+        "noise": {
+          "skewness_items": 0.8130941412692358,
+          "max_occ": 35,
+          "frac_zero": 0.0009149828440716736,
+          "mean_occ": 10.0
+        },
+        "randproj": {
+          "skewness_items": 0.686593547605001,
+          "max_occ": 42,
+          "frac_zero": 0.0006099885627144491,
+          "mean_occ": 10.0
+        }
+      }
+    },
+    {
+      "n_items": 13115,
+      "n_ids": 2902,
+      "per_arm": {
+        "id": {
+          "skewness_items": 0.9822629390562517,
+          "max_occ": 44,
+          "frac_zero": 0.007167365611894777,
+          "mean_occ": 10.0
+        },
+        "ood": {
+          "skewness_items": 2.1133774087809525,
+          "max_occ": 112,
+          "frac_zero": 0.041555470834921844,
+          "mean_occ": 10.0
+        },
+        "noise": {
+          "skewness_items": 0.8735893453492108,
+          "max_occ": 39,
+          "frac_zero": 0.00099123141441098,
+          "mean_occ": 10.0
+        },
+        "randproj": {
+          "skewness_items": 0.7291004984774966,
+          "max_occ": 33,
+          "frac_zero": 0.0008387342737323676,
+          "mean_occ": 10.0
+        }
+      }
+    },
+    {
+      "n_items": 13115,
+      "n_ids": 2934,
+      "per_arm": {
+        "id": {
+          "skewness_items": 0.9678892245659577,
+          "max_occ": 45,
+          "frac_zero": 0.0074723598932520015,
+          "mean_occ": 10.0
+        },
+        "ood": {
+          "skewness_items": 2.1576082919803734,
+          "max_occ": 109,
+          "frac_zero": 0.037971788028974454,
+          "mean_occ": 10.0
+        },
+        "noise": {
+          "skewness_items": 0.8199234538469439,
+          "max_occ": 40,
+          "frac_zero": 0.000533739992375143,
+          "mean_occ": 10.0
+        },
+        "randproj": {
+          "skewness_items": 0.7382261376046997,
+          "max_occ": 37,
+          "frac_zero": 0.0007624857033930614,
+          "mean_occ": 10.0
+        }
+      }
+    }
+  ],
+  "full_msmt_ref": {
+    "id": 1.175,
+    "ood": 2.375,
+    "noise": 1.119,
+    "randproj": 0.956
+  },
+  "market_ref": {
+    "id": 0.844,
+    "ood": 1.697,
+    "noise": 0.945,
+    "randproj": 0.868
+  }
+}
