@@ -63,7 +63,7 @@ def topk_gallery_only(G_cuda, k, chunk=256):
     return out
 
 
-def k_reciprocal_gallery_shape(G_np, g_pids, g_cids, k1=K1, k2=K2):
+def k_reciprocal_gallery_shape(G_np, g_pids, g_cids, k1=K1, k2=K2, lam=LAMBDA):
     """Compute Jaccard-corrected top-10 neighbours per gallery item.
     Returns:
       kocc (Ng,) int64
@@ -140,17 +140,17 @@ def k_reciprocal_gallery_shape(G_np, g_pids, g_cids, k1=K1, k2=K2):
         for c, v in zip(cols, vals):
             inv[int(c)].append((i, float(v)))
 
-    # For each gallery item i, compute Jaccard distance to all other gallery
-    # items via inverted index, take top-10 (minimum Jaccard distance),
-    # excluding same-cam-same-pid.
-    print("    computing top-10 per gallery item in Jaccard space...", flush=True)
+    # Zhong blend: final_dist = lam * original + (1 - lam) * jaccard.
+    # With lam=0.3: 30% original + 70% Jaccard. Previous version used pure
+    # Jaccard and did not match the mAP space; this corrects it.
+    print(f"    computing top-10 per gallery item in BLENDED space "
+          f"(lam={lam} on original, 1-lam={1-lam} on Jaccard)...", flush=True)
     t0 = time.time()
     kocc = np.zeros(Ng, dtype=np.int64)
     top_nb = np.zeros((Ng, K_OCC), dtype=np.int32)
     for i in range(Ng):
         cols_q, vals_q = V_rows[i]
         if len(cols_q) == 0:
-            # fallback to raw order
             temp_min = np.zeros(Ng, dtype=np.float32)
         else:
             temp_min = np.zeros(Ng, dtype=np.float32)
@@ -158,12 +158,15 @@ def k_reciprocal_gallery_shape(G_np, g_pids, g_cids, k1=K1, k2=K2):
                 for (idx, vj) in inv[int(c)]:
                     temp_min[idx] += min(vq, vj)
         jac = 1.0 - temp_min / (2.0 - temp_min + 1e-12)
-        # same-cam-same-pid exclusion + self
+        # Original pairwise cosine distance: d(i, j) for all j
+        sims_row = (G_cuda[i:i+1] @ G_cuda.T).cpu().numpy()[0]
+        d_orig = dist_from_sim(sims_row)
+        blend = lam * d_orig + (1.0 - lam) * jac
         exc = (g_pids == g_pids[i]) & (g_cids == g_cids[i])
-        jac_masked = jac.copy()
-        jac_masked[exc] = 1e9
-        idx_top = np.argpartition(jac_masked, K_OCC)[:K_OCC]
-        order = idx_top[np.argsort(jac_masked[idx_top])]
+        blend_masked = blend.copy()
+        blend_masked[exc] = 1e9
+        idx_top = np.argpartition(blend_masked, K_OCC)[:K_OCC]
+        order = idx_top[np.argsort(blend_masked[idx_top])]
         top_nb[i] = order
         kocc[order] += 1
         if (i + 1) % 20000 == 0:
@@ -205,9 +208,11 @@ def main():
         skew_val = float(stats.skew(kocc.astype(np.float32)))
         sym = symmetric_10nn_fraction(top_nb)
         r_val, _ = stats.spearmanr(kocc.astype(np.float32), d_c)
-        print(f"  skew_items    = {skew_val:.3f}", flush=True)
-        print(f"  sym_10nn_frac = {sym:.3f}", flush=True)
-        print(f"  signed r      = {r_val:+.3f}", flush=True)
+        print(f"  skew_items    = {skew_val:.4f}", flush=True)
+        print(f"  sym_10nn_frac = {sym:.4f}", flush=True)
+        print(f"  signed r      = {r_val:+.4f}", flush=True)
+        print(f"  max kocc      = {int(kocc.max())}", flush=True)
+        print(f"  frac_zero     = {float((kocc == 0).mean()):.4f}", flush=True)
         print(f"  total t={(time.time()-t0)/60:.1f}m", flush=True)
         out[tag] = {
             'skew_items': skew_val,
@@ -219,7 +224,8 @@ def main():
                 'min': int(kocc.min()),
                 'frac_zero': float((kocc == 0).mean()),
             },
-            'k1': K1, 'k2': K2,
+            'k1': K1, 'k2': K2, 'lambda': LAMBDA,
+            'readout_space': 'blended (0.3 original + 0.7 Jaccard)',
         }
 
     print("\n========== k-reciprocal gallery-side graph-shape summary ==========")

@@ -1,0 +1,54 @@
+{
+  "MSMT_id": {
+    "skew_items": 1.140655372793772,
+    "sym_10nn_frac": 0.6311124098967466,
+    "r_global_signed": 0.04069317893971697,
+    "kocc_summary": {
+      "mean": 10.0,
+      "max": 122,
+      "min": 0,
+      "frac_zero": 0.04667105006818625
+    },
+    "k1": 20,
+    "k2": 6
+  },
+  "MSMT_ood": {
+    "skew_items": 2.1767339388851887,
+    "sym_10nn_frac": 0.5760544515877655,
+    "r_global_signed": -0.07479382161946618,
+    "kocc_summary": {
+      "mean": 10.0,
+      "max": 238,
+      "min": 0,
+      "frac_zero": 0.04035164621079291
+    },
+    "k1": 20,
+    "k2": 6
+  },
+  "Market_id": {
+    "skew_items": 0.7333373271658684,
+    "sym_10nn_frac": 0.7054822722073961,
+    "r_global_signed": 0.03113520956720322,
+    "kocc_summary": {
+      "mean": 10.0,
+      "max": 56,
+      "min": 0,
+      "frac_zero": 0.03133816240945482
+    },
+    "k1": 20,
+    "k2": 6
+  },
+  "Market_ood": {
+    "skew_items": 0.7304939619420044,
+    "sym_10nn_frac": 0.655600457491422,
+    "r_global_signed": -0.058384339968844,
+    "kocc_summary": {
+      "mean": 10.0,
+      "max": 49,
+      "min": 0,
+      "frac_zero": 0.015249714067861228
+    },
+    "k1": 20,
+    "k2": 6
+  }
+}

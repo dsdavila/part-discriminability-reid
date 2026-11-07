@@ -1,54 +1,62 @@
 {
   "MSMT_id": {
-    "skew_items": 1.140655372793772,
-    "sym_10nn_frac": 0.6311124098967466,
-    "r_global_signed": 0.04069317893971697,
+    "skew_items": 0.815078101601802,
+    "sym_10nn_frac": 0.6312317358270018,
+    "r_global_signed": 0.044335055447350356,
     "kocc_summary": {
       "mean": 10.0,
-      "max": 122,
+      "max": 69,
       "min": 0,
-      "frac_zero": 0.04667105006818625
+      "frac_zero": 0.03959672706019871
     },
     "k1": 20,
-    "k2": 6
+    "k2": 6,
+    "lambda": 0.3,
+    "readout_space": "blended (0.3 original + 0.7 Jaccard)"
   },
   "MSMT_ood": {
-    "skew_items": 2.1767339388851887,
-    "sym_10nn_frac": 0.5760544515877655,
-    "r_global_signed": -0.07479382161946618,
+    "skew_items": 1.072367802486022,
+    "sym_10nn_frac": 0.546500584453536,
+    "r_global_signed": -0.1496378330104577,
     "kocc_summary": {
       "mean": 10.0,
-      "max": 238,
+      "max": 72,
       "min": 0,
-      "frac_zero": 0.04035164621079291
+      "frac_zero": 0.040716929670757844
     },
     "k1": 20,
-    "k2": 6
+    "k2": 6,
+    "lambda": 0.3,
+    "readout_space": "blended (0.3 original + 0.7 Jaccard)"
   },
   "Market_id": {
-    "skew_items": 0.7333373271658684,
-    "sym_10nn_frac": 0.7054822722073961,
-    "r_global_signed": 0.03113520956720322,
+    "skew_items": 0.7176755878085298,
+    "sym_10nn_frac": 0.7059702630575677,
+    "r_global_signed": 0.035314689148412466,
     "kocc_summary": {
       "mean": 10.0,
-      "max": 56,
+      "max": 57,
       "min": 0,
-      "frac_zero": 0.03133816240945482
+      "frac_zero": 0.028898208158597026
     },
     "k1": 20,
-    "k2": 6
+    "k2": 6,
+    "lambda": 0.3,
+    "readout_space": "blended (0.3 original + 0.7 Jaccard)"
   },
   "Market_ood": {
-    "skew_items": 0.7304939619420044,
-    "sym_10nn_frac": 0.655600457491422,
-    "r_global_signed": -0.058384339968844,
+    "skew_items": 0.8198538964042723,
+    "sym_10nn_frac": 0.6428516965306901,
+    "r_global_signed": -0.11762924774909604,
     "kocc_summary": {
       "mean": 10.0,
-      "max": 49,
+      "max": 54,
       "min": 0,
-      "frac_zero": 0.015249714067861228
+      "frac_zero": 0.017460922607701105
     },
     "k1": 20,
-    "k2": 6
+    "k2": 6,
+    "lambda": 0.3,
+    "readout_space": "blended (0.3 original + 0.7 Jaccard)"
   }
 }
