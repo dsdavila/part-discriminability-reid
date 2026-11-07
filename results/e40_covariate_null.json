@@ -1,0 +1,428 @@
+{
+  "dataset": "MSMT",
+  "real_item_counts_target": {
+    "EASY": 7160,
+    "SHARED": 14797,
+    "OOD-ONLY": 60162
+  },
+  "covariate_partitions": {
+    "camera_modal_asc": {
+      "arms": {
+        "id": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 13.914517402648926,
+            "EASY|SHARED": 14.795475959777832,
+            "OOD-ONLY|SHARED": 9.513489723205566
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        },
+        "ood": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 11.087148666381836,
+            "EASY|SHARED": 11.98605728149414,
+            "OOD-ONLY|SHARED": 7.675802230834961
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        }
+      },
+      "id_counts": {
+        "EASY": 309,
+        "SHARED": 578,
+        "OOD-ONLY": 2172
+      },
+      "item_counts": {
+        "EASY": 7166,
+        "SHARED": 14801,
+        "OOD-ONLY": 60161
+      }
+    },
+    "items_per_id_asc": {
+      "arms": {
+        "id": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 10.178458213806152,
+            "EASY|SHARED": 10.9181489944458,
+            "OOD-ONLY|SHARED": 8.623008728027344
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        },
+        "ood": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 8.954069137573242,
+            "EASY|SHARED": 9.654193878173828,
+            "OOD-ONLY|SHARED": 7.128706932067871
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        }
+      },
+      "id_counts": {
+        "EASY": 629,
+        "SHARED": 841,
+        "OOD-ONLY": 1589
+      },
+      "item_counts": {
+        "EASY": 7161,
+        "SHARED": 14797,
+        "OOD-ONLY": 60170
+      }
+    },
+    "items_per_id_desc": {
+      "arms": {
+        "id": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 14.133703231811523,
+            "EASY|SHARED": 16.145328521728516,
+            "OOD-ONLY|SHARED": 10.75362491607666
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        },
+        "ood": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 11.20183277130127,
+            "EASY|SHARED": 12.41904067993164,
+            "OOD-ONLY|SHARED": 8.092300415039062
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        }
+      },
+      "id_counts": {
+        "EASY": 70,
+        "SHARED": 238,
+        "OOD-ONLY": 2751
+      },
+      "item_counts": {
+        "EASY": 7211,
+        "SHARED": 14816,
+        "OOD-ONLY": 60101
+      }
+    },
+    "camera_per_camera": {
+      "arms": {
+        "id": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 18.515029907226562,
+            "EASY|SHARED": 17.66397476196289,
+            "OOD-ONLY|SHARED": 12.040891647338867
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        },
+        "ood": {
+          "class_pair_medians": {
+            "EASY|OOD-ONLY": 15.25186824798584,
+            "EASY|SHARED": 14.418535232543945,
+            "OOD-ONLY|SHARED": 9.970129013061523
+          },
+          "class_k_effs": {
+            "EASY": 200,
+            "SHARED": 200,
+            "OOD-ONLY": 200
+          },
+          "pair_common_k": {
+            "EASY|OOD-ONLY": 200,
+            "EASY|SHARED": 200,
+            "OOD-ONLY|SHARED": 200
+          }
+        }
+      },
+      "id_counts": {
+        "EASY": 158,
+        "SHARED": 751,
+        "OOD-ONLY": 499
+      },
+      "item_counts": {
+        "EASY": 4681,
+        "SHARED": 16420,
+        "OOD-ONLY": 9889
+      }
+    }
+  },
+  "comparison_to_random_null": {
+    "camera_modal_asc": {
+      "arms": {
+        "id": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 13.914517402648926,
+            "null_mean_deg": 11.400642642974853,
+            "null_min": 10.963382720947266,
+            "null_max": 11.993742942810059,
+            "gap_real_minus_null_mean": 2.5138747596740725,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 14.795475959777832,
+            "null_mean_deg": 13.330792694091796,
+            "null_min": 12.991469383239746,
+            "null_max": 13.853996276855469,
+            "gap_real_minus_null_mean": 1.4646832656860358,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 9.513489723205566,
+            "null_mean_deg": 8.797310762405395,
+            "null_min": 8.507939338684082,
+            "null_max": 9.0194091796875,
+            "gap_real_minus_null_mean": 0.7161789608001712,
+            "pct_below_real": 1.0
+          }
+        },
+        "ood": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 11.087148666381836,
+            "null_mean_deg": 9.137992086410522,
+            "null_min": 8.853419303894043,
+            "null_max": 9.473674774169922,
+            "gap_real_minus_null_mean": 1.949156579971314,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 11.98605728149414,
+            "null_mean_deg": 10.626935834884643,
+            "null_min": 10.355013847351074,
+            "null_max": 10.950913429260254,
+            "gap_real_minus_null_mean": 1.3591214466094979,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 7.675802230834961,
+            "null_mean_deg": 7.0033459997177125,
+            "null_min": 6.84954833984375,
+            "null_max": 7.209916591644287,
+            "gap_real_minus_null_mean": 0.6724562311172484,
+            "pct_below_real": 1.0
+          }
+        }
+      }
+    },
+    "items_per_id_asc": {
+      "arms": {
+        "id": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 10.178458213806152,
+            "null_mean_deg": 11.400642642974853,
+            "null_min": 10.963382720947266,
+            "null_max": 11.993742942810059,
+            "gap_real_minus_null_mean": -1.222184429168701,
+            "pct_below_real": 0.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 10.9181489944458,
+            "null_mean_deg": 13.330792694091796,
+            "null_min": 12.991469383239746,
+            "null_max": 13.853996276855469,
+            "gap_real_minus_null_mean": -2.4126436996459955,
+            "pct_below_real": 0.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 8.623008728027344,
+            "null_mean_deg": 8.797310762405395,
+            "null_min": 8.507939338684082,
+            "null_max": 9.0194091796875,
+            "gap_real_minus_null_mean": -0.17430203437805147,
+            "pct_below_real": 0.03
+          }
+        },
+        "ood": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 8.954069137573242,
+            "null_mean_deg": 9.137992086410522,
+            "null_min": 8.853419303894043,
+            "null_max": 9.473674774169922,
+            "gap_real_minus_null_mean": -0.18392294883727978,
+            "pct_below_real": 0.04
+          },
+          "EASY|SHARED": {
+            "real_deg": 9.654193878173828,
+            "null_mean_deg": 10.626935834884643,
+            "null_min": 10.355013847351074,
+            "null_max": 10.950913429260254,
+            "gap_real_minus_null_mean": -0.9727419567108146,
+            "pct_below_real": 0.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 7.128706932067871,
+            "null_mean_deg": 7.0033459997177125,
+            "null_min": 6.84954833984375,
+            "null_max": 7.209916591644287,
+            "gap_real_minus_null_mean": 0.12536093235015855,
+            "pct_below_real": 0.92
+          }
+        }
+      }
+    },
+    "items_per_id_desc": {
+      "arms": {
+        "id": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 14.133703231811523,
+            "null_mean_deg": 11.400642642974853,
+            "null_min": 10.963382720947266,
+            "null_max": 11.993742942810059,
+            "gap_real_minus_null_mean": 2.73306058883667,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 16.145328521728516,
+            "null_mean_deg": 13.330792694091796,
+            "null_min": 12.991469383239746,
+            "null_max": 13.853996276855469,
+            "gap_real_minus_null_mean": 2.8145358276367194,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 10.75362491607666,
+            "null_mean_deg": 8.797310762405395,
+            "null_min": 8.507939338684082,
+            "null_max": 9.0194091796875,
+            "gap_real_minus_null_mean": 1.956314153671265,
+            "pct_below_real": 1.0
+          }
+        },
+        "ood": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 11.20183277130127,
+            "null_mean_deg": 9.137992086410522,
+            "null_min": 8.853419303894043,
+            "null_max": 9.473674774169922,
+            "gap_real_minus_null_mean": 2.0638406848907476,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 12.41904067993164,
+            "null_mean_deg": 10.626935834884643,
+            "null_min": 10.355013847351074,
+            "null_max": 10.950913429260254,
+            "gap_real_minus_null_mean": 1.7921048450469979,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 8.092300415039062,
+            "null_mean_deg": 7.0033459997177125,
+            "null_min": 6.84954833984375,
+            "null_max": 7.209916591644287,
+            "gap_real_minus_null_mean": 1.08895441532135,
+            "pct_below_real": 1.0
+          }
+        }
+      }
+    },
+    "camera_per_camera": {
+      "arms": {
+        "id": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 18.515029907226562,
+            "null_mean_deg": 11.400642642974853,
+            "null_min": 10.963382720947266,
+            "null_max": 11.993742942810059,
+            "gap_real_minus_null_mean": 7.114387264251709,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 17.66397476196289,
+            "null_mean_deg": 13.330792694091796,
+            "null_min": 12.991469383239746,
+            "null_max": 13.853996276855469,
+            "gap_real_minus_null_mean": 4.333182067871094,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 12.040891647338867,
+            "null_mean_deg": 8.797310762405395,
+            "null_min": 8.507939338684082,
+            "null_max": 9.0194091796875,
+            "gap_real_minus_null_mean": 3.243580884933472,
+            "pct_below_real": 1.0
+          }
+        },
+        "ood": {
+          "EASY|OOD-ONLY": {
+            "real_deg": 15.25186824798584,
+            "null_mean_deg": 9.137992086410522,
+            "null_min": 8.853419303894043,
+            "null_max": 9.473674774169922,
+            "gap_real_minus_null_mean": 6.113876161575318,
+            "pct_below_real": 1.0
+          },
+          "EASY|SHARED": {
+            "real_deg": 14.418535232543945,
+            "null_mean_deg": 10.626935834884643,
+            "null_min": 10.355013847351074,
+            "null_max": 10.950913429260254,
+            "gap_real_minus_null_mean": 3.7915993976593025,
+            "pct_below_real": 1.0
+          },
+          "OOD-ONLY|SHARED": {
+            "real_deg": 9.970129013061523,
+            "null_mean_deg": 7.0033459997177125,
+            "null_min": 6.84954833984375,
+            "null_max": 7.209916591644287,
+            "gap_real_minus_null_mean": 2.966783013343811,
+            "pct_below_real": 1.0
+          }
+        }
+      }
+    }
+  }
+}
