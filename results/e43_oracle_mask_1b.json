@@ -1,0 +1,294 @@
+{
+  "mask_levels_pct": [
+    0.0,
+    0.5,
+    1.0,
+    2.0,
+    5.0,
+    10.0
+  ],
+  "per_dataset": {
+    "MSMT": {
+      "n_gallery": 82128,
+      "per_arm": {
+        "id": {
+          "levels": [
+            {
+              "level_pct": 0.0,
+              "n_mask": 0,
+              "mAP_pct": 41.617072533436264,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 0.5,
+              "n_mask": 410,
+              "mAP_pct": 41.677311651910124,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 1.0,
+              "n_mask": 821,
+              "mAP_pct": 41.736657823097914,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 2.0,
+              "n_mask": 1642,
+              "mAP_pct": 41.86267495222829,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 5.0,
+              "n_mask": 4106,
+              "mAP_pct": 42.232655260740145,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 10.0,
+              "n_mask": 8212,
+              "mAP_pct": 42.84922454492839,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            }
+          ]
+        },
+        "ood": {
+          "levels": [
+            {
+              "level_pct": 0.0,
+              "n_mask": 0,
+              "mAP_pct": 5.3957772894727,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 0.5,
+              "n_mask": 410,
+              "mAP_pct": 5.420846127974811,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 1.0,
+              "n_mask": 821,
+              "mAP_pct": 5.44991970478335,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 2.0,
+              "n_mask": 1642,
+              "mAP_pct": 5.51026582970594,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 5.0,
+              "n_mask": 4106,
+              "mAP_pct": 5.676149608971082,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 10.0,
+              "n_mask": 8212,
+              "mAP_pct": 5.988652736837438,
+              "n_queries_used": 11659,
+              "n_queries_zero_pos": 0
+            }
+          ]
+        }
+      },
+      "per_level_gap": [
+        {
+          "level_pct": 0.0,
+          "id_mAP_pct": 41.617072533436264,
+          "ood_mAP_pct": 5.3957772894727,
+          "gap_pp": 36.22129524396357,
+          "gap_frac_of_id": 0.8703470244059673
+        },
+        {
+          "level_pct": 0.5,
+          "id_mAP_pct": 41.677311651910124,
+          "ood_mAP_pct": 5.420846127974811,
+          "gap_pp": 36.25646552393531,
+          "gap_frac_of_id": 0.8699329224195206
+        },
+        {
+          "level_pct": 1.0,
+          "id_mAP_pct": 41.736657823097914,
+          "ood_mAP_pct": 5.44991970478335,
+          "gap_pp": 36.28673811831457,
+          "gap_frac_of_id": 0.8694212716340873
+        },
+        {
+          "level_pct": 2.0,
+          "id_mAP_pct": 41.86267495222829,
+          "ood_mAP_pct": 5.51026582970594,
+          "gap_pp": 36.352409122522346,
+          "gap_frac_of_id": 0.8683728205138826
+        },
+        {
+          "level_pct": 5.0,
+          "id_mAP_pct": 42.232655260740145,
+          "ood_mAP_pct": 5.676149608971082,
+          "gap_pp": 36.556505651769065,
+          "gap_frac_of_id": 0.8655980881635998
+        },
+        {
+          "level_pct": 10.0,
+          "id_mAP_pct": 42.84922454492839,
+          "ood_mAP_pct": 5.988652736837438,
+          "gap_pp": 36.86057180809095,
+          "gap_frac_of_id": 0.8602389471352463
+        }
+      ]
+    },
+    "Market": {
+      "n_gallery": 13115,
+      "per_arm": {
+        "id": {
+          "levels": [
+            {
+              "level_pct": 0.0,
+              "n_mask": 0,
+              "mAP_pct": 80.39631570532201,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 0.5,
+              "n_mask": 65,
+              "mAP_pct": 80.45106037422649,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 1.0,
+              "n_mask": 131,
+              "mAP_pct": 80.49674083413984,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 2.0,
+              "n_mask": 262,
+              "mAP_pct": 80.61864766451812,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 5.0,
+              "n_mask": 655,
+              "mAP_pct": 80.91647784601369,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 10.0,
+              "n_mask": 1311,
+              "mAP_pct": 81.44115983910075,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            }
+          ]
+        },
+        "ood": {
+          "levels": [
+            {
+              "level_pct": 0.0,
+              "n_mask": 0,
+              "mAP_pct": 26.659615785668073,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 0.5,
+              "n_mask": 65,
+              "mAP_pct": 26.839621645625023,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 1.0,
+              "n_mask": 131,
+              "mAP_pct": 26.97187548415436,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 2.0,
+              "n_mask": 262,
+              "mAP_pct": 27.23061751187654,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 5.0,
+              "n_mask": 655,
+              "mAP_pct": 27.99279474632339,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            },
+            {
+              "level_pct": 10.0,
+              "n_mask": 1311,
+              "mAP_pct": 29.078016646090816,
+              "n_queries_used": 3368,
+              "n_queries_zero_pos": 0
+            }
+          ]
+        }
+      },
+      "per_level_gap": [
+        {
+          "level_pct": 0.0,
+          "id_mAP_pct": 80.39631570532201,
+          "ood_mAP_pct": 26.659615785668073,
+          "gap_pp": 53.73669991965394,
+          "gap_frac_of_id": 0.6683975434473388
+        },
+        {
+          "level_pct": 0.5,
+          "id_mAP_pct": 80.45106037422649,
+          "ood_mAP_pct": 26.839621645625023,
+          "gap_pp": 53.61143872860146,
+          "gap_frac_of_id": 0.6663857316388656
+        },
+        {
+          "level_pct": 1.0,
+          "id_mAP_pct": 80.49674083413984,
+          "ood_mAP_pct": 26.97187548415436,
+          "gap_pp": 53.52486534998548,
+          "gap_frac_of_id": 0.6649320804213829
+        },
+        {
+          "level_pct": 2.0,
+          "id_mAP_pct": 80.61864766451812,
+          "ood_mAP_pct": 27.23061751187654,
+          "gap_pp": 53.388030152641576,
+          "gap_frac_of_id": 0.6622292943291173
+        },
+        {
+          "level_pct": 5.0,
+          "id_mAP_pct": 80.91647784601369,
+          "ood_mAP_pct": 27.99279474632339,
+          "gap_pp": 52.9236830996903,
+          "gap_frac_of_id": 0.6540532226378605
+        },
+        {
+          "level_pct": 10.0,
+          "id_mAP_pct": 81.44115983910075,
+          "ood_mAP_pct": 29.078016646090816,
+          "gap_pp": 52.36314319300993,
+          "gap_frac_of_id": 0.6429567468889342
+        }
+      ]
+    }
+  }
+}
