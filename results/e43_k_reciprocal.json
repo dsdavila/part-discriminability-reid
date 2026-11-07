@@ -1,0 +1,30 @@
+{
+  "MSMT": {
+    "id": {
+      "k_reciprocal_mAP_pct": 56.945854723236835,
+      "k1": 20,
+      "k2": 6,
+      "lambda": 0.3
+    },
+    "ood": {
+      "k_reciprocal_mAP_pct": 8.716621007497215,
+      "k1": 20,
+      "k2": 6,
+      "lambda": 0.3
+    }
+  },
+  "Market": {
+    "id": {
+      "k_reciprocal_mAP_pct": 91.13847875288987,
+      "k1": 20,
+      "k2": 6,
+      "lambda": 0.3
+    },
+    "ood": {
+      "k_reciprocal_mAP_pct": 36.843974160361185,
+      "k1": 20,
+      "k2": 6,
+      "lambda": 0.3
+    }
+  }
+}
