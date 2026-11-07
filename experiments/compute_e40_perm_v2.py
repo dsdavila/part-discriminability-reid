@@ -77,7 +77,9 @@ def classify(rates_id, rates_ood, thr=0.5):
 
 
 def pca_basis_fixed_k_gpu(X_np, k, device=_DEVICE):
-    """Top-k eigenvectors of X_centered.T @ X_centered via torch (GPU if avail)."""
+    """Top-k eigenvectors of X_centered.T @ X_centered via torch (GPU if avail).
+    Caps k at n_items - 1 to avoid null-space directions in rank-starved classes.
+    """
     X = torch.from_numpy(X_np).to(device)
     mean = X.mean(dim=0, keepdim=True)
     Xc = X - mean
@@ -85,20 +87,22 @@ def pca_basis_fixed_k_gpu(X_np, k, device=_DEVICE):
     XtX_cpu = XtX.cpu().numpy()  # eigh is faster on CPU for 2048x2048
     eigvals, eigvecs = np.linalg.eigh(XtX_cpu)
     eigvals = eigvals[::-1]; eigvecs = eigvecs[:, ::-1]
-    k_eff = min(k, eigvecs.shape[1])
-    return eigvecs[:, :k_eff].astype(np.float32)
+    n_items, d = X_np.shape
+    k_eff = min(k, n_items - 1, d)
+    return eigvecs[:, :k_eff].astype(np.float32), k_eff
 
 
 def pca_basis_fixed_k_cpu(X, k):
-    if X.shape[0] < 2: return None
+    if X.shape[0] < 2: return None, 0
     X = X.astype(np.float32)
     mean = X.mean(axis=0, keepdims=True)
     Xc = X - mean
     XtX = Xc.T @ Xc
     eigvals, eigvecs = np.linalg.eigh(XtX)
     eigvals = eigvals[::-1]; eigvecs = eigvecs[:, ::-1]
-    k_eff = min(k, eigvecs.shape[1])
-    return eigvecs[:, :k_eff].astype(np.float32)
+    n_items, d = X.shape
+    k_eff = min(k, n_items - 1, d)
+    return eigvecs[:, :k_eff].astype(np.float32), k_eff
 
 
 def principal_angles(A, B):
@@ -152,23 +156,29 @@ def build_item_matched_pseudo_classes(g_pids, class_item_targets, seed):
 
 
 def compute_class_pair_medians(G, g_pids, class_map, classes=CLASSES, k=FIXED_K, use_gpu=True):
-    """For each class in classes, build PCA basis at fixed k. For each unordered
-    class pair, median principal angle (deg)."""
+    """For each class in classes, build PCA basis capped at min(k, n_items-1, d).
+    Returns median principal angle per pair and per-class k_eff.
+    """
     bases = {}
+    k_effs = {}
     for c in classes:
         idx = np.array([class_map.get(int(p)) == c for p in g_pids])
         if idx.sum() < 2:
-            bases[c] = None; continue
+            bases[c] = None; k_effs[c] = 0; continue
         X = G[idx]
-        bases[c] = (pca_basis_fixed_k_gpu(X, k) if (use_gpu and _HAVE_TORCH)
-                    else pca_basis_fixed_k_cpu(X, k))
+        if use_gpu and _HAVE_TORCH:
+            basis, k_eff = pca_basis_fixed_k_gpu(X, k)
+        else:
+            basis, k_eff = pca_basis_fixed_k_cpu(X, k)
+        bases[c] = basis
+        k_effs[c] = int(k_eff)
     out = {}
     pair_keys = [('EASY', 'OOD-ONLY'), ('EASY', 'SHARED'), ('OOD-ONLY', 'SHARED')]
     for c1, c2 in pair_keys:
         if bases[c1] is None or bases[c2] is None:
             out[f'{c1}|{c2}'] = None; continue
         out[f'{c1}|{c2}'] = principal_angle_median(bases[c1], bases[c2])
-    return out
+    return out, k_effs
 
 
 def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
@@ -193,14 +203,17 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
     # Real statistic per arm
     arms = {'id': G_id, 'ood': G_ood}
     real_stats = {}
+    real_k_effs = {}
     for arm_name, G_ in arms.items():
         t0 = time.time()
-        real_stats[arm_name] = compute_class_pair_medians(G_, g_pids, real_classes, use_gpu=True)
+        real_stats[arm_name], real_k_effs[arm_name] = compute_class_pair_medians(G_, g_pids, real_classes, use_gpu=True)
         print(f"  real [{arm_name}] class-pair medians: t={(time.time() - t0) / 60:.1f}m "
               f"=> {real_stats[arm_name]}", flush=True)
+        print(f"    k_eff per class: {real_k_effs[arm_name]}", flush=True)
 
     # Permutation null
     perm_stats = {arm: {k: [] for k in real_stats['id']} for arm in arms}
+    perm_k_effs = {arm: [] for arm in arms}
     perm_items = []
     t_total = time.time()
     for seed in range(n_perm):
@@ -209,7 +222,8 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
             g_pids, class_item_counts, seed=seed)
         perm_items.append(class_actual_items)
         for arm_name, G_ in arms.items():
-            stats = compute_class_pair_medians(G_, g_pids, perm_classes, use_gpu=True)
+            stats, k_effs = compute_class_pair_medians(G_, g_pids, perm_classes, use_gpu=True)
+            perm_k_effs[arm_name].append(k_effs)
             for pair_key, val in stats.items():
                 if val is not None:
                     perm_stats[arm_name][pair_key].append(val)
@@ -222,6 +236,9 @@ def run_dataset(name, id_cell, ood_cell, n_perm=N_PERMUTATIONS, k=FIXED_K):
     summary = {'real': real_stats, 'perm_items_mean':
                {c: float(np.mean([p.get(c, 0) for p in perm_items])) for c in CLASSES},
                'real_items': class_item_counts,
+               'real_k_effs': real_k_effs,
+               'perm_k_eff_mean': {arm: {c: float(np.mean([pk.get(c, 0) for pk in perm_k_effs[arm]]))
+                                         for c in CLASSES} for arm in arms},
                'partition_counts': real_counts, 'per_arm': {}}
     for arm in arms:
         summary['per_arm'][arm] = {}
@@ -262,12 +279,16 @@ def print_report(name, res):
 
 
 def main():
+    import sys
+    market_only = '--market-only' in sys.argv
     out = {}
-    out['MSMT'] = run_dataset('MSMT', 'D', "B'")
+    if not market_only:
+        out['MSMT'] = run_dataset('MSMT', 'D', "B'")
+        print_report('MSMT', out['MSMT'])
     out['Market'] = run_dataset('Market', "A'", 'C')
-    print_report('MSMT', out['MSMT'])
     print_report('Market', out['Market'])
-    out_path = RESULTS / 'e40_permutation_null_v2.json'
+    out_path = RESULTS / ('e40_permutation_null_v2_market_kfix.json' if market_only
+                          else 'e40_permutation_null_v2.json')
     with open(out_path, 'w') as f:
         json.dump(out, f, indent=2)
     print(f"\nSaved → {out_path}")
