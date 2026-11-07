@@ -25,6 +25,7 @@ import json, time, sys
 import numpy as np
 from pathlib import Path
 from scipy import stats
+from sym_10nn import symmetric_knn_fraction
 
 try:
     import torch
@@ -184,22 +185,6 @@ def eval_post_correction_gallery(G_cuda, g_pids, g_cids, r_g, method,
     return kocc, top_nb
 
 
-def symmetric_10nn_fraction(top_nb, k=K_OCC):
-    """top_nb: (Ng, k). Fraction of ordered pairs (i, j) with j in topk(i)
-    that are reciprocal (i.e., i also in topk(j))."""
-    Ng = top_nb.shape[0]
-    total_pairs = Ng * k
-    # topk_sets[j] = set of j's own top-k neighbours
-    topk_sets = [set(int(x) for x in top_nb[j]) for j in range(Ng)]
-    sym = 0
-    for i in range(Ng):
-        for r in range(k):
-            j = int(top_nb[i, r])
-            if i in topk_sets[j]:
-                sym += 1
-    return sym / total_pairs
-
-
 def dist_to_centroid(G_np):
     c = G_np.mean(axis=0, keepdims=True)
     return np.linalg.norm(G_np - c, axis=1)
@@ -295,7 +280,7 @@ def process_one(dataset, arm_name, cell):
             top_nb_base[i] = order
             kocc_base[order] += 1
     skew_base = float(stats.skew(kocc_base))
-    sym_base = symmetric_10nn_fraction(top_nb_base)
+    sym_base = symmetric_knn_fraction(top_nb_base, k=K_OCC)
     d_global = dist_to_centroid(G)
     r_info_base = r_global_with_boot(kocc_base, d_global, Gp, N_BOOT_R,
                                       np.random.default_rng(42))
@@ -327,7 +312,7 @@ def process_one(dataset, arm_name, cell):
                 G_cuda, Gp, Gc, r_g, method
             )
             skew = float(stats.skew(kocc))
-            sym = symmetric_10nn_fraction(top_nb)
+            sym = symmetric_knn_fraction(top_nb, k=K_OCC)
             r_info = r_global_with_boot(kocc, d_global, Gp, N_BOOT_R,
                                          np.random.default_rng(42 + k_corr))
             mAP = mAP_corrected(sims_qg_fresh, Qp, Qc, Gp, Gc, r_q, r_g, method)

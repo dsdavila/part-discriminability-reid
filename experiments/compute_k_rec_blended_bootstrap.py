@@ -17,6 +17,7 @@ import numpy as np
 from pathlib import Path
 from scipy import stats
 import torch
+from sym_10nn import symmetric_knn_fraction, per_item_reciprocity
 
 CACHE_DIR = Path('/tmp/e12_feature_cache')
 RESULTS   = Path('/data/papers/low_dimensional_reid/results')
@@ -173,29 +174,21 @@ def id_boot_r(kocc, d, pids, n_boot, rng):
 
 
 def id_boot_sym10nn(top_nb, pids, n_boot, rng, k=K_OCC):
-    """Bootstrap sym-10NN on a resampled item subset.
-    Convention per rev 171: fraction of ordered pairs (i, j=top_nb[i,r])
-    with i also in top_nb[j]. On a subset, count pairs where BOTH i and j
-    are in the subset AND are in each other's top-k. Total = |subset| * k.
+    """Bootstrap sym-10NN per Ch2 rev 183: full-gallery neighbour graph
+    stays fixed; resample identities; AVERAGE the per-item reciprocity
+    indicator over the resampled items. No neighbour filtering.
+
+    per_item[i] = fraction of i's own top-k neighbours whose list
+    reciprocates i (computed on the FULL gallery graph, not a subset).
     """
+    per_item = per_item_reciprocity(top_nb, k=k)
     unique = np.unique(pids)
     pid_to_idx = {int(p): np.where(pids == p)[0] for p in unique}
-    # Precompute top_nb sets
-    top_sets = [set(int(x) for x in top_nb[j]) for j in range(top_nb.shape[0])]
     boots = []
     for b in range(n_boot):
         sampled = rng.choice(unique, size=len(unique), replace=True)
         idx = np.concatenate([pid_to_idx[int(p)] for p in sampled])
-        subset = set(int(x) for x in idx)
-        sym = 0; total = 0
-        for i_v in idx:
-            i = int(i_v)
-            for r in range(k):
-                j = int(top_nb[i, r])
-                total += 1
-                if j in subset and i in top_sets[j]:
-                    sym += 1
-        boots.append(sym / total if total > 0 else 0.0)
+        boots.append(float(per_item[idx].mean()))
     return boots
 
 
@@ -219,10 +212,8 @@ def main():
         kocc, top_nb, d_c = k_reciprocal_blended(G, g_pids, g_cids)
         skew_point = float(stats.skew(kocc.astype(np.float32)))
         r_point, _ = stats.spearmanr(kocc.astype(np.float32), d_c)
-        # Full-sample sym-10NN
-        top_sets = [set(int(x) for x in top_nb[j]) for j in range(len(G))]
-        sym_point = sum(1 for i in range(len(G)) for r in range(K_OCC)
-                        if int(top_nb[i, r]) in top_sets and i in top_sets[int(top_nb[i, r])]) / (len(G) * K_OCC)
+        # Full-sample sym-10NN via the shared, unit-tested implementation
+        sym_point = symmetric_knn_fraction(top_nb, k=K_OCC)
         print(f"  point: skew={skew_point:.4f}  sym10NN={sym_point:.4f}  r={r_point:+.4f}", flush=True)
 
         print(f"  id-boot n={N_BOOT}...", flush=True); t0 = time.time()

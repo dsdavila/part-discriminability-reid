@@ -18,6 +18,7 @@ import numpy as np
 from pathlib import Path
 from scipy import stats
 import torch
+from sym_10nn import symmetric_knn_fraction
 
 CACHE_DIR = Path('/tmp/e12_feature_cache')
 RESULTS   = Path('/data/papers/low_dimensional_reid/results')
@@ -182,19 +183,6 @@ def k_reciprocal_gallery_shape(G_np, g_pids, g_cids, k1=K1, k2=K2, lam=LAMBDA):
     return kocc, top_nb, d_centroid
 
 
-def symmetric_10nn_fraction(top_nb, k=K_OCC):
-    Ng = top_nb.shape[0]
-    total = Ng * k
-    sets = [set(int(x) for x in top_nb[j]) for j in range(Ng)]
-    sym = 0
-    for i in range(Ng):
-        for r in range(k):
-            j = int(top_nb[i, r])
-            if i in sets[j]:
-                sym += 1
-    return sym / total
-
-
 def main():
     print(f"Device: {_DEVICE}", flush=True)
     out = {}
@@ -206,7 +194,7 @@ def main():
         t0 = time.time()
         kocc, top_nb, d_c = k_reciprocal_gallery_shape(G, g_pids, g_cids)
         skew_val = float(stats.skew(kocc.astype(np.float32)))
-        sym = symmetric_10nn_fraction(top_nb)
+        sym = symmetric_knn_fraction(top_nb, k=K_OCC)
         r_val, _ = stats.spearmanr(kocc.astype(np.float32), d_c)
         print(f"  skew_items    = {skew_val:.4f}", flush=True)
         print(f"  sym_10nn_frac = {sym:.4f}", flush=True)
