@@ -90,6 +90,9 @@ def main():
         print(f"\n########## {ds_name} ##########", flush=True)
         G_id, g_pids, g_cids = load_gallery(cfg['id'])
         G_ood, _, _ = load_gallery(cfg['ood'])
+        # Defensive: ensure unit-norm on id/ood. Caches checked unit-norm
+        # but the script should not depend on an upstream invariant.
+        G_id = l2(G_id); G_ood = l2(G_ood)
         G_noise = noise_degrade(G_id, cfg['sigma'])
         G_rp = randproj_degrade(G_id, K_RANDPROJ)
         arms = {'id': G_id, 'ood': G_ood, 'noise': G_noise, 'randproj': G_rp}

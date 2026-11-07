@@ -185,21 +185,17 @@ def eval_post_correction_gallery(G_cuda, g_pids, g_cids, r_g, method,
 
 
 def symmetric_10nn_fraction(top_nb, k=K_OCC):
-    """top_nb: (Ng, k). Fraction of pairs (i, j in topk(i)) that are reciprocal
-    (i.e., i in topk(j))."""
+    """top_nb: (Ng, k). Fraction of ordered pairs (i, j) with j in topk(i)
+    that are reciprocal (i.e., i also in topk(j))."""
     Ng = top_nb.shape[0]
     total_pairs = Ng * k
+    # topk_sets[j] = set of j's own top-k neighbours
+    topk_sets = [set(int(x) for x in top_nb[j]) for j in range(Ng)]
     sym = 0
-    # Build reverse lookup: for each j, set of i's that include j in topk(i).
-    # That is just the kocc set.
-    reverse = [set() for _ in range(Ng)]
     for i in range(Ng):
         for r in range(k):
-            reverse[top_nb[i, r]].add(i)
-    for i in range(Ng):
-        for r in range(k):
-            j = top_nb[i, r]
-            if i in reverse[j]:
+            j = int(top_nb[i, r])
+            if i in topk_sets[j]:
                 sym += 1
     return sym / total_pairs
 
