@@ -1,0 +1,34 @@
+{
+  "mapping_stats": {
+    "n_mapped": 82102,
+    "n_total_cache": 82128,
+    "coverage_frac": 0.9996834210013638,
+    "scene_group_size_median": 5,
+    "scene_group_size_mean": 5.673161967938087,
+    "n_scene_groups": 14472
+  },
+  "id": {
+    "n_ids": 121,
+    "mean_acc": 0.6167964112537466,
+    "median_acc": 0.6190476190476191,
+    "mean_baseline": 0.20767414403778045,
+    "mean_lift": 0.4091222672159661,
+    "frac_above_0.5": 0.6776859504132231,
+    "frac_above_0.7": 0.36363636363636365,
+    "excl_median": 7,
+    "excl_mean": 8.904473355908038,
+    "excl_p95": 20.0
+  },
+  "ood": {
+    "n_ids": 121,
+    "mean_acc": 0.7660440774581824,
+    "median_acc": 0.8,
+    "mean_baseline": 0.20767414403778045,
+    "mean_lift": 0.558369933420402,
+    "frac_above_0.5": 0.9173553719008265,
+    "frac_above_0.7": 0.6611570247933884,
+    "excl_median": 7,
+    "excl_mean": 8.904473355908038,
+    "excl_p95": 20.0
+  }
+}
