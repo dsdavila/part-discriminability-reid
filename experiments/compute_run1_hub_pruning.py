@@ -58,36 +58,58 @@ def l2(X):
 
 
 def mAP_pruned(sims, q_pids, q_cids, g_pids, g_cids, pruned_mask):
-    """mAP under pruning: pruned gallery items removed from every query's
-    ranked list. Returns (mAP, n_used, n_stranded) where n_stranded is
-    queries with no remaining positives after same-cam-same-pid exclusion
-    AND pruning.
+    """mAP under pruning. Returns per-query AP array (NaN for queries with
+    no positives at level 0 due to same-cam-same-pid exclusion, which is
+    permanent; 0.0 for stranded queries that lost their positives to pruning)
+    plus (mAP_fixed, mAP_surviving, n_used, n_stranded_by_prune).
+
+    PRIMARY metric per Ch2 rev 199 is mAP_fixed (stranded = 0 AP), computed
+    over the fixed query set valid at level 0. SURVIVING-subset metric is
+    retained as secondary for the ID-level variant where stranding is
+    definitional.
     """
     Nq = sims.shape[0]
-    ap_sum = 0.0; n_used = 0; n_stranded = 0
+    # Determine permanent-zero queries at level 0 (no positives after same-cam
+    # exclusion alone): mark these as NaN so they're excluded from both metrics.
+    ap = np.full(Nq, np.nan, dtype=np.float32)
+    n_used = 0; n_stranded_by_prune = 0
     for q in range(Nq):
         qp, qc = q_pids[q], q_cids[q]
         exc_same_cam = (g_pids == qp) & (g_cids == qc)
+        n_pos_level0 = int(((g_pids == qp) & ~exc_same_cam).sum())
+        if n_pos_level0 == 0:
+            # No positives even without pruning; excluded from the fixed set.
+            continue
         keep = ~exc_same_cam & ~pruned_mask
         if keep.sum() == 0:
-            n_stranded += 1
+            # All gallery items masked away; query definitionally fails.
+            ap[q] = 0.0
+            n_stranded_by_prune += 1
             continue
         sv = sims[q][keep]
         gp = g_pids[keep]
         pos = (gp == qp)
         n_pos = int(pos.sum())
         if n_pos == 0:
-            n_stranded += 1
+            # Pruning removed all this query's positives.
+            ap[q] = 0.0
+            n_stranded_by_prune += 1
             continue
         order = np.argsort(-sv, kind='stable')
         pos_at = pos[order]
         cum = np.cumsum(pos_at)
         ranks = np.arange(1, len(order) + 1)
         prec = cum / ranks
-        ap = prec[pos_at].sum() / n_pos
-        ap_sum += ap
+        ap[q] = prec[pos_at].sum() / n_pos
         n_used += 1
-    return (ap_sum / n_used if n_used > 0 else 0.0, n_used, n_stranded)
+    valid = ~np.isnan(ap)
+    n_fixed_denom = int(valid.sum())
+    mAP_fixed = float(ap[valid].mean()) if n_fixed_denom > 0 else 0.0
+    # Surviving-subset: condition on the query having at least one positive
+    # after pruning (exclude the 0.0 stranded contributions)
+    surviving = valid & (ap > 0)
+    mAP_surviving = float(ap[surviving].mean()) if surviving.any() else 0.0
+    return ap, mAP_fixed, mAP_surviving, n_used, n_stranded_by_prune, n_fixed_denom
 
 
 def run_dataset(ds_name, cfg):
@@ -169,57 +191,61 @@ def run_dataset(ds_name, cfg):
             a = arms[arm_name]
             t0 = time.time()
             # Hub-image prune
-            mAP_hub, n_used_hub, n_strand_hub = mAP_pruned(
+            _, m_hub_fx, m_hub_sv, u_hub, s_hub, dn_hub = mAP_pruned(
                 a['sims'], a['Qp'], a['Qc'], a['Gp'], a['Gc'], hub_pruned)
             # Random-image prune (mean over draws)
-            rand_mAPs, rand_used, rand_strand = [], [], []
+            rand_fx, rand_sv, rand_strand = [], [], []
             for r in random_pruned_draws:
-                m, u, s = mAP_pruned(a['sims'], a['Qp'], a['Qc'],
-                                       a['Gp'], a['Gc'], r)
-                rand_mAPs.append(m); rand_used.append(u); rand_strand.append(s)
+                _, m_r_fx, m_r_sv, _, s_r, _ = mAP_pruned(
+                    a['sims'], a['Qp'], a['Qc'], a['Gp'], a['Gc'], r)
+                rand_fx.append(m_r_fx); rand_sv.append(m_r_sv); rand_strand.append(s_r)
             # ID-level prune
-            mAP_id, n_used_id, n_strand_id = mAP_pruned(
+            _, m_id_fx, m_id_sv, u_id, s_id, _ = mAP_pruned(
                 a['sims'], a['Qp'], a['Qc'], a['Gp'], a['Gc'], id_level_pruned)
 
             print(f"  [{arm_name}] level {level_pct:>5.1f}% (n_items={n_mask}): "
-                  f"hub mAP={mAP_hub*100:.3f}  "
-                  f"rand mAP={np.mean(rand_mAPs)*100:.3f}±{np.std(rand_mAPs)*100:.3f}  "
-                  f"id-level mAP={mAP_id*100:.3f} (id_pruned={id_pruned_count}, items={items_pruned}, strand={n_strand_id})  "
+                  f"hub fx={m_hub_fx*100:.3f} sv={m_hub_sv*100:.3f} strand={s_hub}  "
+                  f"rand fx={np.mean(rand_fx)*100:.3f}±{np.std(rand_fx)*100:.3f}  "
+                  f"id-level fx={m_id_fx*100:.3f} sv={m_id_sv*100:.3f} (ids={id_pruned_count}, items={items_pruned}, strand={s_id})  "
                   f"t={time.time()-t0:.1f}s", flush=True)
 
             out['per_arm'][arm_name]['hub_image'].append({
                 'level_pct': level_pct,
                 'n_items_pruned': int(n_mask),
-                'mAP_pct': float(mAP_hub * 100.0),
-                'n_queries_used': int(n_used_hub),
-                'n_queries_stranded': int(n_strand_hub),
+                'mAP_fixed_pct': float(m_hub_fx * 100.0),
+                'mAP_surviving_pct': float(m_hub_sv * 100.0),
+                'n_queries_stranded': int(s_hub),
+                'n_fixed_denom': int(dn_hub),
             })
             out['per_arm'][arm_name]['random_image'].append({
                 'level_pct': level_pct,
                 'n_items_pruned': int(n_mask),
-                'mAP_pct_draws': [float(m * 100.0) for m in rand_mAPs],
-                'mAP_pct_mean': float(np.mean(rand_mAPs) * 100.0),
-                'mAP_pct_std': float(np.std(rand_mAPs) * 100.0),
+                'mAP_fixed_pct_draws': [float(m * 100.0) for m in rand_fx],
+                'mAP_fixed_pct_mean': float(np.mean(rand_fx) * 100.0),
+                'mAP_fixed_pct_std': float(np.std(rand_fx) * 100.0),
+                'mAP_surviving_pct_mean': float(np.mean(rand_sv) * 100.0),
                 'n_queries_stranded_mean': float(np.mean(rand_strand)),
             })
             out['per_arm'][arm_name]['id_level_hub'].append({
                 'level_pct': level_pct,
                 'id_pruned_count': int(id_pruned_count),
                 'items_pruned': int(items_pruned),
-                'mAP_pct': float(mAP_id * 100.0),
-                'n_queries_stranded': int(n_strand_id),
+                'mAP_fixed_pct': float(m_id_fx * 100.0),
+                'mAP_surviving_pct': float(m_id_sv * 100.0),
+                'n_queries_stranded': int(s_id),
             })
 
     # id - ood gap per scheme per level: both absolute and gap/id
+    # Uses mAP_fixed (primary, per rev 199).
     def _gap_series(scheme):
         rows = []
         for i, lvl in enumerate(PRUNE_LEVELS_PCT):
             if scheme == 'random_image':
-                id_m = out['per_arm']['id'][scheme][i]['mAP_pct_mean']
-                ood_m = out['per_arm']['ood'][scheme][i]['mAP_pct_mean']
+                id_m = out['per_arm']['id'][scheme][i]['mAP_fixed_pct_mean']
+                ood_m = out['per_arm']['ood'][scheme][i]['mAP_fixed_pct_mean']
             else:
-                id_m = out['per_arm']['id'][scheme][i]['mAP_pct']
-                ood_m = out['per_arm']['ood'][scheme][i]['mAP_pct']
+                id_m = out['per_arm']['id'][scheme][i]['mAP_fixed_pct']
+                ood_m = out['per_arm']['ood'][scheme][i]['mAP_fixed_pct']
             gap = id_m - ood_m
             frac = gap / id_m if id_m > 0 else 0.0
             rows.append({
