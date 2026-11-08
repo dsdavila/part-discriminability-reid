@@ -1,0 +1,24 @@
+{
+  "cache": "msmt17_test_noREA.npz (P13 canonical)",
+  "protocol": "canonical junk; mean-only removal via u=mu/|mu|; L2-renorm",
+  "baseline_pct_point": 5.396395176649094,
+  "post_pct_point": 5.830593407154083,
+  "delta_pp_point": 0.4341982305049896,
+  "baseline_marginal_ci": {
+    "median": 5.389411002397537,
+    "lo": 4.992328155785799,
+    "hi": 5.793518591672182
+  },
+  "post_marginal_ci": {
+    "median": 5.8178868144750595,
+    "lo": 5.4033637791872025,
+    "hi": 6.2549324333667755
+  },
+  "delta_paired_ci": {
+    "median": 0.43132342398166656,
+    "lo": 0.37759984843432903,
+    "hi": 0.49158073961734766
+  },
+  "n_boot": 500,
+  "bootstrap": "identity-clustered on query pids, paired"
+}
