@@ -1,0 +1,27 @@
+{
+  "id": {
+    "real_angle_deg": 9.763647079467773,
+    "null_mean": 8.40918706893921,
+    "null_median": 8.40062141418457,
+    "null_min": 8.249940872192383,
+    "null_max": 8.580144882202148,
+    "pct_null_below_real": 1.0,
+    "pct_null_above_real": 0.0,
+    "n_items_easy": 67322,
+    "n_items_hard": 14806,
+    "common_k": 200
+  },
+  "ood": {
+    "real_angle_deg": 8.181806564331055,
+    "null_mean": 6.816394371986389,
+    "null_median": 6.822019577026367,
+    "null_min": 6.628603935241699,
+    "null_max": 6.9650373458862305,
+    "pct_null_below_real": 1.0,
+    "pct_null_above_real": 0.0,
+    "n_items_easy": 67322,
+    "n_items_hard": 14806,
+    "common_k": 200
+  },
+  "n_covariate_buckets": 34
+}
