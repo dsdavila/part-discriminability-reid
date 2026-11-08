@@ -1,0 +1,30 @@
+{
+  "threshold": 0.5,
+  "n_common_identities": 3059,
+  "two_arm_partition_counts": {
+    "SHARED": 692,
+    "OOD-ONLY": 2138,
+    "EASY": 228,
+    "ID-ONLY": 1
+  },
+  "id_only_partition_counts": {
+    "id-hard": 693,
+    "id-easy": 2366
+  },
+  "ood_only_partition_counts": {
+    "ood-hard": 2830,
+    "ood-easy": 229
+  },
+  "cross_tab_two_arm_vs_id_only": {
+    "EASY|id-easy": 228,
+    "EASY|id-hard": 0,
+    "SHARED|id-easy": 0,
+    "SHARED|id-hard": 692,
+    "OOD-ONLY|id-easy": 2138,
+    "OOD-ONLY|id-hard": 0,
+    "ID-ONLY|id-easy": 0,
+    "ID-ONLY|id-hard": 1
+  },
+  "frac_easy_of_id_easy": 0.09636517328825021,
+  "frac_oodonly_of_id_easy": 0.9036348267117498
+}
