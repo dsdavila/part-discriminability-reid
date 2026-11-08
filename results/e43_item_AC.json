@@ -1,0 +1,176 @@
+{
+  "per_arm": {
+    "id": {
+      "mAP_pct": 41.61687791347504
+    },
+    "ood": {
+      "mAP_pct": 5.395659804344177
+    }
+  },
+  "A_best_worst_rank_by_decile": [
+    {
+      "decile": 0,
+      "n_q": 1128,
+      "med_best_id": 1.0,
+      "med_worst_id": 180.5,
+      "med_best_ood": 17.0,
+      "med_worst_ood": 38366.5
+    },
+    {
+      "decile": 1,
+      "n_q": 1351,
+      "med_best_id": 1.0,
+      "med_worst_id": 1102.0,
+      "med_best_ood": 17.0,
+      "med_worst_ood": 51282.0
+    },
+    {
+      "decile": 2,
+      "n_q": 1281,
+      "med_best_id": 1.0,
+      "med_worst_id": 2368.0,
+      "med_best_ood": 19.0,
+      "med_worst_ood": 56620.0
+    },
+    {
+      "decile": 3,
+      "n_q": 1268,
+      "med_best_id": 1.0,
+      "med_worst_id": 3207.5,
+      "med_best_ood": 68.0,
+      "med_worst_ood": 53810.5
+    },
+    {
+      "decile": 4,
+      "n_q": 1227,
+      "med_best_id": 1.0,
+      "med_worst_id": 3681.0,
+      "med_best_ood": 77.0,
+      "med_worst_ood": 55841.0
+    },
+    {
+      "decile": 5,
+      "n_q": 1165,
+      "med_best_id": 1.0,
+      "med_worst_id": 4143.0,
+      "med_best_ood": 116.0,
+      "med_worst_ood": 58859.0
+    },
+    {
+      "decile": 6,
+      "n_q": 1251,
+      "med_best_id": 1.0,
+      "med_worst_id": 9420.0,
+      "med_best_ood": 159.0,
+      "med_worst_ood": 61535.0
+    },
+    {
+      "decile": 7,
+      "n_q": 1075,
+      "med_best_id": 1.0,
+      "med_worst_id": 9799.0,
+      "med_best_ood": 272.0,
+      "med_worst_ood": 60004.0
+    },
+    {
+      "decile": 8,
+      "n_q": 1092,
+      "med_best_id": 2.0,
+      "med_worst_id": 12399.5,
+      "med_best_ood": 491.0,
+      "med_worst_ood": 60328.5
+    },
+    {
+      "decile": 9,
+      "n_q": 821,
+      "med_best_id": 7.0,
+      "med_worst_id": 7532.0,
+      "med_best_ood": 1005.0,
+      "med_worst_ood": 53174.0
+    }
+  ],
+  "C_gap_decomposition_by_decile": [
+    {
+      "decile": 0,
+      "n_q": 1128,
+      "share_of_gap_pp": 5.736473051431565,
+      "per_query_severity_pp": 59.292144775390625,
+      "id_mAP_pct": 71.82621359825134,
+      "ood_mAP_pct": 12.534067034721375
+    },
+    {
+      "decile": 1,
+      "n_q": 1351,
+      "share_of_gap_pp": 6.001408328056254,
+      "per_query_severity_pp": 51.79157638549805,
+      "id_mAP_pct": 61.70470714569092,
+      "ood_mAP_pct": 9.9131278693676
+    },
+    {
+      "decile": 2,
+      "n_q": 1281,
+      "share_of_gap_pp": 5.0878792018483034,
+      "per_query_severity_pp": 46.307247161865234,
+      "id_mAP_pct": 54.161638021469116,
+      "ood_mAP_pct": 7.854395359754562
+    },
+    {
+      "decile": 3,
+      "n_q": 1268,
+      "share_of_gap_pp": 4.360049772471156,
+      "per_query_severity_pp": 40.08976364135742,
+      "id_mAP_pct": 45.32248377799988,
+      "ood_mAP_pct": 5.232718959450722
+    },
+    {
+      "decile": 4,
+      "n_q": 1227,
+      "share_of_gap_pp": 3.9744006548812085,
+      "per_query_severity_pp": 37.7649040222168,
+      "id_mAP_pct": 42.35425889492035,
+      "ood_mAP_pct": 4.5893508940935135
+    },
+    {
+      "decile": 5,
+      "n_q": 1165,
+      "share_of_gap_pp": 3.319418598217256,
+      "per_query_severity_pp": 33.21982955932617,
+      "id_mAP_pct": 37.55291998386383,
+      "ood_mAP_pct": 4.333086311817169
+    },
+    {
+      "decile": 6,
+      "n_q": 1251,
+      "share_of_gap_pp": 3.086920764477137,
+      "per_query_severity_pp": 28.769311904907227,
+      "id_mAP_pct": 31.78330361843109,
+      "ood_mAP_pct": 3.0139919370412827
+    },
+    {
+      "decile": 7,
+      "n_q": 1075,
+      "share_of_gap_pp": 2.153098095505241,
+      "per_query_severity_pp": 23.351600646972656,
+      "id_mAP_pct": 25.25896430015564,
+      "ood_mAP_pct": 1.9073642790317535
+    },
+    {
+      "decile": 8,
+      "n_q": 1092,
+      "share_of_gap_pp": 1.7001237549435386,
+      "per_query_severity_pp": 18.151779174804688,
+      "id_mAP_pct": 19.01624947786331,
+      "ood_mAP_pct": 0.8644702844321728
+    },
+    {
+      "decile": 9,
+      "n_q": 821,
+      "share_of_gap_pp": 0.8014456063255928,
+      "per_query_severity_pp": 11.381308555603027,
+      "id_mAP_pct": 12.887102365493774,
+      "ood_mAP_pct": 1.5057948417961597
+    }
+  ],
+  "C_sum_check_pp": 36.22121782815726,
+  "C_overall_gap_pp": 36.22121810913086
+}
