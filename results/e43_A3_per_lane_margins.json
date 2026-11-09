@@ -1,0 +1,86 @@
+{
+  "A_prime": {
+    "cell": "A_prime",
+    "label": "Market model \u2192 Market (id)",
+    "n_cams": 6,
+    "median_ratio_euclidean": 0.9903765320777893,
+    "median_ratio_angular": 0.9883610010147095,
+    "ci_euclidean": [
+      0.9902044102549553,
+      0.9905813455581665
+    ],
+    "ci_angular": [
+      0.9881562933325767,
+      0.9886110201478004
+    ],
+    "nearest_lane_accuracy_euclidean": 0.4284414244979676,
+    "nearest_lane_accuracy_angular": 0.4284414244979676,
+    "mean_true_lane_euclidean": 1.3042364120483398,
+    "mean_true_lane_angular_deg": 81.47582244873047,
+    "euclidean_verdict": "near-arbitrary (>=0.9)",
+    "angular_verdict": "near-arbitrary (>=0.9)"
+  },
+  "B_prime": {
+    "cell": "B_prime",
+    "label": "Market model \u2192 MSMT (ood)",
+    "n_cams": 15,
+    "median_ratio_euclidean": 0.967761218547821,
+    "median_ratio_angular": 0.9642943143844604,
+    "ci_euclidean": [
+      0.9674647256731987,
+      0.9680435061454773
+    ],
+    "ci_angular": [
+      0.9639658808708191,
+      0.9646141335368157
+    ],
+    "nearest_lane_accuracy_euclidean": 0.4755669762333799,
+    "nearest_lane_accuracy_angular": 0.4755669762333799,
+    "mean_true_lane_euclidean": 0.9972125291824341,
+    "mean_true_lane_angular_deg": 60.10050964355469,
+    "euclidean_verdict": "near-arbitrary (>=0.9)",
+    "angular_verdict": "near-arbitrary (>=0.9)"
+  },
+  "C": {
+    "cell": "C",
+    "label": "MSMT model \u2192 Market (ood)",
+    "n_cams": 6,
+    "median_ratio_euclidean": 0.9765918850898743,
+    "median_ratio_angular": 0.9736161828041077,
+    "ci_euclidean": [
+      0.9760337918996811,
+      0.9770918145775795
+    ],
+    "ci_angular": [
+      0.9729452535510064,
+      0.9742202162742615
+    ],
+    "nearest_lane_accuracy_euclidean": 0.5630649760359158,
+    "nearest_lane_accuracy_angular": 0.5630649760359158,
+    "mean_true_lane_euclidean": 1.0764745473861694,
+    "mean_true_lane_angular_deg": 65.28753662109375,
+    "euclidean_verdict": "near-arbitrary (>=0.9)",
+    "angular_verdict": "near-arbitrary (>=0.9)"
+  },
+  "D": {
+    "cell": "D",
+    "label": "MSMT model \u2192 MSMT (id)",
+    "n_cams": 15,
+    "median_ratio_euclidean": 0.9913644194602966,
+    "median_ratio_angular": 0.9898054003715515,
+    "ci_euclidean": [
+      0.9912723124027252,
+      0.9914390504360199
+    ],
+    "ci_angular": [
+      0.989712305366993,
+      0.9898974403738976
+    ],
+    "nearest_lane_accuracy_euclidean": 0.3844669303848081,
+    "nearest_lane_accuracy_angular": 0.3844669303848081,
+    "mean_true_lane_euclidean": 1.2318141460418701,
+    "mean_true_lane_angular_deg": 76.14278411865234,
+    "euclidean_verdict": "near-arbitrary (>=0.9)",
+    "angular_verdict": "near-arbitrary (>=0.9)"
+  }
+}
