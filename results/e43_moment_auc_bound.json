@@ -1,0 +1,31 @@
+{
+  "id": {
+    "pool_moment_auc": 0.90340892672177,
+    "pool_d_prime": 1.8402071654374696,
+    "pool_mu_pos": 0.40399416896060386,
+    "pool_mu_neg": 0.043762834222389406,
+    "pool_sd_pos": 0.18208977475999777,
+    "pool_sd_neg": 0.07185868305848728,
+    "per_id_moment_auc_mean": 0.9407216175031586,
+    "per_id_moment_auc_median": 0.9634067108464135,
+    "per_id_empirical_auc_mean": 0.9782479925810016,
+    "per_id_empirical_auc_median": 0.9946865755100949,
+    "n_ids": 3059
+  },
+  "ood": {
+    "pool_moment_auc": 0.699547900154035,
+    "pool_d_prime": 0.7397760611982527,
+    "pool_mu_pos": 0.3504765491511931,
+    "pool_mu_neg": 0.1826770814983428,
+    "pool_sd_pos": 0.17900193465864223,
+    "pool_sd_neg": 0.13931167365387673,
+    "per_id_moment_auc_mean": 0.735809471471828,
+    "per_id_moment_auc_median": 0.7298675221085023,
+    "per_id_empirical_auc_mean": 0.7942854908952666,
+    "per_id_empirical_auc_median": 0.8046958453325682,
+    "n_ids": 3059
+  },
+  "moment_explains_fraction_per_id": 1.1138799709376868,
+  "empirical_auc_loss": 0.18396250168573502,
+  "moment_auc_loss": 0.20491214603133068
+}
