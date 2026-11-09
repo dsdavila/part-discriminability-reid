@@ -1,0 +1,74 @@
+{
+  "A_prime": {
+    "cell": "A_prime",
+    "label": "Market model \u2192 Market (id)",
+    "target": "Market",
+    "n_cams": 6,
+    "r_projected": 5,
+    "base_pct": 80.39631570532194,
+    "snap_pct": 79.91812069211583,
+    "delta_pp_point": -0.47819501320610636,
+    "delta_pp_median_boot": -0.477802194770377,
+    "delta_pp_ci": [
+      -0.5742699900072501,
+      -0.38101352955449475
+    ],
+    "n_valid_queries": 3368,
+    "canonical_gap_pp": 53.737,
+    "delta_pct_of_canonical_gap": -0.8898803677282066
+  },
+  "B_prime": {
+    "cell": "B_prime",
+    "label": "Market model \u2192 MSMT (ood)",
+    "target": "MSMT",
+    "n_cams": 15,
+    "r_projected": 14,
+    "base_pct": 5.396395370266649,
+    "snap_pct": 5.10871905189666,
+    "delta_pp_point": -0.28767631836998997,
+    "delta_pp_median_boot": -0.287062055890603,
+    "delta_pp_ci": [
+      -0.4239643125253507,
+      -0.13563027811220804
+    ],
+    "n_valid_queries": 11659,
+    "canonical_gap_pp": 36.221,
+    "delta_pct_of_canonical_gap": -0.7942252239584495
+  },
+  "C": {
+    "cell": "C",
+    "label": "MSMT model \u2192 Market (ood)",
+    "target": "Market",
+    "n_cams": 6,
+    "r_projected": 5,
+    "base_pct": 26.659615562101415,
+    "snap_pct": 26.86107486194238,
+    "delta_pp_point": 0.201459299840967,
+    "delta_pp_median_boot": 0.19343207054616784,
+    "delta_pp_ci": [
+      -0.03296811559738225,
+      0.43280685372275873
+    ],
+    "n_valid_queries": 3368,
+    "canonical_gap_pp": 53.737,
+    "delta_pct_of_canonical_gap": 0.37489867287151685
+  },
+  "D": {
+    "cell": "D",
+    "label": "MSMT model \u2192 MSMT (id)",
+    "target": "MSMT",
+    "n_cams": 15,
+    "r_projected": 14,
+    "base_pct": 41.618376995,
+    "snap_pct": 40.950653265356266,
+    "delta_pp_point": -0.6677237296437322,
+    "delta_pp_median_boot": -0.6709559045138452,
+    "delta_pp_ci": [
+      -0.7466826909609472,
+      -0.5815241794986469
+    ],
+    "n_valid_queries": 11659,
+    "canonical_gap_pp": 36.221,
+    "delta_pct_of_canonical_gap": -1.843471272586986
+  }
+}
