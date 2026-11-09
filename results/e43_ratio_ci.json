@@ -1,0 +1,15 @@
+{
+  "ratio_point": 1.454918032786885,
+  "ratio_bootstrap_mean": 1.4510220364998463,
+  "ratio_bootstrap_median": 1.478329632303407,
+  "ratio_bootstrap_ci": [
+    1.0820197514626395,
+    1.7219621558673024
+  ],
+  "conservative_bound_combination": [
+    1.26,
+    1.62
+  ],
+  "msmt_delta_f_mean": 0.28328584932495093,
+  "market_delta_f_mean": 0.19538319816724556
+}
