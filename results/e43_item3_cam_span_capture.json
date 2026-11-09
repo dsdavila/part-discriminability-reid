@@ -1,0 +1,103 @@
+{
+  "Market_model_cam_span": {
+    "learned_file": "market_test_noREA.npz",
+    "probe_file": "msmt17_test_noREA.npz",
+    "r": 3,
+    "observed_mean_capture": 0.039824943989515305,
+    "per_cam_capture": [
+      0.02956370823085308,
+      0.09008412063121796,
+      0.06228580325841904,
+      0.021986283361911774,
+      0.020790433511137962,
+      0.032341644167900085,
+      0.0526258647441864,
+      0.011111197993159294,
+      0.01346652302891016,
+      0.059698790311813354,
+      0.002908786293119192,
+      0.03989023342728615,
+      0.02933678962290287,
+      0.01859469898045063,
+      0.11268924921751022
+    ],
+    "null_a_identity_offset": {
+      "mean": 0.015096413667313754,
+      "sd": 0.0069444828316250025,
+      "ci_95": [
+        0.005985121196135879,
+        0.03362601287662982
+      ],
+      "pct_below_observed": 0.989
+    },
+    "null_b_covariance_matched": {
+      "mean": 0.018338181588285807,
+      "sd": 0.005994243440073308,
+      "ci_95": [
+        0.009283268601708394,
+        0.03230080839169508
+      ],
+      "pct_below_observed": 0.997
+    },
+    "z_vs_null_a": 3.5608886826803627,
+    "z_vs_null_b": 3.5845661952239163,
+    "nearest_learned_cam_counts": {
+      "3": 4,
+      "1": 5,
+      "5": 3,
+      "4": 1,
+      "0": 2
+    },
+    "herfindahl_concentration": 0.24444444444444446,
+    "uniform_concentration_baseline": 0.16666666666666666,
+    "probe_offsets_eff_rank": 5.5230379642085214,
+    "probe_n_cams": 15,
+    "verdict_preregistered": "genuine re-use"
+  },
+  "MSMT_model_cam_span": {
+    "learned_file": "bot_msmt_seed42_msmt.npz",
+    "probe_file": "bot_msmt_seed42_market.npz",
+    "r": 5,
+    "observed_mean_capture": 0.04392138496041298,
+    "per_cam_capture": [
+      0.05642613768577576,
+      0.04756011441349983,
+      0.010861782357096672,
+      0.051330771297216415,
+      0.06577318906784058,
+      0.03157631680369377
+    ],
+    "null_a_identity_offset": {
+      "mean": 0.024201968787238,
+      "sd": 0.009694723836045091,
+      "ci_95": [
+        0.010313527612015604,
+        0.047606844548136
+      ],
+      "pct_below_observed": 0.959
+    },
+    "null_b_covariance_matched": {
+      "mean": 0.0337035162696302,
+      "sd": 0.011480376677763093,
+      "ci_95": [
+        0.016179292199831878,
+        0.0601614428395414
+      ],
+      "pct_below_observed": 0.818
+    },
+    "z_vs_null_a": 2.034035884535253,
+    "z_vs_null_b": 0.890029045002876,
+    "nearest_learned_cam_counts": {
+      "2": 2,
+      "4": 1,
+      "5": 1,
+      "1": 1,
+      "6": 1
+    },
+    "herfindahl_concentration": 0.22222222222222227,
+    "uniform_concentration_baseline": 0.06666666666666667,
+    "probe_offsets_eff_rank": 2.646482472286765,
+    "probe_n_cams": 6,
+    "verdict_preregistered": "new structure or at null"
+  }
+}
