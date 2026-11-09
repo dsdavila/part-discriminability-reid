@@ -1,0 +1,28 @@
+{
+  "Market_model_project": {
+    "learned_file": "market_test_noREA.npz",
+    "probe_file": "msmt17_test_noREA.npz",
+    "r": 3,
+    "baseline_mAP_pct": 5.3963955491781235,
+    "projected_mAP_pct": 5.449282005429268,
+    "delta_pp_point": 0.05288645625114441,
+    "delta_pp_ci": [
+      0.03727145369339269,
+      0.07026578445220365
+    ],
+    "delta_pp_median_boot": 0.05291659035719931
+  },
+  "MSMT_model_project": {
+    "learned_file": "bot_msmt_seed42_msmt.npz",
+    "probe_file": "bot_msmt_seed42_market.npz",
+    "r": 5,
+    "baseline_mAP_pct": 26.659616827964783,
+    "projected_mAP_pct": 26.665696501731873,
+    "delta_pp_point": 0.006079673767089844,
+    "delta_pp_ci": [
+      -0.04274223785614595,
+      0.058099193120142424
+    ],
+    "delta_pp_median_boot": 0.005744341797253583
+  }
+}
