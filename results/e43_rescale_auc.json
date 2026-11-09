@@ -1,0 +1,14 @@
+{
+  "n_common_ids": 3059,
+  "empirical_loss": 0.18396250168573502,
+  "moment_rescaled_recovery": 0.18351478732522553,
+  "fraction_point": 0.9975662737981552,
+  "fraction_ci": [
+    0.9949637123787235,
+    1.0002098924836156
+  ],
+  "id_auc_mean": 0.9782479925810016,
+  "ood_auc_mean": 0.7942854908952666,
+  "rescaled_auc_mean": 0.9778002782204921,
+  "pre_reg_verdict": "moments most"
+}
