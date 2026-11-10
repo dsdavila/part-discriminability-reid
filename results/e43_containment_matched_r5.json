@@ -1,0 +1,70 @@
+{
+  "Market_train_vs_Bprime": {
+    "name": "Market_train_vs_Bprime",
+    "label": "Market model: TRAIN span vs B\u2032 (MSMT) cam offsets",
+    "r": 5,
+    "obs_capture": 0.027173737064003944,
+    "chance": 0.00244140625,
+    "x_chance": 11.130362701416015,
+    "null_mean": 0.014365695370361208,
+    "null_sd": 0.0031953856339849147,
+    "null_range": [
+      0.00781628955155611,
+      0.0281915795058012
+    ],
+    "excess": 0.012808041693642736,
+    "z": 4.008292945121003,
+    "x_null": 1.8915712997832206
+  },
+  "MSMT_train_vs_C": {
+    "name": "MSMT_train_vs_C",
+    "label": "MSMT model: TRAIN span vs C (Market) cam offsets",
+    "r": 5,
+    "obs_capture": 0.03642960637807846,
+    "chance": 0.00244140625,
+    "x_chance": 14.921566772460938,
+    "null_mean": 0.016486717942170798,
+    "null_sd": 0.005173684844622733,
+    "null_range": [
+      0.00547797279432416,
+      0.031893305480480194
+    ],
+    "excess": 0.019942888435907663,
+    "z": 3.8546778620725792,
+    "x_null": 2.2096336278609128
+  },
+  "Market_test_vs_Bprime": {
+    "name": "Market_test_vs_Bprime",
+    "label": "Market model: TEST (A\u2032) span vs B\u2032 cam offsets",
+    "r": 5,
+    "obs_capture": 0.03637145087122917,
+    "chance": 0.00244140625,
+    "x_chance": 14.897746276855468,
+    "null_mean": 0.02330792855937034,
+    "null_sd": 0.0055394023990505935,
+    "null_range": [
+      0.011675776913762093,
+      0.04433845728635788
+    ],
+    "excess": 0.013063522311858831,
+    "z": 2.35829090771557,
+    "x_null": 1.5604754741968259
+  },
+  "MSMT_test_vs_C": {
+    "name": "MSMT_test_vs_C",
+    "label": "MSMT model: TEST (D) span vs C cam offsets",
+    "r": 5,
+    "obs_capture": 0.027339430525898933,
+    "chance": 0.00244140625,
+    "x_chance": 11.198230743408203,
+    "null_mean": 0.018605972942896187,
+    "null_sd": 0.006410921259010255,
+    "null_range": [
+      0.006107541266828775,
+      0.0391962043941021
+    ],
+    "excess": 0.008733457583002747,
+    "z": 1.3622780923612614,
+    "x_null": 1.4693899969545643
+  }
+}
