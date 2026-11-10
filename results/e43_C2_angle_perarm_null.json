@@ -1,0 +1,74 @@
+{
+  "Market_model": {
+    "model": "Market_model",
+    "label": "Market model (A\u2032 vs B\u2032)",
+    "observed_mean_angle": 76.45,
+    "observed_min_angle": 57.78,
+    "null_mean_angle_perarm": {
+      "mean": 79.0177957228874,
+      "sd": 0.8050944006788661,
+      "ci": [
+        77.22302839023725,
+        80.52791963224244
+      ],
+      "range": [
+        76.73069664629236,
+        81.11197934802748
+      ],
+      "excess_obs_minus_null_mean": -2.5677957228873964,
+      "in_support": false,
+      "pct_below_obs": 0.0
+    },
+    "null_min_angle_perarm": {
+      "mean": 67.08333522830293,
+      "sd": 2.023610109210935,
+      "ci": [
+        62.85435582260643,
+        70.45133183181369
+      ],
+      "range": [
+        59.50790666439312,
+        72.6517344537171
+      ],
+      "excess_obs_minus_null_mean": -9.303335228302927,
+      "in_support": false,
+      "pct_below_obs": 0.0
+    }
+  },
+  "MSMT_model": {
+    "model": "MSMT_model",
+    "label": "MSMT model (D vs C)",
+    "observed_mean_angle": 78.35,
+    "observed_min_angle": 55.85,
+    "null_mean_angle_perarm": {
+      "mean": 79.62832050368705,
+      "sd": 0.7423783625776533,
+      "ci": [
+        78.09261708504235,
+        81.14870857700873
+      ],
+      "range": [
+        77.53484311293359,
+        81.97035653386902
+      ],
+      "excess_obs_minus_null_mean": -1.2783205036870555,
+      "in_support": true,
+      "pct_below_obs": 0.046
+    },
+    "null_min_angle_perarm": {
+      "mean": 68.24497143132119,
+      "sd": 2.0542297015318445,
+      "ci": [
+        64.08563087434484,
+        72.13394595166818
+      ],
+      "range": [
+        61.49035885738876,
+        73.24846998558137
+      ],
+      "excess_obs_minus_null_mean": -12.394971431321189,
+      "in_support": false,
+      "pct_below_obs": 0.0
+    }
+  }
+}
