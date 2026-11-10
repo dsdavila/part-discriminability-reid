@@ -1,0 +1,146 @@
+{
+  "A_prime": {
+    "cell": "A_prime",
+    "label": "Market model \u2192 Market (id)",
+    "n_cams": 6,
+    "F_wcam_obs": 3.097437858905539,
+    "F_pooled": 1.6268853123689813,
+    "C1_null": {
+      "mean": 2.5013228292943843,
+      "sd": 0.008955251306369,
+      "ci": [
+        2.484152322874311,
+        2.517834612004176
+      ],
+      "range": [
+        2.47700912108508,
+        2.5299645850327086
+      ],
+      "n_draws": 500
+    },
+    "lift_decomp": {
+      "total_lift_F_wcam_minus_F_pooled": 1.4705525465365576,
+      "generic_lift_null_minus_pooled": 0.8744375169254031,
+      "camera_specific_lift_obs_minus_null": 0.5961150296111546,
+      "generic_share_pct": 59.46319422484267,
+      "camera_specific_share_pct": 40.53680577515733
+    },
+    "C1_AUC": {
+      "matched_items": 12693,
+      "matched_identities": 746,
+      "same_cam_auc_mean": 0.9978534958116375,
+      "same_cam_auc_median": 0.9999646046577946,
+      "diff_cam_auc_mean": 0.9961244267385614,
+      "diff_cam_auc_median": 0.999697182841194,
+      "diff_mean": 0.0017290690730761282
+    }
+  },
+  "B_prime": {
+    "cell": "B_prime",
+    "label": "Market model \u2192 MSMT (ood)",
+    "n_cams": 15,
+    "F_wcam_obs": 1.631989408652517,
+    "F_pooled": 0.49309226984334514,
+    "C1_null": {
+      "mean": 1.2531722710554034,
+      "sd": 0.0031646297075350435,
+      "ci": [
+        1.2469930711903725,
+        1.2595089475640078
+      ],
+      "range": [
+        1.2433206485319497,
+        1.2634537722731547
+      ],
+      "n_draws": 500
+    },
+    "lift_decomp": {
+      "total_lift_F_wcam_minus_F_pooled": 1.138897138809172,
+      "generic_lift_null_minus_pooled": 0.7600800012120583,
+      "camera_specific_lift_obs_minus_null": 0.37881713759711366,
+      "generic_share_pct": 66.73824837305291,
+      "camera_specific_share_pct": 33.261751626947095
+    },
+    "C1_AUC": {
+      "matched_items": 80822,
+      "matched_identities": 3059,
+      "same_cam_auc_mean": 0.9609005459178682,
+      "same_cam_auc_median": 0.9769477631228088,
+      "diff_cam_auc_mean": 0.8146368657111409,
+      "diff_cam_auc_median": 0.8244367682725078,
+      "diff_mean": 0.1462636802067273
+    }
+  },
+  "C": {
+    "cell": "C",
+    "label": "MSMT model \u2192 Market (ood)",
+    "n_cams": 6,
+    "F_wcam_obs": 2.0880349301376806,
+    "F_pooled": 0.8519618901392697,
+    "C1_null": {
+      "mean": 1.4693607646739135,
+      "sd": 0.006106548875084925,
+      "ci": [
+        1.4584465248512957,
+        1.481247173097773
+      ],
+      "range": [
+        1.454535191005851,
+        1.488204607487888
+      ],
+      "n_draws": 500
+    },
+    "lift_decomp": {
+      "total_lift_F_wcam_minus_F_pooled": 1.236073039998411,
+      "generic_lift_null_minus_pooled": 0.6173988745346438,
+      "camera_specific_lift_obs_minus_null": 0.6186741654637671,
+      "generic_share_pct": 49.94841360955802,
+      "camera_specific_share_pct": 50.05158639044197
+    },
+    "C1_AUC": {
+      "matched_items": 12693,
+      "matched_identities": 746,
+      "same_cam_auc_mean": 0.988292064027623,
+      "same_cam_auc_median": 0.9969081341773802,
+      "diff_cam_auc_mean": 0.9562658026386606,
+      "diff_cam_auc_median": 0.9713777222265174,
+      "diff_mean": 0.032026261388962474
+    }
+  },
+  "D": {
+    "cell": "D",
+    "label": "MSMT model \u2192 MSMT (id)",
+    "n_cams": 15,
+    "F_wcam_obs": 2.1632454422526575,
+    "F_pooled": 0.8823768765398033,
+    "C1_null": {
+      "mean": 1.8299474773236644,
+      "sd": 0.003709240992897449,
+      "ci": [
+        1.8228274705806253,
+        1.8367469148687852
+      ],
+      "range": [
+        1.8194811303775127,
+        1.840720343216392
+      ],
+      "n_draws": 500
+    },
+    "lift_decomp": {
+      "total_lift_F_wcam_minus_F_pooled": 1.2808685657128542,
+      "generic_lift_null_minus_pooled": 0.947570600783861,
+      "camera_specific_lift_obs_minus_null": 0.3332979649289931,
+      "generic_share_pct": 73.97875364803728,
+      "camera_specific_share_pct": 26.021246351962706
+    },
+    "C1_AUC": {
+      "matched_items": 80822,
+      "matched_identities": 3059,
+      "same_cam_auc_mean": 0.9915718349374995,
+      "same_cam_auc_median": 0.9995285529177659,
+      "diff_cam_auc_mean": 0.9803652311025537,
+      "diff_cam_auc_median": 0.9937907831485152,
+      "diff_mean": 0.01120660383494576
+    }
+  }
+}
