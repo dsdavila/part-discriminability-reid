@@ -1,0 +1,184 @@
+{
+  "A_prime": {
+    "cell": "A_prime",
+    "label": "Market model \u2192 Market (id)",
+    "target": "Market",
+    "train_file": "bot_market_market_train.npz",
+    "n_cams_train": 6,
+    "r_train": 5,
+    "canonical_gap_pp": 53.737,
+    "nearest_snap": {
+      "base_pct": 80.39631570532194,
+      "mod_pct": 80.31020024221883,
+      "delta_pp_point": -0.08611546310310914,
+      "delta_pp_ci": [
+        -0.13146398150493593,
+        -0.04384108819441264
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": -0.1602535740795153
+    },
+    "random_snap_control": {
+      "base_pct": 80.39631570532194,
+      "mod_pct": 80.2887663697789,
+      "delta_pp_point": -0.10754933554304458,
+      "delta_pp_ci": [
+        -0.158360804842268,
+        -0.05832333656310365
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": -0.20014019305700836
+    },
+    "excess_near_over_random_pp": 0.021433872439935442,
+    "excess_frac_of_gap_pct": 0.03988661897749305,
+    "nearest_assignment_counts": [
+      3029,
+      2759,
+      3832,
+      3703,
+      1483,
+      1677
+    ]
+  },
+  "B_prime": {
+    "cell": "B_prime",
+    "label": "Market model \u2192 MSMT (ood)",
+    "target": "MSMT",
+    "train_file": "bot_market_market_train.npz",
+    "n_cams_train": 6,
+    "r_train": 5,
+    "canonical_gap_pp": 36.221,
+    "nearest_snap": {
+      "base_pct": 5.396395370266649,
+      "mod_pct": 5.4327632902237575,
+      "delta_pp_point": 0.03636791995710806,
+      "delta_pp_ci": [
+        0.02668056633326416,
+        0.04774079837843166
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": 0.10040562093014567
+    },
+    "random_snap_control": {
+      "base_pct": 5.396395370266649,
+      "mod_pct": 5.438489468117921,
+      "delta_pp_point": 0.04209409785127169,
+      "delta_pp_ci": [
+        0.031007674567573168,
+        0.05351229233939719
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": 0.11621462094164074
+    },
+    "excess_near_over_random_pp": -0.005726177894163631,
+    "excess_frac_of_gap_pct": -0.015809000011495076,
+    "nearest_assignment_counts": [
+      8412,
+      28356,
+      25811,
+      8923,
+      1355,
+      20930
+    ]
+  },
+  "C": {
+    "cell": "C",
+    "label": "MSMT model \u2192 Market (ood)",
+    "target": "Market",
+    "train_file": "bot_msmt_msmt_train.npz",
+    "n_cams_train": 15,
+    "r_train": 14,
+    "canonical_gap_pp": 53.737,
+    "nearest_snap": {
+      "base_pct": 26.659615562101415,
+      "mod_pct": 26.673230949894176,
+      "delta_pp_point": 0.013615387792764722,
+      "delta_pp_ci": [
+        -0.04040675896023735,
+        0.07179814249215404
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": 0.025337082071505146
+    },
+    "random_snap_control": {
+      "base_pct": 26.659615562101415,
+      "mod_pct": 26.65182042382781,
+      "delta_pp_point": -0.007795138273603008,
+      "delta_pp_ci": [
+        -0.06140086501035327,
+        0.04304536867448374
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": -0.014506091284595358
+    },
+    "excess_near_over_random_pp": 0.02141052606636773,
+    "excess_frac_of_gap_pct": 0.039843173356100506,
+    "nearest_assignment_counts": [
+      172,
+      2209,
+      3003,
+      354,
+      129,
+      2056,
+      1081,
+      342,
+      249,
+      346,
+      144,
+      5289,
+      23,
+      103,
+      983
+    ]
+  },
+  "D": {
+    "cell": "D",
+    "label": "MSMT model \u2192 MSMT (id)",
+    "target": "MSMT",
+    "train_file": "bot_msmt_msmt_train.npz",
+    "n_cams_train": 15,
+    "r_train": 14,
+    "canonical_gap_pp": 36.221,
+    "nearest_snap": {
+      "base_pct": 41.618376995,
+      "mod_pct": 41.28340134158598,
+      "delta_pp_point": -0.33497565341402136,
+      "delta_pp_ci": [
+        -0.38592415706376587,
+        -0.2836171110770802
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": -0.9248106165319052
+    },
+    "random_snap_control": {
+      "base_pct": 41.618376995,
+      "mod_pct": 41.277302800708746,
+      "delta_pp_point": -0.3410741942912521,
+      "delta_pp_ci": [
+        -0.39480873942543737,
+        -0.28866107996120105
+      ],
+      "band": "dead (<1pp)",
+      "frac_of_gap_pct": -0.9416476471970738
+    },
+    "excess_near_over_random_pp": 0.006098540877230718,
+    "excess_frac_of_gap_pct": 0.0168370306651686,
+    "nearest_assignment_counts": [
+      2631,
+      4547,
+      19845,
+      3082,
+      3547,
+      9080,
+      6122,
+      6376,
+      2431,
+      3476,
+      3609,
+      16653,
+      2323,
+      2493,
+      7572
+    ]
+  }
+}
