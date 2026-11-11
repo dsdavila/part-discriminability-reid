@@ -1,0 +1,66 @@
+{
+  "Market_model": {
+    "name": "Market_model",
+    "label": "Market model: id=Market-train, ood=MSMT-test (B\u2032)",
+    "n_id_items": 12936,
+    "n_ood_items": 82128,
+    "n_id_blobs": 751,
+    "n_ood_blobs": 3059,
+    "centroid_separation_raw": 0.4314567446708679,
+    "rms_radius_id": 0.999278724193573,
+    "rms_radius_ood": 0.9042611122131348,
+    "sep_in_r_id": 0.4317681686048679,
+    "sep_in_r_ood": 0.477137343233636,
+    "sep_in_rms_avg": 0.45332042589171584,
+    "frac_ood_blob_nn_is_ood": 1.0,
+    "chance_ood_nn_fraction": 0.8030979259648202,
+    "linear_probe": {
+      "accuracy": 0.9677,
+      "mean_margin": 0.21541453897953033,
+      "min_margin": -0.21432164311408997,
+      "mean_separation": 0.43082907795906067,
+      "n_a_used": 5000,
+      "n_b_used": 5000
+    },
+    "within_domain_control": {
+      "accuracy": 0.5489,
+      "mean_margin": 0.009754166007041931,
+      "min_margin": -0.24768248200416565,
+      "mean_separation": 0.019508332014083862,
+      "n_a_used": 5000,
+      "n_b_used": 5000
+    }
+  },
+  "MSMT_model": {
+    "name": "MSMT_model",
+    "label": "MSMT model: id=MSMT-train, ood=Market-test (C)",
+    "n_id_items": 30248,
+    "n_ood_items": 13115,
+    "n_id_blobs": 1041,
+    "n_ood_blobs": 750,
+    "centroid_separation_raw": 0.3766333758831024,
+    "rms_radius_id": 0.9971181750297546,
+    "rms_radius_ood": 0.9217192530632019,
+    "sep_in_r_id": 0.3777219042987191,
+    "sep_in_r_ood": 0.40862049331335476,
+    "sep_in_rms_avg": 0.39256413322875494,
+    "frac_ood_blob_nn_is_ood": 0.9973333333333333,
+    "chance_ood_nn_fraction": 0.41899441340782123,
+    "linear_probe": {
+      "accuracy": 0.9612,
+      "mean_margin": 0.18729108572006226,
+      "min_margin": -0.19826120138168335,
+      "mean_separation": 0.3745821714401245,
+      "n_a_used": 5000,
+      "n_b_used": 5000
+    },
+    "within_domain_control": {
+      "accuracy": 0.5614,
+      "mean_margin": 0.00989628117531538,
+      "min_margin": -0.2323799729347229,
+      "mean_separation": 0.01979256421327591,
+      "n_a_used": 5000,
+      "n_b_used": 5000
+    }
+  }
+}
