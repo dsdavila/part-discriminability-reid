@@ -1,0 +1,406 @@
+{
+  "A_prime": {
+    "n_pairs_total": 2769481,
+    "n_same_total": 5803,
+    "n_cross_cam_total": 2263879,
+    "n_same_cross_cam": 4486,
+    "top_decile_cos_threshold": 0.8855937719345093,
+    "all_pairs": {
+      "0.5000": {
+        "subset": "all",
+        "cos_threshold": 0.5,
+        "n_pairs": 2769481,
+        "n_same": 5803,
+        "n_diff": 2763678,
+        "dprime": 3.8375799153197634,
+        "pair_auc": 0.99391
+      },
+      "0.7000": {
+        "subset": "all",
+        "cos_threshold": 0.7,
+        "n_pairs": 2769481,
+        "n_same": 5803,
+        "n_diff": 2763678,
+        "dprime": 3.8375799153197634,
+        "pair_auc": 0.99391
+      },
+      "0.8000": {
+        "subset": "all",
+        "cos_threshold": 0.8,
+        "n_pairs": 2769298,
+        "n_same": 5803,
+        "n_diff": 2763495,
+        "dprime": 3.8377479185843226,
+        "pair_auc": 0.99388
+      },
+      "0.8856": {
+        "subset": "all",
+        "cos_threshold": 0.8855937719345093,
+        "n_pairs": 276950,
+        "n_same": 5729,
+        "n_diff": 271221,
+        "dprime": 3.0472019875417495,
+        "pair_auc": 0.984505
+      },
+      "0.9000": {
+        "subset": "all",
+        "cos_threshold": 0.9,
+        "n_pairs": 64247,
+        "n_same": 5654,
+        "n_diff": 58593,
+        "dprime": 2.458294457817671,
+        "pair_auc": 0.95818
+      }
+    },
+    "cross_camera_pairs": {
+      "0.5000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.5,
+        "n_pairs": 2263879,
+        "n_same": 4486,
+        "n_diff": 2259393,
+        "dprime": 3.8895771229975398,
+        "pair_auc": 0.993765
+      },
+      "0.7000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.7,
+        "n_pairs": 2263879,
+        "n_same": 4486,
+        "n_diff": 2259393,
+        "dprime": 3.8895771229975398,
+        "pair_auc": 0.993765
+      },
+      "0.8000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8,
+        "n_pairs": 2263727,
+        "n_same": 4486,
+        "n_diff": 2259241,
+        "dprime": 3.8897955014585746,
+        "pair_auc": 0.993875
+      },
+      "0.8856": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8855937719345093,
+        "n_pairs": 223198,
+        "n_same": 4424,
+        "n_diff": 218774,
+        "dprime": 3.0571917196652425,
+        "pair_auc": 0.98241
+      },
+      "0.9000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.9,
+        "n_pairs": 51387,
+        "n_same": 4360,
+        "n_diff": 47027,
+        "dprime": 2.4191110235399447,
+        "pair_auc": 0.9532325
+      }
+    }
+  },
+  "B_prime": {
+    "n_pairs_total": 2876401,
+    "n_same_total": 5995,
+    "n_cross_cam_total": 2540419,
+    "n_same_cross_cam": 4307,
+    "top_decile_cos_threshold": 0.9042959213256836,
+    "all_pairs": {
+      "0.5000": {
+        "subset": "all",
+        "cos_threshold": 0.5,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "dprime": 1.2926074524586273,
+        "pair_auc": 0.816725
+      },
+      "0.7000": {
+        "subset": "all",
+        "cos_threshold": 0.7,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "dprime": 1.2926074524586273,
+        "pair_auc": 0.816725
+      },
+      "0.8000": {
+        "subset": "all",
+        "cos_threshold": 0.8,
+        "n_pairs": 2862008,
+        "n_same": 5992,
+        "n_diff": 2856016,
+        "dprime": 1.290961655390675,
+        "pair_auc": 0.81854
+      },
+      "0.9000": {
+        "subset": "all",
+        "cos_threshold": 0.9,
+        "n_pairs": 373841,
+        "n_same": 3728,
+        "n_diff": 370113,
+        "dprime": 1.1596897926305334,
+        "pair_auc": 0.78985
+      },
+      "0.9043": {
+        "subset": "all",
+        "cos_threshold": 0.9042959213256836,
+        "n_pairs": 287642,
+        "n_same": 3481,
+        "n_diff": 284161,
+        "dprime": 1.1542150991665703,
+        "pair_auc": 0.786655
+      }
+    },
+    "cross_camera_pairs": {
+      "0.5000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.5,
+        "n_pairs": 2540419,
+        "n_same": 4307,
+        "n_diff": 2536112,
+        "dprime": 1.064245252377339,
+        "pair_auc": 0.771265
+      },
+      "0.7000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.7,
+        "n_pairs": 2540419,
+        "n_same": 4307,
+        "n_diff": 2536112,
+        "dprime": 1.064245252377339,
+        "pair_auc": 0.771265
+      },
+      "0.8000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8,
+        "n_pairs": 2526547,
+        "n_same": 4304,
+        "n_diff": 2522243,
+        "dprime": 1.0624478728549824,
+        "pair_auc": 0.77025
+      },
+      "0.9000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.9,
+        "n_pairs": 283387,
+        "n_same": 2155,
+        "n_diff": 281232,
+        "dprime": 0.7745348663694555,
+        "pair_auc": 0.7057875
+      },
+      "0.9043": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.9042959213256836,
+        "n_pairs": 212196,
+        "n_same": 1933,
+        "n_diff": 210263,
+        "dprime": 0.7370832013321921,
+        "pair_auc": 0.6942075
+      }
+    }
+  },
+  "C": {
+    "n_pairs_total": 2776546,
+    "n_same_total": 5807,
+    "n_cross_cam_total": 2268925,
+    "n_same_cross_cam": 4486,
+    "top_decile_cos_threshold": 0.8885983228683472,
+    "all_pairs": {
+      "0.5000": {
+        "subset": "all",
+        "cos_threshold": 0.5,
+        "n_pairs": 2776546,
+        "n_same": 5807,
+        "n_diff": 2770739,
+        "dprime": 2.193854409727445,
+        "pair_auc": 0.942205
+      },
+      "0.7000": {
+        "subset": "all",
+        "cos_threshold": 0.7,
+        "n_pairs": 2776544,
+        "n_same": 5807,
+        "n_diff": 2770737,
+        "dprime": 2.193854791733055,
+        "pair_auc": 0.941925
+      },
+      "0.8000": {
+        "subset": "all",
+        "cos_threshold": 0.8,
+        "n_pairs": 2594633,
+        "n_same": 5804,
+        "n_diff": 2588829,
+        "dprime": 2.15726073896163,
+        "pair_auc": 0.93773
+      },
+      "0.8886": {
+        "subset": "all",
+        "cos_threshold": 0.8885983228683472,
+        "n_pairs": 277656,
+        "n_same": 4822,
+        "n_diff": 272834,
+        "dprime": 1.3647065041141409,
+        "pair_auc": 0.836305
+      },
+      "0.9000": {
+        "subset": "all",
+        "cos_threshold": 0.9,
+        "n_pairs": 151952,
+        "n_same": 4351,
+        "n_diff": 147601,
+        "dprime": 1.2458262113194698,
+        "pair_auc": 0.812545
+      }
+    },
+    "cross_camera_pairs": {
+      "0.5000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.5,
+        "n_pairs": 2268925,
+        "n_same": 4486,
+        "n_diff": 2264439,
+        "dprime": 2.123766932608538,
+        "pair_auc": 0.93395
+      },
+      "0.7000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.7,
+        "n_pairs": 2268923,
+        "n_same": 4486,
+        "n_diff": 2264437,
+        "dprime": 2.123772195308712,
+        "pair_auc": 0.93352
+      },
+      "0.8000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8,
+        "n_pairs": 2111805,
+        "n_same": 4483,
+        "n_diff": 2107322,
+        "dprime": 2.0848566256837255,
+        "pair_auc": 0.929235
+      },
+      "0.8886": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8885983228683472,
+        "n_pairs": 209847,
+        "n_same": 3561,
+        "n_diff": 206286,
+        "dprime": 1.228801492375877,
+        "pair_auc": 0.8108575
+      },
+      "0.9000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.9,
+        "n_pairs": 112536,
+        "n_same": 3139,
+        "n_diff": 109397,
+        "dprime": 1.0896390073911744,
+        "pair_auc": 0.776755
+      }
+    }
+  },
+  "D": {
+    "n_pairs_total": 2876401,
+    "n_same_total": 5995,
+    "n_cross_cam_total": 2523545,
+    "n_same_cross_cam": 4321,
+    "top_decile_cos_threshold": 0.8514016270637512,
+    "all_pairs": {
+      "0.5000": {
+        "subset": "all",
+        "cos_threshold": 0.5,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "dprime": 2.99945219676275,
+        "pair_auc": 0.985075
+      },
+      "0.7000": {
+        "subset": "all",
+        "cos_threshold": 0.7,
+        "n_pairs": 2876083,
+        "n_same": 5995,
+        "n_diff": 2870088,
+        "dprime": 2.9996054663833807,
+        "pair_auc": 0.98495
+      },
+      "0.8000": {
+        "subset": "all",
+        "cos_threshold": 0.8,
+        "n_pairs": 1902759,
+        "n_same": 5976,
+        "n_diff": 1896783,
+        "dprime": 2.8238070010367147,
+        "pair_auc": 0.98001
+      },
+      "0.8514": {
+        "subset": "all",
+        "cos_threshold": 0.8514016270637512,
+        "n_pairs": 287642,
+        "n_same": 5729,
+        "n_diff": 281913,
+        "dprime": 2.2080372396405,
+        "pair_auc": 0.95348
+      },
+      "0.9000": {
+        "subset": "all",
+        "cos_threshold": 0.9,
+        "n_pairs": 13431,
+        "n_same": 4444,
+        "n_diff": 8987,
+        "dprime": 1.6118636314058237,
+        "pair_auc": 0.885195
+      }
+    },
+    "cross_camera_pairs": {
+      "0.5000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.5,
+        "n_pairs": 2523545,
+        "n_same": 4321,
+        "n_diff": 2519224,
+        "dprime": 3.019600972248417,
+        "pair_auc": 0.981525
+      },
+      "0.7000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.7,
+        "n_pairs": 2523251,
+        "n_same": 4321,
+        "n_diff": 2518930,
+        "dprime": 3.0198462564334076,
+        "pair_auc": 0.98138
+      },
+      "0.8000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8,
+        "n_pairs": 1644606,
+        "n_same": 4302,
+        "n_diff": 1640304,
+        "dprime": 2.848592029574309,
+        "pair_auc": 0.97545
+      },
+      "0.8514": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.8514016270637512,
+        "n_pairs": 238193,
+        "n_same": 4086,
+        "n_diff": 234107,
+        "dprime": 2.1543900850079796,
+        "pair_auc": 0.94143
+      },
+      "0.9000": {
+        "subset": "cross_cam",
+        "cos_threshold": 0.9,
+        "n_pairs": 9920,
+        "n_same": 2936,
+        "n_diff": 6984,
+        "dprime": 1.444948942822998,
+        "pair_auc": 0.8488775
+      }
+    }
+  }
+}
