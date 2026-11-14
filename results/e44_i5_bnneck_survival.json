@@ -1,0 +1,218 @@
+{
+  "A_prime": {
+    "top_decile_cos_pre": 0.8855937719345093,
+    "top_decile_cos_post": 0.1087845042347908,
+    "same_cam_at_thr_pre_pre_eucl": {
+      "label": "same_cam_at_thr_pre_pre_eucl",
+      "n_pairs": 53752,
+      "n_same": 1305,
+      "n_diff": 52447,
+      "dprime": 3.674177174042012,
+      "auc": 0.9908,
+      "mean_same": 1.424568772315979,
+      "mean_diff": 2.4501802921295166
+    },
+    "same_cam_at_thr_pre_post_cos": {
+      "label": "same_cam_at_thr_pre_post_cos",
+      "n_pairs": 53752,
+      "n_same": 1305,
+      "n_diff": 52447,
+      "dprime": 4.31421640111291,
+      "auc": 0.99399,
+      "mean_same": 0.2927614748477936,
+      "mean_diff": 0.8517723083496094
+    },
+    "same_cam_at_thr_post_post_cos": {
+      "label": "same_cam_at_thr_post_post_cos",
+      "n_pairs": 54166,
+      "n_same": 1309,
+      "n_diff": 52857,
+      "dprime": 4.273849674520123,
+      "auc": 0.99192,
+      "mean_same": 0.2944675087928772,
+      "mean_diff": 0.8213110566139221
+    },
+    "same_cam_at_thr_post_pre_eucl": {
+      "label": "same_cam_at_thr_post_pre_eucl",
+      "n_pairs": 54166,
+      "n_same": 1309,
+      "n_diff": 52857,
+      "dprime": 3.678757502859153,
+      "auc": 0.990015,
+      "mean_same": 1.4281611442565918,
+      "mean_diff": 2.5157766342163086
+    },
+    "cross_cam_at_thr_post_post_cos": {
+      "label": "cross_cam_at_thr_post_post_cos",
+      "n_pairs": 222783,
+      "n_same": 4439,
+      "n_diff": 218344,
+      "dprime": 3.469633012178448,
+      "auc": 0.984605,
+      "mean_same": 0.40583282709121704,
+      "mean_diff": 0.8228623867034912
+    }
+  },
+  "B_prime": {
+    "top_decile_cos_pre": 0.9042959213256836,
+    "top_decile_cos_post": 0.3843458890914917,
+    "same_cam_at_thr_pre_pre_eucl": {
+      "label": "same_cam_at_thr_pre_pre_eucl",
+      "n_pairs": 75446,
+      "n_same": 1548,
+      "n_diff": 73898,
+      "dprime": 1.9230689442079778,
+      "auc": 0.906965,
+      "mean_same": 1.5455243587493896,
+      "mean_diff": 2.1087865829467773
+    },
+    "same_cam_at_thr_pre_post_cos": {
+      "label": "same_cam_at_thr_pre_post_cos",
+      "n_pairs": 75446,
+      "n_same": 1548,
+      "n_diff": 73898,
+      "dprime": 1.5476535608828879,
+      "auc": 0.85497,
+      "mean_same": 0.2938920855522156,
+      "mean_diff": 0.4991242587566376
+    },
+    "same_cam_at_thr_post_post_cos": {
+      "label": "same_cam_at_thr_post_post_cos",
+      "n_pairs": 75316,
+      "n_same": 1543,
+      "n_diff": 73773,
+      "dprime": 1.5564380057438665,
+      "auc": 0.85428,
+      "mean_same": 0.29164057970046997,
+      "mean_diff": 0.47875815629959106
+    },
+    "same_cam_at_thr_post_pre_eucl": {
+      "label": "same_cam_at_thr_post_pre_eucl",
+      "n_pairs": 75316,
+      "n_same": 1543,
+      "n_diff": 73773,
+      "dprime": 1.942796723391904,
+      "auc": 0.910225,
+      "mean_same": 1.5449918508529663,
+      "mean_diff": 2.145205020904541
+    },
+    "cross_cam_at_thr_post_post_cos": {
+      "label": "cross_cam_at_thr_post_post_cos",
+      "n_pairs": 212325,
+      "n_same": 1870,
+      "n_diff": 210455,
+      "dprime": 0.603668003270096,
+      "auc": 0.659965,
+      "mean_same": 0.47116416692733765,
+      "mean_diff": 0.5261518359184265
+    }
+  },
+  "C": {
+    "top_decile_cos_pre": 0.8885983228683472,
+    "top_decile_cos_post": 0.30516912043094635,
+    "same_cam_at_thr_pre_pre_eucl": {
+      "label": "same_cam_at_thr_pre_pre_eucl",
+      "n_pairs": 67809,
+      "n_same": 1261,
+      "n_diff": 66548,
+      "dprime": 2.0215477858755,
+      "auc": 0.92012,
+      "mean_same": 0.898287832736969,
+      "mean_diff": 1.265989899635315
+    },
+    "same_cam_at_thr_pre_post_cos": {
+      "label": "same_cam_at_thr_pre_post_cos",
+      "n_pairs": 67809,
+      "n_same": 1261,
+      "n_diff": 66548,
+      "dprime": 2.3292227851451655,
+      "auc": 0.939685,
+      "mean_same": 0.3312857449054718,
+      "mean_diff": 0.6279115676879883
+    },
+    "same_cam_at_thr_post_post_cos": {
+      "label": "same_cam_at_thr_post_post_cos",
+      "n_pairs": 70300,
+      "n_same": 1280,
+      "n_diff": 69020,
+      "dprime": 2.254464976212886,
+      "auc": 0.93073,
+      "mean_same": 0.3350331783294678,
+      "mean_diff": 0.6063660383224487
+    },
+    "same_cam_at_thr_post_pre_eucl": {
+      "label": "same_cam_at_thr_post_pre_eucl",
+      "n_pairs": 70300,
+      "n_same": 1280,
+      "n_diff": 69020,
+      "dprime": 2.0061399998591214,
+      "auc": 0.9172,
+      "mean_same": 0.9070062637329102,
+      "mean_diff": 1.3121191263198853
+    },
+    "cross_cam_at_thr_post_post_cos": {
+      "label": "cross_cam_at_thr_post_post_cos",
+      "n_pairs": 207356,
+      "n_same": 3746,
+      "n_diff": 203610,
+      "dprime": 1.3541267388732579,
+      "auc": 0.83056,
+      "mean_same": 0.4726082682609558,
+      "mean_diff": 0.6167600750923157
+    }
+  },
+  "D": {
+    "top_decile_cos_pre": 0.8514016270637512,
+    "top_decile_cos_post": 0.13358169794082642,
+    "same_cam_at_thr_pre_pre_eucl": {
+      "label": "same_cam_at_thr_pre_pre_eucl",
+      "n_pairs": 49449,
+      "n_same": 1643,
+      "n_diff": 47806,
+      "dprime": 3.175122908830186,
+      "auc": 0.983795,
+      "mean_same": 0.871557354927063,
+      "mean_diff": 1.4835830926895142
+    },
+    "same_cam_at_thr_pre_post_cos": {
+      "label": "same_cam_at_thr_pre_post_cos",
+      "n_pairs": 49449,
+      "n_same": 1643,
+      "n_diff": 47806,
+      "dprime": 3.672053915324736,
+      "auc": 0.98877,
+      "mean_same": 0.33249151706695557,
+      "mean_diff": 0.8410557508468628
+    },
+    "same_cam_at_thr_post_post_cos": {
+      "label": "same_cam_at_thr_post_post_cos",
+      "n_pairs": 45814,
+      "n_same": 1651,
+      "n_diff": 44163,
+      "dprime": 3.5259626110774955,
+      "auc": 0.984045,
+      "mean_same": 0.3346043825149536,
+      "mean_diff": 0.8040685057640076
+    },
+    "same_cam_at_thr_post_pre_eucl": {
+      "label": "same_cam_at_thr_post_pre_eucl",
+      "n_pairs": 45814,
+      "n_same": 1651,
+      "n_diff": 44163,
+      "dprime": 3.1309463081041846,
+      "auc": 0.98144,
+      "mean_same": 0.8751854300498962,
+      "mean_diff": 1.5329889059066772
+    },
+    "cross_cam_at_thr_post_post_cos": {
+      "label": "cross_cam_at_thr_post_post_cos",
+      "n_pairs": 241827,
+      "n_same": 4116,
+      "n_diff": 237711,
+      "dprime": 2.179798773847182,
+      "auc": 0.945395,
+      "mean_same": 0.5456708669662476,
+      "mean_diff": 0.8115465044975281
+    }
+  }
+}
