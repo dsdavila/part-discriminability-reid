@@ -1,0 +1,278 @@
+{
+  "A_prime": {
+    "n_pairs_total": 2769481,
+    "n_same_total": 5803,
+    "n_diff_total": 2763678,
+    "median_norm": 5.327578544616699,
+    "thresholds": {
+      "0.5000": {
+        "cos_threshold": 0.5,
+        "n_pairs": 2769481,
+        "n_same": 5803,
+        "n_diff": 2763678,
+        "mean_eucl_same": 1.6544952392578125,
+        "mean_eucl_diff": 2.768068790435791,
+        "median_eucl_same": 1.644228458404541,
+        "median_eucl_diff": 2.7734568119049072,
+        "dprime": 3.8375799153197634,
+        "pair_auc": 0.99391
+      },
+      "0.7000": {
+        "cos_threshold": 0.7,
+        "n_pairs": 2769481,
+        "n_same": 5803,
+        "n_diff": 2763678,
+        "mean_eucl_same": 1.6544952392578125,
+        "mean_eucl_diff": 2.768068790435791,
+        "median_eucl_same": 1.644228458404541,
+        "median_eucl_diff": 2.7734568119049072,
+        "dprime": 3.8375799153197634,
+        "pair_auc": 0.99391
+      },
+      "0.8000": {
+        "cos_threshold": 0.8,
+        "n_pairs": 2769298,
+        "n_same": 5803,
+        "n_diff": 2763495,
+        "mean_eucl_same": 1.6544952392578125,
+        "mean_eucl_diff": 2.7680230140686035,
+        "median_eucl_same": 1.644228458404541,
+        "median_eucl_diff": 2.7734408378601074,
+        "dprime": 3.8377479185843226,
+        "pair_auc": 0.99388
+      },
+      "0.8856": {
+        "cos_threshold": 0.8855937719345093,
+        "n_pairs": 276950,
+        "n_same": 5729,
+        "n_diff": 271221,
+        "mean_eucl_same": 1.6410257816314697,
+        "mean_eucl_diff": 2.4509975910186768,
+        "median_eucl_same": 1.637820839881897,
+        "median_eucl_diff": 2.4762914180755615,
+        "dprime": 3.0472019875417495,
+        "pair_auc": 0.984505
+      },
+      "0.9000": {
+        "cos_threshold": 0.9,
+        "n_pairs": 64247,
+        "n_same": 5654,
+        "n_diff": 58593,
+        "mean_eucl_same": 1.6302860975265503,
+        "mean_eucl_diff": 2.2723495960235596,
+        "median_eucl_same": 1.6313674449920654,
+        "median_eucl_diff": 2.303577423095703,
+        "dprime": 2.458294457817671,
+        "pair_auc": 0.95818
+      }
+    },
+    "top_decile_cos_threshold": 0.8855937719345093
+  },
+  "B_prime": {
+    "n_pairs_total": 2876401,
+    "n_same_total": 5995,
+    "n_diff_total": 2870406,
+    "median_norm": 5.3043532371521,
+    "thresholds": {
+      "0.5000": {
+        "cos_threshold": 0.5,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "mean_eucl_same": 2.156191110610962,
+        "mean_eucl_diff": 2.6899147033691406,
+        "median_eucl_same": 2.222151517868042,
+        "median_eucl_diff": 2.70108699798584,
+        "dprime": 1.2926074524586273,
+        "pair_auc": 0.816725
+      },
+      "0.7000": {
+        "cos_threshold": 0.7,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "mean_eucl_same": 2.156191110610962,
+        "mean_eucl_diff": 2.6899147033691406,
+        "median_eucl_same": 2.222151517868042,
+        "median_eucl_diff": 2.70108699798584,
+        "dprime": 1.2926074524586273,
+        "pair_auc": 0.816725
+      },
+      "0.8000": {
+        "cos_threshold": 0.8,
+        "n_pairs": 2862008,
+        "n_same": 5992,
+        "n_diff": 2856016,
+        "mean_eucl_same": 2.155561685562134,
+        "mean_eucl_diff": 2.6861517429351807,
+        "median_eucl_same": 2.22202205657959,
+        "median_eucl_diff": 2.6994223594665527,
+        "dprime": 1.290961655390675,
+        "pair_auc": 0.81854
+      },
+      "0.9000": {
+        "cos_threshold": 0.9,
+        "n_pairs": 373841,
+        "n_same": 3728,
+        "n_diff": 370113,
+        "mean_eucl_same": 1.8570771217346191,
+        "mean_eucl_diff": 2.2075417041778564,
+        "median_eucl_same": 1.943528175354004,
+        "median_eucl_diff": 2.2454049587249756,
+        "dprime": 1.1596897926305334,
+        "pair_auc": 0.78985
+      },
+      "0.9043": {
+        "cos_threshold": 0.9042959213256836,
+        "n_pairs": 287642,
+        "n_same": 3481,
+        "n_diff": 284161,
+        "mean_eucl_same": 1.8219518661499023,
+        "mean_eucl_diff": 2.1616289615631104,
+        "median_eucl_same": 1.909387230873108,
+        "median_eucl_diff": 2.198599338531494,
+        "dprime": 1.1542150991665703,
+        "pair_auc": 0.786655
+      }
+    },
+    "top_decile_cos_threshold": 0.9042959213256836
+  },
+  "C": {
+    "n_pairs_total": 2776546,
+    "n_same_total": 5807,
+    "n_diff_total": 2770739,
+    "median_norm": 2.904627799987793,
+    "thresholds": {
+      "0.5000": {
+        "cos_threshold": 0.5,
+        "n_pairs": 2776546,
+        "n_same": 5807,
+        "n_diff": 2770739,
+        "mean_eucl_same": 1.1184769868850708,
+        "mean_eucl_diff": 1.6038062572479248,
+        "median_eucl_same": 1.1335169076919556,
+        "median_eucl_diff": 1.6141494512557983,
+        "dprime": 2.193854409727445,
+        "pair_auc": 0.942205
+      },
+      "0.7000": {
+        "cos_threshold": 0.7,
+        "n_pairs": 2776544,
+        "n_same": 5807,
+        "n_diff": 2770737,
+        "mean_eucl_same": 1.1184769868850708,
+        "mean_eucl_diff": 1.603805422782898,
+        "median_eucl_same": 1.1335169076919556,
+        "median_eucl_diff": 1.6141494512557983,
+        "dprime": 2.193854791733055,
+        "pair_auc": 0.941925
+      },
+      "0.8000": {
+        "cos_threshold": 0.8,
+        "n_pairs": 2594633,
+        "n_same": 5804,
+        "n_diff": 2588829,
+        "mean_eucl_same": 1.1181309223175049,
+        "mean_eucl_diff": 1.583208680152893,
+        "median_eucl_same": 1.1332863569259644,
+        "median_eucl_diff": 1.6004647016525269,
+        "dprime": 2.15726073896163,
+        "pair_auc": 0.93773
+      },
+      "0.8886": {
+        "cos_threshold": 0.8885983228683472,
+        "n_pairs": 277656,
+        "n_same": 4822,
+        "n_diff": 272834,
+        "mean_eucl_same": 1.0442311763763428,
+        "mean_eucl_diff": 1.2770464420318604,
+        "median_eucl_same": 1.07489013671875,
+        "median_eucl_diff": 1.2994556427001953,
+        "dprime": 1.3647065041141409,
+        "pair_auc": 0.836305
+      },
+      "0.9000": {
+        "cos_threshold": 0.9,
+        "n_pairs": 151952,
+        "n_same": 4351,
+        "n_diff": 147601,
+        "mean_eucl_same": 1.0123745203018188,
+        "mean_eucl_diff": 1.211962103843689,
+        "median_eucl_same": 1.0453580617904663,
+        "median_eucl_diff": 1.23285973072052,
+        "dprime": 1.2458262113194698,
+        "pair_auc": 0.812545
+      }
+    },
+    "top_decile_cos_threshold": 0.8885983228683472
+  },
+  "D": {
+    "n_pairs_total": 2876401,
+    "n_same_total": 5995,
+    "n_diff_total": 2870406,
+    "median_norm": 2.8552498817443848,
+    "thresholds": {
+      "0.5000": {
+        "cos_threshold": 0.5,
+        "n_pairs": 2876401,
+        "n_same": 5995,
+        "n_diff": 2870406,
+        "mean_eucl_same": 1.0888231992721558,
+        "mean_eucl_diff": 1.750684380531311,
+        "median_eucl_same": 1.0994229316711426,
+        "median_eucl_diff": 1.7558778524398804,
+        "dprime": 2.99945219676275,
+        "pair_auc": 0.985075
+      },
+      "0.7000": {
+        "cos_threshold": 0.7,
+        "n_pairs": 2876083,
+        "n_same": 5995,
+        "n_diff": 2870088,
+        "mean_eucl_same": 1.0888231992721558,
+        "mean_eucl_diff": 1.7506283521652222,
+        "median_eucl_same": 1.0994229316711426,
+        "median_eucl_diff": 1.7558587789535522,
+        "dprime": 2.9996054663833807,
+        "pair_auc": 0.98495
+      },
+      "0.8000": {
+        "cos_threshold": 0.8,
+        "n_pairs": 1902759,
+        "n_same": 5976,
+        "n_diff": 1896783,
+        "mean_eucl_same": 1.086531639099121,
+        "mean_eucl_diff": 1.6735069751739502,
+        "median_eucl_same": 1.0980981588363647,
+        "median_eucl_diff": 1.6895462274551392,
+        "dprime": 2.8238070010367147,
+        "pair_auc": 0.98001
+      },
+      "0.8514": {
+        "cos_threshold": 0.8514016270637512,
+        "n_pairs": 287642,
+        "n_same": 5729,
+        "n_diff": 281913,
+        "mean_eucl_same": 1.063826560974121,
+        "mean_eucl_diff": 1.4809387922286987,
+        "median_eucl_same": 1.0818284749984741,
+        "median_eucl_diff": 1.493651270866394,
+        "dprime": 2.2080372396405,
+        "pair_auc": 0.95348
+      },
+      "0.9000": {
+        "cos_threshold": 0.9,
+        "n_pairs": 13431,
+        "n_same": 4444,
+        "n_diff": 8987,
+        "mean_eucl_same": 0.9741470217704773,
+        "mean_eucl_diff": 1.2266006469726562,
+        "median_eucl_same": 1.0065386295318604,
+        "median_eucl_diff": 1.2377578020095825,
+        "dprime": 1.6118636314058237,
+        "pair_auc": 0.885195
+      }
+    },
+    "top_decile_cos_threshold": 0.8514016270637512
+  }
+}
