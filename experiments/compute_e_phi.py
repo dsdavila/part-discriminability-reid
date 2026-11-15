@@ -53,7 +53,11 @@ from compute_e_snap_a import RNG_SEED, load_backbone_and_bn, CKPT_MARKET
 from compute_e_snap_a_cell_agreement import extract_layer_maps, TRAIN_POOL_SIZE_CELL_DIAGNOSTIC
 
 RESULTS = Path('/data/papers/low_dimensional_reid/results')
-N_RANK = 55  # D7's measured effective rank of the embedding space
+N_RANK = 205  # own measured 90%-variance effective rank of the GAP embedding
+              # (Channel 4 rev 645: D7's "203->55" is a specific camera-offset
+              # subspace collapsing, not a general embedding-rank statement;
+              # 205 matches D7's pre-collapse "203" closely and is the right
+              # target for a general reduced-basis check)
 
 
 def ols_fit(X, Y):
