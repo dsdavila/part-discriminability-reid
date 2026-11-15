@@ -278,6 +278,16 @@ def process_model(model_name, ckpt, train_dataset_name, in_domain_dataset_name,
                 'pid': pids_.tolist(),
                 'cam': cams_.tolist(),
             },
+            'per_layer_raw': {
+                # pre-aggregation scalars, so a single layer (e.g. layer4-only)
+                # can be checked without re-deriving from scratch (Channel 4
+                # rev 641 §4 item 3: report per-population Spearman, not pooled).
+                'meanCell': {L: z_mean_by_layer[L].tolist() for L in LAYER_NAMES},
+                'topK': {
+                    f'f{f:.2f}': {L: z_topk_by_layer[f][L].tolist() for L in LAYER_NAMES}
+                    for f in FRACS
+                },
+            },
             'alignment': {
                 'meanCell_meanLayer': scalar_meanCell_meanLayer.tolist(),
                 'meanCell_maxLayer': scalar_meanCell_maxLayer.tolist(),
