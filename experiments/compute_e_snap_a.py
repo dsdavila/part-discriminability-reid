@@ -36,8 +36,8 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 RNG_SEED = 42
 N_QUERY = 500
 N_GALLERY = 5000
-N_TRAIN_POOL = 3000
 N_BOOT = 2000
+N_SHUFFLE = 50  # shuffled-ranking control replicates per query (Channel 4 rev 631 §3)
 
 CKPT_MARKET = Path('/data/papers/low_dimensional_reid/pretrained/rea_ablation/bot_resnet50_market1501_seed42_final.pth')
 CKPT_MSMT   = Path('/data/papers/low_dimensional_reid/pretrained/bot_resnet50_msmt17_seed42_final.pth')
@@ -237,6 +237,41 @@ def paired_bootstrap_layers(aps_dict, valid_dict, pids, n_boot=2000, seed=0):
     return marginal, differences, int(n_id)
 
 
+def shuffled_ranking_control(q_pids, q_cams, g_pids, g_cams, n_shuffle=N_SHUFFLE, seed=0):
+    """Chance-level mAP control (Channel 4 rev 631 §3): for each query, average
+    AP over n_shuffle random permutations of the (non-junk) gallery order.
+    Returns (mean_shuffled_mAP, per_query_R, n_valid) where per_query_R is the
+    actual count of relevant (non-junk) gallery matches per query — the exact
+    number requested, not an estimate."""
+    rng = np.random.default_rng(seed)
+    n_q = len(q_pids)
+    n_g = len(g_pids)
+    r_per_query = np.zeros(n_q, dtype=np.int64)
+    ap_means = np.zeros(n_q, dtype=np.float64)
+    valid = np.zeros(n_q, dtype=bool)
+    for i in range(n_q):
+        qid, qcam = q_pids[i], q_cams[i]
+        junk = (g_pids == qid) & (g_cams == qcam)
+        non_junk_idx = np.where(~junk)[0]
+        good_mask = g_pids[non_junk_idx] == qid
+        r = int(good_mask.sum())
+        r_per_query[i] = r
+        if r == 0:
+            continue
+        valid[i] = True
+        n_nj = len(non_junk_idx)
+        aps = np.empty(n_shuffle)
+        for s in range(n_shuffle):
+            perm = rng.permutation(n_nj)
+            good = good_mask[perm]
+            prec = np.cumsum(good) / np.arange(1, n_nj + 1)
+            aps[s] = (prec * good).sum() / r
+        ap_means[i] = aps.mean()
+    mean_shuffled_map = float(ap_means[valid].mean()) if valid.any() else float('nan')
+    mean_r = float(r_per_query[valid].mean()) if valid.any() else float('nan')
+    return mean_shuffled_map, mean_r, int(valid.sum())
+
+
 def snap_indices(q_gap_L, train_gap_L):
     """Return nearest-training-sample index for each test sample at layer L.
     Both inputs are (N, C_L). Cosine similarity, argmax."""
@@ -272,27 +307,26 @@ def load_saved_bprime_sub_indices():
     return np.array(arms['B_prime']['q_idx']), np.array(arms['B_prime']['g_idx'])
 
 
-def load_train_pool_indices(script_key='compute_i1_percell_posthoc_v3.py'):
-    """The train-pool subsample in the saved replay used N_TRAIN_POOL=3000, same
-    seed. Because the index file does not store the train-pool index list
-    explicitly (it was drawn and discarded before the arm draws), we re-run
-    rng.choice(len(market.train), 3000) with seed 42 to recover it."""
-    rng = np.random.default_rng(RNG_SEED)
-    # match the replay script's draw order: first draw is the train pool
-    return rng.choice(12936, size=N_TRAIN_POOL, replace=False)
-
-
 def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_name,
-            q_idx=None, g_idx=None, batch=32):
+            q_idx=None, g_idx=None, batch=32, train_pool_size=None):
+    """train_pool_size: None means FULL training set (Channel 4 rev 626 §2 spec:
+    anchor pool = the training set). An int subsamples and MUST be declared in
+    the caller — the previous default of 3000 was an undeclared deviation from
+    spec (Channel 4 rev 631 §1) and is retracted as a silent default here."""
     print(f"\n=== arm {arm_name} (model={model_name}, train={train_dataset_name}, eval={eval_dataset_name}) ===", flush=True)
     train_ds_obj = get_dataset(train_dataset_name, sample=False)
     eval_ds_obj = get_dataset(eval_dataset_name, sample=False)
 
     rng = np.random.default_rng(RNG_SEED)
     train_all = train_ds_obj.train
-    tr_idx = rng.choice(len(train_all), size=N_TRAIN_POOL, replace=False)
-    train_samples = [train_all[int(i)] for i in tr_idx]
-    print(f"  train pool: {len(train_samples)} / {len(train_all)}", flush=True)
+    pool_is_subsampled = train_pool_size is not None and train_pool_size < len(train_all)
+    if pool_is_subsampled:
+        tr_idx = rng.choice(len(train_all), size=train_pool_size, replace=False)
+        train_samples = [train_all[int(i)] for i in tr_idx]
+    else:
+        train_samples = list(train_all)
+    print(f"  train pool: {len(train_samples)} / {len(train_all)}  "
+          f"(subsampled={pool_is_subsampled})", flush=True)
 
     q_all = [s for s in eval_ds_obj.query if not s.is_junk]
     g_all = [s for s in eval_ds_obj.gallery if not s.is_junk]
@@ -323,19 +357,33 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
     print(f"\n  BASELINE (no snap): mAP={100*base_map:.3f}%  R1={100*base_r1_rate:.3f}%  "
           f"n_valid={int(base_valid.sum())}", flush=True)
 
+    # Shuffled-ranking chance control + actual R (Channel 4 rev 631 §3).
+    shuf_map, mean_r, shuf_n_valid = shuffled_ranking_control(
+        q_pids, q_cams, g_pids, g_cams, n_shuffle=N_SHUFFLE, seed=RNG_SEED + 200)
+    print(f"  CHANCE CONTROL ({N_SHUFFLE}x shuffled ranking): mAP={100*shuf_map:.4f}%  "
+          f"mean_R={mean_r:.2f}  n_valid={shuf_n_valid}", flush=True)
+
     out = {
-        'rev': 629,
+        'rev': 633,
         'arm': arm_name,
         'model_ckpt': str(model_ckpt),
         'train_dataset': train_dataset_name,
         'eval_dataset': eval_dataset_name,
         'variant': 'a (GAP-at-layer-L nearest-match, snap both q and g)',
         'params': {'N_QUERY': len(query_samples), 'N_GALLERY': len(gallery_samples),
-                   'N_TRAIN_POOL': len(train_samples), 'RNG_SEED': RNG_SEED,
-                   'n_boot': N_BOOT},
+                   'N_TRAIN_POOL': len(train_samples),
+                   'N_TRAIN_POOL_full_set_size': len(train_all),
+                   'N_TRAIN_POOL_is_subsampled': pool_is_subsampled,
+                   'RNG_SEED': RNG_SEED, 'n_boot': N_BOOT, 'n_shuffle': N_SHUFFLE},
         'baseline': {
             'mAP': base_map, 'rank1': base_r1_rate,
             'n_valid': int(base_valid.sum()),
+        },
+        'chance_control': {
+            'shuffled_ranking_mAP': shuf_map,
+            'mean_R_relevant_per_query': mean_r,
+            'n_valid': shuf_n_valid,
+            'n_shuffle': N_SHUFFLE,
         },
         'per_layer': {},
     }
@@ -357,17 +405,21 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
         q_p3 = anchor_distribution_stats(q_nn, len(train_samples))
         g_p3 = anchor_distribution_stats(g_nn, len(train_samples))
         ratio = snap_map / base_map if base_map and base_map == base_map else float('nan')
+        ratio_vs_chance = (snap_map / shuf_map if shuf_map and shuf_map == shuf_map
+                            and shuf_map > 0 else float('nan'))
         print(f"    mAP={100*snap_map:.3f}%  R1={100*snap_r1:.3f}%  "
-              f"ratio_vs_baseline={ratio:.3f}  "
+              f"ratio_vs_baseline={ratio:.3f}  ratio_vs_chance={ratio_vs_chance:.3f}  "
               f"q_distinct={q_p3['n_distinct_anchors']}/{q_p3['n_train_pool']}  "
               f"g_distinct={g_p3['n_distinct_anchors']}/{g_p3['n_train_pool']}", flush=True)
         out['per_layer'][Lname] = {
             'mAP': snap_map, 'rank1': snap_r1,
             'mAP_ratio_to_baseline': ratio,
+            'mAP_ratio_to_chance': ratio_vs_chance,
             'n_valid': int(valid.sum()),
             'P3_query_anchor_stats': q_p3,
             'P3_gallery_anchor_stats': g_p3,
-            'P3_anchor_pool_label': 'variant_a: pool = N_TRAIN_POOL images',
+            'P3_anchor_pool_label': ('variant_a: pool = N_TRAIN_POOL images '
+                                     f'(full_set={not pool_is_subsampled})'),
         }
         aps_dict[Lname] = aps
         valid_dict[Lname] = valid
@@ -413,18 +465,26 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--arm', choices=['B_prime_sub', 'C', 'both'], default='B_prime_sub')
     ap.add_argument('--batch', type=int, default=32)
+    ap.add_argument('--train-pool-size', type=int, default=None,
+                     help="Explicit anchor-pool subsample size. Default (None) "
+                          "uses the FULL training set, matching the Channel 4 "
+                          "rev 626 §2 spec. Pass an int only with a stated reason "
+                          "(the 3000 default used in revs 629-630 was undeclared "
+                          "and is retracted — see rev 631 §1, rev 633).")
     args = ap.parse_args()
 
     if args.arm in ('B_prime_sub', 'both'):
         q_idx, g_idx = load_saved_bprime_sub_indices()
         run_arm('B_prime_sub', CKPT_MARKET, model_name='BoT-Market',
                 train_dataset_name='market1501', eval_dataset_name='msmt17',
-                q_idx=q_idx, g_idx=g_idx, batch=args.batch)
+                q_idx=q_idx, g_idx=g_idx, batch=args.batch,
+                train_pool_size=args.train_pool_size)
 
     if args.arm in ('C', 'both'):
         run_arm('C', CKPT_MSMT, model_name='BoT-MSMT',
                 train_dataset_name='msmt17', eval_dataset_name='market1501',
-                q_idx=None, g_idx=None, batch=args.batch)
+                q_idx=None, g_idx=None, batch=args.batch,
+                train_pool_size=args.train_pool_size)
 
 
 if __name__ == '__main__':
