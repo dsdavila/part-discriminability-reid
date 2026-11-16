@@ -116,12 +116,20 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
         n_q = len(q_pids)
         valid = np.zeros(n_q, dtype=bool)
         recall_at_k = {k: np.zeros(n_q, dtype=bool) for k in K_SWEEP}
+        # random-item recall@k baseline (Channel 4 rev 662 §1): same k-sweep, same
+        # random different-identity draws used for the rand_rho comparison, checking
+        # whether a RANDOM item's own argmax identity also falls in the query's
+        # top-k -- tests whether the climb is identity signal or just coverage of a
+        # concentrated, overloaded set of occupied training IDs (rev 659 §2: only
+        # ~110-175 of 710-913 train IDs are ever assigned to anything).
+        recall_at_k_rand = {k: np.full(n_q, np.nan) for k in K_SWEEP}
 
         q_profile = identity_profile(q_sim, train_pids, unique_ids, id_to_cols)
         g_profile = identity_profile(g_sim, train_pids, unique_ids, id_to_cols)
 
         mate_rho = np.full(n_q, np.nan)
         rand_rho = np.full(n_q, np.nan)
+        rand_rho_all = [None] * n_q  # per-query array of individual random rhos, for AUC
 
         for i in range(n_q):
             same_pid = g_pids == q_pids[i]
@@ -134,9 +142,9 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
             # P(mate matches) exactly at k=1 -- most queries here have >1 mate
             # (B'-sub: 57% do, mean 2.3), so "first mate only" understates recall.
             mate_ids = set(g_argmax_id[mates].tolist())
+            topk_ids_by_k = {k: set(q_order_ids[i, :k].tolist()) for k in K_SWEEP}
             for k in K_SWEEP:
-                topk_ids = set(q_order_ids[i, :k].tolist())
-                recall_at_k[k][i] = len(mate_ids & topk_ids) > 0
+                recall_at_k[k][i] = len(mate_ids & topk_ids_by_k[k]) > 0
 
             # profile correlation uses the single mate with the highest own-argmax
             # similarity to the query (closest mate), for a well-defined pairing.
@@ -148,21 +156,46 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
             diff_pid = np.where(g_pids != q_pids[i])[0]
             if len(diff_pid) > 0:
                 draws = rng_rand.choice(diff_pid, size=min(N_RAND_DRAWS, len(diff_pid)), replace=False)
-                rhos = [spearmanr(q_profile[i], g_profile[d])[0] for d in draws]
-                rand_rho[i] = np.nanmean(rhos)
+                rhos = np.array([spearmanr(q_profile[i], g_profile[d])[0] for d in draws])
+                rand_rho[i] = float(np.nanmean(rhos))
+                rand_rho_all[i] = rhos
+                # random-item recall@k: for each random draw, does ITS OWN argmax
+                # identity fall in the query's top-k (same k-sweep, same coverage test)
+                draw_ids = g_argmax_id[draws]
+                for k in K_SWEEP:
+                    recall_at_k_rand[k][i] = float(np.isin(draw_ids, list(topk_ids_by_k[k])).mean())
 
         n_valid = int(valid.sum())
-        print(f"    recall@k (mate's argmax ID in query's top-k):", flush=True)
+        print(f"    recall@k, mate vs random baseline (the gap is what matters):", flush=True)
         recall_summary = {}
         for k in K_SWEEP:
-            r = float(recall_at_k[k][valid].mean())
-            recall_summary[str(k)] = r
-            print(f"      k={k:<3d}: {100*r:.2f}%", flush=True)
+            r_mate = float(recall_at_k[k][valid].mean())
+            r_rand = float(np.nanmean(recall_at_k_rand[k][valid]))
+            recall_summary[str(k)] = {'mate': r_mate, 'random': r_rand, 'gap': r_mate - r_rand}
+            print(f"      k={k:<3d}: mate={100*r_mate:.2f}%  random={100*r_rand:.2f}%  "
+                  f"gap={100*(r_mate-r_rand):+.2f}pp", flush=True)
 
         mate_rho_mean = float(np.nanmean(mate_rho[valid]))
         rand_rho_mean = float(np.nanmean(rand_rho[valid]))
+
+        # AUC / d' for mate-vs-random discrimination (Channel 4 rev 662 §2): per
+        # query, fraction of this query's random draws that mate_rho exceeds,
+        # averaged over queries -- the standard paired Mann-Whitney AUC estimator.
+        auc_per_query = np.full(n_q, np.nan)
+        for i in np.where(valid)[0]:
+            if rand_rho_all[i] is not None and not np.isnan(mate_rho[i]):
+                auc_per_query[i] = float((mate_rho[i] > rand_rho_all[i]).mean()
+                                          + 0.5 * (mate_rho[i] == rand_rho_all[i]).mean())
+        auc = float(np.nanmean(auc_per_query[valid]))
+        # d' using pooled mate vs random distributions (not per-query paired)
+        all_mate = mate_rho[valid]
+        all_rand = np.concatenate([r for r in rand_rho_all if r is not None])
+        pooled_sd = np.sqrt((np.nanvar(all_mate) + np.nanvar(all_rand)) / 2)
+        d_prime = float((np.nanmean(all_mate) - np.nanmean(all_rand)) / pooled_sd) if pooled_sd > 0 else float('nan')
+
         print(f"    profile correlation: mate_rho={mate_rho_mean:+.4f}  "
-              f"rand_rho={rand_rho_mean:+.4f}  diff={mate_rho_mean-rand_rho_mean:+.4f}", flush=True)
+              f"rand_rho={rand_rho_mean:+.4f}  diff={mate_rho_mean-rand_rho_mean:+.4f}  "
+              f"AUC={auc:.4f}  d'={d_prime:.4f}", flush=True)
 
         out['per_layer'][Lname] = {
             'n_valid': n_valid,
@@ -170,6 +203,7 @@ def run_arm(arm_name, model_ckpt, model_name, train_dataset_name, eval_dataset_n
             'profile_correlation': {
                 'mate_rho_mean': mate_rho_mean, 'rand_rho_mean': rand_rho_mean,
                 'diff': mate_rho_mean - rand_rho_mean,
+                'auc_mate_vs_random': auc, 'd_prime': d_prime,
             },
         }
 
