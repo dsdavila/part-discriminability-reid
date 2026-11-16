@@ -223,7 +223,7 @@ def main():
     print("\nExtracting: ImageNet-init on Market-gallery (null for C)...", flush=True)
     feat_null_market, lbl_null_market = extract_gap(imagenet_init, market_gallery)
 
-    out = {'rev': 662, 'max_ids': MAX_IDS, 'min_imgs': MIN_IMGS, 'per_arm': {}}
+    out = {'rev': 671, 'max_ids': MAX_IDS, 'min_imgs': MIN_IMGS, 'per_arm': {}}
 
     for arm_name, feat_ceiling, lbl_ceiling, feat_ood, lbl_ood, feat_null, lbl_null in [
         ('B_prime', feat_A, lbl_A, feat_B, lbl_B, feat_null_msmt, lbl_null_msmt),
@@ -246,11 +246,28 @@ def main():
             survival = np.where(np.abs(denom) > 1e-8, (disc_ood - disc_null) / denom, np.nan)
             valid_survival = survival[~np.isnan(survival)]
 
+            # Denominator-quality filter (claude-chat, rev 670 §3): survival is only
+            # a meaningful ratio where the ceiling genuinely separates from the null.
+            # Threshold set relative to the layer's own ceiling scale (not to the
+            # denom distribution itself, to avoid circularity): keep channels where
+            # (disc_ceiling - disc_null) exceeds 10% of the median disc_ceiling.
+            valid_mask = ~np.isnan(survival)
+            median_disc_ceiling = float(np.nanmedian(disc_ceiling[valid_mask])) if valid_mask.any() else float('nan')
+            denom_threshold = 0.1 * median_disc_ceiling
+            keep_mask = valid_mask & (denom > denom_threshold)
+            kept_survival = survival[keep_mask]
+            frac_kept = float(keep_mask.sum() / len(survival))
+
             print(f"  {stage}: K(ceil/ood/null)={K_ceil}/{K_ood}/{K_null}  "
                   f"n_channels_valid={len(valid_survival)}/{len(survival)}  "
                   f"survival: mean={np.nanmean(survival):.3f}  median={np.nanmedian(survival):.3f}  "
                   f"q25={np.nanpercentile(survival,25):.3f}  q75={np.nanpercentile(survival,75):.3f}  "
                   f"frac<0={float((valid_survival<0).mean()):.3f}  frac>1={float((valid_survival>1).mean()):.3f}",
+                  flush=True)
+            print(f"           FILTERED (denom>0.1*median_ceiling={denom_threshold:.4g}): "
+                  f"kept {keep_mask.sum()}/{len(survival)} ({100*frac_kept:.1f}%)  "
+                  f"survival: mean={np.nanmean(kept_survival) if len(kept_survival) else float('nan'):.3f}  "
+                  f"median={np.nanmedian(kept_survival) if len(kept_survival) else float('nan'):.3f}",
                   flush=True)
 
             arm_out[stage] = {
@@ -268,10 +285,22 @@ def main():
                     for lo in np.arange(-2.0, 3.0, 0.5)
                 },
                 'survival_values': survival.tolist(),
+                'disc_null': disc_null.tolist(),
+                'disc_ceiling': disc_ceiling.tolist(),
+                'disc_ood': disc_ood.tolist(),
+                'denom_threshold': denom_threshold,
+                'frac_kept_filtered': frac_kept,
+                'n_kept_filtered': int(keep_mask.sum()),
+                'survival_mean_filtered': float(np.nanmean(kept_survival)) if len(kept_survival) else float('nan'),
+                'survival_median_filtered': float(np.nanmedian(kept_survival)) if len(kept_survival) else float('nan'),
+                'survival_q25_filtered': float(np.nanpercentile(kept_survival, 25)) if len(kept_survival) else float('nan'),
+                'survival_q75_filtered': float(np.nanpercentile(kept_survival, 75)) if len(kept_survival) else float('nan'),
+                'frac_below_0_filtered': float((kept_survival < 0).mean()) if len(kept_survival) else float('nan'),
+                'frac_above_1_filtered': float((kept_survival > 1).mean()) if len(kept_survival) else float('nan'),
             }
         out['per_arm'][arm_name] = arm_out
 
-    outp = RESULTS / 'e44_per_channel_survival.json'
+    outp = RESULTS / 'e44_per_channel_survival_filtered.json'
     outp.write_text(json.dumps(out, indent=2))
     print(f"\nsaved {outp}", flush=True)
 
