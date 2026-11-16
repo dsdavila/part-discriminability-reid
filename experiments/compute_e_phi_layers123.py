@@ -64,13 +64,21 @@ def pca_basis(X_centered, rank):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--pool-size', type=int, default=TRAIN_POOL_SIZE_CELL_DIAGNOSTIC)
+    args = ap.parse_args()
+
     backbone, bn = load_backbone_and_bn(CKPT_MARKET)
     market = get_dataset('market1501', sample=False)
     rng = np.random.default_rng(RNG_SEED)
     train_all = market.train
-    pool_size = min(TRAIN_POOL_SIZE_CELL_DIAGNOSTIC, len(train_all))
-    idx = rng.choice(len(train_all), size=pool_size, replace=False)
-    all_samples = [train_all[int(i)] for i in idx]
+    pool_size = min(args.pool_size, len(train_all))
+    if pool_size < len(train_all):
+        idx = rng.choice(len(train_all), size=pool_size, replace=False)
+        all_samples = [train_all[int(i)] for i in idx]
+    else:
+        all_samples = list(train_all)
 
     n_holdout = int(round(HOLDOUT_FRAC * pool_size))
     holdout_mask = np.zeros(pool_size, dtype=bool)
@@ -148,7 +156,8 @@ def main():
         }
         del maps
 
-    outp = RESULTS / 'e44_e_phi_layers123.json'
+    suffix = f'_pool{pool_size}' if pool_size != TRAIN_POOL_SIZE_CELL_DIAGNOSTIC else ''
+    outp = RESULTS / f'e44_e_phi_layers123{suffix}.json'
     outp.write_text(json.dumps(out, indent=2))
     print(f"\nsaved {outp}", flush=True)
 
